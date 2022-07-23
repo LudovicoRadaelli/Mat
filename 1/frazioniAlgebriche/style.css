@@ -1,0 +1,138 @@
+/* body {
+    position: relative;
+    width: 60%;
+    border: 1px solid transparent;
+    margin: auto;
+    font-size: 1.7em;
+}
+
+article {
+    position: relative;
+    width: 60%;
+}
+
+#nextButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90vw;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    color: #DB4437;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #4285F4;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #F4B400;
+    font-size: 1.1rem;
+}
+
+.media-container {
+    width: 98%;
+}
+
+video, img {
+    display: block;
+    width: 100%;
+}
+
+table, td, th {
+    border: 0.01rem solid black; 
+}
+
+td, th {
+    width: auto;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.grayBackground {
+    background-color: rgb(240, 240, 240);
+    padding: 1rem;    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.generaEsempio {
+    display: block;
+    width: auto;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;   
+}
+
+.green {
+    color: #0F9D58;
+}
+
+.red {
+    color: #DB4437;
+}
+
+.yellow {
+    color: #F4B400;
+}
+
+.blue {
+    color: #4285F4;
+}
+
+.gray {
+    color: gray;
+}
+
+
+.formula {
+    overflow-x: scroll;
+}
+
+button {
+    display: block;
+    width: auto;
+    margin: auto;
+    padding: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem lightgray;
+}
+
+
+.esempi-container {
+    width: 98vw;
+    margin:auto;
+    border: 0.01rem #F4B400 solid; 
+    padding: 1rem;
+}
+
+
+
+
+
+/* ----------------- */
+

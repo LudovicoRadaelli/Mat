@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>m.c.m. e M.C.D.</title>
+</head>
+<body>
+    <h1>m.c.m. e M.C.D.</h1>
+    <br>
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Numeri primi</h2>
+    </div>
+    <p class="grayBackground">
+        Un numero si dice <span class="blue"><b><i>primo</i></b></span> se è divisibile solamente per \(1\) e per sé stesso.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                \(13\) è un numero primo perché i suoi unici divisori sono \(1\) e \(13\).
+                <!-- TODO inserisci un pulsante "non ci credo" che apra una calcolatrice interattiva-->
+            </li>
+            <br>
+            <li>
+                \(37\) è un numero primo perché i suoi unici divisori sono \(1\) e \(37\).
+                <!-- TODO inserisci un pulsante "non ci credo" che apra una calcolatrice interattiva-->
+            </li>
+            <br>
+            <li>
+                \(36\) è un numero primo perché è divisibile anche per \(2) (e per tanti altri numeri).
+            </li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Scomposizione di un numero in fattori primi</h2>
+    </div>
+
+    <br>
+
+    <p>
+        <b>Scomporre</b> un numero significa scrivere il numero stesso come prodotto di altri numeri.
+    </p>
+    <br>
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>Il numero \(30\) si può scomporre in vari modi:</p>
+        \[30 = 3\cdot10\]
+        \[30 = 2\cdot15\]
+        \[30 = 2\cdot3\cdot5\]
+    </div>
+    
+    <br>
+    
+    <p>
+        Nell'ultima scomposizione tutti i fattori che compaiono sono numeri primi, quindi la chiameremo 
+        <b>scomposizione in fattori primi</b> di \(30\).
+    </p>
+    
+    <br>
+    
+    <p>Dal punto di vista pratico, per scomporre un numero in fattori primi usiamo questo schema:</p>
+    
+    <div class="grayBackground">
+        <div id="scomposizione-container">      
+            <div id="scomposizione">
+                <div id="numeroDaScomporre">
+                    <div class="risultato">\(\color{red}{36}\)</div>
+                    <div class="risultato">18</div>
+                    <div class="risultato">9</div>
+                    <div class="risultato">3</div>
+                    <div class="risultato">1</div>
+                </div>
+                <div id="fattoriPrimi">
+                    <div class="fattore">\(\color{red}{2}\)</div>
+                    <div class="fattore">\(\color{red}{2}\)</div>
+                    <div class="fattore">\(\color{red}{3}\)</div>
+                    <div class="fattore">\(\color{red}{3}\)</div>
+                    <div class="fattore">\(\)</div>
+                </div>
+            </div>
+            <div id="scomposizioneSpiegazione">
+                <p class="gray">Scriviamo il numero da scomporre a sinistra e pian piano lo dividiamo per fattori primi, che scriviamo nella colonna a destra.</p>
+            </div>
+        </div>
+        <div>
+            \[\Downarrow\]
+            \[36 = 2^2\cdot3^2\]
+        </div>
+    </div>
+    
+    <br>
+
+    <p><a href="https://mathigon.org/polypad/47Lzs0YOd7SKpw" target="_blank">QUA</a> potete giocare a scomporre in numeri primi e ricomporre.</p>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">3</span>
+        <h2>Minimo comune multiplo</h2>
+    </div>
+
+    <br>
+
+    <p>Prendiamo due numeri, ad esempio \(6\) e \(8\).</p>
+    <p>
+        Scriviamo un po' di loro multipli:
+    </p>
+    <div id="elencoMultipli" style="font-size: 1.2rem;">
+        <p class="formula">
+            \[\color{white}{\boxed{\color{black}{6}}} \quad \color{black}{12} \quad 18 \quad 24 \quad 30 \quad 36 \quad 42 \quad 48 \quad 54 \quad 60 \quad 66 \quad 72 \quad 78 \quad 84 \quad \cdots\]
+        </p>
+        <p class="formula">
+            \[\color{white}{\boxed{\color{black}{8}}} \quad \color{black}{16} \quad 24 \quad 32 \quad 40 \quad 48 \quad 56 \quad 64 \quad 72 \quad 80 \quad \cdots\]
+        </p>
+        <br>
+    </div>
+    <div id="elencoMultipliComuni" style = "display: none;">
+        <p class="formula">
+            \[6 \quad 12 \quad 18 \quad \boxed{24} \quad 30 \quad 36 \quad 42 \quad \boxed{48} \quad 54 \quad 60 \quad 66 \quad \boxed{72} \quad 78 \quad 84 \quad \cdots \]
+        </p>
+        <p class="formula">
+            \[8 \quad 16 \quad \boxed{24} \quad 32 \quad 40 \quad \boxed{48} \quad 56 \quad 64 \quad \boxed{72} \quad 80 \quad \cdots\]
+        </p>
+        <br>
+    </div>
+    <div id="elencoMcm" style = "display: none;">
+        <p class="formula">
+            \[6 \quad 12 \quad 18 \quad \color{red}{\boxed{24}} \quad \color{black}{30} \quad 36 \quad 42 \quad \boxed{48} \quad 54 \quad 60 \quad 66 \quad \boxed{72} \quad 78 \quad 84 \quad \cdots \]
+        </p>
+        <p class="formula">
+            \[8 \quad 16 \quad \color{red}{\boxed{24}} \quad \color{black}{32} \quad 40 \quad \boxed{48} \quad 56 \quad 64 \quad \boxed{72} \quad 80 \quad \cdots\]
+        </p>
+        <br>
+    </div>
+    
+    <div id="cerchiaMultipliComuni">
+        <p>&bullet; Evidenziamo i multipli comuni</p>
+        <br>
+        <button id="cerchiaMultipliComuni-button" onclick="cerchiaMultiplicComuni()">Cliccami!</button>
+    </div>
+    
+    <br>
+    
+    <div id="trovaMcm">
+        <p>&bullet; Selezioniamo il più piccolo tra i multipli in comune</p>
+        
+        <br>
+        
+        <button id="trovaMcm-button" onclick="trovaMcm()">Cliccami!</button>
+    </div>
+    <br>
+    <p>Quindi il minimo comune multiplo, come dice il nome stesso, è <i>il più piccolo dei multipli in comune tra i due numeri</i>.</p>
+
+    <p>Per trovarlo possiamo usare questo metodo:</p>
+
+    <br>
+
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Scomponiamo in fattori primi i numeri di cui dobbiamo calcolare l'm.c.m.
+            </li>
+            <li>
+                Moltiplichiamo tutti i fattori <b><i>comuni</i></b> e <b><i>non comuni</i></b> presi con il loro esponente <b><i>maggiore</i></b>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            Calcoliamo il m.c.m. tra \(63\) e \(294\).
+        </p>
+        <br>
+        <p>&bullet; Scomponiamo i numeri:</p>
+        <br>
+        <div class="scompMacro-container">
+            <div class="scomp-container">
+                <div class="risultato-container">
+                    <div class="risultato">\(63\)</div>
+                    <div class="risultato">\(9\)</div>
+                    <div class="risultato">\(3\)</div>
+                    <div class="risultato">\(1\)</div>
+                </div>
+                <div class="fattore-container">
+                    <div class="fattore">\(7\)</div>
+                    <div class="fattore">\(3\)</div>
+                    <div class="fattore">\(3\)</div>
+                    <div class="fattore">\(\,\)</div>
+                </div>
+            </div>
+            <div class="scomp-container">
+                <div class="risultato-container">
+                    <div class="risultato">\(294\)</div>
+                    <div class="risultato">\(42\)</div>
+                    <div class="risultato">\(6\)</div>
+                    <div class="risultato">\(2\)</div>
+                    <div class="risultato">\(1\)</div>
+                </div>
+                <div class="fattore-container">
+                    <div class="fattore">\(7\)</div>
+                    <div class="fattore">\(7\)</div>
+                    <div class="fattore">\(3\)</div>
+                    <div class="fattore">\(2\)</div>
+                    <div class="fattore">\(\,\)</div>
+                </div>
+            </div>
+        </div>
+        <div class="risultatiScomposizioni-container">
+            <div class="risultatiScomposizioni">
+                \[63 = 3^2\cdot7\]
+            </div>
+            <div class="risultatiScomposizioni">
+                \[294 = 2\cdot3\cdot7^2\]
+            </div>
+        </div>
+        <p> &bullet; Moltiplichiamo tutti i fattori <span id="comuni"><b><i>comuni</i></b></span> e <span id="nonComuni"><b><i>non comuni</i></b></span> presi con il loro <span id="esponenteMaggiore">esponente <b><i>maggiore</i></b></span></p>
+        <br>
+        <p id="mcm">\(\text{m.c.m.}\left(63, 294\right) = \)</p>
+        <br>
+        <button id="nextMcm-button" onclick="nextMcm()">&rightarrow;</button>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- https://ludovicoradaelli.github.io/Matematica/2022/ -->

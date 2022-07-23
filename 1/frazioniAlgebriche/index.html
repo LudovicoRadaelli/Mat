@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Frazioni algebriche</title>
+</head>
+
+<body>
+    <h1>Frazioni algebriche</h1>
+    
+    <div class="h2">
+        <span class="par">1</span> 
+        <h2>Minimo comune multiplo tra polininomi</h2>
+    </div>
+    <p>
+        Il meccanismo per trovare il m.c.m. tra polinomi ricalca quello messo in atto nel calcolo numerico.
+    </p>
+    <div class="grayBackground">
+        <p>
+            Per trovare il m.c.m tra più polinomi
+        </p>
+        <br>
+        <ul>
+            <li>
+                scompongo tutti i polinomi in fattori irriducibili;
+            </li>
+            <br>
+            <li>
+                scrivo il prodotto tra tutti i fattori comuni e non comuni delle scomposizioni, presi con l'esponente maggiore.
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            Trovare il m.c.m. tra i polinomi 
+            \[
+                3x^3 -3x^2\,,\qquad 2x^2 -2x \,,\qquad x^2 -2x +1 
+            \]
+        </p>
+        
+        <p>
+            <b>Svolgimento</b>
+        </p>
+        
+        <br>
+        <ul>
+            <li>
+                <p>
+                    Scompongo i tre polinomi:
+                </p>
+                <br>
+                
+                        \(
+                            \begin{align*}
+                                \triangleright\,\,\, 3x^3 -3x^2 = &\,\, 3x^2 \cdot \left(x^2 -1\right) = 
+                                \\\\
+                                = & \,\, 3 \cdot \color{blue}{x^2}\color{black}{} \cdot \color{red}{\left(x -1\right)}\color{black}{} \cdot \color{rgb(15, 157, 88)}{\left(x +1\right)} 
+                            \end{align*}
+                        \)
+                        
+                        <br>
+                        <br>
+                
+                        \(
+                            \triangleright\,\,\, 2x^2 -2x  =   \color{gray}{2}\cdot \color{black}{}\color{blue}{x}\color{black}{} \cdot \color{red}{\left(x -1\right)}
+                        \)
+
+                        <br>
+                        <br>
+                
+                        \(
+                            \triangleright\,\,\, x^2 -2x +1  = \color{red}{\left(x - 1\right)^2}
+                        \)
+                
+            </li>
+            <br>
+            <li>
+                <p>
+                    Scrivo il prodotto tra i fattori comuni e non comuni delle scomposizioni, presi con l'esponente maggiore:
+                </p>
+                
+                <br>
+
+                <p>
+                    \(\Longrightarrow\) il m.c.m. è 
+                    \[
+                        \begin{align*}
+                            &\color{gray}{2}\color{black}{} \cdot \color{black}{3} \cdot \color{blue}{x^2}\color{black}{} \cdot \color{red}{\left(x -1\right)}\color{black}{} \cdot  \color{rgb(15, 157, 88)}{\left(x +1\right)}\color{black}{} =
+                            \\\\
+                            = \,\,& 6x^4 - 6x^2
+                        \end{align*}
+                    \]
+                </p>
+            </li>
+        </ul>
+        
+    </div>
+
+    <!-- 
+        TODO 
+        Inserire un'attività. Vengono forniti 3 polinomi già scomposti e si devono selezionare i 
+        fattori che andranno a comporre il m.c.m.
+    -->
+
+    <br>
+    <hr>
+    <br>
+    
+    
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Frazioni algebriche</h2>
+    </div>
+    
+    <p class="grayBrackground">
+        Una <b>frazione algebrica</b> è una frazione che presenta dei polinomi al numeratore ed al denominatore.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>Tutte quelle che seguono sono frazioni algebriche:</p>
+        <br>
+        <ul>
+            <li>
+                \(\dfrac{2x +1}{5 - x}\);
+            </li>
+            <br>
+            <li>
+                \(\dfrac{x^5 -a^2}{7 - x^2}\);
+            </li>
+            <br>
+            <li>
+                \(\dfrac{8x^2 -7x +2}{x}\);
+            </li>
+            <br>
+            <li>
+                \(\dfrac{x}{9x^4 -4x^3 -x^2 +1}\);
+            </li>
+            <br>
+            <li>
+                \(\dfrac{5}{x -2}\);
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">2.1</span> 
+        <h3>Semplificazione di frazioni algebriche</h3>    
+    </div>
+    
+    <br>
+
+    <p>
+        Alcune frazioni algebriche possono essere <b>semplificate</b>, ovvero riscritte come frazioni algebriche equivalenti più semplici.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        Semplifichiamo la frazione algebrica
+        \[ 
+            \dfrac{x^2 +4 -4x}{x^2 -5x +6} =
+        \]
+        Innanzitutto scomponiamo i polinomi al numeratore e denominatore
+        \[
+            = \dfrac{\left(x -2\right)^2}{\left(x - 2\right)\cdot\left(x -3\right)} =
+        \]
+        Ora, esattamente come nel caso delle frazioni numeriche, semplifichiamo i fattori che compaiono sia al numeratore che al denominatore
+        \[
+            = \dfrac{\color{red}{\left(x -2\right)^{\color{black}{\cancel{\color{red}{2}}}}}}{\color{black}{\cancel{\color{red}{\left(x - 2\right)}}}\color{black}{\cdot}\color{blue}{\left(x -3\right)}} \color{black}{} = \dfrac{x-2}{x-3}
+        \]
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="sommaSottrazioneFrazioniAlgebriche" class="h3">
+        <span class="sub-par">2.2</span> 
+        <h3>Somma e sottrazione di frazioni algebriche</h3>
+    </div>
+
+    <br>
+
+    <p>
+        Il procedimento di somma e sottrazione di frazioni algebriche è del tutto analogo a quello del caso numerico.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    
+    <div class="esempi-container" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+        <p class="gray">Svolgiamo in parallelo una somma tra frazioni numeriche ed una tra frazioni algebriche</p>
+        
+        <br>
+
+        <b>Esempio 1</b>
+    
+        <!-- testo somma -->
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start;">
+            <div style="width: 48%; margin: auto;">
+                <p>
+                    Sommare le seguenti frazioni numeriche
+                    \[
+                        \dfrac{3}{10} + \dfrac{9}{4}
+                    \]
+                </p>
+            </div>
+            <div style="width: 48%; margin: auto;">
+                <p>
+                    Sommare le seguenti frazioni algebriche
+                    \[
+                        \dfrac{2 + x}{x^2 -1} + \dfrac{3 -4x}{x^2+2x +1}
+                    \]
+                </p>
+            
+            </div>
+        </div>
+
+        <br>
+        
+
+        <!-- passaggio 1-->
+        <p>
+            Scompongo i denominatori per poter effettuare il m.c.m.
+        </p>
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start;">
+            <div style="width: 30%;  margin: auto;">
+                <p>
+                    \[
+                        \dfrac{\color{red}{3}}{\color{rgb(225, 95, 237)}{2 \cdot 5}} + \dfrac{\color{red}{9}}{\color{rgb(225, 95, 237)}{2^2}}
+                    \]
+                </p>
+            </div>
+            <div style="width: 70%; margin: auto;">
+                <p class="formula" style="font-size: 0.9rem;">
+                    \[
+                        \dfrac{\color{red}{2 + x}}{\color{rgb(225, 95, 237)}{\left(x +1\right) \cdot \left(x  -1\right)}} + \dfrac{\color{red}{3 -4x}}{\color{rgb(225, 95, 237)}{\left(x+1\right)^2}}
+                    \]
+                </p>            
+            </div>
+        </div>
+
+        <!-- passaggio 2-->
+        <li>
+            Scrivo come <span style="color: blue;">denominatore comune</span> il m.c.m. tra i denominatori
+        </li>
+        <br>
+        <li>
+            Per ogni frazione divido il <span style="color: blue;">denominatore comune</span>  per il <span style="color: rgb(225, 95, 237)">vecchio denominatore</span>   e moltiplico il risultato per il <span style="color: red;">vecchio numeratore</span> *
+        </li>
+        <br>
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+            
+            <div style="width: 30%; margin: auto;">
+                <p>
+                    \[
+                        \dfrac{2 \cdot \color{red}{3} \color{black}{}+ 5 \cdot \color{red}{9}\color{black}{}}{\color{blue}{2^2 \cdot 5}}
+                    \]
+                </p>
+            </div>
+            <div style="width: 70%; margin: auto;">
+                <p class="formula" style="font-size: 0.9rem;">
+                    \[
+                        \dfrac{\left(x + 1\right) \cdot \color{red}{\left(2 +x\right)}\color{black}{} + \left(x -1\right) \cdot \color{red}{\left(3 - 4x\right)}\color{black}{}}{\color{blue}{\left(x + 1\right)^2 \cdot \left(x - 1\right)}}
+                    \]
+                </p> 
+            </div>
+        </div>
+
+        <br>
+
+        <p class="gray">* Se non avete chiaro come abbiamo ottenuto i numeri neri al numeratore cliccate il pulsante</p>
+        
+        <br>
+        
+        <button id="hint1-button" onclick="showHint(1)">Passaggi intermedi</button>
+        
+        <br>
+
+        <div id="hint1" class="gray" style="display: none;">
+            <!-- passaggio 3-->
+            <div style="width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                <div style="width: 30%; margin: auto;">
+                    <p>
+                        \[
+                            \dfrac{\color{blue}{2^{\cancel{2}} \cdot \cancel{5}}}{\color{rgb(225, 95, 237)}{\cancel{2} \cdot \cancel{5}}} \color{black}{}=  2
+                        \]
+
+                        \[
+                            \dfrac{\color{blue}{\cancel{2^{2}}} \cdot 5}{\color{rgb(225, 95, 237)}{\cancel{2^2}} }\color{black}{}=  5
+                        \]
+                    </p>
+                </div>
+                <div style="width: 70%; margin: auto;">
+                    <p class="formula" style="font-size: 0.9rem;">
+                        \[
+                            \dfrac{\color{blue}{\left(x + 1\right)^{\cancel{2}} \cdot \cancel{\left(x - 1\right)}}}{\color{rgb(225, 95, 237)}{\cancel{\left(x +1\right)} \cdot \cancel{\left(x  -1\right)}}} \color{black}{}= x +1
+                        \]
+                    </p>
+                    <p class="formula" style="font-size: 0.9rem;">
+                        \[
+                            \dfrac{\color{blue}{\cancel{\left(x + 1\right)^2} \cdot \left(x - 1\right)}}{{\color{rgb(225, 95, 237)}{\cancel{\left(x+1\right)^2}}}} \color{black}{}= x -1
+                        \]
+                    </p>
+                    
+                </div>
+            </div>
+        </div> 
+
+        
+
+        <!-- passaggio 4-->
+        <p>
+            Svolgo i conti al numeratore
+        </p>
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+            <div style="width: 30%; margin: auto;">
+                \[
+                    \begin{align*}
+                        \dfrac{6  + 45}{20} = 
+                         \dfrac{51}{20}
+                    \end{align*}
+                \]
+            </div>
+            <div style="width: 70%; margin: auto;">
+                <p class="formula">
+                    \[
+                        \begin{align*}
+                            & \dfrac{2x + x^2 +2 +x + 3x -4x^2 -3 +4x}{\left(x +1\right)^2 \cdot \left(x - 1\right)} = 
+                            \\\\
+                            = & \dfrac{-3x^2 + 10x -1}{\left(x +1\right)^2 \cdot \left(x - 1\right)} = 
+                        \end{align*}
+                    \]
+                </p>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <div>
+                <p><b>Esempio 2</b></p>
+                <br>
+                <div style="font-size: 0.95rem;">
+                    \(
+                        \begin{align*}
+                            & \dfrac{2x -1}{3x^3 -2x^2 +3x -2} - \dfrac{3 + x^2}{9x^2 -4} =
+                            \\\\
+                            = \,&  \dfrac{2x -1}{\left(3x -2\right) \cdot \left(1 + x^2\right)} - \dfrac{3 + x^2}{\left(3x -2\right) \cdot \left(3x +2\right)} =
+                            \\\\
+                            = \,&  \dfrac{\left(3x +2\right) \cdot \left(2x -1\right) - \left(1 + x^2\right) \cdot \left(3 + x^2\right)}{\left(3x + 2\right) \cdot \left(3x -2\right) \cdot \left(1 + x^2\right)} =
+                            \\\\
+                            = \,&  \dfrac{6x^2 -3x +4x -2 - \left(3 +x^2 +3x^2 + x^4\right)}{\left(3x + 2\right) \cdot \left(3x -2\right) \cdot \left(1 + x^2\right)} =
+                            \\\\
+                            = \,&  \dfrac{6x^2 -3x +4x -2 - 3  -x^2 - 3x^2 - x^4}{\left(3x + 2\right) \cdot \left(3x -2\right) \cdot \left(1 + x^2\right)} =
+                            \\\\
+                            = \,&  \dfrac{-x^4 +2x^2 +x -5}{\left(3x + 2\right) \cdot \left(3x -2\right) \cdot \left(1 + x^2\right)}
+                        \end{align*}
+                    \)
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+        
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="prodottoFrazioniAlgebriche" class="h3">
+        <span class="sub-par">2.3</span>
+        <h3>Prodotto tra frazioni algebriche e semplificazione incrociata</h3>
+    </div>
+    
+    <br>
+
+    <p>
+        Per moltiplicare due frazioni algebriche si moltiplicano numeratore con numeratore e denominatore con denominatore:
+    </p>
+
+    <p class="grayBackground">
+        \[
+            \dfrac{A\left(x\right)}{B\left(x\right)} \cdot \dfrac{C\left(x\right)}{D\left(x\right)} = \dfrac{A\left(x\right) \cdot C\left(x\right)}{B\left(x\right) \cdot D\left(x\right)}
+        \]
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            \[
+                \begin{align*}
+                    & \dfrac{5x +1}{2x -1} \cdot \dfrac{x^2 +2x -1}{3x -1} = 
+                    \\\\
+                    = \,& \dfrac{\left(5x +1\right)\cdot\left(x^2 +2x -1\right)}{\left(2x -1\right) \cdot \left(3x -1\right)} =
+                    \\\\
+                    = \,& \dfrac{5x^3 +10x^2 -5x +x^2 +2x -1}{6x^2 -2x -3x +1} =
+                    \\\\
+                    = \,& \dfrac{5x^3 +11x^2 -3x -1}{6x^2 -5x +1} 
+                \end{align*}
+            \]
+            come potete i passaggi successivi all'applicazione della regola di moltiplicazione consistono solamente nello svolgimento di calcoli.
+        </p>
+        
+    </div>
+    
+    <br>
+    <br>
+
+    <p>
+        Così come nel caso numerico, prima di effettuare una moltiplicazione tra frazioni algebriche è opportuno controllare se sia possibile effettuare <b>semplificazioni incrociate</b>.
+    </p>
+    <br>
+    <ul>
+        <li>
+            si scompongono i polinomi ai numeratori e denominatori delle frazioni
+        </li>
+        <li>
+            si semplificano eventuali fattori che figurano sia al numeratore di una fraizone che al denominatore dell'altra
+        </li>
+        
+    </ul>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            \[
+                \begin{align*}
+                    & \dfrac{x^2 - 25}{4x^2 + 2x^3} \cdot \dfrac{x^9}{x^2 +25 +10x} = 
+                    \\\\
+                    = \,& \dfrac{\color{red}{\left(x +5\right) \color{black}{\cdot \left(x -5\right)}}}{2 \cdot \color{blue}{x^2} \color{black}{} \cdot \left(2 + x\right)} \cdot \dfrac{\color{blue}{x^9}}{\color{red}{\left(x +5\right)^2}}
+                    \\\\
+                    = \,& \dfrac{\color{black}{\cancel{\color{red}{\left(x +5\right)}}} \color{black}{\cdot \left(x -5\right)}}{2 \cdot \cancel{\color{blue}{x^2}} \color{black}{} \cdot \left(2 + x\right)} \cdot \dfrac{\color{blue}{x^{\overset{\color{black}{7}}{\color{black}{\cancel{\color{blue}{9}}}}}}}{\color{red}{\left(x +5\right)^{\color{black}{\cancel{\color{red}{2}}}}}}
+                    \\\\
+                    = \,& \dfrac{x -5}{2 \cdot \left(2 + x\right)} \cdot \dfrac{x^7}{x +5} =
+                    \\\\
+                    = \,& \dfrac{\left(x -5\right) \cdot x^7}{2 \cdot \left(2 + x\right) \cdot \left(x + 5\right)} =
+                    \\\\
+                    = \,& \dfrac{x^8 -5x^7}{\left(4 + 2x\right) \cdot \left(x + 5\right)} =
+                    \\\\
+                    = \,& \dfrac{x^8 -5x^7}{4x +20 +2x^2 +10x} =
+                    \\\\
+                    = \,& \dfrac{x^8 -5x^7}{2x^2 +14x +20} =
+
+                \end{align*}
+            \]
+            
+        </p>
+        
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="divisioneFrazioniAlgebriche" class="h3">
+        <span class="sub-par">2.4</span> 
+        <h3>Divisione tra frazioni algebriche</h3>
+    </div>
+    
+    <br>
+
+    <p>
+        La divisione tra due frazioni algebriche è equivalente alla moltiplicazione tra il dividendo ed il reciproco del divisore:
+    </p>
+    <p class="grayBackground">
+        \[
+
+            \dfrac{A\left(x\right)}{B\left(x\right)} \color{rgb(15, 157, 88)}{\,\boldsymbol{:}\,}\color{black}{} \dfrac{\color{red}{C\left(x\right)}}{\color{blue}{D\left(x\right)}} = \dfrac{A\left(x\right)}{B\left(x\right)} \color{rgb(15, 157, 88)}{\,\boldsymbol{\cdot}\,} \color{black}{} \dfrac{\color{blue}{D\left(x\right)}}{\color{red}{C\left(x\right)}} 
+        \]
+    </p>
+    
+    <br>
+
+    <p>
+        In parole semplici, la divisione si "trasforma" in moltiplicazione a patto di invertire numeratore e denominatore del divisore.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        \[
+            \begin{align*}
+                &\dfrac{2x -1}{3x +2} \color{rgb(15, 157, 88)}{\,\boldsymbol{:}\,}\color{black}{} \dfrac{\color{red}{5 + x}}{\color{blue}{x^2}} = 
+                \\\\
+                = \,&
+                \dfrac{2x -1}{3x +2} \color{rgb(15, 157, 88)}{\,\boldsymbol{\cdot}\,}\color{black}{} \dfrac{\color{blue}{x^2}}{\color{red}{5 +x}} =
+                \\\\
+                = \,& \dfrac{\left(2x -1\right) \cdot x^2}{\left(3x +2\right) \cdot \left(5 + x\right)} =
+                \\\\
+                = \,& \dfrac{2x^3 -x^2}{15x +3x^2 +10 +2x} =
+                \\\\
+                = \,& \dfrac{2x^3 -x^2}{3x^2 +17x +10} =
+            \end{align*}
+        \]
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        function showHint(i) {
+            document.getElementById("hint"+i+"-button").style.display = "none";
+            document.getElementById("hint"+i).style.display = "block";
+        }  
+    </script>
+    
+    
+    
+    
+    
+</body>
+
+</html>

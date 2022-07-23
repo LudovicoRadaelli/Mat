@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Scomposizione di polinomi</title>
+</head>
+<body>
+        
+    <h1 id="scomposizioneDiPolinomi">Scomposizione di polinomi</h1>
+
+    <br>
+
+    <p class="grayBackground">
+        Scomporre un polinomio significa scriverlo come <b style="color: red">moltiplicazione</b> di polinomi di <b style="color: #009900">grado minore</b>.
+    </p>
+
+    <br>
+
+    <div class="esempi-container">
+        <ul>
+            <li>
+                \[
+                    \underset{\color{#009900}{\text{grado 3}}}{\color{lightgray}{\underbrace{\color{black}{3x^3 - 9x^2}}}} = \underset{\color{#009900}{\text{grado 2}}}{\color{lightgray}{\underbrace{\color{black}{3x^2}}}} \color{red}{\,\boldsymbol{\cdot}\,}\color{black}{} \underset{\color{#009900}{\text{grado 1}}}{\color{lightgray}\underbrace{\color{black}{\left(x -3\right)}}}
+                \]
+            </li>
+            <li>
+                \[
+                    \underset{\color{#009900}{\text{grado 2}}}{\color{lightgray}{\underbrace{\color{black}{x^2 - 5x +6}}}} = \underset{\color{#009900}{\text{grado 1}}}{\color{lightgray}{\underbrace{\color{black}{\left(x -2\right)}}}} \color{red}{\,\boldsymbol{\cdot}\,}\color{black}{} \underset{\color{#009900}{\text{grado 1}}}{\color{lightgray}\underbrace{\color{black}{\left(x -3\right)}}}
+                \]
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <br>
+    <hr>
+    <br>
+
+    <br>
+
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Raccoglimento a fattor comune</h2>
+    </div>
+
+    <h3 class="yellow" id="esempio1-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio1">            
+            <p>
+                Scomponiamo il polinomio 
+                \[4x^3y - 12x^4y -18x^6\]
+            </p>
+            <p>
+                <b>Troviamo il fattore comune</b>
+            </p>
+            <br>
+            <p>
+                &bullet; Il più grande numero che divide i coefficienti del polinomio è \(2\).
+            </p>
+            <br>
+            <p>
+                &bullet;  La \(x\) è presente in tutti i monomi e l'esponente più piccolo con cui 
+                compare è \(3\).
+            </p>
+            <br>
+            <p>
+                Di conseguenza il fattore comune è \(2\color{black}{}x^{3}\)
+            </p>
+            <br>
+            <p class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    \begin{align*}
+                    & 4x^3y - 12x^4y -18x^6 =
+                    \\\\
+                    = \,\,&  2x^3 \cdot \left(2y -6xy -9x^3\right)
+                    \end{align*}
+                \]
+            </p>            
+            <br>
+            <p>
+                <b>Come abbiamo trovato i termini in parentesi?</b>
+            </p>
+            <br>
+        
+            <p>
+                \(2y\) è il monomio che moltiplicato per \(2x^3\) dà come risultato \(2x^3y\)
+            </p>
+            <br>
+            <p>
+                \(-6xy\) è il monomio che moltiplicato per \(2x^3\) dà come risultato \(-12x^4y\)
+            </p>
+            <br>
+            <p>
+                \(-18x^3\) è il monomio che moltiplicato per \(2x^3\) dà come risultato \(-18x^6\)
+            </p>
+            <br>
+        </div>
+        
+        <button class="generaEsempio" id="generaEsempio1" onclick="generaEsempio(1)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+    <br>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- A FATTOR PARZIALE -->
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Raccoglimento a fattor parziale</h2>
+    </div>
+
+
+    <br>
+
+    <h3 class="yellow" id="esempio2-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio2">            
+            <p>
+                Scomponiamo il polinomio 
+                \[6x^3 + 8x^2 + 15x + 20\]
+            </p>
+            <p>
+                Osserviamo che non è possibile scomporre a fattore comune (provare per credere!).
+            </p>
+            
+            <br>
+
+            <p>
+                <b>Evidenziamo coppie di termini con fattori in comune</b>
+            </p>
+
+            <p>
+                \[\color{red}{6x^3 + 8x^2} \,\color{blue}{+ 15x + 20}\]
+            </p>
+            <p>
+                Scomponiamo a fattor comune entrambe le coppie:
+            </p>
+            <p>
+                \[
+                    \underset{\color{red}{6x^3 + 8x^2}}
+                    {\color{gray}{\underbrace{\color{black}{}\boldsymbol{2x^2} \cdot \color{green}{\left(3x + 4\right)}}}} 
+                    \,\,\,
+                    \underset{\color{blue}{+ 15x + 20}}
+                    {\color{gray}{\underbrace{\color{black}{\boldsymbol{+5} \cdot \color{green}{\left(3x + 4\right)}}}}} 
+                \]
+            </p>
+            <p>
+                Raccogliamo a fattor comune la parentesi <span style="color: green"><b>verde</b></span>:
+            </p>
+            <p>
+                \[
+                    \color{green}{\left(3x + 4\right)} \color{black}{} \cdot \left(\boldsymbol{2x^2} \boldsymbol{+ 5}\right)
+                \]
+            </p>
+
+            <br>
+            <p class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    \begin{align*}
+                    & 6x^3 + 8x^2 + 15x + 20 =
+                    \\\\
+                    = \,\,&  \left(3x + 4\right) \color{black}{} \cdot \left(2x^2 + 5\right)
+                    \end{align*}
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaEsempio2" onclick="generaEsempio(2)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    
+
+    
+    
+    
+    <script src="monomialAndPolynomial.js"></script>
+    <script src="script.js"></script>
+    
+    
+    
+    
+    
+    
+</body>
+
+</html>

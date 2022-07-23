@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangoli</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <!-- <div class="grayBackground">
+        <p>cliccate i pulsanti <button>&leftarrow;</button> <button >&rightarrow;</button> per animare il testo</p>
+        <div id="chiudi" onclick="chiudi()"><b>&Cross;</b></div>
+    </div> -->
+
+    
+    <h1>Triangoli</h1>
+    
+    <div class="grayBackground">
+        <b>Definizione</b>
+        <br>
+        <p>
+            Un triangolo è un insieme di punti del piano costituito da una 
+            <a href="#poligonale">poligonale</a> chiusa di tre lati e dai sui punti interni.
+        </p>
+
+    </div>
+
+    <br>
+
+    <div class="grayBackground">
+        
+        <b>Primo criterio di congruenza</b>
+        <br>
+        <br>
+        
+        <div class="c1">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti due lati e l’angolo compreso fra i due lati,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio1.png">
+        </div>
+        <div class="c1">
+            
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno <u>ordinatamente congruenti due lati</u> e l’angolo compreso fra i due lati,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio1.png">
+        </div>
+        <div class="c1">
+            
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti due lati e l’angolo compreso fra i due lati,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio2.png">
+        </div>
+        <div class="c1">
+            
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti due lati e l’<u>angolo compreso</u> fra i due lati,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio2.png">
+        </div>
+        <div class="c1">
+            
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti due lati e l’angolo compreso fra i due lati,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio3.png">
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="previousNext">
+            <button onclick="ss1.previous()">&leftarrow;</button>
+            <button onclick="ss1.next()">&rightarrow;</button>
+        </div>  
+    </div>
+
+    <br>
+    
+    <p>⚠️<b>Il primo criterio è un postulato</b>⚠️<br>
+        Secondo Euclide era così ovvio da non aver bisogno di essere dimostrato
+    </p>
+
+    <br>
+        
+    <div class="grayBackground">
+        <b>Secondo criterio di congruenza</b>
+
+        <br>
+        <br>
+
+        <div class="c2">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti un lato e gli angoli adiacenti al lato,</p>
+            <p><b>allora</b> sono congruenti.</p>
+            
+            <br>
+        
+            <img class="criterioImage" src="images/primoCriterio1.png">
+        </div>
+        <div class="c2">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno <u>ordinatamente congruenti un lato</u> e gli angoli adiacenti al lato,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/primoCriterio1.png">
+        </div>
+        <div class="c2">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti un lato e gli angoli adiacenti al lato,</p>
+            <p><b>allora</b> sono congruenti.</p>
+            
+            <br>
+
+            <img class="criterioImage" src="images/secondoCriterio2.png">
+        </div>
+        <div class="c2">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente <u>congruenti</u> un lato e <u>gli angoli adiacenti al lato</u>,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+            
+            <img class="criterioImage" src="images/secondoCriterio2.png">
+        </div>
+        <div class="c2">
+
+            <p>Siano \(ABC\) e \(DEF\) due triangoli.</p>
+            <p><b>Se</b> hanno ordinatamente congruenti un lato e gli angoli adiacenti al lato,</p>
+            <p><b>allora</b> sono congruenti.</p>
+
+            <br>
+
+            <img class="criterioImage" src="images/secondoCriterio3.png">
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="previousNext">
+            <button onclick="ss2.previous()">&leftarrow;</button>
+            <button onclick="ss2.next()">&rightarrow;</button>
+        </div>
+    </div>
+
+    
+    <br>
+    
+    <p>
+        Questo criterio NON è un postulato, va dimostrato.<br>
+    </p>
+    <p>
+        <i>"Ma come?!</i> - direte - <i>è ovvio!"</i><br>
+    </p>
+    <p>
+        Per voi sì, per il signor Giancaterino no
+    </p>
+
+    <br>
+
+    <img id="complotto" src="images/complotto.png">
+    
+    <br>
+
+    <p>
+        Secondo lui <i>solo il primo criterio è vero</i>, mentre il secondo criterio è <b>falso</b>, è un antico complotto 
+        dei professori che vogliono appioppare più argomenti da studiare ai poveri alunni. 
+    </p>
+    <br>
+    <p>
+        Convinciamo il signor Giancaterino che il criterio è vero. Assecondiamolo per un attimo. 
+    </p>
+
+    <p>Signor Giancaterino, facciamo finta che tu abbia ragione. Diciamo che il criterio sia falso, ovvero che</p>
+    
+    <br>
+
+    <div style="width: 85%; margin: auto; padding: 1rem; border: 0.01rem solid gray;">
+        Esistono due triangoli che hanno ordinatamente congruenti un lato e gli angoli adiacenti al lato, <b>ma</b> non sono congruenti.
+        <br>
+        Ad esempio immaginiamo che il lato \(AB\) sia più grande del lato \(DF\).
+    </div>
+
+    <img src="images/dimostrazione1.png">
+
+    <p class="noMarginBottom">Dato che il lato \(AB\) è più grande di \(DF\), possiamo trovare un punto \(P\) su \(AB\) in modo che  
+        il segmento \(\color{red}{AP}\) sia congruente al segmento \(\color{red}{DF}\).
+    </p>
+
+    <img src="images/dimostrazione3.png">
+
+    <p>Considerate i triangoli \(ACP\) e \(DEF\):</p>
+    
+    <br>
+    
+    <ul>
+        <li>
+            abbiamo appena visto che il <b>lato</b> \(\color{red}{AP}\) è congruente al lato \(\color{red}{DF}\)
+        </li>
+        <br>
+        <li>
+            L'<b>angolo</b> \(\color{#0000ff}{BAC}\) è congruente all'angolo \(\color{#0000ff}{FDE}\)
+        </li>
+        <br>
+        <li>
+            il <b>lato</b> \(\color{#f40099}{AC}\) è congruente al lato \(\color{#f40099}{DE}\) per ipotesi
+        </li>    
+    </ul>  
+
+    <br>
+
+    <p>
+        Lato, angolo, lato... ma... possiamo usare il primo criterio di congruenza!<br>
+        Signor Giancaterino, lei non avrà niente da obiettare, dato che <i>crede nel primo criterio</i>.<br>
+        Il triangolo \(APC\) è congruente al triangolo \(DEF\).
+    </p>
+
+    <br>
+
+    
+    <div class="c3">
+        <img class="border" src="images/dimostrazione4.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+        
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+        </p>
+
+    </div>
+    <div class="c3">
+        <img class="border" src="images/dimostrazione5.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+            <br>
+            Sappiamo anche, per ipotesi, che l'angolo \(\color{#ff5500}{DEF}\) è congruente all'angolo 
+            \(\color{#ff5500}{ACB}\).
+        </p>
+
+    </div>
+    <div class="c3">
+        <img class="border" src="images/dimostrazione5.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+        
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+            <br>
+            Sappiamo anche, per ipotesi, che l'angolo \(\color{#ff5500}{DEF}\) è congruente all'angolo 
+            \(\color{#ff5500}{ACB}\).
+            <br>
+            Ma allora...
+        </p>
+        
+    </div>
+    <div class="c3">
+        <img class="border" src="images/dimostrazione6.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+        
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+            <br>
+            Sappiamo anche, per ipotesi, che l'angolo \(\color{#ff5500}{DEF}\) è congruente all'angolo 
+            \(\color{#ff5500}{ACB}\).
+            <br>
+            Ma allora...
+            <br>
+            L'angolo \(\color{red}{ACP}\) è congruente all'angolo \(\color{#ff5500}{ACB}\)</p>
+    </div>
+    <div class="c3">
+        <img class="border" src="images/dimostrazione6.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+        
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+            <br>
+            Sappiamo anche, per ipotesi, che l'angolo \(\color{#ff5500}{DEF}\) è congruente all'angolo 
+            \(\color{#ff5500}{ACB}\).
+            <br>
+            Ma allora...
+            <br>
+            L'angolo \(\color{red}{ACP}\) è congruente all'angolo \(\color{#ff5500}{ACB}\)
+            <br>
+            Ovvero un angolo è uguale ad una sua parte.
+        </p>
+    </div>
+    <div class="c3">
+        <img class="border" src="images/dimostrazione6.png">
+        <br>
+
+        <div class="previousNext noMarginBottom">
+            <button onclick="ss3.previous()">&leftarrow;</button>
+            <button onclick="ss3.next()">&rightarrow;</button>
+        </div>
+        
+        <br>
+        
+        <p>
+            Questo, in particolare, significa che l'angolo \(\color{red}{ACP}\) è congruente all'angolo 
+            \(\color{#ff5500}{DEF}\).
+            <br>
+            Sappiamo anche, per ipotesi, che l'angolo \(\color{#ff5500}{DEF}\) è congruente all'angolo 
+            \(\color{#ff5500}{ACB}\).
+            <br>
+            Ma allora...
+            <br>
+            L'angolo \(\color{red}{ACP}\) è congruente all'angolo \(\color{#ff5500}{ACB}\)
+            <br>
+            Ovvero un angolo è uguale ad una sua parte.
+            <br>
+            <br>
+            Questo, caro signor Giancaterino, <b>è un assurdo</b>.
+            <br>
+            E quindi abbiamo ragione noi: Il secondo criterio è valido! &#x270C;
+        </p>
+    </div> 
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <b>Riassumiamo:</b>
+    
+    <br>
+    <br>
+
+    <div style="border: 0.01rem solid black; padding: 1rem">
+        <div class="c4">
+            <p style="min-height: 22vh">
+                Volevamo dimostrare il secondo criterio.
+            </p>
+            <img src="images/schemaDimostrazione.png" style="border: 0.01rem rgb(215, 215, 215) solid;">
+        </div>
+    
+        <div class="c4">
+            <p style="min-height: 22vh">
+                Abbiamo momentaneamente immaginato che il secondo criterio fosse falso, ovvero abbiamo assunto la prospettiva di
+                Giancaterino.
+            </p>
+            <img src="images/schemaDimostrazione2.png" style="border: 0.01rem rgb(215, 215, 215) solid;">
+        </div>
+    
+        <div class="c4">
+            <p style="min-height: 22vh">
+                Questo significa dare per buono che esistono due triangoli che hanno congruenti angolo-lato-angolo 
+                <b>e</b> non sono congruenti.
+            </p>
+            <img src="images/schemaDimostrazione3.png" style="border: 0.01rem rgb(215, 215, 215) solid;">
+        </div>
+        <div class="c4">
+            <p style="min-height: 22vh">
+                Da questo siamo riusciti a dedurre, con l'aiuto del primo criterio, una cosa assurda.
+            </p>
+            <img src="images/schemaDimostrazione4.png" style="border: 0.01rem rgb(215, 215, 215) solid;">
+        </div>
+        <div class="c4">
+            <p style="min-height: 22vh">
+                Perciò il secondo criterio è necessariamente valido.
+            </p>
+            <img src="images/schemaDimostrazione.png" style="border: 0.01rem rgb(215, 215, 215) solid;">
+        </div>
+        
+        <br>
+
+        <div id="ss4Button" class="previousNext">
+            <button onclick="ss4.previous()">&leftarrow;</button>
+            <button onclick="ss4.next()">&rightarrow;</button>
+        </div>
+    </div>
+    
+    
+
+
+    <div style="min-height: 100vh;"></div>
+    
+    <b id="poligonale">Poligonale</b>
+    <br>
+    <p class="grayBackground">
+        Si dice poligonale una figura costituita da un insieme ordinato di <a href="#segmento">segmenti</a> in cui un segmento e il suo 
+        successivo sono sempre consecutivi.
+    </p>
+    
+    <div style="min-height: 100vh;"></div>
+
+    <b id="segmento">Segmento</b>
+    <p class="grayBackground">
+        Data una <a href="#retta">retta</a> orientata e due suoi <a href="#punto">punti</a> A e B, con A che precede B, chiamiamo segmento AB l’insieme dei punti della retta formato 
+        da A, da B e dai punti che seguono A e precedono B.
+    </p>
+
+    <div style="min-height: 100vh;"></div>
+
+    <b id="punto">Punto</b>
+    <p class="grayBackground">
+        Un punto è un punto... punto e basta!
+    </p>
+
+    <div style="min-height: 100vh;"></div>
+
+    <b id="retta">Retta</b>
+    <p class="grayBackground">
+        You shall not pass!<br><br> Una retta è una retta, stop.
+        <iframe src="https://giphy.com/embed/8abAbOrQ9rvLG" width="480" height="233" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </p>
+    
+
+        
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- PER INSERIRE P5.js
+    
+    HEAD
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="sketch/sketch.js"></script>
+    
+    BODY
+    <div id="try1Container">
+        <div id="try1" class="try1"></div>
+        <button class="try1" onclick="drawBackground()">Pulisci</button>
+    </div>
+    
+-->

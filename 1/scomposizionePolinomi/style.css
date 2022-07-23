@@ -1,0 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----------------- */
+
+#container-container {
+    display: block;
+    position: relative;
+}
+
+#container {
+    width: 100%;
+}
+
+#nextButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

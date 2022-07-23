@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Frazioni equivalenti</title>
+</head>
+<body>
+    <h1>Frazioni equivalenti</h1>
+    <br>
+    <p class="gray">
+        Usando i primi due slider, provate a cambiare il valore del numeratore, del denominatore della frazione.
+        <br>
+        Modificando l'ultimo slider potete ottenere frazioni equivalenti.
+    </p>
+    <br>
+    <div id="container">
+        
+        <div id="frazione-container">
+            <div class="sketch" id="frazione-sketch"></div>
+        </div>
+        
+        <p id="sliderText">\[\dfrac{\color{#ff7b7b}{2}}{3}\]</p>
+        
+
+        <div id="controls-container">
+
+            <div class="input-container">
+                <p class="label">Numeratore: </p>
+                <input class="input" id="num-input" type="range" min="1" value="2" onchange="generaFrazioneContinua(`num`)">
+            </div>
+
+            <div class="input-container">
+                <p class="label">Denominatore: </p>
+                <input class="input" id="den-input" type="range" min="2" max="7" value="3" onchange="generaFrazioneContinua()">
+            </div>
+
+            <div class="input-container">
+                <p class="label">Suddivisioni: </p>
+                <input class="input" id="subdivision-input" type="range" min="1" max="7" value="1" onchange="generaFrazioneContinua()">
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>

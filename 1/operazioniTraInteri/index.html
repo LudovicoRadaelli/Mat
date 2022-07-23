@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Operazioni tra numeri interi</title>
+</head>
+<body>
+    
+    <h1>Operazioni tra numeri interi</h1>
+    
+    <br>
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>L' insieme dei numeri interi \(\mathbb{Z}\)</h2>
+    </div>
+
+    <p>Abbiamo studiato l'inisieme \(\mathbb{N}\) dei numeri naturali</p>
+    <p>
+        \[
+            \mathbb{N} = \left\{ 0, 1, 2, 3, 4, 5, \dots \right\}.
+        \]
+    </p>
+    <p>
+        Definiamo l'insieme dei <b><i>numeri interi</i></b>, che indichiamo con \(\mathbb{Z}\):
+    </p>
+    
+    <br>
+    
+    <p class="formula">
+        \[
+            \mathbb{Z} = \left\{\dots, -5, -4, -3, -2, -1,\,\, 0,\, 1,\, 2,\, 3,\, 4,\, 5,\, \dots \right\}
+        \]
+    </p>
+
+    <br>
+
+    <p>
+        \(\mathbb{Z}\) contiene tutti i numeri naturali, con l'aggiunta dei <b><i>numeri interi 
+        negativi</i></b>.
+    </p>
+    
+    <br>
+    
+    <p>
+        Dato un numero intero, chiameremo <b><i>modulo</i></b> il numero considerato senza segno
+    </p>
+    
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container" style="border: 0.01rem solid #F4B400; padding: 1rem 1rem 1rem 2rem">
+        <p>Il numero <span id="numero">\(\color{red}{-}\color{blue}{3}\)</span> ha </p>
+        
+        <br>
+
+        <ul>
+            <li><b><i>segno</i></b> <span id="segno">\(\color{red}{-}\)</span></li>
+            <br>    
+            <li><b><i>modulo</i></b> <span id="modulo">\(\color{blue}{3}\)</span></li>
+        </ul>
+
+        <br>
+
+        <button onclick="segnoModulo()">Nuovo esempio</button>
+
+        <br>
+
+        <p class="gray">
+            Osservate: se il numero è scritto senza segno, si sottointende che abbia segno \(\color{red}{+}\)
+        </p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Operazioni in \(\mathbb{Z}\)</h2>
+    </div>
+    
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">2.1</span>
+        <h3 class="blue">Somme algebriche</h3>
+    </div>
+    
+    <br>
+
+    <p>
+        Con <b><i>somme algebriche</i></b> intendiamo sia addizioni che sottrazioni. Quindi esempi di somme algebriche sono:
+        \[
+            2 - 7
+        \]
+        \[ 
+            -51 + 7
+        \]
+        \[
+            -2 - 10 
+        \]
+        \[
+            2 + 9
+        \]
+    </p>
+    <p>Per svolgerle distinguo due casi:</p>
+    <br>
+
+    <p id="regolaEsempio1" style="font-size: 1.2rem;"><b>\(\triangleright\) Se hanno lo stesso segno</b></p>
+    
+    <div class="grayBackground regola" style="margin-top: 0;">
+        <ul>
+            <li class="passaggio">
+                Il segno del risultato è il segno dei due numeri addizionati.
+            </li>
+            <li class="passaggio">
+                Il modulo del risultato è la somma dei moduli.
+            </li>
+        </ul>
+    </div>
+    
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container" style="border: 0.01rem solid #F4B400;">
+        <div class="esempio">
+            \(
+                -6 - 8 =  
+            \)
+        </div>
+        <div class="prevNext-container">
+            <button class="prev" onclick = "step(-1,1)" disabled><img class="button-arrow" src="img/left-arrow.png" style="border: 0rem;"></button>
+            <button class="next" onclick = "step(1,1)"><img class="button-arrow" src="img/right-arrow.png" style="border: 0rem;"></button>
+            <button class="again" style="display: none;" onclick="nuovoEsempio(1)">Nuovo esempio</button>
+        </div>
+    </div>
+    <br>
+    <!-- <video src="" controls></video> -->
+    <br>
+
+    <p id="regolaEsempio2" style="font-size: 1.2rem;"><b>\(\triangleright\) Se hanno segno differente</b></p>
+    <div class="grayBackground regola" style="margin-top: 0;">
+        <ul>
+            <li class="passaggio">
+                Il segno del risultato è il segno del numero con modulo maggiore.
+            </li>
+            <li class="passaggio">
+                Il modulo del risultato è la sottrazione tra il modulo più grande ed il modulo più piccolo.
+            </li>
+        </ul>
+    </div>
+    
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container" style="border: 0.01rem solid #F4B400;">
+        <div class="esempio" style="min-height: 5.5rem;">
+            \(
+                -16 +7 =  
+            \)
+        </div>
+
+        <div class="prevNext-container">
+            <button class="prev" onclick = "step(-1,2)" disabled><img class="button-arrow" src="img/left-arrow.png" alt="" style="border: 0rem;"></button>
+            <button class="next" onclick = "step(1,2)"><img class="button-arrow" src="img/right-arrow.png" alt="" style="border: 0rem;"></button>
+            <button class="again" style="display: none;" onclick="nuovoEsempio(2)">Nuovo esempio</button>
+        </div>
+    </div>
+    <br>
+    <!-- <video src="" controls></video> -->
+    <hr>
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">2.2</span>
+        <h3 class="blue">Prodotto tra numeri interi</h3>
+    </div>
+    
+    <div class="grayBackground">
+        <p>Nella moltiplicazione tra numeri interi</p>
+        <ul style="padding: 1rem;">
+            <li>il segno si trova attraverso la regola dei segni, che trovate qua sotto</li>
+            <li>il modulo è dato dal prodotto dei moduli</li>
+        </ul>
+    </div>
+    
+    <br>
+
+    <table style=" width: 70%; margin: auto;">
+        <tr>
+            <th colspan="2">Regola dei segni</th>
+        </tr>
+        <tr>
+            <td style="width: 50%;">\[ \color{red}{+} \color{black}{\,\,\cdot\,\,} \color{red}{+} = \color{red}{+} \]</td>
+            <td style="width: 50%;">\[ \color{blue}{-} \color{black}{\,\,\cdot\,\,} \color{blue}{-} = \color{red}{+}\]</td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">\[ \color{red}{+} \color{black}{\,\,\cdot\,\,} \color{blue}{-} = \color{blue}{-} \]</td>
+            <td style="width: 50%;">\[ \color{blue}{-} \color{black}{\,\,\cdot\,\,} \color{red}{+} = \color{blue}{-}\]</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="example-container">
+        <div id="esempioProdotto">
+            \[
+                \left(-3\right)\cdot\left(-7\right) = 21
+            \]
+        </div>
+        <button id="generaEsempioProdotto" onclick="generaEsempioProdotto()">Nuovo esempio</button>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">2.3</span>
+        <h3 class="blue">Potenze di numeri negativi</h3>
+    </div>
+
+    <div class="grayBackground">
+        <p style="text-align: center;">
+            ⚠️⚠️⚠️
+        </p>
+        <p>
+            \[-3^{\color{red}{2}} \quad\text{è diverso da}\quad \left(-3\right)^{\color{red}{2}}\]        
+        </p>
+    </div>
+
+    <br>
+    
+    <p>
+        &bullet; Nel primo caso la potenza agisce solamente sul \(3\).
+        \[
+            -3^{\color{red}{2}} = -9
+        \]
+    </p>    
+    <p> 
+        &bullet; Nel secondo caso la potenza agisce su tutto il numero contenuto in parentesi, ovvero su \(-3\).
+        \[
+            \left(-3\right)^{\color{red}{2}} = 9
+        \]
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p style="font-size: 1.2rem;">
+        \(\triangleright\) <b>Se l'esponente è pari</b>
+    </p>
+    
+    <br>
+
+    <p>
+        Svolgiamo la potenza \(\left(-2\right)^4\)
+    </p>
+    
+    <p class="formula">
+        \[
+            \left(\color{blue}{-}\color{black}{2}\right)^4 = 
+            \color{gray}{\underset{\color{red}{+}}{\underbrace{\color{black}{\left(\color{blue}{-}\color{black}{2}\right) \cdot \left(\color{blue}{-}\color{black}{2}\right)}}}} 
+            \cdot 
+            \color{gray}{\underset{\color{red}{+}}{\underbrace{\color{black}{\left(\color{blue}{-}\color{black}{2}\right) \cdot \left(\color{blue}{-}\color{black}{2}\right)}}}}  
+            = \color{red}{+}\color{black}{16}
+        \]
+    </p>
+
+    <p>
+        I segni \(\color{blue}{-}\) si moltiplicano a coppie dando come risultato \(\color{red}{+}\)
+    </p>
+
+    <br>
+    <br>
+
+    <p style="font-size: 1.2rem;">
+        \(\triangleright\) <b>Se l'esponente è dispari</b>
+    </p>
+
+    <br>
+    
+    <p>
+        Svolgiamo la potenza \(\left(-2\right)^5\)
+    </p>
+    
+    <p class="formula">
+        \[
+            \begin{align*}
+                \left(\color{blue}{-}\color{black}{2}\right)^5 =&\,\, 
+                \color{gray}{\underset{\color{red}{+}}{\underbrace{\color{black}{\left(\color{blue}{-}\color{black}{2}\right) \cdot \left(\color{blue}{-}\color{black}{2}\right)}}}} 
+                \cdot 
+                \color{gray}{\underset{\color{red}{+}}{\underbrace{\color{black}{\left(\color{blue}{-}\color{black}{2}\right) \cdot \left(\color{blue}{-}\color{black}{2}\right)}}}}  
+                \cdot 
+                \color{gray}{\underset{\color{blue}{-}}{\underbrace{\color{black}{\left(\color{blue}{-}\color{black}{2}\right)}}}}  
+                \\\\
+                =& \,\, \color{blue}{-}\color{black}{32}
+                
+            \end{align*}
+        \]
+    </p>
+
+    <p>
+        I segni \(\color{blue}{-}\) si moltiplicano a coppie dando come risultato \(\color{red}{+}\), ma questa volta 
+        <b>rimane fuori</b> un segno \(\color{blue}{-}\). Di conseguenza il segno del risultato è \(\color{blue}{-}\).
+    </p>
+
+    <br>
+    <br>
+
+    <p>
+        In generale
+    </p>
+
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Se la potenza di un numero negativo ha esponente <b>pari</b> il risultato ha segno <span style="color: red">positivo</span>
+            </li>
+            <br>
+            <li>
+                Se la potenza di un numero negativo ha esponente <b>dispari</b> il risultato ha segno <span style="color: blue">negativo</span>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- https://ludovicoradaelli.github.io/Matematica/2022/ -->

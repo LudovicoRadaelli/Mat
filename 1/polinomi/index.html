@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <title>Polinomi</title>
+</head>
+<body>
+    <h1>Polinomi</h1>
+
+    <br>    
+
+    <p class="grayBackground">
+        Con il nome <b>polinomio</b> indichiamo una somma algebrica di monomi.
+    </p>
+
+    <br>
+
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Operazioni tra polinomi</h2>
+    </div>
+    
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">1.1</span>
+        <h3 class="blue">Somma</h3>
+    </div>
+
+    <br>
+
+    <video src="img/sommaPolinomi.mp4" controls></video>
+
+    <br>
+
+    <br>
+    <hr>
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">1.2</span>
+        <h3 class="blue">Sottrazione</h3>
+    </div>
+
+    <br>
+
+    <video src="img/differenzaPolinomi.mp4" controls></video>
+
+    <br>
+    
+    <br>
+    <hr>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">1.3</span>
+        <h3 class="blue">Moltiplicazione</h3>    
+    </div>
+
+    
+    <br>
+
+    <video src="img/moltiplicazionePolinomi.mp4" controls></video>
+
+    <br>
+    
+    
+
+    <h3 class="yellow">Esempi</h3>
+    
+    <div id="container-container" class="esempi-container" style="width: 98%;">
+        <br>
+        <p class="gray">
+            Premendo il pulsante in alto a sinistra potete visualizzare il passaggio successivo.
+            Provate a svolgere la moltiplicazione da soli, poi controllate se i passaggi sono corretti.
+        </p>
+        <div id="container" class="formula"></div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2 id='prodottiNotevoli'>Prodotti notevoli</h2>
+    </div>
+
+    <br>
+
+    <p>
+        I prodotti notevoli sono prodotti dotati di particolari strutture, per i quali è possibile
+        applicare delle regole che abbreviano i calcoli.
+    </p>
+
+    <br>
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">2.1</span>
+        <h3 class="blue" id="sommaPerDifferenza">Somma per differenza</h3>
+    </div>
+
+    <p class="grayBackground">
+        \[
+            \left(\color{red}{A}  \color{black}{+} \color{blue}{B}\right) \color{black}{} \left(\color{red}{A}  \color{black}{+} \color{blue}{B}\right) = 
+            \color{red}{A}^{\color{black}{2}}  - \color{blue}{B}^{\color{black}{2}} 
+        \]
+    </p>
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container"  style="width: 100%;">
+        <div id="sommaPerDifferenzaWrapper" class="wrapper">
+            <div id="button-container" style="display: flex; flex-direction: row; justify-content: center; align-items: center;"></div>
+        </div>
+        <br>
+        <div id="container1" class="container">
+    </div>
+    
+        
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">2.2</span>
+        <h3 class="blue">Quadrato di binomio</h3>
+    </div>
+    
+    <p class="grayBackground">
+        \[
+            \left(\color{red}{\,A\,} \color{black}{+} \color{blue}{\,B\,} \color{black}{}\right)^2 = \color{red}{A}\color{black}{}^2 + \color{blue}{B}\color{black}{}^2 + 2\color{red}{A}\color{blue}{B}
+        \]
+    </p>
+    <br>
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container" style="width: 100%;">
+        <div id="quadratoDiBinomioWrapper" class="wrapper">
+            <div id="button-container2" style="display: flex; flex-direction: row; justify-content: center; align-items: center;"></div>
+        </div>
+        <br>
+        <div id="container2" class="container"></div>
+    </div>
+    
+    <br>
+    <br>
+    
+
+    
+    <!-- <div id="cuboDiBinomioWrapper" class="wrapper">
+        <h2 id="cuboDiBinmonioTitle" class="title">Cubo di binomio</h2>
+    </div>
+    <div id="container3" class="container"></div> -->
+    
+    <script src="monomialAndPolynomial.js"></script>
+    <script src="prodottoPolinomi.js"></script>
+    <script src="sommaPerDifferenza.js"></script>   
+    <script src="quadratoDiBinomio.js"></script>
+    <!-- <script src="cuboDiBinomio.js"></script> -->
+    
+    
+    
+    
+    
+</body>
+
+</html>

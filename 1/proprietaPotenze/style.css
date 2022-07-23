@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 90%;
+        margin: auto;
+        font-size: 17px;
+        line-height: 1.5rem;
+    }
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 500px;
+        margin: auto;
+        font-size: 20px;
+        line-height: 1.7rem;
+    }
+}
+
+
+h1 {
+    width: 100%;
+    line-height: 2rem;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #DB4437;
+    border-bottom: 0.2rem #DB4437 solid;
+    margin-top: 0rem;
+    margin-bottom: 1.1rem;
+}
+
+
+
+#potenze {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+video, img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #4285F4; 
+}
+
+.h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 0.25rem;
+}
+
+
+.par {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    aspect-ratio: 1;
+    width: 3rem;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    
+    text-align: center;
+    vertical-align: middle;
+    border: 0.2rem double #4285F4;
+    border-radius: 100%;
+    background-color: #4285F4;
+    color: white;
+}
+
+table, td, th {
+    border: 0.01rem solid black; 
+}
+
+td, th {
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+h3 {
+    font-size: 1.3rem;
+    color: #4285F4; 
+}
+
+.h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+
+.sub-par {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    aspect-ratio: 1;
+    width: 2rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    
+    text-align: center;
+    vertical-align: middle;
+    border: 0.2rem double #4285F4;
+    border-radius: 100%;
+    background-color: #4285F4;
+    color: white;
+}
+
+
+.geogebra-container {
+    background-color: rgb(240, 240, 240);
+}
+
+.ggbTransform {
+    width: 100% !important;
+}
+
+button {
+    display: block;
+    width: auto;
+    margin: auto;
+    padding: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem lightgray;
+}
+
+.concavita {
+    display: inline;
+    width: 1rem;
+    
+}
+
+#gimmiSpace {
+    height: 50vh;
+}
+
+.grayBackground {
+    background-color: rgb(195, 195, 195);
+    padding: 1rem;    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0.5rem 0.5rem 0.6rem gray;
+}

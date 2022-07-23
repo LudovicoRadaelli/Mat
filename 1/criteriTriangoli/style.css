@@ -1,0 +1,14 @@
+.previousNext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0rem;
+}
+
+.giphy-embed {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 1em;
+}

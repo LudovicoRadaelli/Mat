@@ -1,0 +1,47 @@
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#frazione-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sliderText {
+    font-size: 1.7rem;
+}
+
+#controls-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+.label {
+    width: 40%;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.input {
+    margin-left: 1rem ;
+}
+

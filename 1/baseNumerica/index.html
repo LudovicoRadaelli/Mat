@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Basi numeriche</title>
+</head>
+<body>
+    <h1>Basi numeriche</h1>
+    
+    <br>
+
+    <p class="gray">
+        Cliccate sulle banconote per selezionarle.
+        <br>
+        Per inserire un'altra base usate la casella apposita.
+    </p>
+    <br>
+    
+    <div id="app-container">
+        <div id="listaBasi-container">
+            <div>Base</div>
+            <!-- <input type="number" id="listaBasi" value="2" onchange="generaBanconote()"> -->
+            <select id="listaBasi" onclick="generaBanconote()">
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        
+        <hr>
+        <br>
+        <div id="banconote-container">
+            <div class="pow"></div>
+            <div class="pow"></div>
+            <div class="pow"></div>
+            <div class="pow"></div>
+            <div class="pow"></div>
+        </div>
+    
+        <div id="banconoteSelezionate">
+            <div class="powSelected">0</div>
+            <div class="powSelected">0</div>
+            <div class="powSelected">0</div>
+            <div class="powSelected">0</div>
+            <div class="powSelected">0</div>
+        </div>
+
+        <br>
+        <div id="totale"><b>0€</b> \(\longleftrightarrow\) (0)<sub>2</sub></div>
+        <br>
+    </div>
+
+    
+
+<!-- 
+    LICENZA
+
+    <div class="gray">
+        <span style="font-size: 0.7rem;">Quest'opera è distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - Non opere derivate 4.0 Internazionale</a>.</span>
+        <br>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            <img alt="Licenza Creative Commons" style="border-width:0; width: 30%; min-width:75px; max-width: 100px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+        </a>
+    </div>
+    <br>
+    <br> 
+-->
+    
+<script src="script.js"></script>
+</body>
