@@ -189,6 +189,213 @@
     <br>
     <hr>
     <br>
+
+
+    <!-- TRAMITE QUADRATO DI BINOMIO -->
+    <div class="h2">
+        <span class="par">3</span>
+        <h2>Raccoglimento tramite quadrato di binomio</h2>
+    </div>
+
+
+    <br>
+
+    <h3 class="yellow" id="esempio3-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio3">            
+            <p>
+                Scomponiamo il polinomio 
+                \[
+                    25x^2 -10x +4
+                \]
+            </p>
+
+            <br id="squareBinomialSlide-container" >
+            <div style="border: 0.01rem solid lightgray; padding: 1rem; min-height: 60vh;">
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">
+                        Prima di tutto verifichiamo che il polinomio contenga due quadrati
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                \color{red}{25x^{2}} & -10x & +4\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">
+                        \(25x^2\) è il quadrato di \(5x\), infatti 
+                        \[ 
+                            \left(5x\right)^2 = 25x^2
+                        \]
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4\\
+                                \downarrow&  & \\
+                                \color{red}{5x}&  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">
+                        
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & \color{red}{+4}\\
+                                \downarrow &  & \\
+                                5x^2 &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        \(+4\) è il quadrato di \(2\), infatti 
+                        \[ 
+                            \left(2\right)^2 = 4
+                        \]
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4\\
+                                \downarrow &  &\downarrow\\
+                                5x&  & \color{red}{2}
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & \color{red}{-}\color{black}{}10x & +4\\
+                                \downarrow &  &\downarrow\\
+                                5x&  & 2
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        Il segno del termine rimanente è \(-\)
+                        \[ 
+                            -10x
+                        \]
+                    </p>
+                </div>
+
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4\\
+                                \downarrow &  &\downarrow\\
+                                5x & \color{red}{-}  & 2
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4 \\
+                                \downarrow &  &\downarrow\\
+                                \Big(5x & - & 2\Big)^2
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                <div class="squareBinomialSlide">
+                    <p id="schemeSquareBinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                25x^{2} & -10x & +4 \\
+                                \downarrow &  &\downarrow\\
+                                \Big(5x & - & 2\Big)^2
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSquareBinomial" style="color: gray; text-align:center; min-height: 5rem;">  
+                        ⚠️⚠️⚠️⚠️
+                        <br>
+                        <br>
+                        Controlliamo che il termine 
+                        \[
+                            -10x
+                        \] 
+                        sia il doppio prodotto tra \(5x\) e \(-2\):
+                    </p>
+                    <br>
+                    <p style="color: gray; text-align:center;">
+                        \[
+                            2 \cdot \left(5x\right) \left(-2\right) = -10x
+                        \]
+                    </p>
+                </div>
+
+
+                <br>
+                <button id="slideSquareBinomial-button" onclick="nextSlideSquareBinomial()">Avanti</button>
+
+            </div>
+            
+            <br>
+            <p id="squareBinomial-conclusion" class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    25x^2 -10x +4 = \left(5x -2\right)^2             
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaEsempio3" onclick="generaEsempio(3)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
     
 
     
