@@ -40,12 +40,15 @@ function Monomial(sign, num, den, literal){
 
         /* Per controllare il caso in cui il monomio sia 1 */
         if(this.literal[0] === 0 && this.literal[1] === 0 && this.literal[2] === 0 && this.literal[3] === 0 && this.literal[4] === 0 && this.literal[5] === 0 && (this.num === 1 || this.num === -1)) {
-                        
-            if(sign === 0) {
+
+            str = "";
+
+            if(this.sign == 0) {
                 str = "1"
             } else {
                 str = "-1"
             }
+
         }
         
         return str
@@ -83,7 +86,7 @@ function Monomial(sign, num, den, literal){
         
         if(this.literal[0] === 0 && this.literal[1] === 0 && this.literal[2] === 0 && this.literal[3] === 0 && this.literal[4] === 0 && this.literal[5] === 0 && (this.num === 1 || this.num === -1)) {
             
-            if(sign === 0) {
+            if(this.sign === 0) {
                 str = "+1"
             } else {
                 str = "-1"
@@ -91,6 +94,13 @@ function Monomial(sign, num, den, literal){
         }
         
 
+        return str
+    }
+
+    //evidenzia il monomio del colore passato come parametro
+    this.color = function(color) {
+        let str = this.display();
+        str = `\\color{${color}}{${str}}\\color{black}{}`
         return str
     }
 
@@ -130,7 +140,7 @@ function Monomial(sign, num, den, literal){
         
         if(this.literal[0] === 0 && this.literal[1] === 0 && this.literal[2] === 0 && this.literal[3] === 0 && this.literal[4] === 0 && this.literal[5] === 0 && (this.num === 1 || this.num === -1)) {
             console.log(`${this.literal}`)
-            if(sign === 0) {
+            if(this.sign === 0) {
                 str = "\\color{red}{+}\\color{black}{1}"
             } else {
                 str = "\\color{red}{-}\\color{black}{1}"
@@ -428,7 +438,7 @@ function Monomial(sign, num, den, literal){
 
 
 function randomMonomial() {
-    var a = new Monomial(rnd(0,1),rnd(1,3),rnd(1,5),[rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5)]);
+    var a = new Monomial(rnd(0,1),rnd(1,9),rnd(1,5),[rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5),rnd(0,5)]);
     simplify(a);
     return a
 }
@@ -464,6 +474,7 @@ function Polynomial(v) {
         return segnoStr + this.display()
         
     }
+
 
     this.redSign = function(m) {
 
@@ -663,6 +674,12 @@ function lcm(x, y) {
 //numero random compreso tra min e max (inclusi)
 function rnd(min,max) {
     return Math.floor(Math.random() * (max+1 - min) ) + min;
+}
+
+//evidenzia il polinomi del colore passato come parametro
+color = function(col, str) {
+    str = `\\color{${col}}{${str}}\\color{black}{}`
+    return str
 }
 
 
