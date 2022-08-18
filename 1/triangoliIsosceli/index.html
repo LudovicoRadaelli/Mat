@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proprietà triangoli isosceli</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="sketch/sketch1.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <h1>Proprietà dei triangoli isosceli</h1>
+
+    <br>
+    
+    <div class="grayBackground">
+        <b>Definizione</b>
+        <br>
+        <br>
+        <p>
+            Un triangolo si dice <b>isocele</b> se ha due lati congruenti.
+        </p>
+        <br>
+        <img src="images/isoscele1.png">
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="grayBackground">
+        <b>Teorema del triangolo isoscele</b>
+        <br>
+        <br>
+        <p>Sia \(ABC\) un triangolo.</p>
+        <p><b>Se</b> \(ABC\) è isoscele,</p>
+        <p><b>allora</b> ha gli angoli alla base congruenti.</p>
+    
+    </div>
+
+    <br>
+    <div class="dim"><i>Dimostazione</i></div>
+    <br>
+
+    
+
+    <div style="border: 0.01rem solid lightgray; padding: 1rem;">
+        <p>
+            Tracciamo la <a id="bisettice-a" href="./definizioni.html#bisettrice">bisettrice</a> dell'angolo \(\color{#9933ff}{ACB}\), 
+            quello contenuto tra i lati congruenti.
+        </p>
+    
+        <br>
+    
+        <div class='sticky-container'>
+            <img class='sticky' src='images/isoscele5.png'>
+            <br>
+    
+            <p>
+                Poniamo l'attenzione su i due triangoli che si formano: \(\overset{\triangle}{ADC}\) e \(\overset{\triangle}{DBC}\).
+            </p>
+            <br>
+            <ul>
+                <li>
+                    Il <b>lato</b> \(\color{#00ca00}{CD}\) appartiene sia al triangolo 
+                    \(\overset{\triangle}{ADC}\) che al triangolo \(\overset{\triangle}{DCB}\).
+                </li>
+                <br>
+                <li>
+                    Gli <b>angoli</b> \(\color{#7f00ff}{\widehat{ACD}}\) e \(\color{#7f00ff}{\widehat{DCB}}\) 
+                    sono congruenti perché \(\color{#00ca00}{CD}\) è la bisettice dell'angolo \(\widehat{ACB}\).
+                </li>
+                <br>
+                <li>
+                    I <b>lati</b> \(\color{red}{AC}\) e \(\color{red}{CB}\) sono congruenti perché per ipotesi 
+                    il triangolo \(\overset{\triangle}{ABC}\) è isoscele. 
+                </li>
+            </ul>
+            <br>
+            <p>
+                Lato, angolo, lato... uhmmm ma certo!<br> Possiamo appellarci al <a href="../criteriTriangoli/index.html">primo criterio</a> per affermare che i triangoli
+                \(\overset{\triangle}{ADC}\) e \(\overset{\triangle}{DCB}\) sono congruenti.
+            </p>
+            <br>
+            <p>
+                Se questi due triangoli sono congruenti, in particolare i loro angoli \(\widehat{CAD}\) e \(\widehat{CBD}\) 
+                sono congruenti.
+            </p>
+            <br>
+            <p>
+                \(\widehat{CAD}\) è solo un altro modo di chiamare l'angolo \(\widehat{CAB}\). Stesso vale per \(\widehat{DCB}\), che possiamo 
+                chiamare anche \(\widehat{ABC}\).
+            </p>
+            <br>
+            <p>
+                Quindi abbiamo proprio dimostrato che l'angolo \(\widehat{CAB}\) è congruente all'angolo \(\widehat{ABC}\). 
+            </p>
+            <div class="qed-container">
+                <div class="qed">&square;</div>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p>
+        Bene, ora sappiamo che 
+    </p>
+
+    <br>
+
+    <div class="grayBackground">
+        <b>se</b> <span style="color: darkcyan">un triangolo ha due lati congruenti</span>, <br>
+        <b>allora</b> <span style="color: darkgoldenrod">ha due angoli congruenti</span>.
+    </div>
+
+    <br>
+
+    <p>
+        Domanda: è vero anche il viceversa? Cioè che
+    </p>
+    
+    <br>
+
+    <div class="grayBackground">
+        <b>se</b> <span style="color: darkgoldenrod">ha due angoli congruenti</span>,<br>
+        <b>allora</b> <span style="color: darkcyan">un triangolo ha due lati congruenti</span>.
+    </div>
+    
+    <br>
+    
+    <p>
+        ...Boh! Potrebbe essere vero o falso.
+        <br>
+        <br>
+        Se fosse vero, <u>tutti</u> i triangoli con due angoli congruenti dovrebbero avere automaticamente
+        due lati congruenti.
+        <br>
+        <br>
+        Se fosse falso, esisterebbe <u>almeno un</u> un triangolo avente due angoli congruenti 
+        <b>ed</b> i lati non congruenti.
+    </p>
+    
+
+    <div class="centred">
+        <span style="color: darkgoldenrod">due angoli congruenti</span>
+        <br>
+        <b>ed</b> <span style="color: darkcyan">i lati <b>non</b> congruenti</span>.
+    </div>
+
+    <p>
+        Proviamo a disegnare un triangolo che abbia queste due proprietà!
+    </p>
+    <div id="try1Container" class="centred">
+        <p style="color:gray; text-align: center;">Clicca nel riquadro per disegnare</p>
+        <div id="try1" class="try1"></div>
+        <button class="try1" onclick="drawBackground()">Pulisci</button>
+    </div>
+    
+    
+    
+    <p>
+        Anche se scambiamo ipotesi e tesi, il teorema sembra proprio vero!
+    </p>
+    <p>
+        Ma come al solito c'è qualcuno che non si fida....
+    </p>
+    
+    <br>
+    <img src="images/giancaterino.png" class="image"></img>
+    <br>
+
+    <p>
+        Dimostriamo a Giancaterino che anche questa volta abbiamo ragione.
+    </p>
+
+    <br>
+    <div class="grayBackground">
+
+        <b>Teorema inverso del triangolo isoscele</b>
+        
+        <br>
+        <br>
+
+        <p>Sia \(ABC\) un triangolo.</p>
+        <p><b>Se</b> \(ABC\) ha due angoli congruenti,</p>
+        <p><b>allora</b> è isoscele.</p>
+
+    </div>
+    
+    <br>
+
+    <div><i>Dimostazione</i></div>
+
+    <br>
+
+    <div>
+        
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+        
+        <br>
+
+        <p>
+            Prolunghiamo i lati \(CA\) e \(CB\) di due segmenti congruenti \(\color{#f40099}{AE}\) e \(\color{#f40099}{BF}\).<br>
+        </p>
+
+        <br>
+
+        <div class="sticky-container" style="border: 0.01rem lightgray solid; padding: 0.5rem">
+            <div class="sticky geogebra-container" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                <div id="geogebra2" class="geogebra"></div>
+            </div>
+            
+            
+            <br>
+
+            <p>
+                Gli angoli \(\color{#00ca00}{CAB}\) e \(\color{#0000ff}{BAE}\) sono <a>supplementari</a>.<br>
+                Anche gli angoli \(\color{#00ca00}{CBA}\) e \(\color{#0000ff}{ABF}\) sono <a>supplementari</a>.<br>
+                Gli angoli  \(\color{#00ca00}{CAB}\) e \(\color{#00ca00}{CBA}\) sono congruenti.<br><br>
+                Quindi \(\color{#0000ff}{BAE}\) e \(\color{#0000ff}{ABF}\) sono congruenti.
+            </p>
+        </div>
+        
+
+        <br>
+        <br>
+
+        <div class="sticky-container" style="border: 0.01rem lightgray solid; padding: 0.5rem">
+            <div class="sticky" style="display: flex; flex-direction:row; justify-content:flex-start; align-items: center; width: 100%; overflow-x: auto;">
+                <img src="images/isoscele2.png" style="width: 100%;">
+                <img src="images/isoscele3.png" style="width: 100%;">
+            </div>
+            <p style="text-align: center; color:gray; ">
+                Scorri verso destra per vedere anche l'altra figura
+            </p>
+    
+            <br>
+            
+            <p><!--TODO inserisci bottoni su AEB e ABF-->
+                Guardiamo i triangoli \(ABF\) ed \(AEB\):
+            </p>
+    
+            
+            <!--
+                arancione: #ff5500
+                rosa: #f40099
+            -->
+            <br>
+            <ul>
+                <li>
+                    I <b>lati</b> \(\color{#f40099}{BF}\) e \(\color{#f40099}{AE}\) sono congruenti 
+                    <i>per costruzione</i>.
+                </li>
+                <br>
+                <li>
+                    Abbiamo visto che gli <b>angoli</b> \(\color{#0000ff}{ABF}\) ed \(\color{#0000ff}{EAB}\) 
+                    sono congruenti.
+                </li>
+                <br>
+                <li>
+                    Il <b>lato</b> \(\color{#ff5500}{AB}\) è in comune.<br>
+                </li>
+            </ul>
+            <br>
+    
+            <p>
+                Lato, angolo, lato... possiamo appellarci di nuovo al primo criterio per affermare che i triangoli
+                \(ABF\) ed \(EAB\) sono congruenti.
+            </p>
+        </div>
+        
+        
+        <br>
+
+        <div class="sticky-container" style="border: 0.01rem lightgray solid; padding: 0.5rem">
+            <div class="sticky" style="display: flex; flex-direction:row; justify-content:flex-start; align-items: center; width: 100%; overflow-x: auto;">
+                <img src="images/isoscele6.png" style="width: 100%;">
+                <img src="images/isoscele7.png" style="width: 100%;">
+            </div>
+            <p style="text-align: center; color:gray; ">
+                Scorri verso destra per vedere anche l'altra figura
+            </p>
+    
+            <br>
+            
+            <p>
+                Ora concentriamoci sui triangoli \(AFC\) e \(EBC\)
+            </p>
+            
+            <br>
+            <ul>
+                <li>
+                    Gli <b>angoli</b> \(\color{blue}{AFB}\) e \(\color{blue}{AEB}\) sono congruenti,<br>
+                    <i>perché fanno parte dei triangoli congruenti \(ABF\) ed \(EAB\)</i>
+                </li>
+                <br>
+                <li>                        
+                    Il <b>lato</b> \(\color{#00cc00}{AF}\) è congruente al lato \(\color{#00cc00}{EB}\),<br>
+                    <i>perché fanno parte dei triangoli congruenti \(ABF\) ed \(EAB\)</i>
+                </li>
+                <br>
+                <li>
+                    Gli <b>angoli</b> \(CAF\) e \(CBE\) sono congruenti,<br>
+                    <i>perché sono formati rispettivamente dagli angoli \(\color{red}{FAB}\), \(\color{#00c5c5}{BAC}\) e 
+                        \(\color{red}{ABE}\), \(\color{#00c5c5}{ABC}\)</i><br>
+                </li>
+            </ul>
+    
+            <br>
+    
+            <p>
+                angolo, lato, angolo... possiamo appellarci al <a href="../criteriTriangoli/index.html">secondo criterio</a> per affermare che i triangoli \(AFC\) 
+                ed \(EBC\) sono congruenti. 
+            </p>
+        </div>
+        
+
+        <br>
+        <img src="images/isoscele8.png"></img>
+        <br>
+        <p>
+            Concludiamo finalmente: <br><br>
+            \(\color{red}{AC}\) e \(\color{red}{CB}\) sono congruenti perché sono la differenza di lati congruenti:<br> 
+        </p>
+        <p class="centred">\(\color{red}{AC}\) = \(EC - \color{blue}{EA}\)</p>
+        <p class="centred">\(\color{red}{CB}\) = \(CF - \color{blue}{BF}\)</p>
+        <div class="qed-container">
+            <div class="qed">&square;</div>
+        </div>
+        
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- PER INSERIRE P5.js
+    
+    HEAD
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="sketch/sketch.js"></script>
+    
+    BODY
+    <div id="try1Container">
+        <div id="try1" class="try1"></div>
+        <button class="try1" onclick="drawBackground()">Pulisci</button>
+    </div>
+    
+-->

@@ -1,0 +1,40 @@
+a {
+    color: black;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2rem;
+}
+
+.sticky-container {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0.5rem;
+    z-index: 1;
+}
+
+.centred {
+    width: fit-content;
+    padding: 1rem;    
+    margin: 1rem auto;
+}
+
+.qed {
+    position: relative; 
+    width: 100%;
+}
+
+.qed-container {
+    position: absolute; 
+    right: 0.5rem;
+    width: fit-content; 
+}
+
+.geogebra {
+    width: 100%;
+}
+
+.definizioni {
+    margin: 1rem auto 100vh auto;
+}
