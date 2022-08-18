@@ -39,7 +39,7 @@ function Monomial(sign, num, den, literal){
         }
 
         /* Per controllare il caso in cui il monomio sia 1 */
-        if(this.literal[0] === 0 && this.literal[1] === 0 && this.literal[2] === 0 && this.literal[3] === 0 && this.literal[4] === 0 && this.literal[5] === 0 && (this.num === 1 || this.num === -1)) {
+        if(this.literal[0] === 0 && this.literal[1] === 0 && this.literal[2] === 0 && this.literal[3] === 0 && this.literal[4] === 0 && this.literal[5] === 0 && (this.num === 1 && this.den === 1)) {
 
             str = "";
 
@@ -434,6 +434,32 @@ function Monomial(sign, num, den, literal){
 
         return str
     }
+
+    this.coeff = function() {
+        let coeff = parseFloat(this.num/this.den);
+        if(this.sign === 1) {
+            coeff = -coeff;
+        }
+        return coeff
+    }
+
+    this.xExp = function() {
+        return this.literal[3];
+    }
+
+    //valuta un polinomio nella sola incognita x in un punto c assegnato
+    this.evalX = function(c) {
+        return this.coeff()*Math.pow(c, this.xExp());
+    }
+
+    //valuta un polinomio nella sola incognita x in un punto c assegnato (funziona solo per valori interi)
+    //defColor è il colore di default, mentre subColor è il colore della stringa sostituita
+    this.displayEvalX = function(c, defColor, subColor) {
+        let str = `${this.displayWithSign()}`;
+        str = str.replace(/x/g, `\\color{${subColor}}{\\left(${c}\\right)}\\color{${defColor}}{}`)
+
+        return str 
+    }
 }
 
 
@@ -627,6 +653,19 @@ function sum(a,b) {
     return s
 }
 
+//opposto di un dato monomio
+function opposite(a) {
+    let b = new Monomial((a.sign + 1)%2, a.num, a.den, a.literal);
+    return b
+}
+
+//sottrazione tra monomi
+function difference(a, b) {
+    let c = opposite(b);
+    let d = sum(a, c)
+    return d
+}
+
 //prodotto tra monomi
 function product(a,b) {
     
@@ -644,6 +683,25 @@ function product(a,b) {
     var p = new Monomial(pSign,pNum,pDen,pLiteral);
     
     return p 
+
+}
+
+//divisione tra monomi
+function division(a,b) {
+    
+    var dSign = (a.sign + b.sign)%2; 
+    
+    var dNum = a.num*b.den;
+    var dDen = a.den*b.num;
+
+    var dLiteral = [];
+    for(var i = 0; i < 6; i++) {
+        dLiteral[i] = a.literal[i] - b.literal[i]; 
+    }
+
+    var d = new Monomial(dSign, dNum, dDen, dLiteral);
+    
+    return simplify(d)
 
 }
 
