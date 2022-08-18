@@ -370,11 +370,11 @@
                         \]
                     </p>
                 </div>
-
-
-                <br>
+            </div>
+            <br>
+            <div class="button-container" style="width: 100%; margin: auto; display:flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlideSquareBinomial-button" onclick="previousSlideSquareBinomial()">Indietro</button>
                 <button id="slideSquareBinomial-button" onclick="nextSlideSquareBinomial()">Avanti</button>
-
             </div>
             
             <br>
@@ -396,7 +396,1802 @@
     <br>
     <hr>
     <br>
+
+
+    <!-- TRAMITE SOMMA PER DIFFERENZA -->
+    <div class="h2">
+        <span class="par">4</span>
+        <h2>Raccoglimento tramite somma per differenza</h2>
+    </div>
+
+
+    <br>
+
+    <h3 class="yellow" id="esempio4-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio4">            
+            <p>
+                Scomponiamo il polinomio 
+                \[
+                    100x^4 - 9
+                \]
+            </p>
+
+            <br id="sumByDifferenceSlide-container" >
+            <div style="border: 0.01rem solid lightgray; padding: 1rem; min-height: 60vh;">
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                100x^4 & - & 9\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        Prima di tutto verifichiamo che il polinomio contenga due quadrati
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                \color{red}{100x^{4}} & - & 9\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        \(100x^4\) è il quadrato di \(10x^2\), infatti 
+                        \[ 
+                            \left(10x^2\right)^2 = 100x^4
+                        \]
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9\\
+                                \downarrow&  & \\
+                                \color{red}{10x^2}&  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & \color{red}{9}\\
+                                \downarrow &  & \\
+                                10x^2 &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        \(9\) è il quadrato di \(3\), infatti 
+                        \[ 
+                            \left(3\right)^2 = 9
+                        \]
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9\\
+                                \downarrow &  &\downarrow\\
+                                10x^2&  & \color{red}{3}
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                \color{gray}{+}\color{black}{}100x^{4} & \color{red}{-}\color{black}{} & 9\\
+                                \downarrow &  &\downarrow\\
+                                10x^2 &  & 3
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:left; min-height: 5rem;">  
+                        Il segno del primo termine è \(+\), quello del secondo termine è \(-\). 
+                        <br>
+                        Il polinomio quindi è il risultato di una somma per differenza.
+                    </p>
+                </div>
+
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9  = 
+                            \end{array}
+                        \]
+                        \[
+                        = \Big( 10x^2 \,\,\color{blue}{+}\,\, \color{black}{} 3\Big) \cdot  \Big( 10x^2 \,\,\color{blue}{-}\,\, \color{black}{} 3\Big)
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="button-container" style="width: 100%; margin: auto; display:flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlideSumByDifference-button" onclick="previousSlideSumByDifference()">Indietro</button>
+                <button id="slideSumByDifference-button" onclick="nextSlideSumByDifference()">Avanti</button>
+            </div>
+            
+            <br>
+            <p id="sumByDifference-conclusion" class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    100x^4 - 9 = \left(10x^2 + 3\right) \cdot \left(10x - 3\right)
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaEsempio4" onclick="generaEsempio(4)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- SOMMA PER DIFFERENZA DOPPIONE -->
+    <!-- <div class="h2">
+        <span class="par">4</span>
+        <h2>Raccoglimento tramite somma per differenza</h2>
+    </div>
+
+
+    <br>
+
+    <h3 class="yellow" id="esempio4-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio4">            
+            <p>
+                Scomponiamo il polinomio 
+                \[
+                    100x^4 - 9
+                \]
+            </p>
+
+            <br id="sumByDifferenceSlide-container" >
+            <div style="border: 0.01rem solid lightgray; padding: 1rem; min-height: 60vh;">
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                100x^4 & - & 9\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        Prima di tutto verifichiamo che il polinomio contenga due quadrati
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \begin{array}{ccc}
+                                \color{red}{100x^{4}} & - & 9\\
+                                &  & \\
+                                &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        \(100x^4\) è il quadrato di \(10x^2\), infatti 
+                        \[ 
+                            \left(10x^2\right)^2 = 100x^4
+                        \]
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9\\
+                                \downarrow&  & \\
+                                \color{red}{10x^2}&  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">
+                        
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & \color{red}{9}\\
+                                \downarrow &  & \\
+                                10x^2 &  & 
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        \(9\) è il quadrato di \(3\), infatti 
+                        \[ 
+                            \left(3\right)^2 = 9
+                        \]
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9\\
+                                \downarrow &  &\downarrow\\
+                                10x^2&  & \color{red}{3}
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                \color{gray}{+}\color{black}{}100x^{4} & \color{red}{-}\color{black}{} & 9\\
+                                \downarrow &  &\downarrow\\
+                                10x^2 &  & 3
+                            \end{array}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:left; min-height: 5rem;">  
+                        Il segno del primo termine è \(+\), quello del secondo termine è \(-\). 
+                        <br>
+                        Il polinomio quindi è il risultato di una somma per differenza.
+                    </p>
+                </div>
+
+                <div class="sumByDifferenceSlide">
+                    <p id="schemeSumByDifference" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            \begin{array}{ccc}
+                                100x^{4} & - & 9  = 
+                            \end{array}
+                        \]
+                        \[
+                        = \Big( 10x^2 \,\,\color{blue}{+}\,\, \color{black}{} 3\Big) \cdot  \Big( 10x^2 \,\,\color{blue}{-}\,\, \color{black}{} 3\Big)
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSumByDifference" style="color: gray; text-align:center; min-height: 5rem;">  
+                        
+                    </p>
+                </div>
+                
+
+
+                <br>
+                <button id="slideSumByDifference-button" onclick="nextSlideSumByDifference()">Avanti</button>
+
+            </div>
+            
+            <br>
+            <p id="sumByDifference-conclusion" class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    100x^4 - 9 = \left(10x^2 + 3\right) \cdot \left(10x - 3\right)
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaEsempio4" onclick="generaEsempio(4)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br> -->
+
+    <!-- TRAMITE QUADRATO DI BINOMIO -->
+    <div class="h2">
+        <span class="par">5</span>
+        <h2>Trinomio speciale</h2>
+    </div>
+
+
+    <br>
+
+    <h3 class="yellow" id="esempio5-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio5">            
+            <p>
+                Scomponiamo il polinomio 
+                \[
+                    x^2 - 5x + 6
+                \]
+            </p>
+
+            <br id="specialTrinomialSlide-container" >
+            <div style="border: 0.01rem solid lightgray; padding: 1rem; min-height: 60vh;">
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            x^2 - 5x + 6
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">
+                    </p>
+                </div>
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \color{green}{1}\color{black}{}x^{\color{blue}{2}} - 5x + 6
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">
+                        Il polinomio ha grado \(\color{blue}{2}\) ed il coeffieciente della \(x^2\) è \(\color{green}{1}\).
+                        <br>
+                        Potrebbe essere un trinomio speciale.
+                    </p>
+                </div>
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            x^2 \,\,\color{blue}{}{-\,\,5}\color{black}{}x \,\,\color{red}{+ \,\,6}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">
+                        Cerchiamo due numeri che abbiano
+                        <br>
+                        <br>
+                        \(\triangleright\quad\) somma: \(\color{blue}{-5}\)
+                        <br>
+                        <br>
+                        \(\triangleright\quad\) prodotto: \(\color{red}{6}\)
+                    </p>
+                </div>
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            x^2 \,\,\color{blue}{}{-\,\,5}\color{black}{}x \,\,\color{red}{+ \,\,6}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">
+                        Elenchiamo tutte le coppie di numeri che hanno prodotto \(\color{red}{+6}\)
+                        <br>
+                        <br>
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>1°</th>
+                                <th>2°</th>
+                                <th>prodotto</th>
+                                <th>somma</td>
+                            </tr>
+                            <tr>
+                                <td>\(+1\)</td>
+                                <td>\(+6\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>\(+2\)</td>
+                                <td>\(+3\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>\(-1\)</td>
+                                <td>\(-6\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>\(-2\)</td>
+                                <td>\(-3\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            x^2 \,\,\color{blue}{}{-\,\,5}\color{black}{}x \,\,\color{red}{+ \,\,6}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">
+                        Scriviamo le somme:
+                        <br>
+                        <br>
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>1°</th>
+                                <th>2°</th>
+                                <th>prodotto</th>
+                                <th>somma</td>
+                            </tr>
+                            <tr>
+                                <td>\(+1\)</td>
+                                <td>\(+6\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td>\(+7\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(+2\)</td>
+                                <td>\(+3\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td>\(+5\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(-1\)</td>
+                                <td>\(-6\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td>\(-7\)</td>
+                            </tr>
+                            <tr">
+                                <td>\(-2\)</td>
+                                <td>\(-3\)</td>
+                                <td>\(\color{red}{+6}\)</td>
+                                <td>\(\color{blue}{-5}\)</td>
+                            </tr>
+                        </table>
+                        <br>
+                        I numeri cercati sono \(\color{darkorange}{-2}\) e \(\color{violet}{-3}\)
+                    </p>
+                </div>
+                <div class="specialTrinomialSlide">
+                    <p id="schemeSpecialTrinomial" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                                  
+                        \[
+                            x^2 -5x + 6 = \left(x \color{darkorange}{-\,\,2}\color{black}{}\right) \cdot \left(x \color{violet}{-\,\,3}\color{black}{}\right)
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentSpecialTrinomial" style="color: gray; text-align:left; min-height: 5rem;">  
+                        Usiamo i numeri trovati per scomporre il polinomio.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="button-container" style="width: 100%; margin: auto; display:flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlideSpecialTrinomial-button" onclick="previousSlideSpecialTrinomial()">Indietro</button>
+                <button id="slideSpecialTrinomial-button" onclick="nextSlideSpecialTrinomial()">Avanti</button>
+            </div>
+            
+            <br>
+            <p id="specialTrinomial-conclusion" class="grayBackground">
+                Di conseguenza possiamo scomporre il polinomio come segue:
+                \[
+                    x^2 -5x +6 = \left(x -2\right)\cdot\left(x -3\right)
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaEsempio5" onclick="generaEsempio(5)">Genera un altro esempio</button>
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
     
+    <!-- TRAMITE RUFFINI -->
+
+    <div class="h2">
+        <span class="par">7</span>
+        <h2>Scomposizione tramite Ruffini</h2>
+    </div>
+
+     <br>
+
+    <h3 class="yellow" id="esempio7-title">Esempi</h3 class="yellow">
+    <div class="esempi-container">
+        <div id="esempio7">            
+            <p>
+                Scomponiamo il polinomio 
+                \[
+                    2x^2 -7x +3 
+                \]
+            </p>
+
+            <br id="ruffiniSlide-container" >
+            <div style="border: 0.01rem solid lightgray; padding: 1rem; min-height: 90vh;">
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            2x^2 -7x +3 
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \color{red}{2}\color{black}{}x^2 -7x \color{blue}{+3}
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Scriviamo l'elenco tutti i divisori del termine noto...
+                        <br>
+                        <br>
+                        \(\triangleright\quad\) divisori di \(\color{blue}{3}\): 
+                        \[\color{violet}{1} \,\,\,\, \color{violet}{3}\]
+                        
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        \[
+                            \color{red}{2}\color{black}{}x^2 -7x \color{blue}{+3}       
+                        \]
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        ...e l'elenco tutti i divisori del coefficiente di \(x^2\).
+                        <br>
+                        <br>
+                        \(\triangleright\quad\) divisori di \(\color{blue}{3}\): 
+                        <br>
+                        \[\color{violet}{1} \,\,\,\, \color{violet}{3}\]
+                        
+                        \(\triangleright\quad\) divisori di \(\color{red}{2}\): 
+                        <br>
+                        \[\color{darkorange}{1} \,\,\,\, \color{darkorange}{2}\]
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Ora formiamo tutte le frazioni positive e negative (\(\pm\)) della forma 
+                        \[
+                            \dfrac{\color{violet}{\text{numero viola}}}{\color{darkorange}{\text{numero arancione}}}
+                        \]
+                        <table style="width: 100%; border: 0;">
+                            <tr style="height: 1rem; max-height: 1rem; min-height: 1rem;">
+                                <td style="width: 1rem; padding-top: 0; padding-bottom: 0; border-left: white; border-top: white;"></td>
+                                <td style="width: calc((100% -1rem)/2); padding-top: 0; padding-bottom: 0; background-color: rgb(233, 233, 233);">\(\boldsymbol{\color{violet}{1}}\)</td>
+                                <td style="width: calc((100% -1rem)/2); padding-top: 0; padding-bottom: 0; background-color: rgb(233, 233, 233);">\(\boldsymbol{\color{violet}{3}}\)</td>
+                            </tr>
+                            <tr style="height: 0.45%; max-height: 0.45%;">
+                                <td style="width: 1rem; background-color: rgb(233, 233, 233);">\[\boldsymbol{\color{darkorange}{1}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important;">\[\pm\dfrac{\color{violet}{1}}{\color{darkorange}{1}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm\dfrac{\color{violet}{3}}{\color{darkorange}{1}}\]</td>
+                            </tr>
+                            <tr style="height: 0.45%; max-height: 0.45%;">
+                                <td style="width: 1rem; background-color: rgb(233, 233, 233);">\[\boldsymbol{\color{darkorange}{2}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm\dfrac{\color{violet}{1}}{\color{darkorange}{2}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm\dfrac{\color{violet}{3}}{\color{darkorange}{2}}\]</td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Semplifichiamo le frazioni laddove possibile.
+                        <table style="width: 100%; border: 0;">
+                            <tr style="height: 1rem; max-height: 1rem; min-height: 1rem;">
+                                <td style="width: 1rem; padding-top: 0; padding-bottom: 0; border-left: white; border-top: white;"></td>
+                                <td style="width: calc((100% -1rem)/2); padding-top: 0; padding-bottom: 0; background-color: rgb(233, 233, 233);">\(\boldsymbol{\color{violet}{1}}\)</td>
+                                <td style="width: calc((100% -1rem)/2); padding-top: 0; padding-bottom: 0; background-color: rgb(233, 233, 233);">\(\boldsymbol{\color{violet}{3}}\)</td>
+                            </tr>
+                            <tr style="height: 0.45%; max-height: 0.45%;">
+                                <td style="width: 1rem; background-color: rgb(233, 233, 233);">\[\boldsymbol{\color{darkorange}{1}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important;">\[\pm 1\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm 3\]</td>
+                            </tr>
+                            <tr style="height: 0.45%; max-height: 0.45%;">
+                                <td style="width: 1rem; background-color: rgb(233, 233, 233);">\[\boldsymbol{\color{darkorange}{2}}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm \dfrac{1}{2}\]</td>
+                                <td style="width: calc((100% -1rem)/2); aspect-ratio: 1 !important">\[\pm \dfrac{3}{2}\]</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <span style="color: gray">
+                            La lista dei delle possibili radici di \(2x^2 -7x +3\) è la seguente:
+                            \[
+                                \begin{array}{}
+                                    +1 & -1 & +3 & -3 \\
+                                    +\dfrac{1}{2} & -\dfrac{1}{2} & +\dfrac{3}{2} & -\dfrac{3}{2} \\
+                                \end{array}
+                            \]
+                        </span>
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        <nobr>Possibili radici di \(2x^2 -7x +3\):</nobr>
+                        \[
+                            
+                            \begin{array}{}
+                                +1 & -1 & +3 & -3 \\
+                                +\dfrac{1}{2} & -\dfrac{1}{2} & +\dfrac{3}{2} & -\dfrac{3}{2} \\
+                            \end{array}
+                            
+                        \]   
+                        
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        <nobr>Possibili radici di \(2x^2 -7x +3\):</nobr>
+                        \[
+                            
+                            \begin{array}{}
+                                \color{red}{+1} & -1 & +3 & -3 \\
+                                +\dfrac{1}{2} & -\dfrac{1}{2} & +\dfrac{3}{2} & -\dfrac{3}{2} \\
+                            \end{array}
+                            
+                        \]   
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        
+                        Testiamo \(\color{red}{+1}\).
+                        \[
+                            \begin{align*}
+                                & 2\color{red}{x}\color{gray}{}^2 - 7\color{red}{x}\color{gray}{} + 3 = \\\\
+                                & 2\color{red}{\left(+1\right)}\color{gray}{}^2 - 7\color{red}{\left(+1\right)}\color{gray}{} + 3 = 2
+                            \end{align*}
+                        \]
+                        Il risultato non è \(0\).
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        <nobr>Possibili radici di \(2x^2 -7x +3\):</nobr>
+                        \[
+                            
+                            \begin{array}{}
+                                +1 & \color{red}{-1} & +3 & -3 \\
+                                +\dfrac{1}{2} & -\dfrac{1}{2} & +\dfrac{3}{2} & -\dfrac{3}{2} \\
+                            \end{array}
+                            
+                        \]   
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;"> 
+                        Testiamo \(\color{red}{-1}\).
+                        \[
+                            \begin{align*}
+                                & 2\color{red}{x}\color{gray}{}^2 - 7\color{red}{x}\color{gray}{} + 3 = \\\\
+                                & 2\color{red}{\left(-1\right)}\color{gray}{}^2 - 7\color{red}{\left(-1\right)}\color{gray}{} + 3 = 12
+                            \end{align*}
+                        \]
+                        Il risultato non è \(0\).
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <p id="schemeRuffini" style="background-color: rgba(211, 211, 211,0.3); padding: 1rem;">                   
+                        <nobr>Possibili radici di \(2x^2 -7x +3\):</nobr>
+                        \[
+                            
+                            \begin{array}{}
+                                +1 & -1 & \color{red}{+3} & -3 \\
+                                +\dfrac{1}{2} & -\dfrac{1}{2} & +\dfrac{3}{2} & -\dfrac{3}{2} \\
+                            \end{array}
+                            
+                        \]   
+                    </p>
+                    <br>
+                    <p id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Testiamo \(\color{red}{+3}\).
+                        \[
+                            \begin{align*}
+                                & 2\color{red}{x}\color{gray}{}^2 - 7\color{red}{x}\color{gray}{} + 3 = \\\\
+                                & 2\color{red}{\left(+3\right)}\color{gray}{}^2 - 7\color{red}{\left(+3\right)}\color{gray}{} + 3 = 0
+                            \end{align*}
+                        \]
+                        Il risultato è \(0\), ovvero \(+3\) è radice del polinomio che dobbiamo scomporre.
+                        <br>
+                        Grazie al teorema di Ruffini, sappiamo che 
+                    </p>
+                    <br>
+                    <p style="text-align: center; color: gray;">
+                        \[2x^2 -7x +3\] 
+                        è divisibile per \[x \color{red}{-3}\]
+                    </p>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Svolgiamo la divisione.
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3 
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Troviamo un numero che moltiplicato per \(\color{blue}{x}\) dia come risultato \(\color{red}{2x^2}\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \color{red}{2x^2} & -7x & +3 \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3 
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Troviamo un numero che moltiplicato per \(\color{blue}{x}\) dia come risultato \(\color{red}{2x^2}\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \color{red}{2x^2} & -7x & +3 \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3 
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(\color{green}{2x}\) per \(\color{blue}{x -3}\) e scriviamo il risultato sotto a \(2x^2 -7x +3\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & \color{blue}{-3 }
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(2x\) per \(x -3\) e scriviamo il risultato sotto a \(2x^2 -7x +3\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            \color{black}{2x^2} &  & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3 
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    \[
+                        \color{green}{2x} \,\,\color{gray}{\cdot}\,\, \color{blue}{x}\color{gray}{} = \color{black}{2x^2}
+                    \]
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(2x\) per \(x -3\) e scriviamo il risultato sotto a \(2x^2 -7x +3\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & \color{black}{-6x} & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & \color{blue}{-3} 
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                        \[
+                            \color{green}{2x} \,\,\color{gray}{\cdot}\,\, \color{blue}{\left(-3\right)}\color{gray}{} = \color{black}{-6x}
+                        \]
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,\color{blue}{2x^2 -7x +3}\,\,\,\) e \(\,\,\,\color{black}{2x^2 -6x}\,\,\,\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            \color{blue}{2x^2} & \color{blue}{-7x} & \color{blue}{+3} \\
+                                            \color{black}{2x^2} & \color{black}{-6x} & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,2x^2 -7x +3\,\,\,\) e \(\,\,\,2x^2 -6x\,\,\,\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            \color{blue}{2x^2} & -7x & +3 \\
+                                            \color{black}{2x^2} & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            \color{red}{//} \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    \[
+                        \color{blue}{2x^2} - \color{black}{2x^2} = \color{red}{0}
+                    \]
+                    
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,2x^2 -7x +3\,\,\,\) e \(\,\,\,2x^2 -6x\,\,\,\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & \color{blue}{-7x} & +3 \\
+                                            2x^2 & \color{black}{-6x} & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            //\,\,\, & \color{red}{-x}\\ 
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    \[
+                        \color{blue}{-7x} - \color{black}{\left(-6x\right)} = \color{red}{-x}
+                    \]
+                    
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,2x^2 -7x +3\,\,\,\) e \(\,\,\,2x^2 -6x\,\,\,\).
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & \color{blue}{+3} \\
+                                            2x^2 & -6x & \color{black}{0}\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\, -x & \,\,\,\color{red}{+3}\\ 
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    \[
+                        \color{blue}{+3} - \color{black}{\left(0\right)} = \color{red}{+3}
+                    \]
+                    
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Troviamo un monomio che moltiplicato per \(\color{blue}{x}\) dia come risultato \(\color{red}{-x}\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,\color{red}{-x} & \,\,\,+3\\ 
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Troviamo un monomio che moltiplicato per \(x\) dia come risultato \(-x\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,\color{red}{-x} & \,\,\,+3\\ 
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x \,\,\,\color{green}{-1}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    \[
+                        \color{blue}{x} \color{gray}{} \cdot \color{green}{\left(1\right)}\color{gray}{} =  \color{red}{-x} 
+                    \]                
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(\color{green}{-1}\) per \(\color{blue}{x -3}\) e scriviamo il risultato sotto \(-x +3\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,-x & \,\,\,+3\\ 
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & \color{blue}{-3}
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x \,\,\,\color{green}{-1}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(-1\) per \(x -3\) e scriviamo il risultato sotto \(-x +3\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\, -x & \,\,\,+3\\ 
+                                            & \color{black}{-x} & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x \,\,\,\color{green}{-1}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                    \[
+                        \color{green}{\left(-1\right)} \color{gray}{}\cdot \color{blue}{x} \color{gray}{} = \color{black}{-x}
+                    \]
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Moltiplichiamo \(-1\) per \(x -3\) e scriviamo il risultato sotto \(-x +3\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,-x & \,\,\,+3\\ 
+                                            & -x & \color{black}{+3}\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & \color{blue}{-3}
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x \,\,\,\color{green}{-1}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                    \[
+                        \color{green}{\left(-1\right)} \color{gray}{}\cdot \color{blue}{\left(-3\right)} \color{gray}{} = \color{black}{-x}
+                    \]
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,\color{blue}{-x +3}\,\,\,\) e \(\,\,\,\color{black}{-x +3}\,\,\,\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem; border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,\color{blue}{-x} & \,\,\,\color{blue}{+3}\\ 
+                                            & \color{black}{-x} & \color{black}{+3}\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x -1
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,-x +3\,\,\,\) e \(\,\,\,-x +3\,\,\,\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="border-bottom: 0.01rem solid gray; margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,\color{blue}{-x} & \,\,\,+3\\ 
+                                            & \color{black}{-x} & +3\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            \,\,\quad & \,\,\,\color{red}{//} & \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x -1
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                    \[
+                        \color{blue}{-x} \color{gray}{} - \color{black}{\left(-x\right)} \color{gray}{} = \color{red}{0}
+                    \]   
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        Eseguiamo la sottrazione tra \(\,\,\,-x +3\,\,\,\) e \(\,\,\,-x +3\,\,\,\)
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            2x^2 & -7x & +3 \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="border-bottom: 0.01rem solid gray; margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & \,\,\,-x & \,\,\,\color{blue}{+3}\\ 
+                                            & -x & \color{black}{+3}\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            \,\,\quad & \,\,\,// & \,\,\,\color{red}{//} \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        x & -3
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        2x -1
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                    \[
+                        \color{blue}{+3} \color{gray}{} - \color{black}{\left(+3\right)} \color{gray}{} = \color{red}{0}
+                    \]   
+                </div>
+
+                <div class="ruffiniSlide">
+                    <div id="commentRuffini" style="color: gray; text-align:left; min-height: 5rem;">
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+                            <div style="padding-right: 0.5rem; border-right: 0.01rem gray solid;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \begin{array}{}
+                                            \color{red}{2x^2} & \color{red}{-7x} & \color{red}{+3} \\
+                                            2x^2 & -6x & \\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="border-bottom: 0.01rem solid gray; margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            // & -x & +3\\ 
+                                            & -x & +3\\
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div style="margin-top: 0.4rem;">
+                                    \(
+                                        \begin{array}{}
+                                            \,\,\quad & \,\,\,// & \,\,\,// \\
+                                            \\
+                                        \end{array}
+                                    \)
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-content: center; padding-left: 0; margin-left: 0;">
+                                <div style="border-bottom: 0.01rem solid gray;">
+                                    \(
+                                        \,\,\,
+                                        \begin{array}{}
+                                        \color{blue}{x} & \color{blue}{-3}
+                                        \end{array}
+                                    \)
+                                </div>
+                                <div>
+                                    \(
+                                        \,\,\,
+                                        \color{green}{2x -1}
+                                    \)
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <br>
+                    <p style="color: gray; text-align: center;">
+                        si ha che 
+                        \[
+                            \color{red}{2x^2 -7x +3} \color{gray}{} = \color{blue}{\left(x-3\right)} \color{gray}{} \cdot \color{green}{\left(2x -1\right)}
+                        \]   
+                    </p>
+                </div>            
+
+            </div>
+
+            <div class="button-container" style="width: 100%; margin: auto; display:flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlideRuffini-button" onclick="previousSlideRuffini()">Indietro</button>
+                <button id="slideRuffini-button" onclick="nextSlideRuffini()">Avanti</button>
+            </div>
+            
+            <br>
+            <p id="ruffini-conclusion" class="grayBackground">
+                In conclusione possiamo scomporre il polinomio come segue:
+                \[
+                    2x^2 -7x +3 = \left(x -3\right)\cdot\left(2x -1\right)
+                \]
+            </p>            
+            <br>
+        </div>
+
+
+        <button class="generaEsempio" id="generaesempio7" onclick="generaEsempio(7)">Genera un altro esempio</button>
+        
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
 
     
     
