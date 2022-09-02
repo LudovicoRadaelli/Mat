@@ -6,9 +6,12 @@ function Monomial(sign, num, den, literal){
     //parte numerica 
     this.num = num;
     this.den = den;
-    //parte letterale
+    //parte this.letterale
     this.literal = literal;
 
+    //questo permette di introdurre anche altre this.lettere 
+    //(basta modificare una di quelle che compaiono nell'array)
+    this.letter = ["a","b","c","x","y","z"]
 
     //per scrivere la funzione su MathJax senza segno + davanti
     this.display = function() {
@@ -27,13 +30,13 @@ function Monomial(sign, num, den, literal){
             str += "\\dfrac{"+this.num+"}{"+this.den+"}"
         }
 
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
-                    str += letter[i];
+                    str += this.letter[i];
                 } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                 }
             }
         }
@@ -48,6 +51,13 @@ function Monomial(sign, num, den, literal){
             } else {
                 str = "-1"
             }
+
+        }
+
+        /* Per controllare il caso in cui il monomio sia 0 */
+        if(this.num === 0) {
+
+            str = "0";
 
         }
         
@@ -72,13 +82,13 @@ function Monomial(sign, num, den, literal){
             str += "\\dfrac{"+this.num+"}{"+this.den+"}"
         }
 
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
-                    str += letter[i];
+                    str += this.letter[i];
                 } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                 }
             }
         }
@@ -124,13 +134,13 @@ function Monomial(sign, num, den, literal){
             str += "\\dfrac{"+this.num+"}{"+this.den+"}"
         }
 
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
-                    str += letter[i];
+                    str += this.letter[i];
                 } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                 }
             }
         }
@@ -169,13 +179,13 @@ function Monomial(sign, num, den, literal){
         }
 
         str += "\\color{black}{"
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
-                    str += letter[i];
+                    str += this.letter[i];
                 } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                 }
             }
         }
@@ -183,7 +193,7 @@ function Monomial(sign, num, den, literal){
         return str
     }
 
-    //evidenzia tutta la parte letterale
+    //evidenzia tutta la parte this.letterale
     this.redLit = function() {
         var str = "";
     
@@ -200,13 +210,13 @@ function Monomial(sign, num, den, literal){
         }
 
         str += "\\color{red}{"            
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
-                    str += letter[i];
+                    str += this.letter[i];
                 } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                 }
             }
         }
@@ -232,27 +242,27 @@ function Monomial(sign, num, den, literal){
             str += "\\dfrac{"+this.num+"}{"+this.den+"}"
         }
         
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
                     if(i === redIndex){
-                        str += "\\color{red}{"+letter[i]+"}\\color{black}{";
+                        str += "\\color{red}{"+this.letter[i]+"}\\color{black}{";
                     } else {
-                        str += letter[i];
+                        str += this.letter[i];
                     }
                 } else {
                     if(i === redIndex){
-                        str += "\\color{red}{"+letter[i]+"^{"+this.literal[i]+"}}\\color{black}{";
+                        str += "\\color{red}{"+this.letter[i]+"^{"+this.literal[i]+"}}\\color{black}{";
                     } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                     }   
                     
                 }
             }
         }
 
-        if(this.literal[l] !== 0){ //se non c'è la lettera da evidenziare questa parentesi
+        if(this.literal[l] !== 0){ //se non c'è la this.lettera da evidenziare questa parentesi
             str += "}";            //genera un errore
         }   
 
@@ -331,7 +341,7 @@ function Monomial(sign, num, den, literal){
         return str
     }
 
-    //disegna fino alla l-esima lettera, con la lettera in rosso
+    //disegna fino alla l-esima this.lettera, con la this.lettera in rosso
     this.tillRedLett = function(l) {
         var redIndex = l;
         var str = "";
@@ -360,7 +370,7 @@ function Monomial(sign, num, den, literal){
                 str += "\\dfrac{"+this.num+"}{"+this.den+"}"
             }
             
-            var letter = ["a","b","c","x","y","z"];
+            
 
             
 
@@ -368,17 +378,17 @@ function Monomial(sign, num, den, literal){
                 if(this.literal[i] !== 0) {
                     if(this.literal[i] === 1) {
                         if(i === redIndex){
-                            str += "\\color{red}{"+letter[i]+"}\\color{black}{";
+                            str += "\\color{red}{"+this.letter[i]+"}\\color{black}{";
                             break;
                         } else {
-                            str += letter[i];
+                            str += this.letter[i];
                         }
                     } else {
                         if(i === redIndex){
-                            str += "\\color{red}{"+letter[i]+"^{"+this.literal[i]+"}}\\color{black}{";
+                            str += "\\color{red}{"+this.letter[i]+"^{"+this.literal[i]+"}}\\color{black}{";
                             break;
                         } else {
-                        str += letter[i]+"^{"+this.literal[i]+"}";
+                        str += this.letter[i]+"^{"+this.literal[i]+"}";
                         }   
                         
                     }
@@ -391,7 +401,7 @@ function Monomial(sign, num, den, literal){
         return str
     }
 
-     //disegna fino alla l-esima lettera, con la lettera in nero
+     //disegna fino alla l-esima this.lettera, con la this.lettera in nero
      this.tillBlackLett = function(l) {
         var redIndex = l;
         var str = "";
@@ -410,22 +420,22 @@ function Monomial(sign, num, den, literal){
             str += "\\dfrac{"+this.num+"}{"+this.den+"}"
         }
         
-        var letter = ["a","b","c","x","y","z"];
+        
         for(let i = 0; i<this.literal.length; i++) {
             if(this.literal[i] !== 0) {
                 if(this.literal[i] === 1) {
                     if(i === redIndex){
-                        str += letter[i];
+                        str += this.letter[i];
                         break;
                     } else {
-                        str += letter[i];
+                        str += this.letter[i];
                     }
                 } else {
                     if(i === redIndex){
-                        str += letter[i]+"^{"+this.literal[i]+"}";
+                        str += this.letter[i]+"^{"+this.literal[i]+"}";
                         break;
                     } else {
-                    str += letter[i]+"^{"+this.literal[i]+"}";
+                    str += this.letter[i]+"^{"+this.literal[i]+"}";
                     }   
                     
                 }
