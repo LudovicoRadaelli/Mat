@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Equazioni di II grado</title>
+</head>
+<body>
+    <h1>Equazioni di II grado</h1>
+    <!-- <div class="media-container">
+        <img src="https://ludovicoradaelli.github.io/Matematica/2022/prima/proprietaPotenze/img/potenzeBaseEsponente.png" alt="">
+    </div> 
+    <br>
+    <hr>
+    <br>-->
+
+    <br>
+
+    <div class="h2">
+        <span class="par">
+            1
+        </span>
+        <h2 id="formulaRisolutiva">Formula risolutiva</h2>
+    </div>
+
+    <br>
+
+    <video src="img/formulaEquazioniSecondoGrado.mp4" controls></video>
+    <br>
+    <p class="grayBackground">
+        Data l'equazione 
+        \[
+            \color{red}{a}\,\color{black}{x^2}\, + \color{blue}{b}\,\color{black}{x}\, + \color{darkorange}{c}\,\,  \color{black}{}= 0
+        \]
+        la forumula risolutiva è
+        \[
+            x = \dfrac{-\color{blue}{b}\color{black}{} \pm \sqrt{\color{blue}{b}\color{black}{}^2 - 4 \cdot \color{red}{a}\color{black} \cdot  \color{darkorange}{c}\color{black}}}{2\color{red}{a}}
+        \]
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">
+            2
+        </span>
+        <h2 id="numeroSoluzioni">Numero di soluzioni</h2>
+    </div>
+    <br>
+    <video src="img/numeroDiSoluzioni.mp4" controls></video>
+    <br>
+    <p>
+        Data l'equazione 
+        \[
+            \color{red}{a}\,\color{black}{x^2}\, + \color{blue}{b}\,\color{black}{x}\, + \color{darkorange}{c}\,\,  \color{black}{}= 0
+        \]
+        sappiamo che la formula risolutiva è 
+        \[
+            x = \dfrac{-\color{blue}{b}\color{black}{} \pm \sqrt{\color{blue}{b}\color{black}{}^2 - 4 \cdot \color{red}{a}\color{black} \cdot  \color{darkorange}{c}\color{black}}}{2\color{red}{a}}
+        \]
+        
+        Indichiamo con la lettera \(\Delta\) il contenuto della radice presente nella formula, ovvero 
+        
+        \[\Delta = \color{blue}{b}^2 \color{black}{-4}\,\color{red}{a}\,\color{darkorange}{c} \]
+        
+        il numero di soluzioni dipende dal segno di \(\Delta\):
+    </p>
+    <br>
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Se \(\Delta \gt 0\),
+                <br>
+                allora l'equazione ha <b>due</b> soluzioni;
+            </li>
+            <br>
+            <li>
+                Se \(\Delta = 0\),
+                <br>
+                allora l'equazione ha <b>una</b> soluzioni;
+            </li>
+            <br>
+            <li>
+                Se \(\Delta \lt 0\),
+                <br>
+                allora l'equazione ha <b>zero</b> soluzioni;
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+
+        <b>Equazione con 2 soluzioni</b>
+        <video src="img/2Soluzioni.mp4" controls></video>
+    
+        <br>
+        <hr>
+        <br>
+
+        <b>Equazione con 1 soluzione</b>
+        <video src="img/1Soluzione.mp4" controls></video>
+    
+        <br>
+        <hr>
+        <br>
+
+        <b>Equazione con 0 soluzioni</b>
+        <video src="img/0Soluzioni.mp4" controls></video>
+
+        <br>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">3</span>
+        <h2 id="schemaRisoluzione">Schema di risoluzione</h2>
+    </div>
+    <br>
+
+    <p>
+        Se l'equazione non si presenta già nella forma 
+        
+        \[ax^2 +bx +c = 0\]
+
+        possiamo seguire il seguente schema per riportarla in tale forma, in modo da poter poi utilizzare
+        la formula risolutiva.
+    </p>
+    
+    <br>
+    
+    <div style="position: relative; height: 90vh; width: 90vw; overflow-x: scroll;">
+        <img src="img/schemaRisoluzione.png" style="display: block; position: absolute; height: 90vh; width: auto">
+    </div>
+    <p class="gray">
+        Per visualizzare lo schema completo scorrete a destra.
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <video src="img/schemaRisolutivo.mp4" controls></video>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">
+            4
+        </span>
+        <h2 id="casiParticolari">Casi particolari</h2>
+    </div>
+    <p>
+        Ci sono alcuni casi in cui possiamo usare strade alternative e più rapide rispetto all'applicaizione della formula.
+    </p>
+
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">4.1</span>
+        <h3 class="blue">Se \(\boldsymbol{b = 0}\)</h3>
+    </div>
+    <br>
+    <p>
+        Nel caso in cui \(b\) sia \(0\), il termine con la \(x\) non compare nell'equazione:
+        \[
+            ax^2 + c = 0
+        \]
+    </p>
+    <p>
+        Esaminiamo un caso concreto:
+        \[
+            2x^2 - 18 = 0
+        \]
+        In questo caso possiamo isolare la \(x^2\).
+    </p>
+    <p>
+        Primo passo, spostiamo il \(-18\) dall'altra parte dell'uguale.
+        \[
+            2x^2 = 18
+        \]
+        Dividiamo per \(2\)
+    </p>
+    <p>
+        \[
+            x^2 = \dfrac{18}{2} 
+        \]
+        ovvero 
+        \[
+            x^2 = 9
+        \]
+    </p>
+    <p>
+        Bene, sappiamo che \(x\) è quel numero che elevato al quadrato fa \(9\)... 
+        la <a href="">radice quadrata</a> di \(9\)!
+        \[
+            x = \sqrt{9} 
+        \]
+    </p>
+    <p>
+        Ma vediamo che \(\sqrt{9}\) non è l'unico numero che elevato al quadrato fa \(9\), anche \(\left(-\sqrt{9}\right)^2\) fa \(9\).
+    </p>
+    <p>
+        Quindi
+        \[
+            x = \sqrt{9} \quad\text{oppure}\quad x = -\sqrt{9}
+        \]
+    </p>
+
+    <h3 id="esempio1-title" class="yellow">Esempi</h3>
+    <div class="esempi-container" id="bUgualeZeroEsempi">
+        <p id="esempio1">
+            Risolviamo l'equazione
+            \[
+                3x^2 - 8 = 0
+            \]
+            Isoliamo la \(x^2\):
+            \[
+                3x^2 = 8
+            \]
+            \[
+                x^2 = \dfrac{8}{3}
+            \]
+            Dunque 
+            \[
+                x = \sqrt{\dfrac{8}{3}} \quad\text{oppure}\quad x = -\sqrt{\dfrac{8}{3}}
+            \]
+        </p>
+        <br>
+
+        <button onclick="generaEsempio(1)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">4.2</span>
+        <h3 class="blue">Se \(\boldsymbol{c = 0}\)</h3>
+    </div>
+    <br>
+    <br>
+    <p>
+        Nel caso in cui \(c\) sia \(0\), il termine senza \(x\) non compare nell'equazione:
+        \[
+            ax^2 + bx = 0
+        \]
+    </p>
+    <p>
+        Esaminiamo un caso concreto:
+        \[
+            5x^2 +3x = 0
+        \]
+        Notate che il polinomio \(5x^2 +3x\) può essere riscritto come \(x\cdot\left(5x + 3\right)\). 
+        <br>
+        L'equazione quindi si riscrive così:
+        \[
+            x\cdot\left(5x + 3\right) = 0
+        \]
+        Leggiamolo in questo modo:
+    </p>
+    <p>
+        \[
+            \underset{\color{red}{\text{il numero \(x\)}}}{\underbrace{\color{red}{x}}}
+            \underset{\color{darkgreen}{\,\,\text{moltiplicato}}}{\color{darkgreen}{\underbrace{\cdot}}}
+            \underset{\,\,\color{blue}{\text{per il numero \(5x +3\)}}}{\underbrace{\color{blue}{\left(5x + 3\right) }}}
+            \underset{\text{fa \(0\)}}{\underbrace{= 0}}
+        \]
+    </p>
+    <!-- <p style="width: 80%; margin: auto;">
+        <i>il numero \(x\) moltiplicato per il numero \(\,5x +3\,\) fa \(\,0\).</i>
+    </p> -->
+    <br>
+    <p>
+        Ma allora deve esser vero che almeno uno tra \(\color{red}{x}\) e \(\,\color{blue}{5x +3}\,\) è \(0\) 
+        <br>
+        (sennò il loro prodotto non potrebbe essere \(0\)!).
+        <br>
+        Quindi 
+    </p>
+    <p class="formula">
+        \[
+            \color{red}{x\,} \color{black}{=0} \quad\text{oppure}\quad\color{blue}{5x +3\,}\color{black}{ = 0}
+        \]
+    </p>
+    <p class="formula">
+        \[
+            x = 0 \quad\text{oppure}\quad 5x = -3 
+        \]
+    </p>
+    <p class="formula">
+        \[
+            x = 0 \quad\text{oppure}\quad x = -\dfrac{3}{5} 
+        \]
+    </p>
+
+    <h3  id="esempio2-title" class="yellow">Esempi</h3>
+    <div class="esempi-container" id="cUgualeZeroEsempi">
+        <p id="esempio2">
+            Risolviamo l'equazione
+            \[
+                2x^2 - 7x = 0
+            \]
+            Mettiamo in evidenza la \(x\) al primo membro:
+            \[
+                x \cdot \left(2x - 7\right) = 0
+            \]
+            Dunque
+            \[
+                x = 0 \quad\text{oppure}\quad 2x - 7 = 0    
+            \]
+            Svolgiamo l'equazione di primo grado a destra:
+            \[
+                x = 0 \quad\text{oppure}\quad 2x = 7  
+            \]
+            \[
+                x = 0 \quad\text{oppure}\quad x = \dfrac{7}{2}  
+            \]
+        </p>
+        <br>
+
+        <button onclick="generaEsempio(2)">Mostrami un altro esempio</button>
+        <br>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">5</span>
+        <h2>Equazioni risolvibili tramite la legge di annullamento del prodotto</h2>
+    </div>
+    
+    <p>
+        Iniziamo con un indovinello:
+    </p>
+    <br>
+    <p>
+        <i>
+            Sto pensando a due numeri. 
+            <br>
+            Se li moltiplico, il risultato che ottengo è zero.
+            <br>
+            Cosa sapete dirmi su quei numeri?
+        </i>
+    </p>
+    <br>
+    <button id="hint1-button" onclick="showHint(1)">Soluzione</button>
+    <div id="hint1" style="display: none;">
+        <p class="grayBorder">
+            Beh... almeno uno dei due numeri dovrà essere zero! 
+            <br>
+            Se entrambi i numeri fossero diversi da zero, sicuramente il prodotto non darebbe come risultato zero.
+        </p>
+    </div> 
+    <br>
+    <p>
+        Questo semplice ragionamento, prende l'altisonante nome di <b>legge dell'annullamento del prodotto</b>.
+    </p>
+
+    <p class="grayBackground">
+        Se 
+        \[
+            \color{red}{A}\color{black}{} \cdot \color{blue}{B} \color{black}{} = 0
+        \]
+        allora 
+        \[
+            \color{red}{A}\color{black}{}  = 0 \quad\text{oppure}\quad \color{blue}{B}\color{black}{} = 0
+        \]
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <b>Esempio 1</b>
+        <br>
+        <p>
+            Consideriamo la seguente equazione:
+        </p>
+        <p class="formula">
+            \[
+                \left(5x +10\right) \cdot \left(4x -12\right) = 0
+            \]
+        </p>
+        <p>
+            Come potete notare dei colori, siamo in presenza della <span style="color: rgb(0, 153, 0)">moltiplicazione</span> tra due numeri:
+        </p>
+        <p class="formula">
+            \[
+                \underset{\color{red}{A}}{\underbrace{\color{red}{\left(5x +10\right)}}} \color{rgb(0, 153, 0)}{\boldsymbol{\,\,\cdot\,\,}}\color{black}{} \underset{\color{blue}{B}}{\underbrace{\color{blue}{\left(4x -12\right)}}} = 0
+            \]
+        </p>
+        
+        <ul>
+            <li>
+                il <span style="color: red">primo numero</span> è il risultato dell'operazione \(5x + 10\)
+            </li>
+            <br>
+            <li>
+                il <span style="color: blue">secondo numero</span> è il risultato dell'operazione \(4x -12\)
+            </li>
+        </ul>
+        <br>
+        <p>
+            Sappiamo che la loro moltiplicazione dà come risultato zero, di conseguenza almeno uno dei due numeri dovrà essere zero:
+        </p>
+        <p class="formula">
+            \[
+                \color{red}{5x +10}\color{black}{} = 0 \quad\text{oppure}\quad \color{blue}{4x -12} \color{black}{} = 0
+            \]
+        </p>
+        <p>
+            Da entrambe le parti abbiamo delle equazioni di primo grado, che possiamo risolvere con la solita tecnica:
+        </p>
+        <p>
+            \[
+                \begin{align*}
+                    5x + 10 = 0 \quad&\text{oppure}\quad 4x -12 = 0
+                    \\\\
+                    5x = -10 \quad&\text{oppure}\quad 4x = 12
+                    \\\\
+                    \dfrac{\cancel{5}x}{\cancel{\color{gray}{5}}} = \dfrac{-10}{\color{gray}{5}} \quad&\text{oppure}\quad \dfrac{\cancel{4}x}{\cancel{\color{gray}{4}}} = \dfrac{12}{\color{gray}{4}}
+                    \\\\
+                    x = -2 \quad&\text{oppure}\quad x = 3
+                \end{align*}
+            \]
+        </p>
+        <p>
+            Abbiamo trovato così le due soluzioni dell'equazione.
+        </p>
+    
+        <br>
+        <hr>
+        <br>
+    
+        <b>Esempio 2</b>
+        <br>
+        <p>
+            Il ragionamento visto può essere esteso ad un numero qualsiasi di fattori.
+            <br>
+            Considerate il seguente esempio:
+        </p>
+        <p class="formula" style="font-size: 0.9rem;">
+            \[
+                \color{red}{\left(5x +1\right)}  \,\,\color{black}{\cdot}\,\, \color{blue}{\left(2x -1\right)} \,\,\color{black}{\cdot}\,\, \color{rgb(0, 153, 0)}{\left(x -1\right)} \,\,\color{black}{\cdot}\,\, \color{gray}{\left(-x -2\right)} \color{black}= 0
+            \]
+        </p>
+        <p>
+            Come prima, essendo il prodotto uguale a zero, almeno 
+            uno dei fattori deve essere zero. Ovvero: 
+        </p>
+        <p class="formula">
+            \[
+                \begin{align*}
+                & \color{red}{5x +1}  \color{black}{} \,\,=\,\, 0 \quad\text{oppure}
+                \\\\
+                & \color{blue}{2x -1} \,\,\color{black}{ = }\,\, 0 \quad\text{oppure}
+                \\\\
+                &\color{rgb(0, 153, 0)}{x -1} \,\,\color{black}{ = }\,\, 0 \quad\text{oppure}
+                \\\\
+                & \quad \color{gray}{-x -2} \color{black} = 0
+                \end{align*}
+            \]
+        </p>
+        <p>
+            Abbiamo ottenuto quattro equazioni di I grado. Risoviamole:
+        </p>
+        <p class="formula">
+            \[
+                \begin{align*}
+                    & \color{red}{}5x = -1 \color{black}{} \quad\text{oppure}
+                    \\\\
+                    & \color{blue}{}2x = 1 \color{black}{} \quad\text{oppure}
+                    \\\\
+                    & \color{green}{} x = 1 \color{black}{} \quad\text{oppure}
+                    \\\\
+                    & \color{gray}{} -x = 2
+                \end{align*}
+            \]
+        </p>
+        <p>
+            Dunque le soluzioni dell'equazione iniziale sono
+        </p>
+        <p class="formula">
+            \[
+                \begin{align*}
+                & \color{red}{} x = -\dfrac{1}{5} \color{black}{} \quad\text{oppure} \\\\
+                & \color{blue}{} x = \dfrac{1}{2} \color{black}{} \quad\text{oppure} \\\\
+                & \color{green}{} x = 1 \quad \color{black}{} \text{oppure} \\\\
+                & \color{gray}{} x = -2
+                \end{align*}
+            \]
+        </p>
+    </div>
+
+    <!-- TODO esempi automatici -->
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">6</span>
+        <h2>Scomposizione di polinomi di secondo grado</h2>
+    </div>
+    
+    <br>
+    
+    <p>
+        <b>Scomporre</b> un polinomio significa scriverlo come prodotto di polinomi di grado minore.
+    </p>
+    <p>
+        Nel prossimo video vediamo qual è il ragionamento che ci permette di scomporre un polinomio di secondo grado.
+    </p>
+    
+    <br>
+    <video src="img/spiegazioneScomposizione.mp4" controls></video>
+    <br>
+
+    <p> 
+        Nel seguente video rivediamo in maniera più schematica il procedimento per scomporre 
+        un polinomio di secondo grado.
+    </p>
+
+    <br>
+    <video src="img/spiegazioneScomposizione.mp4" controls></video>
+    <br>
+
+    <p>Riassumendo:</p>
+    <div class="grayBackground">
+        <p>
+            Per scomporre un polinomio di secondo grado
+            \[
+                \color{red}{a}\color{black}x^2 + bx +c
+            \]
+        </p>
+        <ul>
+            <li>
+                risolviamo l'equazione associata, 
+                \[
+                    ax^2 + bx +c = 0
+                \]
+                in maniera da trovare le soluzioni \(\color{blue}{s_{1}}\) ed \(\color{blue}{s_{2}}\)
+            </li>
+            <br>
+            <li>
+                usiamo la formula
+                \[
+                    \begin{align*}
+                        & \color{red}{a}\color{black}x^2 + bx +c = 
+                        \\\\
+                        = \,\,& \color{red}{a} \color{black}{} \cdot \left(x - \color{blue}{s_{1}}\color{black}{}\right) \cdot \left(x - \color{blue}{s_{2}}\color{black}{}\right)
+                    \end{align*}
+                \]
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            Scomporre il polinomio 
+            \[
+                \color{red}{8}\color{black}{}x^2 -2x -1
+            \]
+        </p>
+        <ul>
+            <li>
+                <p>
+                    Risolviamo l'equazione associata 
+                    \[
+                        8x^2 -2x -1 = 0
+                    \]
+                    \[
+                        \begin{align*}
+                            x &= \dfrac{+2 \pm \sqrt{\left(-2\right)^2 -4 \cdot 8 \cdot \left(-1\right)}}{16} = 
+                            \\\\
+                            = & \dfrac{+2 \pm \sqrt{4 + 32}}{16} =  \dfrac{+2 \pm \sqrt{36}}{16} = 
+                            \\\\
+                            = & \dfrac{+2 \pm 6}{16}
+                        \end{align*}
+                    \]
+                    \[
+                        x = \dfrac{+2 + 6}{16} \quad\text{oppure}\quad x = \dfrac{+2 - 6}{16}
+                    \]
+                    \[
+                        x = \dfrac{+8}{16} \quad\text{oppure}\quad x = \dfrac{-4}{16}
+                    \]
+                    \[
+                        x = \dfrac{1}{2} \quad\text{oppure}\quad x = -\dfrac{1}{4}
+                    \]
+                    Dunque le soluzioni sono
+                    \[
+                        s_{1} = \color{blue}{\dfrac{1}{2}} \color{gray}{} \quad\text{e}\quad s_{2} = \color{blue}{-\dfrac{1}{4}}
+                    \]
+                </p>
+            </li>
+            <br>
+            <li>
+                Applichiamo la formula:
+                \[
+                    \begin{align*}
+                        & \color{red}{8}\color{gray}x^2 + bx +c = 
+                        \\\\
+                        = \,\,& \color{red}{8} \color{gray}{} \cdot \left(x \color{blue}{\,-\dfrac{1}{2}}\color{gray}{}\right) \cdot \left(x \color{blue}{\,+\,\dfrac{1}{4}}\color{gray}{}\right)
+                    \end{align*}
+                \]
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">7</span>
+        <h2>Polinomi di II grado e parabola</h2>
+    </div>
+
+    <br>
+    
+    <p>
+        Dato un polinomio qualsiasi è possibile rappresentarlo graficamente sul piano cartesiano.
+    </p>
+    <br>
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            Rappresentiamo il polinomio \(x -1\) sul piano cartesiano.
+            <br>
+            Per farlo andiamo a disegnare <u>tutti</u> i punti che hanno la coordinata \(y\) 
+            uguale alla coordinata \(x\) diminutita di \(1\), ovvero tutti i punti tali che:
+            \[
+                y = x -1 
+            \]
+        </p>
+        
+        <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+            <div class="geogebra-container">
+                <div id="geogebra1"></div>
+            </div>
+
+            <br>
+        
+    
+            <div style="width: 100%;">
+                <table style="width: auto; margin: auto;">
+                    <tr>
+                        <th>
+                            \(\boldsymbol{x}\)
+                        </th>
+                        <th>
+                            \(\boldsymbol{y}\)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            \(1\)
+                        </td>
+                        <td>
+                            \(0\)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            \(2\)
+                        </td>
+                        <td>
+                            \(1\)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            \(-1\)
+                        </td>
+                        <td>
+                            \(-2\)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="" id="coordX" style="width: 2rem">
+                        </td>
+                        <td>
+                            <input type="number" name="" id="coordY" style="width: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <div style="display: flex; flex-direction: row; justify-content:space-evenly; align-items: center">
+                    <button style="width: 5rem; margin-top: 0.5rem;" onclick="disegnaPunto()">Aggiungi punto</button>
+                    <button style="width: 5rem; margin-top: 0.5rem;" onclick="disegnaPolinomio()">Disegna <u>tutti</u> i punti</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <br>
+    <hr>
+    <br>
+
+    <p>
+        La rapprentazione di un polinomio di secondo grado \(ax^2 +bx +c\) è una curva detta <b>parabola</b>. 
+    </p>
+    <br>
+    <p>
+        Vediamo come varia il grafico 
+    </p>
+    <br>
+    <ul>
+        <li>
+            in funzione del coefficiente \(\color{blue}{a}\);
+        </li>
+        <br>
+        <li>
+            in funzione delle soluzioni \(\color{red}{s_{1}}\) ed \(\color{rgb(0, 153, 0)}{s_{2}}\) dell'equazione associata al polinomio 
+        </li>
+    </ul>
+
+    <br>
+    <div class="geogebra-container">
+        <div id="geogebra2"></div>
+    </div>
+    <br>
+    <p class="gray">
+        Provate a variare \(\color{blue}{a}\), \(\color{red}{s_{1}}\) ed \(\color{rgb(0, 153, 0)}{s_{2}}\) tramite gli slider ed osservate come cambia la figura.
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="grayBackground">
+        <p>
+            Per disegnare la parabola associata ad un polinomio di secondo grado
+            \[
+                ax^2 + bx + c 
+            \]
+        </p>
+        <br>
+        <ul>
+            <li>
+                risolviamo l'equazione associata \(ax^2 + bx + c = 0\), ottenendo le soluzioni \(\color{red}{s_{1}}\) ed \(\color{rgb(0, 153, 0)}{s_{2}}\).
+                <br>
+                Queste indicano le ascisse dei punti di intersezione della parabola con l'asse delle \(x\);
+            </li>
+            <br>
+            <li>
+                osserviamo il segno del coefficiente \(\color{blue}{a}\).
+                <br>
+                <ul>
+                    <li>
+                        se \(\color{blue}{a} \color{black}{} \gt 0\)  allora la concavità della parabola è verso l'alto;
+                        <div style="width: 50%;">
+                            <img src="img/parabolaSorride.png" alt="" style="display: block; width: 100%; margin: auto;">
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        se \(\color{blue}{a}\color{black}{} \lt 0\)  allora la concavità della parabola è verso il basso;
+                        <div style="width: 50%;">
+                            <img src="img/parabolaTriste.png" alt="" style="display: block; width: 100%; margin: auto;">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <b>Esempio 1</b>
+        <br>
+        <p>
+            Rappresentare graficamente il polinomio 
+            \[
+                2x^2 +2x -4
+            \]    
+        </p>
+        <br>
+        <ul>
+            <li>
+                <p>
+                    Risolviamo l'equazione associata \(2x^2 +2x -4 = 0\):
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                        
+                            x =  \dfrac{-2 \pm \sqrt{2^2 -4 \cdot 2 \cdot \left(-4\right)}}{2 \cdot 2} =
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            =  \dfrac{-2 \pm \sqrt{4 +32}}{4} = \dfrac{-2 \pm \sqrt{36}}{4} =
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            =  \dfrac{-2 \pm 6}{4} 
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            x = \color{red}{-2} \color{black}{} \quad\text{oppure}\quad x = \color{rgb(0, 153, 0)}{1}  
+                    \)
+                </p>
+                <br>
+                <p>
+                    Di conseguenza la parabola interseca l'asse delle \(x\) in corrispondenza di \(x = \color{red}{-2}\) e \(x = \color{rgb(0, 153, 0)}{1}\)
+                </p>
+            </li>
+            <br>
+            <li>
+                <p>
+                    Guardiamo il polinomio
+                    \[
+                        \color{blue}{2}\,\color{black}{}x^2 +2x -4
+                    \]
+                </p>
+                <p>
+                    Il coefficiente \(\color{blue}{a}\) ha valore \(\color{blue}{2}\), dunque ha segno positivo. Di conseguenza la parabola ha la concavità verso l'alto.
+                </p>
+                <p>
+                    Abbiamo tutti gli elementi per disegnare la parabola:
+                </p>
+                <br>
+
+                <img src="img/esempioParabolaSorridente.png" alt="">
+            </li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+
+        <b>Esempio 2</b>
+        <br>
+        <p>
+            Rappresentare graficamente il polinomio 
+            \[
+                -x^2 +x +6 
+            \]    
+        </p>
+        <br>
+        <ul>
+            <li>
+                <p>
+                    Risolviamo l'equazione associata \(-x^2 +x +6  = 0\):
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                        
+                            x =  \dfrac{-1 \pm \sqrt{1^2 -4 \cdot \left(-1\right) \cdot 6}}{2 \cdot \left(-1\right)} =
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            =  \dfrac{-1 \pm \sqrt{1 + 24}}{-2} = \dfrac{-1 \pm \sqrt{25}}{-2} =
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            =  \dfrac{-1 \pm 5}{-2} 
+                    \)
+                </p>
+                <br>
+                <p class="formula">
+                    \(
+                            x = \color{red}{-2} \color{black}{} \quad\text{oppure}\quad x = \color{rgb(0, 153, 0)}{3}  
+                    \)
+                </p>
+                <br>
+                <p>
+                    Di conseguenza la parabola interseca l'asse delle \(x\) in corrispondenza di \(x = \color{red}{-2}\) e \(x = \color{rgb(0, 153, 0)}{3}\)
+                </p>
+            </li>
+            <br>
+            <li>
+                <p>
+                    Guardiamo il polinomio
+                    \[
+                        \color{blue}{-}\,\color{black}{}x^2 +x +6
+                    \]
+                </p>
+                <p>
+                    Il coefficiente \(\color{blue}{a}\) ha valore \(\color{blue}{-1}\), dunque ha segno negativo. Di conseguenza la parabola ha la concavità verso il basso.
+                </p>
+                <p>
+                    Abbiamo tutti gli elementi per disegnare la parabola:
+                </p>
+                <br>
+
+                <img src="img/esempioParabolaTriste.png" alt="">
+            </li>
+        </ul>
+    </div>
+    
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">8</span>
+        <h2>Segno di un polinomio di II grado:
+            <br>
+            Metodo della parabola</h2>
+    </div>
+    <p>
+        Consideriamo il polinomio 
+        \[
+            3x^2 +2x -5
+        \]
+        Il <b>segno</b> di questo polinomio dipende dal valore che assegnamo alla \(x\).
+        <br>
+        <br>
+        Raccogliamo qualche esempio nella taballa che segue
+        <br>
+        <br>
+        <div style="width: 100%; overflow-x:auto">
+            <table style="margin: 0.1rem">
+                <tr>
+                    <th>
+                        \[
+                            \text{valore di}\,\,\,\color{red}{x}
+                        \]
+                    </th>
+                    <th style="font-size: 0.9rem;">
+                        \[
+                            \text{valore di}\,\,\, 3\color{red}{x}\color{black}{}^2 +2\color{red}{x}\color{black}{} -5
+                        \]
+                    </th>
+                    <th>
+                        <p>Segno</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        \[
+                            \color{red}{2}
+                        \]
+                    </td>
+                    <td style="font-size: 0.8rem;">
+                        \[
+                            3\cdot\color{red}{2}\color{black}{}^2 +2\cdot\color{red}{2}\color{black}{} -5 = 11
+                        \]
+                    </td>
+                    <td>
+                        \[
+                            \boldsymbol{+}
+                        \]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \[
+                            \color{red}{-1}
+                        \]
+                    </td>
+                    <td style="font-size: 0.8rem;">
+                        \[
+                            3\cdot\color{red}{\left(-1\right)}\color{black}{}^2 +2\cdot\color{red}{\left(-1\right)}\color{black}{} -5 = -4
+                        \]
+                    </td>
+                    <td>
+                        \[
+                            \boldsymbol{-}
+                        \]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \[
+                            \color{red}{0}
+                        \]
+                    </td>
+                    <td style="font-size: 0.8rem;">
+                        \[
+                            3\cdot\color{red}{0}\color{black}{}^2 +2\cdot\color{red}{0}\color{black}{} -5 = -5
+                        \]
+                    </td>
+                    <td>
+                        \[
+                            \boldsymbol{-}
+                        \]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \[
+                            \color{red}{-5}
+                        \]
+                    </td>
+                    <td style="font-size: 0.8rem;">
+                        \[
+                            3\cdot\color{red}{\left(-5\right)}\color{black}{}^2 +2\cdot\color{red}{\left(-5\right)}\color{black}{} -5 = 110
+                        \]
+                    </td>
+                    <td>
+                        \[
+                            \boldsymbol{+}
+                        \]
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        <br>
+    </p>
+    
+
+    <p>
+        Il nostro obiettivo è scoprire quali valori della \(x\) rendono il polinomio
+    </p>
+    <br>
+    <ul>
+        <li>
+            positivo
+        </li>
+        <li>
+            nullo
+        </li>
+        <li>
+            negativo
+        </li>
+    </ul>
+    <br>
+    <p>
+        In altre parole vogliamo <b>studiare il segno</b> del polinomio al variare del valore della \(x\).
+    </p>
+    <br>
+    <p>
+        Per farlo risolviamo l'equazione associata al polinomio e disegnamo la parabola che lo rappresenta:
+    </p>
+    <p>
+        \[
+            \begin{align*}
+                x = \,& \dfrac{-2 \pm \sqrt{2^2 -4 \cdot 3 \cdot \left(-5\right)}}{2 \cdot 3} = 
+                \\\\
+                = \,& \dfrac{-2 \pm \sqrt{64}}{6} = \dfrac{-2 \pm 8}{6} 
+            \end{align*}
+        \]
+        quindi
+        \[
+            \begin{align*}
+                x = \dfrac{-2 + 8}{6} \quad&\text{oppure}\quad x = \dfrac{-2 - 8}{6}
+                \\\\
+                x = 1 \quad&\text{oppure}\quad x = -\dfrac{5}{3}
+            \end{align*}
+        \]
+        di conseguenza la parabola che rappresenta il polinomio è la seguente
+    </p>
+    <br>
+    <img src="img/segnoParabola(1).png" alt="" style="max-width: 300px; width: 100%; margin: auto">
+    <br>
+    <p>
+        A partire da questo grafico è possibile stabilire il segno del polinomio \(3x^2 +2x -5\). Infatti, 
+    </p>
+    <br>
+    <ul>
+        <li>
+            i valori della \(x\) in corrispondenza dei quali il grafico si trova <b style="color: red">sopra</b> l'asse delle \(x\) sono quelli per cui il polinomio ha segno \(\boldsymbol{\color{red}{+}}\)
+        </li>
+        <br>
+        <li>
+            i valori della \(x\) in corrispondenza dei quali il grafico si trova <b style="color: blue">sotto</b> l'asse delle \(x\) sono quelli per cui il polinomio ha segno \(\boldsymbol{\color{blue}{-}}\)
+        </li>
+        <br>
+        <li>
+            i valori della \(x\) in corrispondenza dei quali il grafico <b style="color: gray">interseca</b> l'asse delle \(x\) sono quelli per cui il polinomio vale \(\boldsymbol{\color{gray}{0}}\)
+        </li>
+    </ul>
+    <br>
+    <p>
+        Rappresentiamo queste informazioni sul grafico della parabola:
+    </p>
+    <br>
+    <img src="img/segnoParabola(2).png" alt="" style="max-width: 300px; width: 100%; margin: auto;">
+    <br>
+    <p>
+        Possiamo concludere che 
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(3x^2 +2x -5 \lt 0 \quad\)  se
+            <br>
+            <br>
+            \(x \lt -\dfrac{5}{3}\quad\)  oppure \(\quad x \gt 1\)
+        </li>
+        <br>
+        <li>
+            \(3x^2 +2x -5 = 0 \quad\)  se
+            <br>
+            <br>
+            \(x = -\dfrac{5}{3}\quad\)  oppure \(\quad x = 1\)
+        </li>
+        <br>
+        <li>
+            \(3x^2 +2x -5 \gt 0 \quad\)  se
+            <br>
+            <br>
+            \(\dfrac{5}{3} \lt x \lt 1\)
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        function showHint(i) {
+            document.getElementById("hint"+i+"-button").style.display = "none";
+            document.getElementById("hint"+i).style.display = "block";
+        }  
+    </script>
+</body>
+</html>
+
+<!-- https://ludovicoradaelli.github.io/Matematica/2022/ -->

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Radici di indice n</title>
+</head>
+<body>
+    <h1>Radicali</h1>
+
+    <br>
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Radice di indice \(n\) di un numero</h2>
+    </div>
+    <p class="grayBackground">
+        \(\sqrt[\color{red}{n}]{\color{blue}{A}}\) è quel numero che elevato alla \(\color{red}{n}\) dà come risultato \(\color{blue}{A}\).
+    </p>
+
+    <br>
+
+    <h3>Esempi</h3>    
+    <div class="esempi-container">
+        <p class="gray">
+            Scegliete voi il valore da dare ad \(\color{red}{n}\) e ad \(\color{blue}{A}\):
+        </p>
+        <br>
+        <div id="input-container">
+            <div id="nInput-container">
+                <div>
+                    \(\color{red}{n} \,\, \color{black}{=}\)
+                </div>
+                <input id="nInput" type="number" value="2" style="color: red;"> 
+            </div>
+            <div id="aInput-container">
+                <div>
+                    \(\color{blue}{A \,\,\color{black}{=}}\)
+                </div>
+                <input id="aInput" type="number" value="5" style="color: blue;">
+            </div>
+        </div>
+        <br>
+
+        <button onclick="generaDefinizione()">mostra definizione</button>
+        <br>
+    
+        <div id="generaDefinizione">
+            <p class="grayBackground" id="definizione">
+                \(\sqrt[\color{red}{2}]{\color{blue}{5}}\) è quel numero che elevato alla \(\color{red}{2}\) dà come risultato \(\color{blue}{5}\).
+
+                \[
+                    \left(\sqrt[\color{red}{2}]{\color{blue}{}5}\color{black}{}\right)^{\color{red}{2}} = \color{blue}{5}
+                \]
+            </p>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+
+
+    <p>
+        Diamo un nome alle varie parti che compongono una radice:
+    </p>
+    <br>
+    
+    
+    <img src="img/nomenclaturaRadici.png" alt="" style="width: 60%;">
+    
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <div id="esempio1">
+            <p>
+                \(\sqrt[\color{red}{2}]{\color{blue}{7}}\,\,\) ha
+            </p>
+            <ul>
+                <li>
+                    <span style="color: red;">indice</span>: \(\color{red}{2}\)
+                </li>
+                <li>
+                    <span style="color: blue;">argomento</span>: \(\color{blue}{7}\)
+                </li>
+            </ul>
+            <br>
+        </div>
+        
+
+        <button onclick="generaEsempio(1)">Mostrami un altro esempio</button>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2 id="campoEsistenza">Definizione di una radice</h2>
+    </div>
+
+    <br>
+
+    <div class="grayBorder">
+        <p>
+            <b>Sfida</b>
+            <br>
+            Qual è il risultato di \(\sqrt[\color{red}{2}]{\color{blue}{-4}}\)?
+            <br>
+            <br>
+            Ovvero, qual è il numero che elevato alla \(\color{red}{2}\) dà come risultato \(\color{blue}{-4}\)?
+        </p>
+
+        <br>
+
+
+        <img src="img/hideSolution.png" id="show-button1" onclick="show(1)"></img>
+        <div id="show1" style="display: none;">
+            <p>
+                <b>Soluzione</b>
+                <br>
+                Stiamo cercando il numero che elevato alla \(\color{red}{2}\) dà come risultato \(\color{blue}{-4}\).
+            </p>
+            <br>
+            <p>
+                C'è un problema: <u>qualsiasi</u> numero, elevato alla \(2\) dà come risultato un numero positivo (con il segno \(\color{darkorange}{\boldsymbol{+}}\)).
+            </p>
+            <p>
+                \[
+                    \begin{align*}
+                        1^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 1
+                        \\\\
+                        \left(-1\right)^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 1
+                        \\\\
+                        2^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 4
+                        \\\\
+                        \left(-2\right)^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 4
+                        \\\\
+                        3^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 9
+                        \\\\
+                        \left(-3\right)^2 = \color{darkorange}{\boldsymbol{+}}\color{black}{} 9
+                        \\\\
+                        \text{etc...}
+                    \end{align*}
+                \]
+            </p>
+            <p>
+                \(\sqrt[2]{-4}\) non esiste, perché non esiste un numero che elevato alla seconda abbia risultato negativo!
+                \[
+                    \color{red}{\xcancel{\color{black}{}\text{???}^2 = \color{darkorange}{\boldsymbol{-}}\color{black}{}4}}
+                \]
+            </p>
+        </div>
+    </div>
+    
+    
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="grayBorder">
+        <p>
+            <b>Altra sfida</b>
+            <br>
+            Qual è il risultato di \(\sqrt[\color{red}{3}]{\color{blue}{-27}}\)?
+            <br>
+            <br>
+            Ovvero, qual è il numero che elevato alla \(\color{red}{3}\) dà come risultato \(\color{blue}{-27}\)?
+        </p>
+
+        <br>
+
+        <img src="img/hideSolution(2).png" id="show-button2" onclick="show(2)"></img>
+        <div id="show2" style="display: none;">
+            <p>
+                <b>Soluzione</b>
+                <br>
+                Stiamo cercando il numero che elevato alla \(\color{red}{3}\) dà come risultato \(\color{blue}{-27}\).
+            </p>
+            <p>
+                Osserviamo che rispetto al caso precedente, un numero alla \(3\) può dare come risultato un numero con segno \(\color{darkorange}{\boldsymbol{-}}\)
+                \[
+                    \begin{align*}
+                        1^3 = +1
+                        \\\\
+                        \left(-1\right)^3 = \color{darkorange}{\boldsymbol{-}}\color{black}{} 1
+                        \\\\
+                        2^3 = +8
+                        \\\\
+                        \left(-2\right)^3 = \color{darkorange}{\boldsymbol{-}}\color{black}{} 4
+                        \\\\
+                        3^3 = 27
+                        \\\\
+                        \boxed{\left(-3\right)^3 = \color{darkorange}{\boldsymbol{-}}\color{black}{} 27}
+                        \\\\
+                        \text{etc...}
+                    \end{align*}
+                \]
+            </p>
+            <p>
+                Stavolta la soluzione esiste: \(\sqrt[\color{red}{3}]{\color{blue}{-27}} = -3\).
+            </p>
+            <p>
+                Infatti 
+                \[\left(-3\right)^{\color{red}{3}} = \left(-3\right)\cdot\left(-3\right)\cdot\left(-3\right) = \color{blue}{-27}\] 
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <p>In sintesi:</p>
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Le radici di <b>indice pari</b> sono definite solamente per argomenti positivi.
+            </li>
+            <br>
+            <li>
+                Le radici di <b>indice dispari</b> sono definite per qualisasi argomento (sia positivo che negativo).
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <span class="par">3</span>
+        <h2 id="propInvariantiva">Proprietà invariantiva</h2>
+    </div>
+    
+    <br>
+    
+    <p>
+        Conosciamo già la priprietà invariantiva della frazioni. 
+        Prendiamo la frazione \(\dfrac{\color{red}{10}}{\color{blue}{8}}\).
+        <br>
+        Possiamo modificare la <i>forma</i> della frazione senza modificare il suo <i>valore</i>. 
+        <br>
+        Come? 
+        <br>
+        <br>
+        <u>Moltiplicando</u> <span style="color: red">numeratore</span> e <span style="color: blue">denominatore</span> per uno <span style="color: green">stesso numero</span>
+        \[
+            \dfrac{\color{red}{10}}{\color{blue}{8}} =
+            \dfrac{\color{red}{10} \color{black}{\,\cdot\,}\color{green}{2}}{\color{blue}{8}\color{black}{\,\cdot\,}\color{green}{2}} =
+            \dfrac{\color{red}{20}}{\color{blue}{16}} 
+        \]
+        
+        <br>
+        oppure <u>dividendo</u> <span style="color: red">numeratore</span> e <span style="color: blue">denominatore</span> per uno <span style="color: green">stesso numero</span>
+        \[
+            \dfrac{\color{red}{10}}{\color{blue}{8}} =
+            \dfrac{\color{red}{10} \color{black}{\,:\,}\color{green}{2}}{\color{blue}{8}\color{black}{\,:\,}\color{green}{2}} =
+            \dfrac{\color{red}{5}}{\color{blue}{4}} 
+        \]
+        <br>
+        La stessa proprietà la ritroviamo per i radicali.
+        
+    </p>
+
+    <br>
+
+    <p class="grayBackground">
+        <b>Proprietà invariantiva dei radicali</b>
+        <br>
+        <br>
+        <u>Moltiplicando</u> o <u>dividendo</u> sia l'<span style="color: red">indice di radice</span> che 
+        l'<span style="color: blue">esponente</span> dell'argomento per uno  <span style="color: green">stesso numero</span>, il valore del 
+        radicale rimane invariato. 
+        <br>
+        <br>
+        In formule:
+        \[
+            \sqrt[\color{red}{m}]{A^{\color{blue}{n}}} = 
+            \sqrt[\color{red}{m}\color{black}{\,\cdot\,}\color{green}{p}]{A^{\color{blue}{n}\color{black}{\,\cdot\,}\color{green}{p}}} 
+            \qquad\,\,\,\, \sqrt[\color{red}{m}]{A^{\color{blue}{n}}} = \sqrt[\frac{\color{red}{m}}{\color{green}{p}}\,]{A^{\frac{\color{blue}{n}}{\color{green}{p}}}}
+        \]
+    </p>
+    <br>
+    
+    <br>
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p><b>Tramite moltiplicazione</b></p>
+        <p id="esempio3" >
+            \[
+                \sqrt[\color{red}{2}]{7^{\color{blue}{5}}} = 
+                \sqrt[\color{red}{2 \color{black}{\,\cdot\,}\color{green}{3}}]{7^{\color{blue}{5}\color{black}{\,\cdot\,}\color{green}{3}}} = 
+                \sqrt[\color{red}{6}]{7^{\color{blue}{15}}}
+            \]
+        </p>
+        <p id="esempio-text3" class="gray">
+            <u>Moltiplico</u> per \(\color{green}{3}\) sia l'indice di radice, \(\color{red}{2}\), che l'esponente dell'argomento, \(\color{blue}{5}\).
+        </p>
+        <br>
+        <button onclick="generaEsempio(3)">Mostrami un altro esempio</button>
+
+        <br>
+        <hr>
+        <br>
+        
+        <p><b>Tramite divisione</b></p>
+        <p id="esempio2" >
+            \[
+                \sqrt[\color{red}{8}]{6^{\color{blue}{10}}} = 
+                \sqrt[\color{red}{4}\color{black}{\,:\,}\color{green}{2}]{6^{\color{blue}{10}\color{black}{\,:\,}\color{green}{2}}} =
+                \sqrt[\color{red}{4}]{6^{\color{blue}{5}}}
+            \]
+        </p>
+        <p id="esempio-text2" class="gray">
+            <u>Divido</u> per \(\color{green}{2}\) sia l'indice di radice, \(\color{red}{8}\), che l'esponente dell'argomento, \(\color{blue}{10}\).
+        </p>
+        <br>
+        <button onclick="generaEsempio(2)">Mostrami un altro esempio</button>
+        
+    </div>
+    <br>
+    
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">4</span>
+        <h2 class="blue">Moltiplicazioni e divisioni tra radici</h2>
+    </div>
+    
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">4.1</span>
+        <h3>Se l'indice di radice è uguale</h3>
+    </div>
+    
+
+    <br>
+    
+    <div class="grayBackground">
+        <p>
+            Il risultato della <b>moltiplicazione</b> tra due radicali aventi indice uguale è un radicale che 
+        </p>
+        
+        <ul>
+            <li>
+                come indice ha lo stesso indice dei fattori
+            </li>
+            <li>
+                come argomento il prodotto degli argomenti
+            </li>
+        </ul>
+        <br>
+        <p>In formule:
+            \[
+                \boxed{\sqrt[\color{red}{n}]{\color{blue}{A}} \cdot \sqrt[\color{red}{n}]{\color{blue}{B}} = \sqrt[\color{red}{n}]{\color{blue}{A \color{black}{\,\cdot\,} \color{blue}{B}}}}
+            \]
+        </p>
+    </div>
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio4" >
+            \[
+                \sqrt[\color{red}{5}]{\color{blue}{2}} \cdot \sqrt[\color{red}{5}]{\color{blue}{3}} = \sqrt[\color{red}{5}]{\color{blue}{2 \color{black}{\,\cdot\,} \color{blue}{3}}}
+            \]
+        </p>
+        <br>
+        <button onclick="generaEsempio(4)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+    <div class="grayBackground">
+        <p>
+            Il risultato della <b>divisione/frazione</b> tra due radicali aventi indice uguale è un radicale che 
+        </p>
+        
+        <ul>
+            <li>
+                come indice ha lo stesso indice dei fattori
+            </li>
+            <li>
+                come argomento il risultato della divisione/frazione degli argomenti
+            </li>
+        </ul>
+        <br>
+        <p>In formule:
+            \[
+                \boxed{\sqrt[\color{red}{n}]{\color{blue}{A}} : \sqrt[\color{red}{n}]{\color{blue}{B}} = \sqrt[\color{red}{n}]{\color{blue}{A \color{black}{\,:\,} \color{blue}{B}}}}
+            \]
+            \[
+                \boxed{
+                    \dfrac{\sqrt[\color{red}{n}]{\color{blue}{A}}}{\sqrt[\color{red}{n}]{\color{blue}{B}}} = \sqrt[\color{red}{n}]{\dfrac{\color{blue}{A}}{\color{blue}{B}}}
+                }
+            \]
+        </p>
+    </div>
+
+    <br>
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio5" >
+            \[
+                \dfrac{\sqrt[\color{red}{7}]{\color{blue}{50}}}{\sqrt[\color{red}{7}]{\color{blue}{10}}} = \sqrt[\color{red}{7}]{\dfrac{\color{blue}{50}}{\color{blue}{10}}}
+            \]
+        </p>
+        <br>
+        <button onclick="generaEsempio(5)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">4.1</span>
+        <h3>Se l'indice di radice è diverso</h3>
+    </div>
+    <br>
+
+    <p>
+        Per eseguire la moltiplicazione eseguiamo un procedimento simile a quello del calcolo della somma tra due frazioni:
+    </p>
+    <br>
+    <video src="img/radicaliMoltiplicazioneIndiciDiversi.mp4" controls></video>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="h2">
+        <span class="par">5</span>
+        <h2 id="portareFuoriDallaRadice">Portare un fattore fuori dal segno di radice</h2>
+    </div>
+
+    <br>
+    <video src="img/portareFuoriDalSimboloDiRadice.mp4" controls></video>
+    <br>
+
+    <h3 class="yellow" >Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio6">
+            \[
+                \begin{align}
+                    \sqrt[3]{5^{8}} \,&=\, \sqrt[3]{5^{6}\,\cdot\,5^2} \,=\\\\
+                    &=\, 5^2\,\sqrt[3]{5^2} \,=\\\\
+                    &=\, 25 \,\sqrt[3]{25}
+                \end{align}
+            \]
+        </p>
+        <br>
+        <button onclick="generaEsempio(6)">Mostrami un altro esempio</button>
+
+        
+    </div>
+    <br>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">6</span>
+        <h2 id="radiceDiRadice">Radici di radicali</h2>
+    </div>
+
+    <br>
+
+    <p class="grayBackground">
+        \[
+            \sqrt[\color{red}{n}]{\sqrt[\color{red}{m}]{A}} = \sqrt[\color{red}{n \,\cdot\, m}]{A}
+        \]
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio7">
+            \[
+                \sqrt[\color{red}{3}]{\sqrt[\color{red}{4}]{7}} = \sqrt[\color{red}{12}]{7}
+            \]
+        </p>
+        <p id="esempio-text7" class="gray">
+            L'indice del risultato è il prodotto tra gli indici delle due radici \(\color{red}{3 \,\cdot\,4 = 12}\).
+
+        </p>
+        <br>
+        <button onclick="generaEsempio(7)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">7</span>
+        <h2>Somma di radicali</h2>
+    </div>
+
+    <br>
+
+    <p>
+        <nobr>⚠️<b>&Eacute; <u>sempre</u> possibile addizionare due radicali.</b></nobr>
+        <br>
+        Ad esempio:
+        \[
+            \begin{align*}
+                &\color{green}{}\sqrt{2} \color{black}{}\,\,+\,\, \color{darkorange}{}\sqrt[3]{7} \color{black}{} = 
+                \\\\
+                & \color{green}{}1,41421356\dots \color{black}{}\,\,+\,\, \color{darkorange}{}1,91293118\dots \color{black}{}=
+                \\\\
+                &3,32714475\dots
+            \end{align*}
+        \]
+        Come potete vedere, il risultato lo abbiamo <b>approssimato</b> (scritto con i puntini, per intenderci).
+        <br>
+        Il problema che ci poniamo in questo paragrafo è il seguente:
+    </p>
+
+    <br>
+    <div class="grayBorder">
+        <p>
+            Dati due radicali è possibile scrivere la loro somma <b>in forma radicale</b>?
+        </p>
+    </div>
+
+    <br>
+    <video src="img/sommaAlgebricaRadicali.mp4" controls></video>
+    <br>
+    <p class="grayBackground">
+        La somma tra due termini aventi la stessa parte radicale può scriversi in forma radicale:
+        \[
+            \color{darkorange}{A} \color{blue}{\sqrt[n]{C}}  \color{black}{\,\,+\,\,} \color{green}{B} \color{blue}{\sqrt[n]{C}} \color{black}{} 
+            \,\,=\,\, \left(\color{darkorange}{A} \color{black}{\,\,+\,\,} \color{green}{B} \color{black}{}\right) \color{blue}{\sqrt[n]{C}}
+        \]
+    </p>
+    
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio10">
+            \[
+                \begin{align}
+                    &3\,\color{red}{\sqrt[3]{5}} \color{black}{}+ 7\,\color{blue}{\sqrt{8}} \color{black}{} + 2\,\color{red}{\sqrt[3]{5}} \color{black}{} - 16\,\color{blue}{\sqrt{8}} \color{black}{} = \\\\
+                    &= 5\, \color{red}{\sqrt[3]{5}} \color{black}{} -9 \,\color{blue}{\sqrt{8}} 
+
+                \end{align}
+            \]
+        </p>
+        <br>
+        <button onclick="generaEsempio(10)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <span class="par">8</span>
+        <h2 id="razionalizzazione">Razionalizzazione</h2>
+    </div>
+    <br>
+    <video src="img/razionalizzazione.mp4" controls></video>
+    <br>
+
+    <p class="grayBackground">
+        <b>Razionalizzare</b> una frazione assegnata significa riscriverla come una frazione equivalente che 
+        non abbia radicali al denominatore.
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio8">
+            \[
+                \dfrac{5}{\sqrt{10}} = \dfrac{5}{\sqrt{10}} \cdot \color{red}{\dfrac{\sqrt{10}}{\sqrt{10}}} \color{black}{} = \dfrac{5\,\sqrt{10}}{10}
+            \]
+        </p>
+    </div>
+    <br>
+    <button onclick="generaEsempio(8)">Mostrami un altro esempio</button>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <span class="par">9</span>
+        <h2 id="condizioniEsistenza">Condizioni d'esistenza della radice quadrata</h2>
+    </div>
+    <br>
+    <video src="img/condizioniEsistenza.mp4" controls></video>
+    <br>
+    <p class="grayBackground">
+        La radice quadrata esiste se e solo se <span style="color: red">il suo contenuto</span> <span style="color: blue">è positivo</span>.
+        \[
+            \sqrt{\color{red}{A}} \,\,\,\text{esiste}
+        \]
+        \[
+            \Updownarrow
+        \]
+        \[
+            \color{red}{A}\,\,\color{blue}{\geq 0 } 
+        \]
+
+    </p>
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio9">
+            \[
+                \sqrt{\color{red}{2x - 1}} \,\,\,\text{esiste}
+            \]
+            \[
+            \Updownarrow
+            \]
+            \[
+                \begin{align*}    
+                \color{red}{2x -1 }&\color{blue}{\,\,\geq 0 } \\\\
+                2x & \geq 1 \\\\
+                x & \geq \dfrac{1}{2} 
+                \end{align*}    
+            \]
+        </p>
+        <br>
+        <button onclick="generaEsempio(9)">Mostrami un altro esempio</button>
+    </div>
+    
+    
+
+    <br>
+    <br>
+
+
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- https://ludovicoradaelli.github.io/Matematica/2022/ -->

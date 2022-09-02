@@ -1,0 +1,22 @@
+#input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#nInput-container>input,
+#aInput-container>input {
+    width: 2rem;
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+#nInput-container,
+#aInput-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}

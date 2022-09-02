@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Insiemi di rette dipendenti da un parametro</title>
+</head>
+<body>
+    <div class="h2">
+        <span class="par">5</span>
+        <h2>Insiemi di rette dipendenti da un parametro</h2>
+    </div>
+
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">5.1</span>
+        <h3>Cos'è un parametro?</h3>
+    </div>
+
+    <br>
+
+    <p>
+        Immaginate di voler chiedere un prestito di \(100\)&euro; in banca. 
+        <br>
+        Indichiamo con 
+    </p>
+    <br>
+    <ul>
+        <li>\(x\) il numero di anni in cui saldare il debito con la banca</li>
+        <br>
+        <li>
+            \(y\) il debito stesso (ovvero quanti soldi dobbiamo dare alla banca).
+        </li>
+    </ul>
+    <br>
+
+    
+    <div class="grayBorder">
+        <b>Prima banca</b>
+        <br>
+        <p>
+            La prima banca vi propone un prestito con <span style="color: red"><i>interesse annuo</i></span> del \(1\%\).
+            <br>
+            Questo significa che, oltre ai \(\color{blue}{100}\) <span style="color: blue">&euro;</span> da restituire, per ogni <span style="color: green;">anno</span>  della durata 
+            del prestito pagate l'\(1\%\) della somma che vi è stata prestata.
+        </p>
+        
+        <p class="formula" style="font-size: 0.95rem;">
+            \[
+                \underset{\text{debito}}{\color{gray}{}\underbrace{\color{black}{}y}} =
+                \underset{\color{blue}{}\text{prestito}}{\color{gray}{}\underbrace{\color{blue}{}100}} + 
+                \underset{\color{red}{}\text{interesse annuo} (1\%)}{\color{gray}{}\underbrace{\color{red}{} 1\% \cdot 100 }} 
+                \cdot \underset{\color{green}{\text{durata prestito}}}{\color{gray}{}\underbrace{\color{green}{} x}}
+            \]
+        </p>
+
+        
+
+        <b>Seconda banca</b>
+        <br>
+        <p>
+            La seconda banca vi propone un prestito con <span style="color: red"><i>interesse annuo</i></span> del \(2\%\).
+        </p>
+        
+        <p class="formula" style="font-size: 0.95rem;">
+            \[
+                \underset{\text{debito}}{\color{gray}{}\underbrace{\color{black}{}s}} = 
+                \underset{\color{blue}{}\text{prestito}}{\color{gray}{}\underbrace{\color{blue}{}100}} + 
+                \underset{\color{red}{}\text{interesse annuo} (2\%)}{\color{gray}{}\underbrace{\color{red}{} 2\% \cdot 100 }} 
+                \cdot \underset{\color{green}{\text{durata prestito}}}{\color{gray}{}\underbrace{\color{green}{} x}}
+            \]
+        </p>
+
+        <b>Terza banca</b>
+        <br>
+        <p>
+            La terza banca vi propone un prestito con <span style="color: red"><i>interesse annuo</i></span> del \(5\%\).
+        </p>
+        
+        <p class="formula" style="font-size: 0.95rem;">
+            \[
+                \underset{\text{debito}}{\color{gray}{}\underbrace{\color{black}{}s}} =
+                \underset{\color{blue}{}\text{prestito}}{\color{gray}{}\underbrace{\color{blue}{}100}} + 
+                \underset{\color{red}{}\text{interesse annuo} (5\%)}{\color{gray}{}\underbrace{\color{red}{} 5\% \cdot 100 }} 
+                \cdot \underset{\color{green}{\text{durata prestito}}}{\color{gray}{}\underbrace{\color{green}{} x}}
+            \]
+        </p>
+    </div>
+
+    <br>
+
+    <p>
+        La formula che usiamo per sapere il debito che abbiamo con la banca ha sempre la stessa forma:
+    </p>
+    <p class="formula" class="formula">
+        \[
+            s = \color{blue}{}100 \color{black}{}+ \color{red}{}i\,\% \cdot 100 \color{black}{}\cdot \color{green}{}x
+        \]
+    </p>
+    <p>
+        Il numero \(i\) dipende dalla banca che scegliamo, ma una volta effettuata la scelta è <b>costante</b>. Lo chiameremo parametro.
+        <br>
+        In generale possiamo dire che
+    </p>
+    
+    <br>
+
+
+    <p class="grayBackground">
+        Un parametro è una costante aribitraria.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">5.2</span>
+        <h3>Insiemi di rette dipendenti da un parametro</h3>
+    </div>
+    
+    <br>
+
+    <video src="img/insiemeRetteDipendenteDaParametro.mp4" controls></video>
+    <br>
+
+    <p>
+        Nell'esempio che segue avete la possibilità di esplorare tre insiemi di rette dipendenti da parametro.
+    </p>
+    <br>
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <div id="insieme1" class="formula" style="display: none;">
+            \(
+                \color{rgb(255, 51, 102)}{}\text{Insieme 1}
+            \)
+            \[
+                \color{rgb(255, 51, 102)}{y = -\dfrac{10 - d}{d} x + 10 -d}
+            \]
+        </div>
+        
+        <div id="insieme2" class="formula" style="display: none;">
+            \[
+                \color{blue}{}\text{Insieme 2}
+            \]
+            <br>
+            \[
+                \color{blue}{y = \left(b+1\right)x + \dfrac{b}{8}}
+            \]
+        </div>
+        
+        <div id="insieme3" class="formula" style="display: none;">
+            \[
+                \color{rgb(255, 127, 0)}{}\text{Insieme 3}
+            \]
+            <br>
+            \[
+                \color{rgb(255, 127, 0)}{y = \left(k -1\right)^2x + \dfrac{1}{k^2+1}}   
+            \]   
+        </div>
+        
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+        <br>
+        <p class="gray" style="font-size: 0.8rem;">Usate lo slider in alto a sinistra per vedere come cambia la retta al variare del parametro.</p>
+        <br>
+        <br>
+    
+        <div style="display: flex; flex-direction: row; justify-content:space-evenly; align-items: center">
+            <button onclick="disegnaInsieme(1)"><span style="color: #ff6699">Insieme 1</span></button>
+            <button onclick="disegnaInsieme(2)"><span style="color: blue">Insieme 2</span></button>
+            <button onclick="disegnaInsieme(3)"><span style="color: #ff7f00">Insieme 3</span></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>

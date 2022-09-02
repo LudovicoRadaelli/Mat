@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    
+    <script src="monomialAndPolynomial.js"></script>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Retta passante per due punti</title>
+</head>
+<body>
+    <h1>Retta passante per due punti</h1>
+    <br>
+<!-- 
+    <h2>Equazione della retta: piccolo riassunto</h2>
+    
+    <video src="https://ludovicoradaelli.github.io/Matematica/2022/seconda/rettaPassantePerDuePunti/img/riassuntoEquazioneRetta.mp4" controls></video>
+    <br>
+    <p>
+        L'equazione 
+        \[
+            y = mx + q
+        \]
+        viene detta <b>equazione della retta</b> perché se rappresentiamo <u>tutti</u> i punti che hanno coordinata 
+        \(y\) uguale a \(m\) volte la coordinata \(x\) più \(q\) la figura che otteniamo è proprio una retta.
+    </p>
+    <br>
+    <hr>
+    <br> 
+-->
+
+    <div class="h3">
+        <span class="sub-par">.1</span>
+        <h3>Come verificare se un punto appartiene ad una retta</h3>
+    </div>
+
+    <br>
+
+    <video src="img/verificaAppartenenzaPuntoRetta.mp4" controls></video>
+    <br>
+    <p>
+        Prendiamo il punto 
+        \[A\left(2\,;\,\,3 \right)\] 
+        e la retta di equazione 
+        \[y = -2x + 7\]
+        Per controllare se il punto \(A\) appartiene alla retta sostituiamo le sue coordinate nell'equazione della retta.
+    </p>
+    <br>
+
+    <video src="https://ludovicoradaelli.github.io/Matematica/2022/seconda/rettaPassantePerDuePunti/img/gifAppartiene.mp4" controls defaultPlaybackRate = "1.5"></video>
+
+    <br>
+    <br>
+
+    <h2 class="yellow">Esempi</h2>
+    <div class="esempi-container">
+        <p id="esempio1">
+            Stabilire se il punto di coordinate 
+            \[
+                \left(\color{red}{-8}\,\color{black}{},\,\,\color{blue}{4}\color{black}{}\right)
+            \]
+            appartiene alla retta di equazione 
+            \[
+                \color{blue}{}y \color{black}{}\,\,=\,\, -9\,\color{red}{}x \color{black}{} \,  -68
+            \]
+            <br>
+            <b>Svolgimento</b>
+            <br>
+            
+            Sostituiamo le coordinate del punto nell'equazione della retta e svolgiamo i conti:
+            \[
+                \begin{align*}
+                    \color{blue}{4} \color{black}{} &amp; = -9 \cdot \color{red}{\left(-8\right)}\color{black}{} -68
+                    \\\\
+                    4 &amp; = 72 -68
+                    \\\\
+                    4 &amp; = 4 \quad \color{lightgreen}{\text{✔}}
+                \end{align*}
+            \]
+            Le coordinate del punto <b>soddisfano</b> l'equazione della retta, ovvero sostituite nell'equazione
+            generano un'uguaglianza vera.
+            <br>
+            <br>
+            Quindi il punto <b>appartiene</b> alla retta.
+        </p>
+
+        <br>
+
+        <button onclick="generaEsempio(1)">Mostrami un altro esempio</button>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">.2</span>
+        <h3>Retta passante per due punti</h3>
+    </div>
+    <br>
+
+    <video src="img/rettaPassantePerDuePunti.mp4" controls></video>
+    <br>
+    <p>
+        Prendiamo due punti 
+        \[
+            A\left(1\,;\,\,4\right) \,\,\,\,\text{e}\,\,\,\,\, B\left(-3\,;\,\,2\right)
+        \]   
+        Il nostro obiettivo è trovare l'equazione della retta passante per i punti \(A\) e \(B\).
+    </p>
+    <p>
+        L'equazione della retta in generale è 
+        \[
+            y = mx + q
+        \]
+    </p>
+    <p>
+        I due punti \(A\) e \(B\) appartengono alla retta, quindi le loro coordinate soddisfano l'equazione \(y = mx + q\,\,\): 
+    </p>
+    
+
+    <!-- <div style="border: 0.01rem lightgray solid;">
+        \[
+            A\left(1\,;\,\,4\right) \,\,\text{appartiene alla retta} 
+        \]
+        \[
+            \Updownarrow
+        \]
+        \[
+            4 = m\cdot1 + q
+        \]
+    </div>
+    <br>
+
+    <div  style="border: 0.01rem lightgray solid;">
+        \[
+            B\left(-3\,;\,\,2\right) \,\,\text{appartiene alla retta} 
+        \]
+        \[
+            \Updownarrow
+        \]
+        \[
+            2 = m\cdot\left(-3\right) + q
+        \]
+    </div> -->
+    <br>
+    <video src="img/gifRettaPerDuePunti.mp4" controls defaultPlaybackRate = "3"></video>
+    <br>
+
+    <p>
+        Quindi per trovare \(m\) e \(q\) della retta dobbiamo risolvere il sistema 
+        \begin{cases}
+            4 = m\cdot1 + q \\
+            \\
+            2 = m\cdot\left(-3\right) + q
+        \end{cases}
+    </p>
+
+    <p>
+        Svolgiamo degli esempi completi.
+    </p>
+
+    <br>
+
+    <h2 class="yellow">Esempi</h2>
+    <div class="esempi-container">
+        <div id="esempio2">
+            <p>
+                Troviamo la retta passante per i punti 
+                \[
+                    A\left(-6\,,\,\,-9\right)    
+                    \quad\text{e}\quad 
+                    B\left(-1\,,\,\,7\right)
+                \]
+                
+                I punti non sono allineati verticalmente, quindi la retta passante per \(A\) e \(B\) deve essere della forma
+                \[
+                    y = mx + q    
+                \]
+                <br>
+            </p>
+            <ul>
+            <li>
+                    Dato che \(A\) appartiene alla retta, le sue coordinate <i>soddisfano</i> l'equazione della retta:
+                    \[
+                        -9 = m \cdot \left(-6\right) +q
+                    \]
+            </li>
+                <br>
+                <li>
+                    Allo stesso modo, il punto \(B\) appartiene alla retta, le sue coordinate <i>soddisfano</i> l'equazione della retta:
+                    \[
+                        7 = m \cdot \left(-1\right) +q
+                    \]
+                </li>
+            </ul>
+
+            <br>
+
+            <p>
+                Quindi dobbiamo trovare una coppia di numeri \(m\) e \(q\) che risolva il sitstema
+                \[
+                    \begin{cases}
+                        -9 = m \cdot \left(-6\right) +q
+                        \\\\
+                        7 = m \cdot \left(-1\right) +q
+                    \end{cases}
+                \]
+                Isoliamo la \(q\) nella prima equazione
+                \[
+                    \begin{cases}
+                        -q = -6m  +9
+                        \\\\
+                        7 = -1 m +q
+                    \end{cases}
+
+                    \Rightarrow
+
+                    \begin{cases}
+                        +q = 6 m  -9
+                        \\\\
+                        7 = -1m + q
+                    \end{cases}
+                \]
+                Ora sostituiamo il valore di \(q\) in funzione di \(m\) nella seconda equazione
+                \[
+                    \begin{cases}
+                        q = 6m  -9
+                        \\\\
+                        7 = -1m +6m  -9
+                    \end{cases}
+                \]
+                Portiamo i temini con \(m\) a sinistra ed i termini noti a destra, poi svolgiamo 
+                i calcoli e troviamo il valore di \(m\)
+            </p><p class="formula">
+                \[
+                    \begin{align*}
+                        &amp;\begin{cases}
+                            q = 6m  -9
+                            \\\\
+                            1m -6m =   -9 -7
+                        \end{cases}
+
+                        \\\\
+
+                        \Rightarrow
+
+                        &amp;\begin{cases}
+                            q = 6m  -9
+                            \\\\
+                            -5m  = -16
+                        \end{cases}
+
+                        \\\\
+
+                        \Rightarrow
+
+                        &amp;\begin{cases}
+                            q = 6m  -9
+                            \\\\
+                            m = \dfrac{16}{5}
+                        \end{cases}
+
+                    \end{align*}
+                \]</p>   A questo punto sostituiamo il valore di \(m\) nella prima equazione
+                \[
+                    \begin{cases}
+                        q = 6\left(\dfrac{16}{5}\right) -9 = \dfrac{51}{5}
+                        \\\\
+                        m = \dfrac{16}{5}
+                    \end{cases}            
+                \]
+                Abbiamo così trovato \(m\) e \(q\) della retta passante per i punti \(A\) e \(B\), che quindi ha equazione
+                \[
+                    y = \dfrac{16}{5}x +\dfrac{51}{5}
+                \]
+        </div>
+
+        <br>
+
+        <button onclick="generaEsempio(2)">Mostrami un altro esempio</button>
+    </div>
+
+    <br>
+    <br>
+    
+
+
+    <script src="script.js"></script>
+</body>

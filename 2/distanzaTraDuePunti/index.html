@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Distanza tra due punti</title>
+</head>
+<!-- <style>
+    video {
+        border: 0.01rem lightgray solid;
+    }
+</style> -->
+<body>
+    <h1>Distanza tra due punti</h1>
+    
+    <br>
+    
+
+    <div class="h3">
+        <span class="sub-par">1</span>
+        <h2>Teorema di Pitagora</h2>
+    </div>
+
+    <br>
+    
+    <div class="grayBackground">
+        Dato un triangolo <u>rettangolo</u> vale la seguente uguaglianza:
+        \[
+            \text{ipotenusa}^2 = \left(\text{cateto}_{1}\right)^2 \,+\, \left(\text{cateto}_{2}\right)^2
+        \]
+    </div>
+
+    <br>
+
+    <p>
+        Il teorema di Pitagora stabilisce la relazione che intercorre tra i tre lati di un triangolo rettangolo. 
+    </p>
+    <p>
+        Quindi possiamo usarlo per trovare un lato del triangolo se sappiamo gli altri due usando le due formule inverse.
+    </p>
+    
+    <br>
+
+    <p>
+        La prima permette di trovare l'ipotenusa a partire dai due cateti:
+    </p>
+
+    <br>
+
+    <div class="grayBackground" style="font-size: 1rem; width: fit-content; margin: auto;">
+        \[
+            \text{ipotenusa} = \sqrt{\left(\text{cateto}_{1}\right)^2 \,+\, \left(\text{cateto}_{2}\right)^2}
+        \]
+    </div>
+
+    <br>
+
+    <p>
+        La seconda permette di trovare un cateto a partire dall'ipotenusa e dall'altro cateto:
+    </p>
+
+    <br>
+
+    <div class="grayBackground" style="font-size: 1rem;width: fit-content; margin: auto;">
+        \[
+            \text{cateto}_{1} = \sqrt{\text{ipotenusa}^2 \,-\, \left(\text{cateto}_{2}\right)^2}
+        \]
+    </div>
+
+    <br>
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            Supponiamo di conoscere la misura del cateto minore, \(3\), e quella del cateto maggiore, \(4\). 
+            Quanto misura l'ipotenusa?
+        </p>
+        <br>
+        <p>
+            Usiamo la prima formula:
+        </p>
+        <p>
+            \[
+                \text{ipotenusa} = \sqrt{\left(\text{cateto}_{1}\right)^2 \,+\, \left(\text{cateto}_{2}\right)^2}
+            \]
+            \[
+                \text{ipotenusa} = \sqrt{4^2 + 3^2}
+            \]
+            \[
+                \text{ipotenusa} = \sqrt{16 + 9}
+            \]
+            \[
+                \text{ipotenusa} = \sqrt{25}
+            \]
+            \[
+                \text{ipotenusa} = 5
+            \]
+        
+        </p>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            Supponiamo di conoscere la misura dell'ipotenusa, \(13\), e quella del cateto minore, \(5\). 
+            Quanto misura il cateto maggiore?
+        </p>
+        <br>
+        <p>
+            Usiamo la seconda formula inversa:
+        </p>
+        
+        <p >
+            \[
+                \text{cateto}_{1} = \sqrt{\text{ipotenusa}^2 \,-\, \left(\text{cateto}_{2}\right)^2}
+            \]
+            \[
+                \text{cateto}_{1} = \sqrt{13^2 \,-\, 5^2}
+            \]
+            \[
+                \text{cateto}_{1} = \sqrt{169 \,-\, 25}
+            \]
+            \[
+                \text{cateto}_{1} = \sqrt{144}
+            \]
+            \[
+                \text{cateto}_{1} = 12
+            \]
+        </p>
+
+    </div>
+    <br>
+    <p>
+        Esistono <a href="https://www.cut-the-knot.org/pythagoras/">tonnellate di dimostrazioni</a> del teorema di Pitagora. 
+        Di seguito potete vederne una particolarmente carina.
+    </p>
+    <br>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <iframe src="https://www.youtube.com/embed/CAkMUdeB06o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: fit-content; "></iframe>
+    </div>
+    <br>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h3">
+        <span class="sub-par">2</span>
+        <h2>Distanza tra due punti</h2>
+    </div>
+
+    <br>
+
+    <p>
+        Ritorniamo al nostro problema iniziale: 
+    </p>
+
+    <br>
+    <div class="esempi-container">
+        <p>
+            Abbiamo i punti \(A\left(1; 3\right)\) e \(B\left(5; 6\right)\) e vogliamo trovare
+            la misura della loro distanza.
+        </p>
+    </div>
+
+    <br>
+
+    <div id="slide-container" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem; ">
+
+        <div class="slide">
+            <img class="slideImg" src="img/dist(1).png" alt="">
+            <br>
+            <p class="slideText gray"></p>
+        </div>
+        <div class="slide" style="display: none;">
+            <img class="slideImg" src="img/dist(2).png" alt="">
+            <br>
+            <p class="slideText gray">
+                Disegnamo questo triangolo rettangolo, in modo da poter sfruttare il teorema di Pitagora.
+            </p>
+        </div>
+        <div class="slide" style="display: none;">
+            <img class="slideImg" src="img/dist(3).png" alt="">
+            <br>
+            <p class="slideText gray">
+                La misura del cateto blu è la differenza tra \(x_B\) ed \(x_A\)
+            </p>
+        </div>
+        <div class="slide" style="display: none;">
+            <img class="slideImg" src="img/dist(4).png" alt="">
+            <br>
+            <p class="slideText gray">
+                La misura del cateto blu è la differenza tra \(y_B\) ed \(y_A\)
+            </p>
+        </div>
+        <div class="slide" style="display: none;">
+            <img class="slideImg" src="img/dist(5).png" alt="">
+            <br>
+            <p class="slideText gray">
+                Abbiamo trovato la misura di entrambi i cateti rispetto alle coordinate di \(A\) e \(B\). 
+                Usiamo il teorema di Pitagora per trovare l'ipotenusa del triangolo, che è la distanza tra \(A\) e \(B\)
+            </p>
+        </div>
+        <div class="slide" style="display: none;">
+            <img class="slideImg" src="img/dist(6).png" alt="">
+            <br>
+            <p class="slideText gray formula" style="font-size: 0.9rem;">
+                \[
+                    \text{ipotenusa} = \sqrt{\left(\text{cateto}_{1}\right)^2 \,+\, \left(\text{cateto}_{2}\right)^2}
+                \]
+                <span style="font-size: 1rem;">Quindi</span>
+                \[
+                    AB = \sqrt{\left(x_B-x_A\right)^2 \,+\, \left(y_B-y_A\right)^2}
+                \]
+            </p>
+        </div>    
+
+    </div>
+    <br>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+        <button id="previousSlide-button" onclick="previousSlide()" disabled>Indietro</button>
+        <button id="nextSlide-button" onclick="nextSlide()">Avanti</button>
+    </div>
+
+    <br>
+    <br>    
+    <hr>
+    <br>
+
+    <p>
+        Riassumendo: 
+    </p>
+    
+    <br>
+
+    <div class="grayBackground">
+        <b>Formula della distanza tra due punti</b>
+    
+        <br>
+        <p>
+            Dati i punti 
+            \[A\left(x_A\,\,\,; y_A\right) \qquad B\left(x_B\,\,\,; y_B\right)\]
+             la distanza tra \(A\) e \(B\) è 
+            \[
+                AB = \sqrt{\left(x_B-x_A\right)^2 \,+\, \left(y_B-y_A\right)^2}
+            \]
+        </p>
+    </div>
+    <br>
+    
+
+    
+
+
+    <script src="script.js"></script>
+</body>

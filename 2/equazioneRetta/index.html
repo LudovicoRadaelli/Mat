@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Equazione della retta</title>
+</head>
+<body>
+    
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>L'equazione <u>esplicita</u> della retta</h2>
+    </div>
+    <br>
+    <p>Siano \(\color{blue}{m}\) e \(\color{red}{q}\) due numeri qualsiasi.</p>
+    <p>
+        Rappresentando tutti i punti del piano tali che 
+        \[
+            y = \color{blue}{m\,}\color{black}{x} + \color{red}{q}
+        \]
+        otteniamo una retta.
+    </p>
+    <br>
+    <ul>
+        <li>
+            Il numero \(\color{blue}{m}\) è detto <span style="color: blue;"><b>coefficiente angolare</b></span>. 
+            Dal suo valore dipende la <span style="color: blue;"><b>pendenza</b></span> della retta.
+        </li>
+        <br>
+        <li>
+            Il numero \(\color{red}{q}\) è detto <span style="color: red;"><b>termine noto</b></span>.
+            Il suo valore indica la <span style="color: red;"><b>"quota iniziale"</b></span> della retta, ovvero l'ordinata del punto 
+            di intersezione tra la retta e l'asse \(y\).
+        </li>
+    </ul>
+    
+    <br>
+    
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        
+        <div class="grayBorder">
+            <div id="sketch-container" style="display: flex; flex-direction: row; justify-items:center; align-items:center">
+                <div id="retta-sketch" style="width: 100%;"></div>
+            </div>
+        
+            <p id="equationText">\[ y = \,\color{blue}{1} \color{black}{\,x \,} \color{red}{+\,\,0}\]</p>
+            <div id="controls-container">        
+                <div class="input" id="mInput">
+                    <p class="label">\(\color{blue}{m}\): </p>
+                    <input class="range"  id="mRange" type="range" min=-20 max=20 step=1 value="1" onchange="changeLine()">
+                    <button class="increase-button" id="mMinus" onclick="mChange(-1)">\(\downarrow\)</button>
+                    <button class="increase-button" id="mPlus" onclick="mChange(1)">\(\uparrow\)</button>
+                </div>
+                <div class="input" id="qInput">
+                    <span class="label">\(\color{red}{q}\): </span>
+                    <input class="range" id="qRange" type="range" min=-20 max=20 step=1 value="0" onchange="changeLine()">
+                    <button class="increase-button" id="qMinus" onclick="qChange(-1)">\(\downarrow\)</button>
+                    <button class="increase-button" id="qPlus" onclick="qChange(1)">\(\uparrow\)</button>
+                </div>    
+            </div>
+        </div>
+        <br>
+        <ul>
+            <li>
+                <p>
+                    Come cambia la pendenza della retta se aumento il valore del <span style="color: blue;">coefficiente angolare</span> \(\color{blue}{m}\)?
+                    <br>
+                    E se lo diminuisco?
+                </p>
+            </li>
+            <br>
+            <li>
+                <p>
+                    Come cambia il punto di intersezione tra retta ed asse \(y\) se aumento il valore del <span style="color: red;">termine noto</span> \(\color{red}{q}\)?
+                    <br>
+                    E se lo diminuisco?
+                </p>
+            </li>
+        </ul>
+    </div>
+    
+    <br>
+    <br>
+    
+    
+
+
+
+    <script src="script.js"></script>
+</body>

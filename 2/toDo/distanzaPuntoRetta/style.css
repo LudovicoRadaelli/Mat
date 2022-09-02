@@ -1,0 +1,18 @@
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.check {
+    margin-left: 0.5rem;
+    margin-right: 4rem;
+}
+
+.img-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

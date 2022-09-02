@@ -1,0 +1,27 @@
+#input-container, #xInput-container, #yInput-container, #button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#zoom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom {
+    width: 20%;
+    padding: 0.4rem;
+    margin: 0.5rem;
+}
+
+#unit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+

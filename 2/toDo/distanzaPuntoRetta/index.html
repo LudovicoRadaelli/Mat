@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Distanza tra un punto ed una retta</title>
+</head>
+<style>
+
+</style>
+<body>
+    
+    <h1>Distanza tra un punto ed una retta</h1>
+
+    <br>
+    
+    <h2>Definizione</h2>
+    <p>
+        Provate a spostare il punto \(\color{blue}{H}\) in maniera che la distanza dal punto \(P\) sia la più piccola possibile.
+    </p>
+    <br>
+    <div class="geogebra-container">
+        <div class="geogebra" id="geogebra1"></div>
+    </div>
+    <br>
+
+    <p>
+        Come potete vedere la distanza minima si ottiene quando il segmento \(PH\) è 
+        perpendicolare alla retta.
+    </p>
+    <div class="grayBackground">
+        Dati un punto \(P\) ed una retta \(r\) si definisce <b>distanza tra \(\boldsymbol{P}\) ed \(\boldsymbol{r}\)</b> la misura del 
+        segmento perpendicolare che congiunge il punto \(P\) e la retta \(r\).
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h3 class="yellow">Problema</h3>
+    <p class="esempi-container">
+        Calcolare la distanza tra il punto \(P\left(5; 1\right)\) e la retta di equazione \(y = 2x + 1\).
+    </p>
+
+    <br>
+
+    <p><b>Svolgimento:</b></p>
+    
+    <br>
+    
+    <p>
+        Il nostro obiettivo è scoprire quanto misura il segmento <span style="color: blue;">blu</span>.
+    </p>
+    <p>
+        Per farlo dobbiamo trovare una qualche relazione dove sia coinvolto il lato \(\color{blue}{PH}\)
+    </p>
+    <div class="img-container">
+        <img src="img/fig2.png" alt="">
+    </div>
+    <p>
+        A partire dalla figura qua sopra proviamo a disegnare una figura di cui sappiamo tante cose... un triangolo rettangolo, ad esempio!  
+    </p>
+    
+
+    <div class="img-container">
+        <img src="img/fig1.png" alt="">
+    </div>
+    
+    <p>Del triangolo rettangolo conosciamo:</p>
+    <br>
+    
+    <div id="checkbox-container">
+        <div class="text-container">
+            <div id="text1">Il teorema di Pitagora</div>
+            <input type="checkbox" id="1" class="check">
+        </div>
+        <div class="text-container">
+            <div id="text1">La formula del perimetro</div>
+            <input type="checkbox" id="2" class="check">
+        </div>
+        <div class="text-container">
+            <div id="text1">La formula del perimetro</div>
+            <input type="checkbox" id="3" class="check">
+        </div>
+        <div class="text-container">
+            <div id="text1">La formula dell'area</div>
+            <input type="checkbox" id="4" class="check">
+        </div>
+        
+    </div>
+    <p>
+        Seleziona tra queste opzioni una formula in cui sia presente anche l'area.
+    </p>
+    
+
+
+    
+    
+
+    
+
+
+    <script src="script.js"></script>
+</body>

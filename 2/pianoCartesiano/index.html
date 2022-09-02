@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Il piano cartesiano</title>
+</head>
+<body>
+    <h1>Il piano cartesiano</h1>
+    
+    <div class="grayBorder">
+        <div id="sketch-container" style="display: flex; flex-direction:row; justify-content:center; align-items:center; padding: 1rem;">
+            <div id="sketch"></div>
+        </div>
+    
+        <div id="input-container" class="grayBorder">
+            <div id="xInput-container">
+                <p>\(x = \,\,\,\)</p>
+                <input class="coordinate" type="number" value="2" style="width: 2rem;">  
+            </div>
+            <div id="yInput-container">
+                <p>\(y = \,\,\,\)</p>
+                <input class="coordinate" type="number" value="3" style="width: 2rem;">
+            </div>
+        </div>
+    
+        <br>
+    
+        <div id="button-container">
+            <button onclick="indietro()">\(\triangleleft\triangleleft\)</button>
+            <button onclick="disegna()">Disegna punto</button>
+            <button onclick="pulisci()">Pulisci</button>
+        </div>
+        <br>
+        
+    
+        <div style="display: none;">
+            <div id="unit-container">
+                <div id="min">\(-5\)</div>
+                <input type="range" id="unity-input" min="10" max="20" step="2" value="10" onchange="resize()" style="display: block; width: 80%; margin: auto;">
+                <div id="max">\(5\)</div>
+            </div>
+        </div>
+        
+        
+        
+        <div id="zoom-container">
+            <img id="zoomOut" class="zoom" src="img/zoom-out.png" alt="" style="width: 2rem;" onclick="zoom(-1)">
+            <img id="zoomIn" class="zoom" src="img/zoom-in.png" alt="" style="width: 2rem;" onclick="zoom(1)">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+
+    <script src="script.js"></script>
+</body>
