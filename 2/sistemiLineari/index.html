@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="monomialAndPolynomial.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistemi lineari</title>
+</head>
+<body>
+    <h1>Sistemi lineari</h1>
+
+    <br>
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Equazione in due incognite</h2>
+    </div>
+    <p>
+        Consideriamo l'equazione 
+        \[ 
+            \color{red}{}x\color{black}{} \,+\, \color{blue}{}y \color{black}{} \,=\, 10 
+        \]
+        Risolverla significa trovare tutte le coppie di valori \(\color{red}{}x\) e \(\color{blue}{}y\) che hanno somma \(10\).
+        <br>
+        Esistono infinite coppie di valori \(\color{red}{}x\) e \(\color{blue}{}y\) che soddisfano quest'equazione.
+    </p>
+    <br>
+    <table>
+        <thead style="background-color: lightgray;">
+            <tr>
+                <th>\(\color{red}{}x\)</th>
+                <th>\(\color{blue}{}y\)</th>
+                <th>\(\color{red}{}x\color{black}{} \,+\, \color{blue}{}y \color{black}{} \,=\, 10 \)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\(\color{red}{}1\)</td>
+                <td>\(\color{blue}{}9\)</td>
+                <td>\(\color{red}{}1\color{black}{} \,+\, \color{blue}{}9 \color{black}{} \,=\, 10 \)</td>
+            </tr>
+            <tr>
+                <td>\(\color{red}{}2\)</td>
+                <td>\(\color{blue}{}8\)</td>
+                <td>\(\color{red}{}2\color{black}{} \,+\, \color{blue}{}8 \color{black}{} \,=\, 10 \)</td>
+            </tr>
+            <tr>
+                <td>\(\color{red}{}-3\)</td>
+                <td>\(\color{blue}{}13\)</td>
+                <td>\(\color{red}{}-3\color{black}{} \,+\, \color{blue}{}13 \color{black}{} \,=\, 10 \)</td>
+            </tr>
+            <tr>
+                <td>\(\color{red}{}100\)</td>
+                <td>\(\color{blue}{}-90\)</td>
+                <td>\(\color{red}{}100\color{black}{} \,+\, \color{blue}{}\left(-90\right) \color{black}{} \,=\, 10 \)</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Cosa è un sistema lineare?</h2>
+    </div>
+    
+    <br>
+
+    <p>
+        Stavolta consideriamo due equazioni, ognuna delle quali con due incognite:
+    </p>
+    <p class="formula">
+        \[ x + 2y = 1 \quad\text{ e }\quad 3x - 4y = 2\]
+    </p>
+    <p>Sappiamo che l'equazione \(x + 2y = 1\) ha infinite soluzioni.</p>
+    <p>Anche l'equazione \(3x - 4y = 2\) ha infinite soluzioni.</p>
+    <p>La domanda che ci poniamo è: <b>esiste una soluzione in comune?</b></p>
+    <p>Ovvero, esiste una coppia di valori \(x\) ed \(y\) che è soluzione sia della prima che della seconda equazione?</p>
+    <p>Se tale coppia esiste, diremo che è soluzione del <span class="color">sistema lineare</span></p>
+    <p class="formula">
+        \[
+            \begin{cases}
+            x + 2y = 1 
+            \\\\
+            3x - 4y = 2
+            \end{cases}            
+        \]
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">3</span>
+        <h2>Metodo di sostituzione</h2>
+    </div>
+    <p>
+        Fino ad ora abbiamo imparato a risolvere equazioni con <b>una</b> incognita, non con due. 
+        <br>
+        <br>
+        Il <b>metodo di sostituzione</b> permette di trasformare una delle equazioni con due incognite in un'equazione in un'incognita.
+        <!-- <br>
+        <br>
+        Consideriamo il sistema
+        \[
+            \begin{cases}
+                \color{red}{}x\color{black}{} \,+\, 2\color{blue}{}y\color{black}{} = 8
+                \\\\
+                
+            \end{cases}
+        \]
+        Le due equazioni che compongono il sistema affermano una <b>relazione</b> tra \(\color{red}{x}\) e \(\color{blue}{y}\).
+        Ad esempio l'equazione 
+        \[
+            \color{red}{}x\color{black}{} \,+\, 2\color{blue}{}y\color{black}{} = 8
+        \]
+        ci dice che sommando \(\color{red}{}x\) al doppio di \(\color{blue}{y}\), il risultato che otteniamo è \(8\).
+        <br>
+        Rigiriamo quest'equazione portando il termine con \(\color{blue}{y}\) alla destra dell'uguale
+        \[
+            \begin{align*}
+                &\color{red}{}x\color{black}{} \,+\, 2\color{blue}{}y\color{black}{} = 8 
+                \\\\
+                \Rightarrow\quad &\color{red}{}x\color{black}{} \color{black}{} \,=\, 8 - 2\color{blue}{}y
+            \end{align*}
+        \]
+        L'equazione ottenuta ci dice che il valore di \(\color{red}{}x\) si ottiene sottraendo ad \(8\) 
+        il doppio di \(\color{blue}{y}\). 
+        <br>
+        In altre parole abbiamo espresso il valore di 
+        <br>
+        \(\color{red}{}\boldsymbol{x}\) <b>rispetto al valore di \(\color{blue}{}\boldsymbol{y}\)</b>    
+    -->
+    </p>
+    
+    <br>
+
+    <video src="img/sistemiSostituzione1.mp4" controls></video>
+    <br>
+    <br>
+    <video src="img/sistemiSostituzione2.mp4" controls></video>
+    
+    <br>
+    <p>
+        Riassumiamo il procedimento:
+    </p>
+    <br>
+    <div class="grayBackground">
+        <b>Metodo di sostituzione</b>
+        <br>
+        <br>
+        <ol>
+            <li>
+                Scelgo una delle due equazioni.
+                <br>
+                In questa scelgo una delle due incognite.
+                <br>
+                La isolo.
+            </li>
+            <br>
+            <li>
+                Sostituisco l'incognita isolata nell'altra equazione.
+            </li>
+            <br>
+            <li>
+                Risolvo l'equazione in un'incognita che ho ottenuto.
+            </li>
+            <br>
+            <li>
+                Sostituisco nell'altra equazione la soluzione ottenuta.
+            </li>
+        </ol>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">4</span>
+        <h2>Metodo di riduzione</h2>
+    </div>
+    <p>
+        Prima di vedere il metodo vero e proprio, capiamo il meccanismo che ne sta alla base.
+    </p>
+
+    <br>
+
+    <video src="img/meccanismoSistemaRiduzione.mp4" controls></video>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p id="esempio1">
+            Consideriamo queste due informazioni.
+            \[
+                \begin{cases}
+                    \color{red}{A} \color{black}{\,=\,} \color{red}{B}
+                    \\\\
+                    \color{blue}{C} \color{black}{\,=\,} \color{blue}{D}
+                \end{cases}
+            \]
+            <nobr>Scegliamo due nuemeri, ad esempio \(\color{green}{3}\) e \(\color{green}{8}\).</nobr>
+            <br>
+            Moltiplichiamo tutti i termini della prima equazione per \(\color{green}{3}\) e tutti quelli della seconda per \(\color{green}{8}\):
+            \[
+                \begin{cases}
+                    \color{green}{3}\,\color{red}{A} \color{black}{\,=\,} \color{green}{3}\,\color{red}{B}
+                    \\\\
+                    \color{green}{8}\,\color{blue}{C} \color{black}{\,=\,} \color{green}{8}\,\color{blue}{D}
+                \end{cases}
+            \]Ora sommiamo i termini della prima equazione con quelli della seconda equazione
+            \[
+                \begin{align*}
+                    \color{green}{3}\,\color{red}{A} \,\color{green}{+\,8}\,\color{blue}{C} \color{black}{\,\,=\,\,} \color{green}{3}\,\color{red}{B} \, \color{green}{+\,8}\,\color{blue}{D}
+                \end{align*}
+            \]            
+        </p>
+        <br>
+        <button onclick="generaEsempio(1)">Genera un altro esempio</button>
+    </div>
+    
+    <br>
+    <p>    
+        Questo ragionamento del tutto generale può essere applicato nel caso in cui \(\color{red}{A}\), \(\color{red}{B}\), \(\color{blue}{C}\) e \(\color{blue}{D}\) siano <b>polinomi</b>.
+    </p>
+
+    <br>
+
+
+    <video src="img/riduzioneConcetto.mp4" controls></video>
+    
+    <br>
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container" id="esempio2">
+        <p>
+            Partiamo dalle due equazioni assegnate:
+        </p>
+        <p id="eq1">
+            \[  
+                \begin{equation*}
+                    \begin{cases}
+                        \overset{\color{red}{A}}{\color{gray}{\overbrace{\color{red}{x+2y}}}}=\overset{\color{red}{B}}{\color{gray}{\overbrace{\color{red}{1}}}} \\
+                        \\
+                        \underset{\color{blue}{C}}{\color{gray}{\underbrace{\color{blue}{-2x+7y}}}}=\underset{\color{blue}{D}}{\color{gray}{\underbrace{\color{blue}{3}}}}
+                    \end{cases}
+                \end{equation*}
+             \]
+        </p>
+        <p>
+            Scegliamo una combinazione:
+        </p>
+        <p id="eq2" class="formula">
+            \[
+                2\color{red}{A} \color{black}{\,\,+\,\,5} \color{blue}{C} \color{black}{\,\,=\,\,2} \color{red}{B} \color{black}{\,\,+\,\,5} \color{blue}{D}
+            \]
+        </p>
+        <p>
+            Sostituiamo \(\color{red}{}A\), \(\color{red}{}B\), \(\color{blue}C\), \(\color{blue}{}D\) con i rispettivi polinomi.
+        </p>
+        <p id="eq3" class="formula" style="font-size: 1rem;">
+            \[
+                2\color{red}{\left(x+2y\right)} \color{black}{\,\,+\,\,5} \color{blue}{\left(-2x+7y\right)} \color{black}{\,\,=\,\,2\,\cdot} \color{red}{1} \color{black}{\,\,+\,\,5\,\cdot} \color{blue}{3}
+            \]
+        </p>
+        <p>
+            Svolgiamo le moltiplicazioni:
+        </p>
+        <p  id="eq4" class="formula">
+            \[
+                2x +4y -10x +35y = 2 + 15
+            \]
+        </p>
+        <p>
+            Sommiamo i monomi simili ed ecco la nostra nuova equazione:
+        </p>
+        <p  id="eq5" class="formula">
+            \[
+                \color{gray}{\boxed{\color{black}{-8x +39y = 17}}}
+            \]
+        </p>
+        
+        <br>
+        <button id="generaEsempio" onclick="generaEsempio(2)">Genera un altro esempio</button>
+    </div>
+
+    <br>
+    <br>
+    
+    <p>
+        Vediamo infine come poter usare questo meccanismo per risolvere un sistema.
+    </p>
+    <br>
+    
+    <video src="img/sistemiRiduzione.mp4" controls></video>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <div id="esempio3">
+            <div id="slide-container3" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem;">
+
+                <div class="slide3">
+        
+                    \[
+                        \begin{cases}
+                        -6x  +5y = 4
+                        \\\\
+                        -4x  -10y = 3
+                        \end{cases}
+                    \]
+        
+                    Risolviamo questo sistema con il <b>metodo di eliminazione</b>.
+                    
+                </div>
+        
+                <div class="slide3" style="display: none;">
+    
+                    \[
+    
+                        \color{white}{}
+    
+                        \begin{align*}
+                        
+                        \color{green}{k_{1}}&amp;
+                        \\\\
+                        \color{green}{k_{2}}&amp;
+                        \end{align*}
+                        
+                        \color{black}{}
+    
+                        \begin{cases}
+                        \color{red}{-6}\color{black}{}x  +5y = 4
+                        \\\\
+                        \color{red}{-4}\color{black}{}x  -10y = 3
+                        \end{cases}
+                    \]
+    
+                    <p>
+                        Dobbiamo trovare una combinazione delle due equazioni che annulli il termine con la \(x\).
+                        <br>
+                        In altre parole dobbiamo individuare due numeri \(\color{green}{k_{1}}\) e \(\color{green}{k_{2}}\)
+                        tali che 
+                    </p>
+    
+                    <br>
+                    
+                    <p style="text-align: center">
+                        il prodotto tra \(\color{green}{k_{1}}\) e \(\color{red}{-6}\) 
+                        <br>
+                        sia opposto 
+                        <br>
+                        al prodotto tra \(\color{green}{k_{2}}\) e \(\color{red}{-4}\)
+                    </p>
+                    
+                </div>
+                
+                <div class="slide3" style="display: none;">
+    
+                    \[
+                        \color{white}{}
+    
+                        \begin{align*}
+                        
+                        \color{green}{2}&amp;
+                        \\\\
+                        \color{green}{-3}&amp;
+                        \end{align*}
+                        
+                        \color{black}{}
+                        
+                        \begin{cases}
+                        \color{red}{-6}\color{black}{}x +5y = 4
+                        \\\\
+                        \color{red}{-4}\color{black}{}x -10y = 3
+                        \end{cases}
+                    \]
+    
+                    <br>
+    
+                    <p style="text-align: center">
+                        Il prodotto tra \(\,\color{green}{2}\,\) e \(\,\color{red}{-6}\,\) è \(\,-12\).
+                        <br>
+                        Quello tra \(\,\color{green}{-3}\,\) e \(\,\color{red}{-4}\,\) è \(\,12\). 
+                        <br>
+                        Sono opposti!
+                    </p>
+    
+                </div>
+    
+                <div class="slide3" style="display: none;">
+    
+                    Moltiplichiamo i numeri che abbiamo trovato per tutti i termini delle due equazioni...
+    
+                    \[
+                        \color{white}{}
+    
+                        \begin{align*}
+                        
+                            \color{green}{2}&amp;
+                            \\\\
+                            \color{green}{-3}&amp;
+    
+                        \end{align*}
+                        
+                        \color{black}{}
+                        
+                        \begin{cases}
+                            \color{red}{-6}\color{black}{}x +5y = 4
+                            \\\\
+                            \color{red}{-4}\color{black}{}x -10y = 3
+                        \end{cases}
+                    \]
+    
+                    \[
+                    \Downarrow    
+                    \]
+                            
+                    \[
+                        \begin{cases}
+                            -12x +10y = 8
+                            \\\\
+                            12x +30y = -9
+                        \end{cases}
+                    \]
+                </div>
+    
+                <div class="slide3" style="display: none;">
+    
+                    Sommiamo i termini delle equazioni membro a membro
+            
+                    <div style="width: fit-content; margin: auto; border-bottom: 0.01rem solid black">
+                        \[
+                            \\
+                            \color{blue}{+}
+                            \\
+                            \begin{cases}
+                                \begin{array}{}
+                                    \color{blue}{-12x} &amp; +10y &amp; = &amp; 8
+                                    \\\\
+                                    \color{blue}{12x} &amp; +30y &amp; = &amp; -9
+                                \end{array}
+                            \end{cases}
+                        \]
+                    </div>
+    
+                    \[
+                        \color{white}{}
+                        
+                        \begin{cases}
+                            \color{black}{}
+                            \begin{array}{}
+                                \,\,\color{blue}{//}\,\, &amp; \color{white}{}+40y &amp; \color{black}{}= &amp;  \color{white}{}-1
+                            \end{array}
+                        \end{cases}
+                    \]
+    
+                </div>
+    
+                <div class="slide3" style="display: none;">
+    
+                    Sommiamo i termini delle equazioni membro a membro
+            
+                    <div style="width: fit-content; margin: auto; border-bottom: 0.01rem solid black">
+                        \[
+                            \\
+                            \color{blue}{+}
+                            \\
+                            \begin{cases}
+                                \begin{array}{}
+                                    -12x &amp; \color{blue}{}+10y &amp; = &amp; 8
+                                    \\\\
+                                    12x &amp; \color{blue}{}+30y &amp; = &amp; -9
+                                \end{array}
+                            \end{cases}
+                        \]
+                    </div>
+    
+                    \[
+                        \color{white}{}
+                        
+                        \begin{cases}
+                            \color{black}{}
+                            \begin{array}{}
+                                \,\,\color{black}{//}\,\, &amp; \color{blue}{}+40y &amp; \color{black}{}= &amp;  \color{white}{}-1
+                            \end{array}
+                        \end{cases}
+                    \]
+    
+                </div>
+    
+                <div class="slide3" style="display: none;">
+    
+                    Sommiamo i termini delle equazioni membro a membro
+            
+                    <div style="width: fit-content; margin: auto; border-bottom: 0.01rem solid black">
+                        \[
+                            \\
+                            \color{blue}{+}
+                            \\
+                            \begin{cases}
+                                \begin{array}{}
+                                    -12x &amp; +10y &amp; = &amp; \color{blue}{}8
+                                    \\\\
+                                    12x &amp; +30y &amp; = &amp; \color{blue}{}-9
+                                \end{array}
+                            \end{cases}
+                        \]
+                    </div>
+    
+                    \[
+                        \color{white}{}
+                        
+                        \begin{cases}
+                            \color{black}{}
+                            \begin{array}{}
+                                \,\,\color{black}{//}\,\, &amp; \color{black}{}+40y &amp; \color{black}{}= &amp;  \color{blue}{}-1
+                            \end{array}
+                        \end{cases}
+                    \]
+    
+                </div>
+    
+    
+                <div class="slide3" style="display: none;">
+                
+                    Sommiamo i termini delle equazioni membro a membro
+            
+                    <div style="width: fit-content; margin: auto; border-bottom: 0.01rem solid black">
+                        \[
+                            \\
+                            \color{blue}{+}
+                            \\
+                            \begin{cases}
+                                \begin{array}{}
+                                    -12x &amp; +10y &amp; = &amp; 8
+                                    \\\\
+                                    12x &amp; +30y &amp; = &amp; -9
+                                \end{array}
+                            \end{cases}
+                        \]
+                    </div>
+    
+                    \[
+                        \color{white}{}
+                        
+                        \begin{cases}
+                            \color{black}{}
+                            \begin{array}{}
+                                \,\,\color{black}{//}\,\, &amp; +40y &amp; = &amp;  -1
+                            \end{array}
+                        \end{cases}
+                    \]
+    
+                </div>
+    
+                <div class="slide3" style="display: none;">
+                    Abbiamo così ottenuto l'equazione
+                    \[
+                        40y = -1
+                    \]
+                    che contiente <b>solo una incognita</b>. Per risolverla basta isolare la \(y\):
+                    \[
+                        y = -\dfrac{1}{40}    
+                    \]
+                </div>
+    
+                <div class="slide3" style="display: none;">
+                    <nobr>Ora sappiamo che il valore di \(y\) è \(-\dfrac{1}{40}\).</nobr>
+                    <br>
+                    <br>    
+                    Per trovare anche il valore di \(x\) scegliamo una delle due equazioni del sistema, la prima ad esempio, ed al posto della \(y\) sostituiamo \(-\dfrac{1}{40}\)
+                    \[
+                        -6x  +5\color{red}{y}\color{black}{} = 4
+                    \]
+                    \[
+                        \Downarrow    
+                    \]
+                    \[ 
+                        -6x  +5\cdot\color{red}{\left(-\dfrac{1}{40}\right)}\color{black}{} = 4
+                    \]
+    
+                    Questa equazione ha <b>una sola incognita</b>. Risolviamola.
+    
+                </div>
+                
+            <div class="slide3" style="display: none;">
+    
+                    \[
+                        \begin{align*}
+                            &amp; -6x  +5\cdot\left(-\dfrac{1}{40}\right) = 4
+                            \\\\\                        &amp; -6x  -\dfrac{5}{40} = 4
+                            \\\\
+                            &amp; -6x = 4 +\dfrac{5}{40}
+                            \\\\
+                            &amp; -6x = \dfrac{4 \cdot 40 +5}{40}
+                            \\\\
+                            &amp; -6x = \dfrac{165}{40}
+                            \\\\
+                    &amp; x = \dfrac{165}{40} \cdot \left(-\dfrac{1}{6}\right)
+                    \\\\
+                    &amp; x = -\dfrac{165}{240}
+                            \\\\
+                    &amp; x = -\dfrac{11}{16}
+                        \end{align*}
+                    \]
+                </div>
+
+                <div class="slide3" style="display: none;">
+
+                    In conclusione, la soluzione del sistema
+                    \[
+                        \begin{cases}
+                        -6x  +5y = 4
+                        \\\\
+                        -4x  -10y = 3
+                        \end{cases}
+                    \]
+    
+                    è la coppia
+    
+                    \[
+                        \begin{cases} 
+                             x = -\dfrac{11}{16}
+                             \\\\
+                             y = -\dfrac{1}{40}    
+                        \end{cases}
+                    \]
+                </div>
+    
+            </div>
+            <br>
+    
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                <button id="previousSlide-button3" onclick="previousSlide(3)" disabled="">Indietro</button>
+                <button id="nextSlide-button3" onclick="nextSlide(3)">Avanti</button>
+            </div>
+                    
+        </div>
+        
+        <br>
+
+        <button onclick="generaEsempio(3)">Genera un altro esempio</button>
+    </div>
+ 
+    <!-- <h2>Esercizi</h2>
+    <div class="video-container">
+        <img src="https://ludovicoradaelli.github.io/Matematica/2022/seconda/sistemiLineari/img/eserciziSostituzione.png">
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>
