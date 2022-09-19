@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Goniometria</title>
+</head>
+<body>
+    <h1>Goniometria</h1>
+    <br>
+    
+    <section>
+        <div class="h2">
+            <span class="par">1</span>
+            <h2 id="definizioneGeometrica">Seno, coseno, tangente:<br>definizione geometrica</h2>
+        </div>
+        
+    
+        <br>
+        <video src="img/funzioniTrigonometriche.mp4" controls></video>
+    
+        <br>
+        <p>
+            Nella figura interattiva di seguito potete variare gli elementi del triangolo così come mostrato nel video.
+        </p>
+        
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra1" style="border: 0.01rem black solid;"></div>
+        </div>
+        <br>
+        
+        <p>
+            Dato un triangolo rettangolo \(ABC\) possiamo considerare le seguenti funzioni trigonomeriche:
+        </p>
+    
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    \[sin\left(\text{angolo}\right) = \dfrac{\text{cateto opposto}}{\text{ipotenusa}} \]
+                </li>
+                <br>
+                <li>
+                    \[cos\left(\text{angolo}\right) = \dfrac{\text{cateto adiacente}}{\text{ipotenusa}} \]
+                </li>
+                <br>
+                <li>
+                    \[sin\left(\text{angolo}\right) = \dfrac{\text{cateto opposto}}{\text{cateto adiacente}} \]
+                </li>
+                <br>
+            </ul>    
+        </div>
+        <br>
+    
+        <p>
+            Consideriamo il triangolo in \(ABC\) in figura. 
+        </p>
+    
+        <br>
+        <img src="img/triangoloABC.png" style="width: 70%; margin: auto;">
+        <br>
+    
+        <p>
+            Seguendo le definizioni appena date si ha che  ha che
+        </p>
+        <br>
+        <ul>
+            <li>
+                \[
+                    sin\left(\color{blue}{\beta}\color{black}{}\right) = \dfrac{\color{blue}{b}}{\color{red}{a}}
+                    \quad
+                    sin\left(\color{#009900}{\gamma}\color{black}{}\right) = \dfrac{\color{#009900}{c}}{\color{red}{a}}
+                \]
+            </li>
+            
+            <li>
+                
+                \[
+                    cos\left(\color{blue}{\beta}\color{black}{}\right) = \dfrac{\color{#009900}{c}}{\color{red}{a}}
+                    \quad
+                    cos\left(\color{#009900}{\gamma}\color{black}{}\right) = \dfrac{\color{blue}{b}}{\color{red}{a}}
+                \]
+            </li>
+            <li>
+                \[
+                    tan\left(\color{blue}{\beta}\color{black}{}\right) = \dfrac{\color{blue}{b}}{\color{#009900}{c}}
+                    \quad
+                    tan\left(\color{#009900}{\gamma}\color{black}{}\right) = \dfrac{\color{#009900}{c}}{\color{blue}{b}}
+                \]
+            </li>
+        </ul>
+    
+        <br>
+        <hr>
+        <br>
+    
+        <br>
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">2</span>
+            <h2 id="gradiVSRadianti">Gradi v.s. Radianti</h2>
+        </div>
+        
+        <div class="h2">
+            <span class="sub-par">2.1</span>
+            <h3>Definizioni di grado e radiante</h3>
+        </div>
+        <br>
+        <p>
+            Un <b>grado</b> è la \(360\)-esima parte di un angolo giro.
+        </p>
+        <br>
+        <p>
+            Data una qualsiasi circonferenza di raggio \(r\), un <b>radiante</b> è l'angolo che determina un arco di lunghezza uguale a quella del raggio.
+        </p>
+    
+        <br>
+        <video src="img/gradiRadianti.mp4" controls></video>
+        <br>
+        
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">2.2</span>
+            <h3>Un angolo di riferimento: l'angolo giro</h3>
+        </div>
+    
+        <br>
+    
+        <p>
+            Un angolo giro in gradi misura \(360°\), mentre in radianti misura \(2\pi\).
+        </p>
+    
+        <br>
+        <video src="img/angoloGiroInRadianti.mp4" controls></video>
+        <br>
+        
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">2.3</span>
+            <h3 class="blue">Passare da gradi a radianti (e viceversa)</h3>
+        </div>
+    
+        <br>
+    
+        <p>
+            Il meccanismo che ci permette di passare da gradi a radianti e viceversa è si basa sulla seguente proporzione:
+        </p>
+    
+        <br>
+    
+        <p class="grayBackground">
+            \[
+                \dfrac{\color{red}{\text{angolo in gradi}}}{\color{blue}{\text{angolo in radianti}}} = \dfrac{\color{red}{360°}}{\color{blue}{2\pi}}
+            \]
+        </p>
+    
+        <br>
+        <br>
+    
+        
+        <video src="img/trasformazioneGradiRadianti.mp4" controls></video>
+        <br>
+    
+        <br>
+        <hr>
+        <br>
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">3</span>
+            <h2 id="circonferenzaGoniometrica">Visualizzazione delle funzioni trigonometriche</h2>
+        </div>
+    
+        <p class="grayBackground">
+            Si definisce <b>circonferenza goniometrica</b> una circonferenza centrata nell'origine ed avente raggio \(1\).
+        </p>
+        
+        <br>
+    
+        <p>
+            La circonferenza goniometrica è uno strumento di grande importanza per la goniometria, poiché ci permette di <b>visualizzare</b> i valori del seno, coseno e tangente di un angolo.
+        </p>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">3.1</span>
+            <h3 class="blue">Visualizzazione del seno</h3>
+        </div>
+    
+        <br>
+    
+        <p>
+            Consideriamo un angolo \(\color{rgb(255, 127, 0)}{\alpha}\) avente come lati il semiasse positivo delle \(x\) ed il raggio \(OP\).
+        </p>
+        <p>
+            Proiettando il punto \(P\) perpendicolarmente sull'asse delle \(x\) otteniamo un triangolo rettangolo, \(OPH\).
+        </p>
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra3"></div>
+        </div>
+        <br>
+        <p>
+            Usiamo la definizione geometrica di seno che abbiamo visto nel primo paragrafo:
+            \[
+                sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \dfrac{\color{red}{PH}}{\color{gray}{OP}} = 
+                \dfrac{\color{red}{PH}}{\color{gray}{1}} = \color{red}{PH}
+            \]
+        </p>
+        <p>
+            Abbiamo ottenuto che 
+            \[
+                sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{red}{PH}
+            \]
+            ovvero che la misura del seno di \(\color{rgb(255, 127, 0)}{\alpha}\) coincide con la misura del segmento \(\color{red}{PH}\).
+        </p>
+    
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">3.2</span>
+            <h3 class="blue">Visualizzazione del coseno</h3>
+        </div>
+    
+        <br>
+    
+        <p>
+            Prendiamo nuovamente in considerazione il triangolo \(OPH\) determinato dall'angolo \(\color{rgb(255, 127, 0)}{\alpha}\).
+        </p>
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra4"></div>
+        </div>
+        <br>
+        <p>
+            Usiamo la definizione geometrica di coseno:
+            \[
+                cos\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \dfrac{\color{blue}{OH}}{\color{gray}{OP}} = 
+                \dfrac{\color{blue}{OH}}{\color{gray}{1}} = \color{blue}{OH}
+            \]
+        </p>
+        <p>
+            Abbiamo ottenuto che 
+            \[
+                sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{blue}{OH}
+            \]
+            ovvero che la misura del seno di \(\color{rgb(255, 127, 0)}{\alpha}\) coincide con la misura del segmento \(\color{blue}{OH}\).
+        </p>
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">3.3</span>
+            <h3 class="blue">Visualizzazione della tangente</h3>
+        </div>
+    
+        <br>
+    
+        <p>
+            Prendiamo nuovamente in considerazione il triangolo \(OPH\) determinato dall'angolo \(\color{rgb(255, 127, 0)}{\alpha}\).
+        </p>
+        <p>
+            Consideriamo la retta tangente \(s\) alla circonferenza goniometrica nel punto \(T\left(1 \,;\,\,0\right)\). 
+        </p>
+        <p>
+            Prolunghiamo il raggio \(OP\) fino a che non si intrseca con la retta \(s\) in un punto \(Q\).
+        </p>
+        <p>
+            Il triangolo \(OQT\) è rettangolo.
+        </p>
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra5"></div>
+        </div>
+        <br>
+        <p>
+            Consideriamo il triangolo \(OQT\). Per definizione geometrica di tangente sappiamo che 
+            \[
+                tan\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \dfrac{\color{#009900}{TQ}}{OT} = \dfrac{\color{#009900}{TQ}}{1} = \color{#009900}{TQ}
+            \]
+        </p>
+        <p>
+            Abbiamo ottenuto che 
+            \[
+                tan\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{#009900}{TQ}
+            \]
+            ovvero che la misura della tangente di \(\color{rgb(255, 127, 0)}{\alpha}\) coincide con la misura del segmento \(\color{#009900}{TQ}\).
+        </p>
+    
+        <br>
+        <hr>
+        <br>
+    
+        <!-- <h3 class="blue">3.4) Segni seno, coseno e tangente</h3>
+        <br>
+        <ul>
+            <li>
+                se il segmento rappresentante il seno di \(\color{rgb(255, 127, 0)}{\alpha}\) si trova sopra l'asse delle \(x\), \(sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) \gt 0\) 
+            </li>
+        </ul>
+    
+        <br>
+        <hr>
+        <br> -->
+    
+        <p>Riassumendo</p>
+        <div class="grayBackground">
+            <p>Dato un qualsiasi angolo \(\color{rgb(255, 127, 0)}{\alpha}\), se lo rappresentiamo all'interno della circonferenza goniometrica</p>
+            <br>
+            <ul>
+                <li>
+                    la misura del lato <span style="color: red">rosso</span> corrisponde alla misura di \(sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)\);
+                </li>
+                <br>
+                <li>
+                    la misura del lato <span style="color: blue">blu</span> corrisponde alla misura del \(cos\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)\);
+                </li>
+                <br>
+                <li>
+                    la misura del lato <span style="color: #009900">verde</span> corrisponde alla misura della \(tan\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)\);
+                </li>
+            </ul>
+            <br>
+            <div class="geogebra-container">
+                <div id="geogebra6"></div>
+            </div>
+            
+            <br>
+        </div>
+    
+    
+        <br>
+        <hr>
+        <br>    
+    </section>
+
+
+    <section>
+        <div class="h2">
+            <span class="par">5</span>
+            <h2 id="archiAssociati">Archi associati</h2>
+        </div>
+    
+        <br>
+        <p>
+            Dato un angolo qualsiasi \(\alpha\) esistono vari angoli i cui seni e coseni sono riconducibili a quelli di \(\alpha\).
+        </p>
+        
+        <br>
+        <video src="" controls></video>
+    
+        <br>
+        <hr>
+        <br>    
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">7</span>
+            <h2 id="coordinatePolari">Coordinate polari</h2>
+        </div>
+    
+        <br>
+    
+    
+        <div class="geogebra-container">
+            <div id="geogebra2" ></div>
+        </div>
+        <p class="gray" style="font-size: 0.9rem;">
+            Trascinate i circoletti <span style="color: rgb(255, 127, 0)">arancione</span> e <span style="color: #f40099">rosa</span> per modificare le coordinate cartesiane del punto \(P\)
+        </p>
+    
+        <br>
+    
+        <p>
+            Il punto \(P\) evidenziato in <span style="color: blue">blu</span> ha coordinate polari 
+            <span id="coords">\[\left(\color{rgb(255, 127, 0)}{30°}\color{black}{},\,\, \color{#f40099}{6}\color{black}{}\right)\]</span>
+        </p>
+        <p>
+            La prima coordinata rappresenta l'<span style="color: rgb(255, 127, 0)">angolo</span> che si deve spaziare a partire dell'asse \(x\) per "vedere" il punto. 
+        </p>
+        <p>
+            La seconda coordinata indica la <span style="color: rgb(244, 0, 153)">distanza</span> del punto dall'origine.
+        </p>
+        
+        <br>
+        <hr>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">7.1</span>
+            <h3 class="blue">Dalle coordinate polari a quelle cartesiane</h3>
+        </div>
+        <br>
+        <p>
+           Consideriamo un punto \(P\) avete generiche coordinate polari 
+           \[\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{};\,\,\color{#f40099}{r}\color{black}{}\right)\]
+        </p>
+        <br>
+        <img src="img/polarToCartesian.png" alt="" style="width: 60%; margin: auto;">
+        <br>
+        <p>
+           Usando la definizione geometrica del seno di un angolo, sappiamo che
+           \[
+                sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{#009900}{y}}{\color{#f40099}{r}}} \color{black}{}
+                \quad\Longrightarrow\quad 
+                \color{#009900}{y} \color{black}{} = \color{#f40099}{r} \color{black}{} \cdot sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)
+           \]
+           Allo stesso modo, usando la definizione geometrica del coseno di un angolo, si ha che
+           \[
+                cos\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{blue}{x}}{\color{#f40099}{r}}} \color{black}{}
+                \quad\Longrightarrow\quad 
+                \color{blue}{x} \color{black}{} = \color{#f40099}{r} \color{black}{} \cdot cos\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)
+           \]
+           Riassumendo:
+        </p>
+        <p class="grayBackground">
+            Se un punto \(P\) ha coordinate <b>polari</b> 
+            \[
+                \left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{};\,\,\color{#f40099}{r}\color{black}{}\right)
+            \]
+            allora le sue coordinate <b>cartesiane</b> sono
+            \[
+                \left(
+                    \color{#f40099}{r} \color{black}{} sin\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) \,;\,\,
+                    \color{#f40099}{r} \color{black}{} cos\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right)
+                \right)
+            \]
+        </p>
+    
+        <br>
+        <hr>
+        <br>
+        
+        <div class="h3">
+            <span class="sub-par">7.2</span>
+            <h3 class="blue">Dalle coordinate cartesiane a quelle polari</h3>
+        </div>
+        <br>
+        <p>
+            Consideriamo un punto \(P\) avete generiche coordinate cartesiane 
+            \[\left(\color{blue}{x}\color{black}{};\,\,\color{#009900}{y}\color{black}{}\right)\]
+         </p>
+         <br>
+         <img src="img/polarToCartesian.png" alt="" style="width: 60%; margin: auto;">
+         <br>
+         <p>
+             Il teorma di Pitagora ci permette di trovare la coordinata polare \(\color{#f40099}{r}\) del punto, ovvero la distanza del punto \(P\) dall'origine:
+             \[
+    
+                \color{#f40099}{r} \color{black}{}= \color{black}{\sqrt{\color{blue}{x}^{\color{black}{2}} + \color{#009900}{y}^{\color{black}{2}}}}
+             \]
+         </p>
+         <p>
+            Per trovare la coordinata polare \(\color{rgb(255, 127, 0)}{\alpha}\) possiamo usare la definizione geometrica di tangente:
+            \[
+                tan\left(\color{rgb(255, 127, 0)}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{#009900}{y}}{\color{blue}{x}}}
+            \]
+            di conseguenza \(\color{rgb(255, 127, 0)}{\alpha}\) è l'angolo che ha tangente \(\dfrac{\color{#009900}{y}}{\color{blue}{x}}\).
+            <br>
+            Problema ...ci sono <b>due</b> angoli che hanno come tangente \(\dfrac{\color{#009900}{y}}{\color{blue}{x}}\)! Quale prendiamo?
+            <br>
+            Chiaramente la scelta dipendera dal segno di \(\color{blue}{x}\) ed \(\color{#009900}{y}\). Infatti sappiamo che 
+         </p>
+         <br>
+         <ul>
+             <li>
+                 se \(\color{blue}{x} \color{black}{}\gt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad0° \lt \color{rgb(255, 127, 0)}{\alpha} \color{black}{}\lt 90°\) ;
+             </li>
+             <br>
+             <li>
+                se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad90° \lt \color{rgb(255, 127, 0)}{\alpha} \color{black}{}\lt 180°\) ;
+            </li>
+            <br>
+            <li>
+                se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\lt 0\quad\) allora \(\quad180° \lt \color{rgb(255, 127, 0)}{\alpha} \color{black}{}\lt 270°\) ;
+            </li>
+            <br>
+            <li>
+                se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad270° \lt \color{rgb(255, 127, 0)}{\alpha} \color{black}{}\lt 360°\).
+            </li>
+         </ul>
+    
+         <br>
+        
+         <p class="gray">
+             <b>Informazione utile per l'infromatica</b>
+             <br>
+             In molti linguaggi di programmazione la funzione che 
+        </p> 
+        <br>
+        <ul class="gray">
+            <li>
+                prende in input le coordinate \(\left(y\,;\,\,x\right)\) 
+            </li>
+            <br>
+            <li>
+                restituisce come output l'angolo \(\alpha\) compreso tra l'asse \(x\) ed il raggio \(r\)
+            </li>
+        </ul>
+        <br>
+        <p class="gray">
+            è indicata con \(\boldsymbol{atan2}\). 
+            <br>
+            <a href="https://it.wikipedia.org/wiki/Arcotangente2">QUI</a> potete trovare ulteriori dettagli.
+        </p>
+    
+        <br>
+    
+        <p>
+            Riassumendo
+        </p>
+        <p class="grayBackground">
+            Se un punto \(P\) ha coordinate <b>cartesiane</b> 
+            \[
+                \left(\color{blue}{x}\color{black}{};\,\,\color{#009900}{y}\color{black}{}\right)
+            \]
+            allora le sue coordinate <b>polari</b> sono
+            \[
+                \left(
+                    \color{rgb(255, 127, 0)}{\alpha}\color{black}{} \,;\,\,
+                    \color{black}{\sqrt{\color{blue}{x}^{\color{black}{2}} + \color{#009900}{y}^{\color{black}{2}}}}
+                \right)
+            \]
+            dove \(\color{rgb(255, 127, 0)}{\alpha}\) è l'angolo che ha come tangente \(\color{black}{\dfrac{\color{#009900}{y}}{\color{blue}{x}}}\), preso in accordo con il segno di \(\color{blue}{x}\) ed \(\color{#009900}{y}\)
+        </p>
+        
+        <br>
+        <br>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>

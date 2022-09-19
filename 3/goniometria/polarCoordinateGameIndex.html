@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Goniometria</title>
+</head>
+<body>
+    <h2>Coordinate polari</h2>
+    <div style="width: 90%; margin: auto; border: 0.01rem solid black;" class="geogebra1-container">
+        <div id="geogebra1" ></div>
+    </div>
+
+    <br>
+
+    <p>
+        Il punto evidenziato in <span style="color: blue">blu</span> ha coordinate polari 
+        <span id="coords">\[\left(\color{#ff7f00}{30°}\color{black}{},\,\, \color{#f40099}{6}\color{black}{}\right)\]</span>
+    </p>
+    <p>
+        La prima coordinata rappresenta l'<span style="color: #ff7f00">angolo</span> che si deve spaziare a partire dell'asse \(x\) per "vedere" il punto. 
+    </p>
+    <p>
+        La seconda coordinata indica la <span style="color: rgb(244, 0, 153)">distanza</span> del punto dall'origine.
+    </p>
+    
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="blue">Dalle coordinate polari a quelle cartesiane</h3>
+    <br>
+    <p>
+       Consideriamo un punto \(P\) avete generiche coordinate polari 
+       \[\left(\color{#ff7f00}{\alpha}\color{black}{};\,\,\color{#f40099}{r}\color{black}{}\right)\]
+    </p>
+    <br>
+    <img src="img/polarToCartesian.png" alt="" style="width: 60%; margin: auto;">
+    <br>
+    <p>
+       Usando la definizione geometrica del seno di un angolo, sappiamo che
+       \[
+            sin\left(\color{#ff7f00}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{#009900}{y}}{\color{#f40099}{r}}} \color{black}{}
+            \quad\Longrightarrow\quad 
+            \color{#009900}{y} \color{black}{} = \color{#f40099}{r} \color{black}{} \cdot sin\left(\color{#ff7f00}{\alpha}\color{black}{}\right)
+       \]
+       Allo stesso modo, usando la definizione geometrica del coseno di un angolo, si ha che
+       \[
+            cos\left(\color{#ff7f00}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{blue}{x}}{\color{#f40099}{r}}} \color{black}{}
+            \quad\Longrightarrow\quad 
+            \color{blue}{x} \color{black}{} = \color{#f40099}{r} \color{black}{} \cdot cos\left(\color{#ff7f00}{\alpha}\color{black}{}\right)
+       \]
+       Riassumendo:
+    </p>
+    <p class="grayBackground">
+        Se un punto \(P\) ha coordinate <b>polari</b> 
+        \[
+            \left(\color{#ff7f00}{\alpha}\color{black}{};\,\,\color{#f40099}{r}\color{black}{}\right)
+        \]
+        allora le sue coordinate <b>cartesiane</b> sono
+        \[
+            \left(
+                \color{#f40099}{r} \color{black}{} sin\left(\color{#ff7f00}{\alpha}\color{black}{}\right) \,;\,\,
+                \color{#f40099}{r} \color{black}{} cos\left(\color{#ff7f00}{\alpha}\color{black}{}\right)
+            \right)
+        \]
+    </p>
+
+    <br>
+    <hr>
+    <br>
+    
+    <h3 class="blue">Dalle coordinate cartesiane a quelle polari</h3>
+    <br>
+    <p>
+        Consideriamo un punto \(P\) avete generiche coordinate cartesiane 
+        \[\left(\color{blue}{x}\color{black}{};\,\,\color{#009900}{y}\color{black}{}\right)\]
+     </p>
+     <br>
+     <img src="img/polarToCartesian.png" alt="" style="width: 60%; margin: auto;">
+     <br>
+     <p>
+         Il teorma di Pitagora ci permette di trovare la coordinata polare \(\color{#f40099}{r}\) del punto, ovvero la distanza del punto \(P\) dall'origine:
+         \[
+
+            \color{#f40099}{r} \color{black}{}= \color{black}{\sqrt{\color{blue}{x}^{\color{black}{2}} + \color{#009900}{y}^{\color{black}{2}}}}
+         \]
+     </p>
+     <p>
+        Per trovare la coordinata polare \(\color{#ff7f00}{\alpha}\) possiamo usare la definizione geometrica di tangente:
+        \[
+            tan\left(\color{#ff7f00}{\alpha}\color{black}{}\right) = \color{black}{\dfrac{\color{#009900}{y}}{\color{blue}{x}}}
+        \]
+        di conseguenza \(\color{#ff7f00}{\alpha}\) è l'angolo che ha tangente \(\dfrac{\color{#009900}{y}}{\color{blue}{x}}\).
+        <br>
+        Problema ...ci sono <b>due</b> angoli che hanno come tangente \(\dfrac{\color{#009900}{y}}{\color{blue}{x}}\)! Quale prendiamo?
+        <br>
+        Chiaramente la scelta dipendera dal segno di \(\color{blue}{x}\) ed \(\color{#009900}{y}\). Infatti sappiamo che 
+     </p>
+     <br>
+     <ul>
+         <li>
+             se \(\color{blue}{x} \color{black}{}\gt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad0° \lt \color{#ff7f00}{\alpha} \color{black}{}\lt 90°\) ;
+         </li>
+         <br>
+         <li>
+            se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad90° \lt \color{#ff7f00}{\alpha} \color{black}{}\lt 180°\) ;
+        </li>
+        <br>
+        <li>
+            se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\lt 0\quad\) allora \(\quad180° \lt \color{#ff7f00}{\alpha} \color{black}{}\lt 270°\) ;
+        </li>
+        <br>
+        <li>
+            se \(\color{blue}{x} \color{black}{}\lt 0\,\,\) e \(\,\,\color{#009900}{y} \color{black}{}\gt 0\quad\) allora \(\quad270° \lt \color{#ff7f00}{\alpha} \color{black}{}\lt 360°\).
+        </li>
+     </ul>
+
+     <br>
+    
+     <p class="gray">
+         <b>Informazione utile per l'infromatica</b>
+         <br>
+         In molti linguaggi di programmazione la funzione che 
+    </p> 
+    <br>
+    <ul class="gray">
+        <li>
+            prende in input le coordinate \(\left(y\,;\,\,x\right)\) 
+        </li>
+        <br>
+        <li>
+            restituisce come output l'angolo \(\alpha\) compreso tra l'asse \(x\) ed il raggio \(r\)
+        </li>
+    </ul>
+    <br>
+    <p class="gray">
+        è indicata con \(\boldsymbol{atan2}\). 
+        <br>
+        <a href="https://it.wikipedia.org/wiki/Arcotangente2">QUI</a> potete trovare ulteriori dettagli.
+    </p>
+
+    <br>
+
+    <p>
+        Riassumendo
+    </p>
+    <p class="grayBackground">
+        Se un punto \(P\) ha coordinate <b>cartesiane</b> 
+        \[
+            \left(\color{blue}{x}\color{black}{};\,\,\color{#009900}{y}\color{black}{}\right)
+        \]
+        allora le sue coordinate <b>polari</b> sono
+        \[
+            \left(
+                \color{#ff7f00}{\alpha}\color{black}{} \,;\,\,
+                \color{black}{\sqrt{\color{blue}{x}^{\color{black}{2}} + \color{#009900}{y}^{\color{black}{2}}}}
+            \right)
+        \]
+        dove \(\color{#ff7f00}{\alpha}\) è l'angolo che ha come tangente \(\color{black}{\dfrac{\color{#009900}{y}}{\color{blue}{x}}}\), preso in accordo con il segno di \(\color{blue}{x}\) ed \(\color{#009900}{y}\)
+    </p>
+
+    <script src="script1.js"></script>
+</body>
