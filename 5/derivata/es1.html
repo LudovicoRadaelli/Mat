@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Esercizi 4Ci</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    <br>
+
+    <h2>Esercizio 1</h2>
+    <p>
+        Nell'applicazione che segue abbiamo un rudimentale autovelox, costituito da 
+        una macchina fotografica. Tutto ciò che dovete fare è scattare due foto in sequenza ed usare
+        la vecchia fomula della velocità <b>media</b> imparata durante il primo anno di scuola:
+        \[
+            v_{media} = \dfrac{\Delta s}{\Delta t}
+        \]
+        dove 
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(\Delta s\) è la distanza percorsa dall'auto tra una foto e la successiva;
+        </li>
+        <li>
+            \(\Delta t\) è il tempo trascorso tra una foto e la successiva.
+        </li>
+    </ul>
+    <br>
+    <p>
+        Per comodità il primo scatto viene effettuato automaticamente, dal programma
+        il vostro compito è solamente quello di eserguire il secondo scatto.
+    </p>
+    <p>
+        Effettuate vari tentativi e riportate i risultati ottenuti in una tabella 
+        come quella allegata in fondo.
+    </p>
+
+    <div id="sketch"></div>
+    <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+        <button id ="start-button" onclick="start()">Start</button>
+        <button id ="scattaFoto-button" onclick="scatta()">Scatta foto</button>
+        <div id="data">
+            \[
+                \begin{align*}
+                & \Delta  s = \cdots
+                \\\\
+                & \Delta t = \cdots
+                \end{align*}
+            \]
+        </div>
+    </div>
+    
+    
+    
+    <br><br>
+
+
+    <table>
+        <tr>
+            <th>
+                \[\Delta s\]
+            </th>
+            <th>
+                \[\Delta t\]
+            </th>
+            <th>
+                Velocità media
+            </th>
+        </tr>
+        <tr>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+        </tr>
+        <tr>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+        </tr>
+        <tr>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+        </tr>
+        <tr>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+            <td>\[\,\,\]</td>
+        </tr>
+        
+    </table>
+    <script>
+        
+let time = 0;
+let position = 0;
+let speed = 0;
+let carX = 0;
+let carY;
+let sizeX = 190/4;
+let sizeY = 107/4;
+
+let bg;
+let car;
+let isAnimated = false;
+let isFlashing = false;
+
+let ti; 
+let pi;
+let tf = 0;
+let pf;
+
+function preload() {
+  car = loadImage("img/car.svg");
+}
+
+
+function setup() {
+  let cnv = createCanvas(8*window.innerWidth/9, 2*window.innerWidth/3);
+  cnv.parent("sketch");
+
+  pi =  width/2;
+  carY = height/2;
+
+  background(255);
+  
+  image(car, carX, carY, sizeX, sizeY);
+
+  noFill();
+  strokeWeight(3);
+  rect(0,0,width, height)
+
+  line(0,height/2+sizeY, width, height/2+sizeY);
+}
+
+function draw() {
+
+    
+    if(carX > width/2) {
+        tf = millis();
+        if(carX < width/2 +7) {
+            isFlashing = true;
+            
+            background("yellow");
+            upDateCarX()
+            time++;
+            
+        } else {
+            
+            isFlashing = false;
+        }
+
+    
+    }
+
+    /* console.log(`
+    isFlashing: ${isFlashing}
+    carX: ${carX} 
+    width/2 + 7: ${width/2 +7},
+    carX < width/2 + 7: ${carX < width/2 + 7}
+    `) */
+
+    
+    
+    if(isAnimated && !isFlashing) {
+        
+        upDateCarX();
+        
+        background(255);
+  
+        image(car, carX, carY, sizeX, sizeY);
+
+        noFill();
+        strokeWeight(3);
+        rect(0,0,width, height);
+
+        line(0,height/2+sizeY, width, height/2+sizeY);
+
+        time++;
+
+    }
+    
+
+    
+
+    //console.log(`carX: ${carX}, width: ${width}, carX > width: ${carX > width}`)
+
+    if(carX > 2*width) {
+        
+        carX = 0;
+        time = 0;
+
+        upDateCarX()
+        
+        background(255);
+  
+        image(car, carX, carY, sizeX, sizeY);
+
+        noFill();
+        strokeWeight(3);
+        rect(0,0,width, height);
+
+        line(0,height/2+sizeY, width, height/2+sizeY);
+
+        isAnimated = false;
+
+        let deltaS = Math.floor(abs(pf- pi)/2*1000)/1000;
+        let deltaT = Math.floor(abs(tf -ti))/1000
+
+        document.getElementById("data").innerHTML = 
+        `\\[
+            \\begin{align*}
+            & \\Delta  s = ${deltaS}, 
+            \\\\\\\\            
+            & \\Delta t = ${deltaT} 
+            \\\\\\\\            
+            & v_{media} = ${deltaS/deltaT} 
+            \\end{align*}            
+        \\]`
+        MathJax.typesetClear([document.getElementById("data")]);
+        MathJax.typesetPromise([document.getElementById("data")]).then(() => {});
+
+        console.log(`
+        ti: ${ti}, pi: ${pi}, 
+        tf: ${tf}, pf: ${pf}`)
+
+    }
+  
+}
+
+function drawCar() {
+  image(car, carX, carY, sizeX, sizeY);
+}
+
+function start() {
+    ti = millis();
+    isAnimated = true;
+}
+
+
+function upDateCarX() {
+    
+    let u = 20;
+    carX = u*5*sin(2*PI/300*time/u)*u*5*sin(2*PI/300*time/u);
+
+}
+
+function scatta() {
+    tf = millis();
+    pf = carX;
+    console.log(`tf: ${tf}, pf: ${pf}`)
+}
+
+
+
+
+    </script>
+    
+</body>

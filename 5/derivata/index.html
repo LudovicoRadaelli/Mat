@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>Derivata di una funzione</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async 
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="h2">
+        <div class="par">1</div>
+        <h2>Il coefficiente angolare</h2>
+    </div>
+
+    <div class="h3">
+        <div class="sub-par">1.1</div>
+        <h3 class="blue">Cosa è?</h3>
+    </div>
+
+    <br>
+
+    <p>
+        Prendiamo la retta \(y = \color{blue}{3}\color{black}{x}+2\)
+    </p>
+
+    <br>
+    <img src="images/derivata1.png">
+    <br>
+
+    <p>
+        Il coefficiente angolare \( \color{blue}{m}\color{black}{=}\color{blue}{3}\) ci dice che pendenza ha la retta.
+    </p>
+
+    <br>
+
+    <p class="gray">Usate lo slider per variare \(\color{blue}{m}\) e guardate come cambia la pendenza della retta.</p>
+    
+    <br>
+    
+    <div class="geogebra-container">
+        <div id="geogebra1" class="geogebra"></div>
+    </div>
+    
+    <br>
+    
+
+    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+        -6<input type="range" id="range" class="range" value="3" min="-6" max="6" step="0.1" defaulteValue="3" onmousemove="changeValue()" ontouchmove="changeValue()">6
+    </div>
+
+    <div id="newRange" class="newRange"> \[ \color{blue}{m} \color{black}{} = \color{blue}{3} \]</div>
+
+    <br>
+    <hr>
+    <br>
+    
+    <div class="h3">
+        <div class="sub-par">1.2</div>
+        <h3 class="blue">Come si calcola?</h3>
+    </div>
+    <br>
+    <p>
+        Per trovare il coefficiente angolare di una retta prendiamo due suoi punti qualsiasi 
+        \(\color{#f40099}{A(x_{A}, y_{A})}\) e \(\color{#ff7f00}{B(x_{B}, y_{B})}\) ed usiamo la formula
+    </p>
+    <p id="formulaCoeffAngolare">
+        \[m = \frac{\color{#0000ff}{y_{B}-y_{A}}}{\color{#00cc00}{x_{B}-x_{A}}}\]    
+    </p>
+    <p>
+        Sostanzialmente la formula rappresenta "quanto ci siamo alzati" (\(\color{#0000ff}{y_{B}-y_{A}}\)), 
+        rispetto a quanto "ci siamo spostati" (\(\color{#00cc00}{x_{B}-x_{A}}\)).
+    </p>
+    <p>
+        Trascinate i due punti e guardate: variano le misure dei segmenti blu e verde, ma il loro rapporto è costante:
+    </p>
+
+    <p id="ggCoefAngolare">\[m = \frac{\color{#0000ff}{3}}{\color{#00cc00}{1}} = 3\]</p>
+
+    <br>
+    <div class="geogebra-container">
+        <div onclick="writeFormula()" id="geogebra4"  class="geogebra"></div>
+    </div>
+    <br>
+    
+    <br>
+    <br>
+
+    <p>
+        Ora vorremmo estendere il concetto di coefficienta angolare ad una funzione qualsiasi, ovvero definire uno
+        strumento matematico che ci dica qual è la "pendenza" di una funzione in un punto.
+    </p>
+    <p>
+        Provate a trascinare il punto rosa e vedete la pendenza della retta tangente al grafico nel punto. 
+        Più la retta è pendente più la variazione della funzione è grande.
+    </p>
+
+    <br>
+    <div class="geogebra-container">
+        <div id="geogebra2" class="geogebra"></div>        
+    </div>
+    
+    <br>
+
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <div class="par">2</div>
+        <h2>La derivata di una funzione</h2>
+    </div>
+    
+    <br>
+    <img src="images/derivata2.png">
+    <br>
+
+    
+    <p>
+        Sia \(f\) una funzione continua in un punto \(x_{0}\).<br>
+        Prendiamo un punto vicino a \(x_{0}\):  
+    </p>
+
+    <p style="text-align: center;">
+        \[x_{0} + h\]
+        <span class="gray">
+            (leggetelo "\(x_{0} +\) pochissimo") 
+        </span>
+    </p>
+
+    <br>
+
+    <p>
+        La funzione in \( \color{#f40099}{x_{0}}\) vale \(\color{#f40099}{f(x_{0}})\)<br>
+        In \(\color{#ff7f00}{x_{0}+h}\)   vale \(\color{#ff7f00}{f(x_{0}+h)}\)
+    </p>    
+
+    <br>
+    <img src="images/derivata3.png">
+    <br>
+
+    <p> 
+        Guardiamo <span style="color: #009900">la retta</span> che passa per i punti \( \color{#f40099}{\left( x_{0}, f\right(x_{0}\left) \right)} \) e \( \color{#ff7f00}{\left( x_{0}+h, f\right(x_{0}+h\left) \right)} \)<br>
+        Il suo coefficiente angolare è 
+    </p>
+    
+    <p>
+        La pendenza di questa retta non è ancora la pendenza della funzione <i><b>nel</b></i> punto \(x_{0}\), ma quasi...
+    </p>    
+
+    <br>
+    <div class="geogebra-container">
+        <div id="geogebra3" class="geogebra"></div> 
+    </div>
+    <br>
+
+    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+        0<input type="range" id="rangeH" class="range" value="2" min="0.01" max="2.5" step="0.1" defaulteValue="2" onmousemove="changeValueH()" ontouchmove="changeValueH()">2,5
+    </div>
+    
+    
+    <div id="newRangeH" class="newRange">\[h = 2\]</div>
+
+    <p>
+        Usando lo slider, prendete \(h\) sempre più piccolo, in modo che il punto \(\color{#ff7f00}{\left(x_{0}+h, f(x_{0}+h)\right)}\) 
+        sia sempre più vicino al punto \(\color{#f40099}{\left(x_{0}, f(x_{0})\right)}\), fino a sovrapporsi ad esso <i>al limite</i>.
+    </p>
+
+    <p>
+        In altre parole la pendenza della funzione nel punto \(x_{0}\) numericamente è 
+        \[ \underset{h \rightarrow 0}{\lim} \frac{f\left( x_{0} + h\right) - f\left( x_{0}\right)}{h}\]
+    </p>
+
+    <p>
+        Questa è la definizione di derivata della funzione \(f\) nel punto \(x_{0}.\)
+    </p>
+    <p>
+        Per indicarla si usa il simbolo \(f'(x_{0})\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+    
+    <p>Riassumendo</p>
+
+    <p class="grayBackground">
+        La derivata di \(f\) in \(x_{0}\) è per definizione 
+        \[
+            f'(x_{0}) = \underset{h \rightarrow 0}{\lim} \frac{f\left( x_{0} + h\right) - f\left( x_{0}\right)}{h}
+        \]
+
+        Geometricamente \(f'(x_{0})\) rappresenta il coefficiente angolare della retta tangente al grafico di \(f\) nel
+        punto \((x_{0},f(x_{0}))\).
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <div class="par">3</div>
+        <h2 id="calcoloDerivate">Calcolo delle derivate fondamentali</h2>
+    </div>
+    <p>
+        Usando la definizione è possibile ricavare le derivate delle funzioni più comuni. 
+        Le trovate evidenziate nel riquadro grigio, seguite da qualche esempio laddove necessario.
+    </p>
+
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = ax +b \quad\Rightarrow\quad f^{'}\left(x\right) = a}\)
+    </p>
+    
+    <br>
+    <h3 class="yellow" class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                <div class="formula">
+                    \(\left(5\right)^{'} = 0\)
+                    <br>
+                    <span class="gray">infatti \(\quad5 = 0x +5\)</span>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(8x\right)^{'} = 8\)
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(6x -3\right)^{'} = 6\)
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(-7x +10\right)^{'} = -7\)    
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(-9x - 10\right)^{'} = -9\)    
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(x -20\right)^{'} = 1\)
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = x^a \quad\Rightarrow\quad f^{'}\left(x\right) = a\,x^{a-1}}\)
+    </p>
+    
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            <b class="yellow">Se \(a\) è un numero intero positivo</b>
+        </p>
+        <br>
+        <ul>
+            <li>
+                <div class="formula">
+                    \(\left(x^9\right)^{'} = 9\,x^{9-1} = 9\,x^8\)    
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(x^4\right)^{'} = 4\,x^{4-1} = 4x^3\)
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(x^{12}\right)^{'} = 12\,x^{12 - 1} = 12\,x^{11}\)
+                </div>
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+
+        
+        <p class="gray">
+            Negli esempi che seguono <u>prima</u> riscriviamo la funzione in forma esponenziale e <u>poi</u> applichiamo la regola (passaggio in corrispondenza dell'uguale in rosso).
+        </p>
+        <br>
+
+        <p>
+            <b class="yellow">Se \(a\) è un numero intero negativo</b>
+        </p>
+        <br>
+        <ul>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\dfrac{1}{x^8}\right)^{'} = \left(x^{-8}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -8\,x^{-8-1} = -8\,x^{-9} = -\dfrac{8}{x^9}\)
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\dfrac{1}{x^2}\right)^{'} = \left(x^{-2}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -2\,x^{-2-1} = -2\,x^{-3} = -\dfrac{2}{x^3}\)
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\dfrac{1}{x^5}\right)^{'} = \left(x^{-5}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -5\,x^{-5-1} = -5\,x^{-6} = -\dfrac{5}{x^6}\)
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            <b class="yellow">Se \(a\) è un numero frazionario positivo</b>
+        </p>
+        <br>
+        <ul>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\sqrt[3]{x^5}\right)^{'} = \left(x^{\frac{5}{3}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} \dfrac{5}{3}\,x^{\frac{5}{3}-1} = \dfrac{5}{3}\,x^{\frac{5 - 3}{3}} = \dfrac{5}{3}\,x^{\frac{2}{3}} = \dfrac{5}{3} \sqrt[3]{x^2}\)
+                    </div>
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\sqrt{x^9}\right)^{'} = \left(x^{\frac{9}{2}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} \dfrac{9}{2}\,x^{\frac{9}{2}-1} = \dfrac{9}{2}\,x^{\frac{9 - 2}{2}} = \dfrac{9}{2}\,x^{\frac{7}{2}} = \dfrac{9}{2} \sqrt{x^7}\)
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\sqrt[10]{x^3}\right)^{'} = \left(x^{\frac{3}{10}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} \dfrac{3}{10}\,x^{\frac{3}{10}-1} = \dfrac{3}{10}\,x^{\frac{3 - 10}{10}} = \dfrac{3}{10}\,x^{-\frac{7}{10}} = \dfrac{3}{10} \dfrac{1}{x^{\frac{7}{10}}} = \dfrac{3}{10} \dfrac{1}{\sqrt[10]{x^7}}\)
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <p>
+            <b class="yellow">Se \(a\) è un numero frazionario negativo</b>
+        </p>
+        <br>
+        <ul>
+            <li>
+                <div class="formula-container">
+                    <div class="formula">
+                        \(\left(\dfrac{1}{\sqrt[11]{x^2}}\right)^{'} = \left(\dfrac{1}{x^{\frac{2}{11}}}\right)^{'} = \left(x^{-\frac{2}{11}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -\dfrac{2}{11}\,x^{-\frac{2}{11}-1} = -\dfrac{2}{11}\,x^{\frac{-2 - 11}{11}} = -\dfrac{2}{11}\,x^{\frac{-13}{11}} = -\dfrac{2}{11} \dfrac{1}{x^{\frac{13}{11}}} = -\dfrac{2}{11} \dfrac{1}{\sqrt[11]{x^{13}}}\)
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(\dfrac{1}{\sqrt[3]{x^4}}\right)^{'} = \left(\dfrac{1}{x^{\frac{4}{3}}}\right)^{'} = \left(x^{-\frac{4}{3}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -\dfrac{4}{3}\,x^{-\frac{4}{3}-1} = -\dfrac{4}{3}\,x^{\frac{-4 - 3}{3}} = -\dfrac{4}{3}\,x^{-\frac{7}{3}} = -\dfrac{4}{3} \dfrac{1}{x^{\frac{7}{3}}} = -\dfrac{4}{3} \dfrac{1}{\sqrt[3]{x^{7}}}\)
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(\left(\dfrac{1}{\sqrt[5]{x^6}}\right)^{'} = \left(\dfrac{1}{x^{\frac{5}{6}}}\right)^{'} = \left(x^{-\frac{5}{6}}\right)^{'} \color{red}{\,\,=\,\,}\color{black}{} -\dfrac{5}{6}\,x^{-\frac{5}{6}-1} = -\dfrac{5}{6}\,x^{\frac{-5 - 6}{6}} = -\dfrac{5}{6}\,x^{\frac{-11}{6}} = -\dfrac{5}{6} \dfrac{1}{x^{\frac{11}{6}}} = -\dfrac{5}{6} \dfrac{1}{\sqrt[6]{x^{11}}}\)
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = ln\left(x\right) \quad\Rightarrow\quad f^{'}\left(x\right) = \dfrac{1}{x}}\)
+    </p>
+    
+    <br>
+    <hr>
+    <br>
+    
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = e^x \quad\Rightarrow\quad f^{'}\left(x\right) = e^x}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = sin\left(x\right) \quad\Rightarrow\quad f^{'}\left(x\right) = cos\left(x\right)}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = cos\left(x\right) \quad\Rightarrow\quad f^{'}\left(x\right) = -sin\left(x\right)}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(
+            \begin{align*}
+                \boldsymbol{f\left(x\right) = tan\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = } & \boldsymbol{\,\,\dfrac{1}{cos^2\left(x\right)}}
+                \\\\
+                 \boldsymbol{=} & \boldsymbol{\,\,1 + tan^2\left(x\right)}
+            \end{align*}
+        \)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(
+            \begin{align*}
+                \boldsymbol{f\left(x\right) = cot\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = } & \boldsymbol{\,\,-\dfrac{1}{sin^2\left(x\right)}}
+                \\\\
+                \boldsymbol{=} & \boldsymbol{\,-1 - cot^2\left(x\right)}
+            \end{align*}
+        \)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = arcsin\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = \dfrac{1}{\sqrt{1 -x^2}}}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = arccos\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = -\dfrac{1}{\sqrt{1 -x^2}}}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = arctan\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = \dfrac{1}{1 + x^2}}\)
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <p class="grayBackground">
+        \(\boldsymbol{f\left(x\right) = arccot\left(x\right) \,\,\Rightarrow\,\, f^{'}\left(x\right) = -\dfrac{1}{1 + x^2}}\)
+    </p> 
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="regoleDerivazione">4) Regole di derivazione</h2>
+    <p>
+        Ora che conosciamo le derivate delle funzioni più comuni, studiamo alcune regole che ci permettono di trovare la derivata di funzioni più articolate definite a partire dalle funzioni elementari.
+    </p>
+
+    <br>
+
+    <h3 class="blue">4.1) Derivata della somma di funzioni</h3>
+    <p class="grayBackground">
+        \[
+            \color{black}{\left(\color{red}{f\left(x\right)} \color{black}{+} \color{blue}{g\left(x\right)}\color{black}{}\right)^{'}} = 
+            \color{red}{f^{\color{black}{'}}\left(x\right)} \color{black}{+} \color{blue}{g^{\color{black}{'}}\left(x\right)}
+        \]
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            \(
+                \begin{align*}
+                    & \color{black}{}\left(\color{red}{cos\left(x\right)} \color{black}{\,+\,} \color{blue}{}x^5 \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{black}{}\left( \color{red}{cos\left(x\right)} \color{black}{}\right)^{'} + \color{black}{}\left( \color{blue}{x^5} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{sin\left(x\right)} \color{black}{} + \color{blue}{} 5 x^{4}
+                \end{align*}
+            \)
+        </p>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <p>
+            \(
+                \begin{align*}
+                    & \color{black}{}\left(\color{red}{tan\left(x\right)} \color{black}{\,+\,} \color{blue}{}ln\left(x\right) \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{black}{}\left( \color{red}{tan\left(x\right)} \color{black}{}\right)^{'} + \color{black}{}\left( \color{blue}{ln\left(x\right)} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{\dfrac{1}{cos^2\left(x\right)}} \color{black}{} + \color{blue}{} \dfrac{1}{x}
+                \end{align*}
+            \)
+        </p>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="blue">4.2) Derivata del prodotto tra una costante ed una funzione </h3>
+    <p class="grayBackground">
+        \[
+            \color{black}{}\left(\color{red}{c} \,\color{blue}{f\left(x\right)}\color{black}{}\right)^{'} = \color{red}{c}\,\color{blue}{f^{\color{black}{'}}\left(x\right)}
+        \]
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{5} \,\,\color{blue}{arcsin\left(x\right)} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{5} \color{black}{}\cdot \left( \color{blue}{arcosin\left(x\right)} \color{black}{} \right)^{'}
+                    \\\\
+                    = \,\,& \color{red}{5} \color{black}{} \,\cdot\, \color{blue}{\dfrac{1}{\sqrt{1 -x^2}}} = 
+                    \\\\
+                    = \,\,& \dfrac{5}{\sqrt{1 -x^2}}
+                \end{align*}
+            \)
+        </p>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{6} \color{blue}{x^4} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{6} \color{black}{}\cdot \left( \color{blue}{x^4} \color{black}{} \right)^{'}
+                    \\\\
+                    = \,\,& \color{red}{6} \color{black}{} \,\cdot\, \color{blue}{4 x^{3}} = 
+                    \\\\
+                    = \,\,& 24x^3
+                \end{align*}
+            \)
+        </p>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{\dfrac{\sqrt{37}}{5}} \,\,\color{blue}{cos\left(x\right)} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{\dfrac{\sqrt{37}}{5}} \color{black}{}\cdot \left( \color{blue}{cos\left(x\right)} \color{black}{} \right)^{'}
+                    \\\\
+                    = \,\,& \color{red}{\dfrac{\sqrt{37}}{5}} \color{black}{} \,\cdot\, \left( \color{blue}{- sin\left(x\right)\color{black}{}}\right) = 
+                    \\\\
+                    = \,\,& - \dfrac{\sqrt{37}\,\,sin\left(x\right)}{5}
+                \end{align*}
+            \)
+        </p>
+        
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="blue">4.3) 
+        Derivata del prodotto tra due funzioni
+        (regola di Leibniz)
+    </h3>
+    <p class="grayBackground">
+        \[
+            \color{black}{}\left(\color{red}{f\left(x\right)} \color{black}{\,\cdot\,} \color{blue}{g\left(x\right)}\color{black}{}\right)^{'} = 
+            \color{red}{f^{\color{black}{'}}\left(x\right)} \color{black}{\,\cdot\,} \color{blue}{g\left(x\right)} + 
+            \color{red}{f\left(x\right)} \color{black}{\,\cdot\,} \color{blue}{g^{\color{black}{'}}\left(x\right)}
+        \]
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{sin\left(x\right)} \color{black}{}\,\cdot\, \color{blue}{ln\left(x\right)} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{black}{}\left(\color{red}{sin\left(x\right)} \color{black}{}\right)^{'}\cdot \color{blue}{ln\left(x\right)} +
+                        \color{red}{sin\left(x\right)} \color{black}{}\cdot \left( \color{blue}{ln\left(x\right)} \color{black}{} \right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{cos\left(x\right)} \color{black}{} \cdot \color{blue}{} ln\left(x\right) \color{black}{} + \color{red}{} sin\left(x\right) \color{black}{} \cdot \color{blue}{} \dfrac{1}{x}
+                    \\\\
+                    = \,\, & cos\left(x\right)\,ln\left(x\right) + \dfrac{sin\left(x\right)}{x}
+                \end{align*}
+            \)
+        </p>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{arctan\left(x\right)} \color{black}{}\,\cdot\, \color{blue}{e^x} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{black}{}\left(\color{red}{arctan\left(x\right)} \color{black}{}\right)^{'}\cdot \color{blue}{e^x} +
+                        \color{red}{arctan\left(x\right)} \color{black}{}\cdot \left( \color{blue}{e^x} \color{black}{} \right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{\dfrac{1}{1 + x^2}} \color{black}{} \cdot \color{blue}{} e^x \color{black}{} + \color{red}{} arctan\left(x\right) \color{black}{} \cdot \color{blue}{} e^{x}
+                    \\\\
+                    = \,\, & e^x\left(\dfrac{1}{1 +x^2} + arctan\left(x\right) \right)
+                \end{align*}
+            \)
+        </p>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            \(
+                \begin{align*}
+                    & \left( \color{red}{cos\left(x\right)} \color{black}{}\,\cdot\, \color{blue}{\dfrac{5}{x^2}} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \color{black}{}\left(\color{red}{cos\left(x\right)} \color{black}{}\right)^{'}\cdot \color{blue}{\dfrac{5}{x^2}} +
+                        \color{red}{cos\left(x\right)} \color{black}{}\cdot \left( \color{blue}{5\,x^{-2}} \color{black}{} \right)^{'} = 
+                    \\\\
+                    = \,\,& \color{red}{-sin\left(x\right)} \color{black}{} \cdot \color{blue}{} \dfrac{5}{x^2} \color{black}{} + \color{red}{} cos\left(x\right) \color{black}{} \cdot \color{blue}{} 5 \cdot \left(-2\right)x^{-3}
+                    \\\\
+                    = \,\,& -\dfrac{5\,sin\left(x\right)}{x^2} -10\,cos\left(x\right) \, x^{-3} = 
+                    \\\\
+                    = \,\,& -\dfrac{5\,sin\left(x\right)}{x^2} -\dfrac{10\,cos\left(x\right)}{x^{3}} = 
+                \end{align*}
+            \)
+        </p>
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="blue">4.4) 
+        Derivata del rapporto tra due funzioni
+    </h3>
+    <p class="grayBackground">
+        \[
+            \color{black}{}\left( \dfrac{\color{red}{f\left(x\right)}}{\color{blue}{g\left(x\right)}} \color{black}{}\right)^{'} = 
+            \dfrac{\color{red}{f^{\color{black}{'}}\left(x\right)} \color{black}{\,\cdot\,} \color{blue}{g\left(x\right)} \color{black}{} - \color{red}{f\left(x\right)} \color{black}{\,\cdot\,} \color{blue}{g^{\color{black}{'}}\left(x\right)}}{\left[\color{blue}{g\left(x\right)}\color{black}{}\right]^2}
+        \]
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            \(
+                \begin{align*}
+                    & \color{black}{}\left( \dfrac{\color{red}{sin\left(x\right)}}{\color{blue}{4x^5 -1}} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \dfrac{\left(\color{red}{sin\left(x\right)}\color{black}{}\right)^{'} \cdot \left(\color{blue}{4x^5 -1}\color{black}{}\right) - \color{red}{sin\left(x\right)} \color{black}{} \cdot \left(\color{blue}{4x^5 -1}\color{black}{}\right)^{'} }{\left[\color{blue}{4x^5 -1}\right]^{2}} =
+                    \\\\
+                    = \,\,& \dfrac{\color{red}{cos\left(x\right)}\color{black}{} \cdot \left(\color{blue}{4x^5 -1}\color{black}{}\right) - \color{red}{sin\left(x\right)} \color{black}{} \cdot \color{blue}{20 x^4}\color{black}{} }{\left[\color{blue}{4x^5 -1}\right]^{2}} =
+                \end{align*}
+            \)
+        </p>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <p class="gray">
+            Notate come nell'esempio che segue l'applicazione della regola vera e propria sia seguita da una manipolazione abbastanza elaborata (i passaggi in colore nero), tesa a semplificare la forma con cui si presenta la derivata.
+        </p>
+        <br>
+        <p>
+            \(
+                \begin{align*}
+                    & \color{black}{}\left( \dfrac{\color{red}{ln\left(x\right)}}{\color{blue}{\sqrt{x}}} \color{black}{}\right)^{'} = 
+                    \\\\
+                    = \,\,& \dfrac{\left(\color{red}{ln\left(x\right)}\color{black}{}\right)^{'} \cdot \left(\color{blue}{\sqrt{x}}\color{black}{}\right) - \color{red}{ln\left(x\right)} \color{black}{} \cdot \left(\color{blue}{\sqrt{x}}\color{black}{}\right)^{'} }{\left[\color{blue}{\sqrt{x}}\right]^{2}} =
+                    \\\\
+                    = \,\,& \dfrac{\left(\color{red}{ln\left(x\right)}\color{black}{}\right)^{'} \cdot \left(\color{blue}{\sqrt{x}}\color{black}{}\right) - \color{red}{ln\left(x\right)} \color{black}{} \cdot \left(\color{blue}{x^{\frac{1}{2}}}\color{black}{}\right)^{'} }{\left[\color{blue}{\sqrt{x}}\right]^{2}} =
+                    \\\\
+                    = \,\,& \dfrac{\color{red}{\dfrac{1}{x}}\color{black}{} \cdot \left(\color{blue}{x^{\frac{1}{2}}}\color{black}{}\right) - \color{red}{ln\left(x\right)} \color{black}{} \cdot \color{blue}{\dfrac{1}{2}x^{-\frac{1}{2}}}\color{black}{} }{|x|} =
+                    \\\\
+                    = \,\,& \dfrac{x^{-1} \cdot \left(x^{\frac{1}{2}}\right) - ln\left(x\right)  \cdot \dfrac{1}{2}\dfrac{1}{\sqrt{x}}}{|x|} =
+                    \\\\
+                    = \,\,& \dfrac{x^{-\frac{1}{2}}  - \dfrac{ln\left(x\right)}{2\sqrt{x}}}{|x|} =
+                    \\\\
+                    = \,\,& \dfrac{\dfrac{1}{\sqrt{x}} - \dfrac{ln\left(x\right)}{2\sqrt{x}}}{|x|} =
+                    \\\\
+                    = \,\,& \dfrac{\dfrac{1}{\sqrt{x}} \left(1 - \dfrac{ln\left(x\right)}{2}\right)}{|x|} =
+                    \\\\
+                    = \,\,& \dfrac{1 - \dfrac{ln\left(x\right)}{2}}{|x|\sqrt{x}} =
+                    \\\\
+                    = \,\,& \dfrac{\frac{2 - ln\left(x\right)}{2}}{|x|\sqrt{x}} =
+                    \\\\
+                    = \,\,& \dfrac{2 - ln\left(x\right)}{2|x|\sqrt{x}} =
+                \end{align*}
+            \)
+        </p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="blue">4.5) 
+        Derivata della composizione di due funzioni
+    </h3>
+    <p class="grayBackground">
+        \[
+            \left[\color{red}{}f\left(\color{blue}{}g\left(\color{black}{}x\color{blue}{}\right)\color{red}{}\right) \color{black}{}\right]^{'} = \color{red}{} f\color{black}{}^{'}\color{red}{}\left( \color{blue}{g\left(\color{black}{}x\color{blue}{}\right)} \color{red}{}\right) \color{black}{} \,\,\cdot\,\, \color{blue}{} g\color{black}{}^{'}\color{blue}{} \left(\color{black}{}x\color{blue}{}\right)
+        \]
+    </p>
+    <br>
+    <p>
+        La funzione composta \(\color{red}{}f\left(\color{blue}{}g\left(\color{black}{}x\color{blue}\right)\color{red}{}\right)\) è la funzione che si ottiene applicando prima la funzione \(\color{blue}{g}\) all'input \(x\) e successivamente applicando la funzione \(\color{blue}{g}\) ad \(\color{red}{f\left(x\right)}\):
+        \[
+            x \longmapsto \color{blue}{}g\left(\color{black}{}x\color{blue}{}\right) \longmapsto \color{red}{}f\left(\color{blue}{}g\left(\color{black}{}x\color{blue}{}\right)\color{red}{}\right)
+        \]
+    </p>
+    <p>
+        Il primo fattore che troviamo nella regola di derivazione è 
+        \[
+            \color{red}{} f\color{black}{}^{'}\color{red}{}\left( \color{blue}{g\left(\color{black}{}x\color{blue}{}\right)} \color{red}{}\right)
+        \]
+        Questo termine è costituito dalla derivata della funzione \(\color{red}{f}\) calcolata in corrispondenza dell'input \(\color{blue}{}g\left(\color{black}{}x\color{blue}{}\right)\)
+    </p>
+
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            Calcoliamo la seguente derivata
+            \[
+                \left[ \color{red}{}cos\left( \color{blue}{} ln\left(\color{black}{}x\color{blue}{}\right) \color{red}{}\right) \color{black}{}\right]^{'}
+            \]
+            
+            La funzione più intena è 
+            \[
+                \color{blue}{} g \left( \color{black}{} x \color{blue}{}\right) \color{black}{} = \color{blue}{} ln \left( \color{black}{} x \color{blue}{}\right) \color{black}{}
+            \]
+            Quella più esterna è 
+            \[
+                \color{red}{} f \left( \color{black}{} x \color{red}{}\right) \color{black}{} = \color{red}{} cos \left( \color{black}{} x \color{red}{}\right) \color{black}{}
+            \]
+        </p>
+        
+        <br>
+
+        <ol>
+            <li>
+                <p>
+                    Calcoliamo la derivata di \(\color{red}{}f\):
+                    \[
+                        \color{red}{}f\color{black}{}^{'}\color{red}{}\left(\color{#009900}{}x\color{red}{}\right) \color{black}{}= 
+                        \left[\color{red}{}cos\left(\color{#009900}{}x\color{red}{}\right)\color{black}{}\right]^{'} = -sin\left(\color{#009900}{}x\color{black}{}\right)
+                    \]
+                    e valutiamola in corrispondenza dell'input \(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\). In soldoni, al posto della \(\color{#009900}{}x\) che vi ho indicato in verde andiamo a sotituire \(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\).
+                </p>
+                <div class="formula">
+                    \[
+                        \color{red}{}f\color{black}{}^{'}\color{red}{}\left(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\color{red}{}\right) \color{black}{}= 
+                        \left[\color{red}{}cos\left(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\color{red}{}\right)\color{black}{}\right]^{'} = -sin\left(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\color{black}{}\right)
+                    \]
+                </p>
+            </li>
+            <br>
+            <li>
+                <p>
+                    Ora calcoliamo la derivata di \(\color{blue}{g}\)
+                    \[
+                        \color{blue}{} g \color{black}{}^{'} \color{blue}{} \left( \color{black}{} x\color{blue}{}\right) = 
+                        \left[ \color{blue}{} ln \left( \color{black}{} x\color{blue}{}\right) \color{black}{}\right]\color{black}{}^{'} = \dfrac{1}{x}
+                    \]
+                </p>
+            </li>
+            
+        </ol>
+        
+        <br>
+        
+        <p>
+            Infine mettiamo insieme i fattori calcolati
+            \[
+            \left[ \color{red}{}cos\left( \color{blue}{} ln\left(\color{black}{}x\color{blue}{}\right) \color{red}{}\right) \color{black}{}\right]^{'} = 
+            -sin\left(\color{blue}{}ln\left(\color{black}{}x\color{blue}{}\right)\color{black}{}\right) \cdot \dfrac{1}{x}
+            \]
+        </p>
+        
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+    <!-- Licenza -->
+
+    <div class="gray">
+        <span style="font-size: 0.7rem;">Quest'opera è distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - Non opere derivate 4.0 Internazionale</a>.</span>
+        <br>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            <img alt="Licenza Creative Commons" style="border-width:0; width: 30%; min-width:75px; max-width: 100px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+        </a>
+    </div>
+    
+    <br>
+    <br>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
