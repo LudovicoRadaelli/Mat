@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="../../js/monomialAndPolynomial.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Studio del segno</title>
+</head>
+<body>
+    
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Studio del segno...</h2>
+    </div>
+    
+    <br>
+    
+    <div class="h3">
+        <span class="sub-par">1.1</span>
+        <h3>...di un polinomio di primo grado</h3>
+    </div>
+
+    <br>
+
+    
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <div id="esempio1">
+            <div id="slide-container1">
+        
+                <div class="slide1" style="display: block;">
+                    <div class="grayBorder">
+                        Studiare il segno del polinomio
+                        \[
+                            2x -3
+                        \]
+                        al variare del valore della \(x\).
+                    </div>
+                    <br>
+                    <b>Svolgimento</b>
+                    <br>
+                    Vogliamo scoprire 
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            Per quali valori di \(x\) il polinomio assume segno <b>positivo</b>
+                        </li>
+                        <br>
+                        <li>
+                            Per quali valori di \(x\) il polinomio assume segno <b>negativo</b>
+                        </li>
+                        <br>
+                        <li>
+                            Per quali valori di \(x\) il polinomio vale <b>zero</b>
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                
+                <div class="slide1" style="display: none;">
+                    Iniziamo con il chiederci per quali valori della \(x\) il polinomio è <b>positivo</b>. 
+                    <br>
+                    In simboli:
+                    \[
+                        \underset{\text{il polinomio}}{\underbrace{2x -3}} \,\,\, \underset{\text{è positivo}}{\underbrace{\gt 0}}
+                    \]
+                </div>
+    
+                <div class="slide1" style="display: none;">
+                    Risolviamo la disequazione
+                    \[
+                        2x -3 \gt 0
+                    \]
+                    Per prima cosa spostiamo \(-3\) dall'altra parte del simbolo di disuguaglianza cambiandolo di segno
+                    \[
+                        2x \gt 3
+                    \]
+                    Ora dividiamo entrambi i membri per \(2\).
+                    
+                    \[
+                        \begin{align*}
+                            \dfrac{2x}{2} &amp;\gt \dfrac{3}{2}
+                            \\\\
+                            x &amp;\gt \dfrac{3}{2}
+                        \end{align*}
+                    \]
+                </div>
+    
+                <div class="slide1" style="display: none;">
+                    \(\triangleright\,\,\,\)Abbiamo scoperto che il polinomio è <b>positivo</b> se il valore di \(x\) è maggiore di 
+                    <nobr>\(\dfrac{3}{2}\).</nobr>
+    
+                    <br>
+                    <br>
+    
+                    \(\triangleright\,\,\,\)Gli stessi passaggi della disequazione appena risolta ci dicono che il polinomio vale <b>zero</b> 
+                    se il valore di \(x\) è \(\dfrac{3}{2}\).
+                    <br>
+                    Infatti
+                    \[
+                        \begin{align*}    
+                            2x -3 &amp;= 0
+                            \\\\
+                            2x &amp;= 3
+                            \\\\
+                            x &amp; = \dfrac{3}{2}
+                        \end{align*}    
+                    \]
+    
+                    \(\triangleright\,\,\,\)Per tutti gli altri valori di \(x\) il polinomio sarà <b>negativo</b>.
+                </div>
+    
+                <div class="slide1" style="display: none;">
+                    In conclusione il polinomio \(2x -3\) è
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            <b>positivo</b> se \(x \gt \dfrac{3}{2}\)
+                        </li>
+                        <br>
+                        <li>
+                            uguale a <b>zero</b> se \(x = \dfrac{3}{2}\)
+                        </li>
+                        <br>
+                        <li>
+                            <b>negativo</b> se \(x \lt \dfrac{3}{2}\)
+                        </li>
+                    </ul>
+                    <br>                    
+                    <br>
+                    <br>
+                    Lo stesso risultato che abbiamo appena espresso a parole, può essere rappresentato attraverso questo grafico
+                    <div style="min-height: 5rem; max-height: 3rem; font-size: 0.8rem">
+                        \[
+                            \begin{align*}
+                                \color{white}{}
+    
+                                \underset{2x -3}{\text{segno di}}\,\,
+                                
+                                \color{black}{}
+                                
+                                \color{gray}{}\dfrac{\quad\qquad\qquad\qquad}{} &amp;\color{black}{}\overset{\dfrac{3}{2}}{} \color{gray}{}\dfrac{\quad\qquad\qquad\qquad}{}
+                                \\\\
+                                \color{gray}{
+                                    \underset{2x -3}{\text{segno di}}
+                                }\,\,
+                                \color{black}{}
+                                \color{blue}{-------} &amp;\,\,\,\color{black}{0}\,\,\, \color{red}{+++++++}
+                            \end{align*}
+                        \]
+                        
+                    </div>
+    
+                    
+                    
+                </div>
+    
+    
+                <br>
+    
+            </div>
+        </div>
+        
+        <br>
+        
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)" disabled>Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <button onclick="generaEsempio(1)">Genera un altro esempio</button>
+    </div>
+
+    
+    
+
+
+
+    <script src="script.js"></script>
+</body>
