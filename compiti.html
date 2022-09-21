@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista compiti</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .classe-container {
+        width: 33.3333%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 0.01rem solid black;
+    }
+
+    a {
+        display: block;
+        margin-bottom: 1rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        background-color: lightgray;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="classe-container">
+            <h2>2°Bs</h2>
+            <div class="classe"></div>
+            <br>
+        </div>
+    
+        <div class="classe-container">
+            <h2>3°Bi</h2>
+            <div class="classe"></div>
+            <br>
+        </div>
+    
+        <div class="classe-container">
+            <h2>4°Bs</h2>
+            <div class="classe"></div>
+            <br>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="classe-container">
+            <h2>4°Ei</h2>
+            <div class="classe"></div>
+            <br>
+        </div>
+    
+        <div class="classe-container">
+            <h2>5°Ci</h2>
+            <udivl class="classe"></udivl>
+            <br>
+        </div>
+    </div>
+    
+    <script>
+        for(let i = 0; i < 5; i++) {
+            for(let j = 1; j<= 10; j++) {
+                if(i === 0) {
+                    document.getElementsByClassName("classe")[i].innerHTML += 
+                    `<a href="https://ludovicoradaelli.github.io/Mat/2/2Bs/sistemiLineari/${j}.html">es${j}</a>`;
+                } else if(i === 1) {
+                    document.getElementsByClassName("classe")[i].innerHTML += 
+                    `<a href="https://ludovicoradaelli.github.io/Mat/3/3Bs/disequazioni/${j}.html">es${j}</a>`;
+                } else if(i === 2) {
+                    document.getElementsByClassName("classe")[i].innerHTML += 
+                    `<a href="https://ludovicoradaelli.github.io/Mat/4/4Bs/goniometria/${j}.html">es${j}</a>`;
+                } else if(i === 3) {
+                    document.getElementsByClassName("classe")[i].innerHTML += 
+                    `<a href="https://ludovicoradaelli.github.io/Mat/4/4Ei/logaritmi/${j}.html">es${j}</a>`
+                } else if(i === 4) {
+                    document.getElementsByClassName("classe")[i].innerHTML += 
+                    `<a href="https://ludovicoradaelli.github.io/Mat/5/5Ci/derivata/${j}.html">es${j}</a>`;
+                }
+                
+            } 
+        }
+    </script>
+</body>
+</html>
