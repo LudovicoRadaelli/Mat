@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Definizione</b>
+            </div>
+            <div class="gray">
+                [Par. 9.1, pag. da 408 a 409]
+            </div>   
+            
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Proprietà del logaritmo</b>
+            </div>
+            <div class="gray">
+                [Par. 9.2, pag. da 409 a 412]
+            </div>
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+            <br>
+            
+            <div>
+                Dispense aggiuntive disponibili <a href="../../logaritmi/index.html">QUI</a>
+            </div>
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Calcolare il valore delle seguenti espressioni <b>usando la definizione di logaritmo</b>        
+    </p>
+    <br>
+    <ul>
+        <li>
+            <p>
+                \(
+                    log_{_{2}}\,\dfrac{1}{4} + log_{_{5}}\,25 + log_{_{3}}\,\sqrt[5]{3^7} 
+                \)
+            </p>
+
+            <br>
+
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad\dfrac{7}{5}\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(
+                    log_{_{6}}\,\dfrac{36}{\sqrt{6}} + log_{_{8}}\,8 + log_{_{37}}\,1 
+                \)
+            </p>
+
+            <br>
+
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad\dfrac{5}{2}\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(
+                    6 \cdot log_{_{7}}\,\sqrt[3]{49} -7 \cdot \,3^{^{log_{_{3}}\,7}}
+                \)
+            </p>
+
+            <br>
+
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad 45\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(
+                    log_{_{2}}\,\left(-4\right) + log_{_{8}}\,0 + \sqrt[4]{-9}
+                \)
+            </p>
+
+            <br>
+
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad ... ... ... 🤨\)
+            </p>
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+
+    <b class="yellow">Esempio svolto</b>
+    <div class="esempi-container"> 
+        Consideriamo l'espressione è 
+        \[
+            2 \cdot log_{_{2}}\left(5\right) + log_{_{2}}\left(7\right) - log_{_{2}}\left(9\right)
+        \]
+        il nostro obiettivo è trasformarla in maniera che la forma finale sia del tipo 
+        \[
+            log_{_{2}}\left(......\right)
+        \]
+        usando le proprietà dei logaritmi. In seguito dirò brevemente che vogliamo <b>"compattare"</b> l'espressione.
+        <br>
+        <br>
+
+        Di seguito un esempio svolto.
+
+        <br>
+
+        <div class="slide-container grayBorder">
+            <div class="slide1">
+                \[
+                    \color{red}{2} \color{black}{} \cdot log_{_{2}}\left(5\right) + log_{_{2}}\left(7\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(5^{^{\color{red}{2}}}\right) + log_{_{2}}\left(7\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(5^{^{2}}\right) \color{red}{\,\,+\,\,}\color{black}{} log_{_{2}}\left(7\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(5^{^{2}} \color{red}{\,\,\cdot\,\,} \color{black}{} 7\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(25 \cdot 7\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(175\right) - log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(175\right) \color{red}{\,\,-\,\,}\color{black}{} log_{_{2}}\left(9\right) = 
+                \]
+            </div>
+            <div class="slide1">
+                \[  
+                    log_{_{2}}\left(\color{red}{\dfrac{\color{black}{175}}{\color{black}{9}}}\color{black}{}\right)  
+                \]
+            </div>
+            <br>
+            <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlide-button1" onclick="previousSlide(1)">Inietro</button>
+                <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    
+
+    Applicare le proprietà dei logarimi per "compattare" le seguenti espressioni.
+        
+    <br>
+    <br>
+
+    <ul>
+        <li>
+            <p>
+                \(2\,log_{_{5}}\left(6\right) -  log_{_{5}}\left(4\right)\)
+            </p>
+            <br>
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad log_{_{5}}\left(9\right)\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(log_{_{2}}\left(\sqrt[9]{81}\right) +  2\,log_{_{2}}\left(9\right)\)
+            </p>
+            <br>
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad log_{_{2}}\left(3^{^{40}}\right)\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(-2\,log\left(6\right) -  2\,log\left(36\right)\)
+            </p>
+            <br>
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad log\left(\dfrac{1}{6^{^{6}}}\right)\)
+            </p>
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Applicare le proprietà dei logarimi per "compattare" le seguenti espressioni.
+    </p>
+    <br>
+    <ul>
+        <li>
+            <p>
+                \(log_{_{5}}\left(x + 2\right) + \log_{_{5}}\left(x -2\right)\)
+            </p>
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad log_{_{5}}\left(x^2 - 4\right)\)
+            </p>
+        </li>
+        <br>
+        <li>
+            <p>
+                \(2\,log\left(3x + 2\right) - \log\left(x\right)\)
+            </p>
+            <p class="gray">
+                <b>Soluzione:</b> \(\quad log\left(\dfrac{9x^2 +12x +4}{x}\right)\)
+            </p>
+        </li>
+    </ul>
+
+
+
+    
+    <br>
+    <br>
+    
+
+    <script>
+
+        
+
+        let slideIndex = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        inizialize(1);
+
+
+        //funzione per passare alla slide successiva
+        function nextSlide(n) {
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]++;
+
+            if(slideIndex[n] !== 0 ) {
+                //pulsante previous abiliatato
+                document.getElementById(`previousSlide-button${n}`).disabled = false;
+            }
+
+            //se ci sono ancora slide da mostrare passo alla successiva
+            if(slideIndex[n] < slide.length) {
+                slide[slideIndex[n]].style.display = "block";
+            }
+
+            //le slide da mostrare sono finite. rendo nuovamente visibile l'ultima slide (altimenti sparisce)
+            //e scrollo la vista al riquadro conclusiovo
+            if(slideIndex[n]  === slide.length -1) {
+                slide[slide.length-1].style.display = "block";
+                document.getElementById(`nextSlide-button${n}`).disabled = true;  
+            }
+
+        }
+            
+        //funzione per passare alla slide successiva
+        function previousSlide(n) {
+
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]--;
+
+
+            //passo alla precedente. se è la prima slide disattivo il tasto previous
+            slide[slideIndex[n]].style.display = "block";
+            slide[slideIndex[n]].style.fontSize = "1.1rem";
+            if(slideIndex[n] === 0) {
+                document.getElementById(`previousSlide-button${n}`).disabled = true;
+            } 
+
+            //nel caso in cui il pulsante next sia disabilitato lo riattivo
+            if(document.getElementById(`nextSlide-button${n}`).disabled === true) {
+                document.getElementById(`nextSlide-button${n}`).disabled = false;  
+            }
+        }
+
+
+        function inizialize(n) {
+
+            slideIndex[n] = 0
+
+            let slide = document.getElementsByClassName(`slide${n}`)
+
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none"
+            }
+
+            //rendo visibile la prima slide
+            slide[0].style.display = "block"
+
+            //pulsante next disabled
+            document.getElementById(`nextSlide-button${n}`).disabled = false;
+
+            //pulsante previous disabled
+            document.getElementById(`previousSlide-button${n}`).disabled = true;
+
+        }
+
+        
+    </script>
+</body>
