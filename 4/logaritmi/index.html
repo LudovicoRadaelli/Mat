@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Logaritmi</title>
+</head>
+<body>
+    <h1>Logaritmi</h1>
+    
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Definizione</h2>
+    </div>
+    
+    <br>
+
+    <p class="grayBackground">
+        Si definisce <b>logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\)</b> quel numero da assegnare come esponente a \(b\) per ottenere \(a\).
+    </p>
+    
+    <br>
+
+    <p>
+        Per indicare il logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\) useremo il simbolo
+        \[
+            \log_{\color{blue}{b}}\left(\color{red}{a}\color{black}{}\right)
+        \]
+    </p>
+
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+    
+        <p>
+            \[ 
+            \log_{\color{blue}{2}}\left(\color{red}{8}\color{black}{}\right) = 3 
+            \] 
+        </p>
+        <p>
+            infatti l'esponente da assegnare a \(\color{blue}{2}\) per ottenere \(\color{red}{8}\) è \(3\):
+            \[
+                \color{blue}{2}\color{black}{^{3} = } \color{red}{\,\,8}
+            \]
+        </p>
+        <hr>
+        <p>
+            \[ 
+            \log_{\color{blue}{3}}\left(\color{red}{81}\color{black}{}\right) = 4 
+            \] 
+        </p>
+        <p>
+            infatti l'esponente da assegnare a \(\color{blue}{3}\) per ottenere \(\color{red}{81}\) è \(4\):
+            \[
+                \color{blue}{3}\color{black}{^{4} = } \color{red}{\,\,81}
+            \]
+        </p>
+        <hr>
+        <p>
+            \[ 
+            \log_{\color{blue}{5}}\left(\color{red}{30}\color{black}{}\right) = 2,1133\dots
+            \] 
+        </p>
+        <p>
+            infatti l'esponente da assegnare a \(\color{blue}{5}\) per ottenere \(\color{red}{30}\) è \(2,1133\dots\).
+        </p>
+        <p class="gray">
+            In questo caso non l'abbiamo potuto calcolare a mente, ma abbiamo dovuto usare la calcolatrice. Però il risultato torna: se \(5^2 = 25\) per ottenere \(30\) dovrò incrementare un po' l'esponente
+        </p>
+        <br>
+        <hr>
+        <p>
+            \[ 
+                \log_{\color{blue}{2}}\left(\color{red}{-8}\color{black}{}\right) = \text{???}
+            \] 
+        </p>
+        <p>
+            Ragioniamo: stiamo cercando un esponente che assegnato a \(\color{blue}{2}\) dia come risultato \(\color{red}{-8}\). Ovvero:
+            \[
+                \color{blue}{2}\color{black}{^{\text{???}} = } \color{red}{\,\,-8}
+            \]
+            Problema: qualsiasi esponente assegni a \(\color{blue}{2}\), il risultato della potenza è <b>sempre</b> positivo. Quindi il numero che sto cercando non esiste!
+        </p>
+    </div>
+
+    <br>
+
+    <div class="grayBackground">
+        <div style="text-align: center;margin-bottom: 0.5rem;">⚠️⚠️⚠️⚠️</div>
+        <p>Il logaritmo è definito solo per valori positivi dell'argomento.</p>
+    </div>
+
+    <br>
+
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Proprietà del logaritmo</h2>
+    </div>
+    
+    <br>
+
+    <table style="margin: auto;">
+        <tr>
+            <td>
+                \[
+                 \log_{b}{\left(a\right)} \color{red}{\,+\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(a \color{red}{\,\cdot\,}\color{black}{}c\right)
+                \]
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \[
+                    \log_{b}{\left(a\right)} \color{red}{\,-\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(\color{red}{\dfrac{\color{black}{a}}{\color{black}{c}}}\color{black}{}\right)
+                \]
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \[
+                    \log_{b}\left(a^{\color{red}{c}}\color{black}{}\right) = \color{red}{c} \color{black}{} \log_{b}\left(a\right)
+                \]
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \[
+                    \log_{b}{\left(a\right)} = \dfrac{\log_{\color{red}{c}}{\left(a\right)}}{\log_{\color{red}{c}}{\left(a\right)}}
+                \]
+            </td>
+        </tr>
+    </table>      
+    
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p class="formula">
+            \[
+                \color{gray}{\underset{=\,\,2}{\underbrace{\color{black}{\log_{5}{\left(25\right)}}}}} + 
+                \color{gray}{\underset{=\,\,3}{\underbrace{\color{black}{\log_{5}{\left(125\right)}}}}} = 
+                \color{gray}{\underset{= \,\,\log_{5}{625} \,\,=\,\, 5}{\underbrace{\color{black}{\log_{5}{\left(25 \cdot 125\right)}}}}}
+            \]
+        </p>
+        <br>
+        <hr>
+        <br>
+        <p>
+            \(
+                    \log_{3}{\left(72\right)} - \log_{3}{\left(45\right)} = \log_{3}{\left(\dfrac{72}{45}\right)}  
+            \)
+        </p>
+        <br>
+        <hr>
+        <br>
+        <p>
+            \[
+                \log_{5}{\left(3^4\right)} = 4 \log_{5}{\left(3\right)}
+            \]
+        </p>
+        <br>
+        <hr>
+        <br>
+        <p>
+            \[
+                \log_{8}{\left(64\right)} = \dfrac{\log_{2}{\left(64\right)}}{\log_{2}{\left(8\right)}}
+            \]
+        </p>
+    </div>
+</body>
