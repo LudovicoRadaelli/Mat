@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Seno, coseno, tangente: definizione geometrica</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]            
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Gradi v.s. Radianti </b>
+                <br>
+                <div class="gray">
+                    [Par. 2.1, pag. da 664 a 666]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Definizioni di grado e radiante
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.2) Un angolo di riferimento: l'angolo giro
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.3) Passare da gradi a radianti (e viceversa)
+                    </b>
+                </div>
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Visualizzazione delle funzioni trigonometriche </b>
+                <br>
+                <div class="gray">
+                    [Par. 12.2, pag. da 668 a 669]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        3.1) Visualizzazione del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.2) Visualizzazione del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.3) Visualizzazione del tangente
+                    </b>
+                </div>
+            </div>   
+            <br>
+            <div>
+                dispense disponibili <a class="blue" href="../../../3/goniometria/index.html">QUI</a>
+            </div>
+            
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Seno, coseno e tangente di angoli notevoli</h3>
+
+    <table class="gray">
+        <tr>
+            <th>
+                Angolo in gradi
+            </th>
+            <th>
+                Angolo in radianti
+            </th>
+            <th>
+                Seno
+            </th>
+            <th>
+                Coseno
+            </th>
+            <th>
+                Tangente
+            </th>
+        </tr>
+        <tr>
+            <td>
+                \(0°\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(30°\)
+            </td>
+            <td>
+                \(\dfrac{\pi}{6}\)
+            </td>
+            <td>
+                \(\dfrac{1}{2}\)
+            </td>
+            <td>
+                \(\dfrac{\sqrt{3}}{2}\)
+            </td>
+            <td>
+                \(\dfrac{\sqrt{3}}{3}\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(45°\)
+            </td>
+            <td>
+                \(\dfrac{\pi}{4}\)
+            </td>
+            <td>
+                \(\dfrac{\sqrt{2}}{2}\)
+            </td>
+            <td>
+                \(\dfrac{\sqrt{2}}{2}\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(60°\)
+            </td>
+            <td>
+                \(\dfrac{\pi}{3}\)
+            </td>
+            <td>
+                \(\dfrac{\sqrt{3}}{2}\)
+            </td>
+            <td>
+                \(\dfrac{1}{2}\)
+            </td>
+            <td>
+                \(\sqrt{3}\)
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                \(90°\)
+            </td>
+            <td>
+                \(\dfrac{\pi}{2}\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                non esiste
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(180°\)
+            </td>
+            <td>
+                \(\pi\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(270°\)
+            </td>
+            <td>
+                \(\dfrac{3\pi}{2}\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                non esiste
+            </td>
+        </tr>
+    </table>
+    <br>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p class="gray">
+        Attraverso questo esercizio potete allenare la memoria su seno, coseno e tangente  degli angoli fontamentali: \(\dfrac{\pi}{6}\), \(\dfrac{\pi}{4}\), \(\dfrac{\pi}{3}\) e multipli di \(\dfrac{\pi}{2}\)
+    </p>
+    <br>
+    
+    <div class="geogebra-container">
+        <div id="geogebra1"></div>
+    </div>
+
+    <p id="domanda" style="min-height: 10vh;"></p>    
+
+    <button id="generaDomanda" onclick="generaDomanda()">Nuova domanda!</button>
+    <br>
+    <button id="rispostaCorretta" onclick="controllaSoluzione()" disabled>Controlla soluzione</button>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Risolvere la seguente espressione
+        \[
+            \dfrac{tan\left(\dfrac{\pi}{4}\right) - cos\left(0\right) + \sqrt{3} \, sin\left(\dfrac{\pi}{3}\right)}{tan\left(\dfrac{\pi}{3}\right) \cdot tan\left(\dfrac{\pi}{6}\right) - 3\sin\left(\dfrac{\pi}{2}\right)}
+        \]
+    </p>
+    <br>
+    <p class="gray">
+        <b>Soluzione:</b> \(-\dfrac{3}{4}\)
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Risolvere la seguente espressione
+        \[
+            \dfrac{cos\left(\dfrac{\pi}{3}\right)}{2 + sin\left(\dfrac{\pi}{6}\right)} - tan\left(\dfrac{\pi}{3}\right)
+        \]
+    </p>
+    <br>
+    <p class="gray">
+        <b>Soluzione:</b> \(\dfrac{1 - 5\,\sqrt{3}}{5}\)
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="red">Extra</h3>
+    <br>
+    <p>
+        Di seguito trovate alcune <a href="https://it.wikipedia.org/wiki/Tassellatura">tassellazioni del piano</a> elaborate dal pittore olandese <a href="https://it.wikipedia.org/wiki/Maurits_Cornelis_Escher">Escher</a>.
+    </p>
+    <br>
+    <img src="img/3(5).jpg" alt="" style="max-width: 400px;">
+    <br>
+    <br>
+    <img src="img/3(2).jpg" alt="" style="max-width: 400px;">
+    <br>
+    <br>
+    <img src="img/3(3).jpg" alt="" style="max-width: 400px;">
+    <br>
+    <br>
+    <img src="img/3(4).jpg" alt="" style="max-width: 400px;">
+    <br>
+    <p class="gray">
+        Tutte le immagini sono tratte da <a class="gray" href="https://mathstat.slu.edu/escher/index.php/Regular_Division_of_the_Plane_Drawings">questo</a> sito, dove ne trovate molte altre.
+    </p>
+    <br>
+    <br>
+    <p>
+        <a href="https://www.ibs.it/godel-escher-bach-eterna-ghirlanda-libro-douglas-r-hofstadter/e/9788845907555?lgw_code=1122-B9788845907555&gclid=CjwKCAjw7IeUBhBbEiwADhiEMVKxnGUxfh4LO6Ulc6PaZG82W1che4BOmeTJC5ZorUFEct82D8502xoCHOMQAvD_BwE">Questo</a> invece è il libro <i>Godel, Escher, Bach</i> di cui vi parlavo in classe.
+    </p>
+    <br>
+    <img src="img/3(1).jpg" alt="" style="max-width: 400px;">
+
+    <br>    
+    <br>
+
+    <script>
+
+        var ggbApp1 = new GGBApplet({
+        "appName": "classic", 
+        "id": "gg1",
+        "showToolBar": false, 
+        "showAlgebraInput": false, 
+        "showMenuBar": false, 
+        "enableShiftDragZoom": false,
+        "scaleContainerClass":"geogebra-container",
+        "material_id":"umfgk74v"}, true);
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+
+        let rispostaCorretta;
+
+        let trigFunction;
+        let angleGG;
+        let angleToPrint;
+
+        let trigFunctionIndex = 0;
+        let randomIndex = 0;
+
+        let trigFunctionList = [`sin`, `cos`, `tan`];
+        let angleListGradi = [0, 30, 45, 60, 90, 180, 270, 360];
+        let angleListRadianti = ["0", "\\dfrac{\\pi}{6}", "\\dfrac{\\pi}{4}", "\\dfrac{\\pi}{3}", "\\dfrac{\\pi}{2}", "\\pi", "\\dfrac{3\\pi}{2}", "2\\pi"];
+        let trigFunctionValue = [
+            [`0`, `1`, `0`],
+            [`\\dfrac{1}{2}`, `\\dfrac{\\sqrt{3}}{2}`, `\\sqrt{3}`],
+            [`\\dfrac{\\sqrt{2}}{2}`, `\\dfrac{\\sqrt{2}}{2}`, `1`],
+            [`\\dfrac{\\sqrt{3}}{2}`, `\\dfrac{1}{2}`, `\\dfrac{\\sqrt{3}}{3}`],
+            [`1`, `0`, `\\text{non esiste}`],
+            [`0`, `-1`, `0`],
+            [`-1`, `0`, `\\text{non esiste}`],
+            [`0`, `1`, `0`],
+        ];
+
+        function generaDomanda() {
+
+            document.getElementById("rispostaCorretta").disabled = false;
+
+            trigFunctionIndex = (trigFunctionIndex +  Math.floor(Math.random()*trigFunctionList.length))%trigFunctionList.length;
+            trigFunction = trigFunctionList[trigFunctionIndex]
+
+            randomIndex = (randomIndex + Math.floor(Math.random()*angleListGradi.length))%angleListGradi.length;
+            angleGG = angleListGradi[randomIndex];
+            angleToPrint = angleListRadianti[randomIndex];
+
+            console.log(`
+            randomIndex: ${randomIndex},
+            angleGG: ${angleGG},
+            trigFunctionIndex:${trigFunctionIndex},
+            trigFunction: ${trigFunctionList[trigFunctionIndex]}
+            `)
+
+            rispostaCorretta = trigFunctionValue[randomIndex][trigFunctionIndex];
+
+            
+
+            gg1.setValue("a", angleGG);
+
+            
+
+            let domanda = document.getElementById("domanda");
+            domanda.innerHTML = 
+            `\\[
+                ${trigFunction}\\left(${angleToPrint}\\right) = \\text{.......}\\,\\,\\,?
+            \\]`
+
+            MathJax.typesetClear([domanda]);
+            MathJax.typesetPromise([domanda]).then(() => {});
+        }
+
+        function controllaSoluzione() {
+            let domanda = document.getElementById("domanda");
+            domanda.innerHTML = 
+            `\\[
+                ${trigFunction}\\left(${angleToPrint}\\right) = ${rispostaCorretta}
+            \\]`
+            MathJax.typesetClear([domanda]);
+            MathJax.typesetPromise([domanda]).then(() => {});
+        }
+
+
+    </script>
+</body>
