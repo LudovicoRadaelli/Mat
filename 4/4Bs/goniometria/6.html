@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Seno, coseno, tangente: definizione geometrica</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]            
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Gradi v.s. Radianti </b>
+                <br>
+                <div class="gray">
+                    [Par. 2.1, pag. da 664 a 666]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Definizioni di grado e radiante
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.2) Un angolo di riferimento: l'angolo giro
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.3) Passare da gradi a radianti (e viceversa)
+                    </b>
+                </div>
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Visualizzazione delle funzioni trigonometriche </b>
+                <br>
+                <div class="gray">
+                    [Par. 12.2, pag. da 668 a 669]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        3.1) Visualizzazione del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.2) Visualizzazione del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.3) Visualizzazione del tangente
+                    </b>
+                </div>
+
+                <br>
+                
+                <div style="text-align: left;">
+                    <b>4) Archi associati</b>
+                </div>
+                <div class="gray">
+                    [Par. 12.6, 12.7, pag. da 680 a 683]            
+                </div>   
+            </div>   
+            <br>
+            <div>
+                dispense disponibili <a class="blue" href="../../../3/goniometria/index.html">QUI</a>
+            </div>
+            
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <div>
+        <h3 class="yellow">Tool per angoli multipli</h3>
+
+        <br>
+
+        <p class="gray">
+            Trascinando il punto nero sulla circonfereza potete visualizzare seno, coseno e tangente dell'angolo che vi interessa e confrontarli con seno, coseno e tangente dell'angolo di cui è multiplo.
+            <br>
+            Potete usare questo strumento per risolvere gli esercizi che seguono.
+        </p>
+
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebra2"></div>
+        </div>
+        <br>
+        <div class="input-container" style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; font-size: 0.9rem;">
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" checked = "checked" onclick="cambiaGriglia(30)"> <span> Multipli di \(\dfrac{\pi}{6}\)</span>
+            </div>
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" onclick="cambiaGriglia(45)"> <span> Multipli di \(\dfrac{\pi}{4}\)</span>
+            </div>
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" onclick="cambiaGriglia(60)"> <span> Multipli di \(\dfrac{\pi}{3}\)</span>    
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere le seguenti espressioni
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(
+                sin\left(\dfrac{7}{4}\pi\right)\cdot cos\left(\dfrac{3}{4}\pi\right) + \dfrac{sin\left(\dfrac{3}{2}\pi\right)}{sin\left(\dfrac{5}{6}\pi\right)}
+            \)
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> \(\,\,\,-\dfrac{3}{2}\)
+        </p>
+        <br>
+        <br>
+        <li>
+            \(
+                \dfrac{tan\left(2\pi\right) - \sqrt{3} \,\, tan\left(\dfrac{4}{3}\pi\right)}{sin\left(\dfrac{7}{6}\pi\right) - cos\left(\dfrac{5}{3}\pi\right)}
+            \)
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> \(\,\,\,3\)
+        </p>
+        <br>
+        <br>
+        <li>
+            \(
+                \dfrac{1}{tan\left(\dfrac{11}{6}\pi\right)}\left[cos\left(\dfrac{\pi}{2}\right) + sin^2\left(\dfrac{5}{3}\pi\right)\right]
+            \)
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> \(\,\,\,-\dfrac{3\,\sqrt{3}}{4}\)
+        </p>        
+    </ul>
+
+    <br>
+
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <ul>
+        <li>
+            <p>
+                Riscrivere l'espressione 
+                \[
+                    \left[-sin^2\left(\alpha\right) + tan\left(\alpha\right) - cos^2\left(\alpha\right)\right] \cdot \dfrac{cos\left(\alpha\right)}{sin\left(\alpha\right)}
+                \]
+                <b>in funzione di</b> \(tan\left(\alpha\right)\).
+            </p>
+            <br>
+            <p class="gray">
+                <b>Soluzione:</b> \(\dfrac{tan\left(\alpha\right) - 1}{tan\left(\alpha\right)}\)
+            </p>
+        </li>
+        
+        <br>
+        <br>
+        <li>
+            <p>
+                Riscrivere l'espressione 
+                \[
+                    \dfrac{sin^2\left(\beta\right) -1}{cos\left(\beta\right) + tan\left(\beta\right) \cdot sin\left(\beta\right)}
+                \]
+                <b>in funzione di</b> \(cos\left(\beta\right)\).
+            </p>
+            <br>
+            <p class="gray">
+                <b>Soluzione:</b> \(-cos^3\left(\beta\right)\)
+            </p>
+        </li>
+        <br>
+
+    </ul>
+
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Sapendo che l'angolo \(\alpha\) è tale che 
+        \[
+            \pi \lt \alpha \lt \dfrac{3}{2}\pi
+        \]
+        e che 
+        \[
+            sin\left(\alpha\right) = -\dfrac{3}{4}
+        \]
+        calcolare il valore di \(\dfrac{1}{tan\left(\alpha\right)}\)
+    </p>
+
+    <br>
+
+    <p class="gray">
+        <b>Soluzione: </b> \(\,\,\,\dfrac{\sqrt{7}}{3}\)
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio 4</h3>
+    <br>
+    <p>
+        Consideriamo un generico angolo \(\alpha\) e supponiamo di conoscerne sia il seno che il coseno.
+        <br>
+        Esistono alcuni angoli particolari, detti <b>angoli associati</b> ad \(\alpha\), i cui seno e coseno sono riconducibili a quelli di \(\alpha\).
+    </p>
+    <br>
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            \(\color{green}{\boxed{\boldsymbol{\pi - \alpha}}}\)
+            <br>
+            <br>
+            L'angolo \(\color{green}{\pi - \alpha}\) è quello che otteniamo aprendo un angolo piatto \(\left(\pi\right)\) e "tornando indietro" di \(\color{darkorange}{\alpha}\)
+            <br>
+            <br>
+            <img src="img/6(1).png" alt="">
+            <br>
+            Come si evince dalla figura, la misura dei due lati <span style="color: red">rossi</span> è
+            uguale. Inoltre il segno è lo stesso (tutti e due "puntano verso l'alto"). Di conseguenza
+            \[
+                sin\left(\pi - \alpha\right) = sin\left(\alpha\right)
+            \]
+            <br>
+            Allo stesso modo i due lati <span style="color:blue">blu</span> hanno la stessa misura. In questo caso
+            però uno "punta verso destra", mentre l'altro "punta verso sinistra": hanno segni opposti!
+            Di conseguenza possiamo dire che
+            \[
+                cos\left(\pi - \alpha\right) = -cos\left(\alpha\right)
+            \]
+            <br>
+            Infine vogliamo esprimere la \(tan\left(\pi - \alpha\right)\) rispetto a \(tan\left(\alpha\right)\).
+            Per farlo usiamo la seconda relazione fondamentale della goniometria e le due uguaglianze ottenute sopra:
+            \[
+                \begin{align*}
+                    tan\left(\pi - \alpha\right) &= \dfrac{\color{red}{sin\left(\pi - \alpha\right)}}{\color{blue}{cos\left(\pi - \alpha\right)}} \color{black}{}=
+                    \\\\
+                    & = \dfrac{\color{red}{sin\left(\alpha\right)}}{\color{blue}{-cos\left(\alpha\right)}} =
+                    \\\\
+                    & = -\dfrac{sin\left(\alpha\right)}{cos\left(\alpha\right)} = 
+                    \\\\
+                    & = -tan\left(\alpha\right)
+                \end{align*}
+            \]
+            
+            <br>
+
+            Concludiamo che le funzioni goniometriche di \(\pi - \alpha\) si possono esprimere rispetto a quelle di \(\alpha\) come seguenti
+        </p>
+        <br>
+        <div class="grayBorder">
+            \[
+                sin\left(\pi - \alpha\right) = sin\left(\alpha\right)
+            \]
+            \[
+                cos\left(\pi - \alpha\right) = -cos\left(\alpha\right)  
+            \]
+            \[
+                tan\left(\pi - \alpha\right) = -tan\left(\alpha\right)
+            \]
+        </div>
+    </div>
+    
+    <br>
+
+    <p>
+        Ricalcando i ragionamenti dell'esempio, esprimere seno, coseno e tangente dei seguenti angoli rispetto alle funzioni goniometriche di \(\alpha\):
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(\pi + \alpha\)
+        </li>
+        <br>
+        <li>
+            \(2\pi - \alpha\)
+        </li>
+        <br>
+        <li>
+            \(\dfrac{\pi}{2} - \alpha\)
+        </li>
+        <br>
+        <li>
+            \(\dfrac{\pi}{2} + \alpha\)
+        </li>
+        <br>
+        <li>
+            \(\dfrac{3}{2}\pi - \alpha\)
+        </li>
+        <br>
+        <li>
+            \(\dfrac{3}{2}\pi + \alpha\)
+        </li>
+    </ul>
+
+
+    <br>
+    <br>
+    
+
+
+    <script>
+
+    var ggbApp2 = new GGBApplet({
+        "appName": "classic", 
+        "id": "gg2",
+        "showToolBar": false, 
+        "showAlgebraInput": false, 
+        "showMenuBar": false, 
+        "enableShiftDragZoom": false,
+        "scaleContainerClass":"geogebra-container",
+        "material_id":"uyg8bgbc"}, true
+    );
+
+    window.addEventListener("load", function() { 
+        ggbApp2.inject('geogebra2');
+    });
+
+    let rispostaCorretta;
+
+    let trigFunction;
+    let angleGG;
+    let angleToPrint;
+
+    let trigFunctionIndex = 0;
+    let randomIndex = 0;
+
+    let trigFunctionList = [`sin`, `cos`, `tan`];
+    let angleListGradi = [0, 30, 45, 60, 90, 180, 270, 360];
+    let angleListRadianti = ["0", "\\dfrac{\\pi}{6}", "\\dfrac{\\pi}{4}", "\\dfrac{\\pi}{3}", "\\dfrac{\\pi}{2}", "\\pi", "\\dfrac{3\\pi}{2}", "2\\pi"];
+    let trigFunctionValue = [
+        [`0`, `1`, `0`],
+        [`\\dfrac{1}{2}`, `\\dfrac{\\sqrt{3}}{2}`, `\\sqrt{3}`],
+        [`\\dfrac{\\sqrt{2}}{2}`, `\\dfrac{\\sqrt{2}}{2}`, `1`],
+        [`\\dfrac{\\sqrt{3}}{2}`, `\\dfrac{1}{2}`, `\\dfrac{\\sqrt{3}}{3}`],
+        [`1`, `0`, `\\text{non esiste}`],
+        [`0`, `-1`, `0`],
+        [`-1`, `0`, `\\text{non esiste}`],
+        [`0`, `1`, `0`],
+    ];
+
+    function cambiaGriglia(n) {
+        /* for(let i = 0; i < 2; i++) {
+            
+            document.getElementsByClassName("input")[i].checked = false;
+        } */
+        gg2.setValue("b",n)
+    }
+
+
+    </script>
+</body>
