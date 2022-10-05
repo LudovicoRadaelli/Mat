@@ -37,19 +37,19 @@
 </style>
 <body>
     <div class="container">
-        <div class="classe-container">
+        <div class="classe-container" style="overflow-y: scroll;">
             <h2>2°Bs</h2>
             <div class="classe"></div>
             <br>
         </div>
     
-        <div class="classe-container">
+        <div class="classe-container" style="overflow-y: scroll;">
             <h2>3°Bi</h2>
             <div class="classe"></div>
             <br>
         </div>
     
-        <div class="classe-container">
+        <div class="classe-container" style="overflow-y: scroll;">
             <h2>4°Bs</h2>
             <div class="classe"></div>
             <br>
@@ -57,22 +57,22 @@
     </div>
 
     <div class="container">
-        <div class="classe-container">
+        <div class="classe-container" style="overflow-y: scroll;">
             <h2>4°Ei</h2>
             <div class="classe"></div>
             <br>
         </div>
     
-        <div class="classe-container">
+        <div class="classe-container" style="overflow-y: scroll;">
             <h2>5°Ci</h2>
-            <udivl class="classe"></udivl>
+            <div class="classe"></div>
             <br>
         </div>
     </div>
     
     <script>
         for(let i = 0; i < 5; i++) {
-            for(let j = 1; j<= 10; j++) {
+            for(let j = 1; j<= 30; j++) {
                 if(i === 0) {
                     document.getElementsByClassName("classe")[i].innerHTML += 
                     `<a href="https://ludovicoradaelli.github.io/Mat/2/2Bs/sistemiLineari/${j}.html">es${j}</a>`;
