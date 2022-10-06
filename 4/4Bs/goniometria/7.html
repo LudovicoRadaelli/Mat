@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Seno, coseno, tangente: definizione geometrica</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]            
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Gradi v.s. Radianti </b>
+                <br>
+                <div class="gray">
+                    [Par. 2.1, pag. da 664 a 666]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Definizioni di grado e radiante
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.2) Un angolo di riferimento: l'angolo giro
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.3) Passare da gradi a radianti (e viceversa)
+                    </b>
+                </div>
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Visualizzazione delle funzioni trigonometriche </b>
+                <br>
+                <div class="gray">
+                    [Par. 12.2, pag. da 668 a 669]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        3.1) Visualizzazione del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.2) Visualizzazione del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.3) Visualizzazione del tangente
+                    </b>
+                </div>
+
+                <br>
+                
+                <div style="text-align: left;">
+                    <b>4) Archi associati</b>
+                </div>
+                <div class="gray">
+                    [Par. 12.6, 12.7, pag. da 680 a 683]            
+                </div>   
+            </div>   
+            <br>
+            <div>
+                dispense disponibili <a class="blue" href="../../../3/goniometria/index.html">QUI</a>
+            </div>
+            
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Semplificare le seguenti espressioni riportando tutti le funzioni goniometriche in termini dell'angolo \(\alpha\).
+    </p>
+    <br>
+    <ul>
+        <li>
+            <div class="formula">
+                \(
+                    -cos\left(2\pi - \alpha\right) sin\left(\dfrac{3}{2}\pi - \alpha\right) + sin\left(\pi + \alpha\right) cos\left(\dfrac{\pi}{2} + \alpha\right)
+                \)
+            </div>
+            <p class="gray" style="font-size: 0.9rem;">Scorrere verso destra per visualizzare tutta l'espressione</p>
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> \(\,\,\,1\)
+        </p>
+        <br>
+        <button class="hint-button" onclick="showHint(0)">Mostra svolgimento</button>
+        <div class="hint">
+            <div class="formula">
+                \[
+                    \begin{align*}
+                        &-\color{red}{cos\left(2\pi - \alpha\right)} \, \color{blue}{sin\left(\dfrac{3}{2}\pi - \alpha\right)} \color{black}{\,\,+\,\,} \color{darkorange}{sin\left(\pi + \alpha\right)} \, \color{green}{cos\left(\dfrac{\pi}{2} + \alpha\right)} \color{black}{} =
+                        \\\\
+                        & = -\color{red}{cos\left(\alpha\right)} \, \color{blue}{\left[-cos\left(\alpha\right)\right]} \color{black}{\,\,+\,\,} \color{darkorange}{\left[-sin\left(\alpha\right)\right]} \, \color{green}{\left[-sin\left(\alpha\right)\right]} \color{black}{} =
+                        \\\\
+                        & = cos^2\left(\alpha\right) + sin^2\left(\alpha\right) = 1
+                    \end{align*}
+                \]
+            </div>
+        </div>
+        <br>
+        <br>
+        <li>
+            <div class="formula">
+                \(
+                    tan\left(\pi - \alpha\right) tan\left(2\pi - \alpha\right) - \dfrac{sin^2\left(\pi + \alpha\right)}{cos\left(\alpha\right) sin\left(\dfrac{\pi}{2} + \alpha\right)}
+                \)
+            </div>
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> \(\,\,\,0\)
+        </p>
+    </ul>    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Svolgere gli esercizi n° \(376\), \(380\) a pag. \(714\) del libro di testo
+    </p>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Svolgere la seguente espressione
+        \[
+            -2\,sin\left(\dfrac{5}{2}\pi\right) cos\left(\dfrac{4}{3}\pi\right) - \dfrac{sin\left(\dfrac{3}{4}\pi\right) cos\left(\dfrac{\pi}{4}\right)}{tan\left(\dfrac{11}{6}\pi\right)}
+        \]
+    </p>
+
+    <br>
+    
+    <p class="gray">
+        <b>Soluzione:</b> \(\,\,\,\dfrac{1}{2}\left(2 + \sqrt{3}\right)\)
+    </p>
+ 
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 4</h3>
+    <br>
+    <p>
+        Consideriamo la circonferenza goniometrica. Su di essa sappiamo rappresentare
+    </p>
+    <br>
+    <ul>
+        <li>    
+            angoli <b>compresi tra \(0\) e \(360°\)</b>. 
+        </li>
+        <br>
+        <li>
+            angoli <b>più grandi di \(360°\)</b>.
+        </li>
+    </ul>
+    <br>
+    <p>
+        Come si potrebbe rappresentare un angolo <b>negativo</b>?
+    </p>
+    <p>
+        Ovvero: come potremmo rappresentare \(-30°\) sulla circonferenza goniometrica? E \(-60°\)
+    </p>
+
+    <br>
+    <br>
+    
+
+
+    <script>
+
+        for(let i = 0; i < document.getElementsByClassName("hint").length; i++) {
+
+            document.getElementsByClassName("hint")[i].style.display = "none";
+
+        }
+
+        function showHint(i) {
+            document.getElementsByClassName("hint-button")[i].style.display = "none";
+            document.getElementsByClassName("hint")[i].style.display = "block";
+        }  
+        
+    </script>
+</body> 
