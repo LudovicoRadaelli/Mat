@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Equazione in due incognite</b>
+            </div>
+            <div class="gray">
+                [Par. 13.1, pag. da 670 a 672]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Cosa è un sistema lineare?</b>
+            </div>
+            <div class="gray">
+                [Par. 13.1, pag. da 670 a 672]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Metodo di sostituzione</b>
+            </div>
+            <div class="gray">
+                [Par. 13.2 pag. 672]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Metodo di riduzione</b>
+            </div>
+            <div class="gray">
+                [Par. 13.5 pag. 676]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Sistemi con più di due equazioni in più di due incognite: 
+                    <br> 
+                    metodo di eliminazione di Gauss</b>
+            </div>
+            <div class="gray">
+                [Par. 13.5 pag. 676]
+            </div>
+            
+            <br>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../../2/sistemiLineari/index.html">QUI</a>
+            </p>
+            
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h2 class="red">Simulazione del compito in classe</h2>
+    <br>
+    <p class="gray">
+        La durata del compito in classe sarà di <b>un'ora e mezza</b>.
+        <br>
+        <br>
+        Vi consiglio di svolgere i seguenti esercizi <b>nelle stesse condizioni del compito</b>, ovvero:
+    </p>
+    <br>
+    <ul class="gray">
+        <li>
+            Orologio a portata di mano. 
+            <br>
+            Se un esercizio non vi viene valutate quanto insistere. 
+            <br>
+            Ad un certo punto andate avanti.
+        </li>
+        <br>
+        <li>
+            No cellulare, neanche per controllare l'ora.
+        </li>
+        <br>
+        <li>
+            No calcolatrice.
+        </li>
+        <br>
+        <li>
+            Foglio di brutta per i calcoli.
+        </li>
+        <br>
+        <li>
+            Le soluzioni controllatele una volta finito il compito. 
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere il seguente sistema usando un metodo <b>a scelta</b>
+        \[
+            \begin{cases}
+                5x\left(2x -1\right) - 10x^2 +4y= -\left(y - 3\right)
+                \\\\
+                -3\,\left(-4x +1\right) = -7y + 2
+            \end{cases}
+        \]
+    </p>
+
+
+    <br>
+        <button class="hint-button" onclick="showHint(0)">Soluzione</button>
+        <div class="hint">
+            <p class="gray">
+                <b>Soluzione:</b> 
+                \[
+                    \begin{cases}
+                        x = \dfrac{26}{25}
+                        \\\\
+                        y = \dfrac{41}{25}
+                    \end{cases}
+                \]
+            </p>
+        </div>
+    <br>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Svolgere il seguente sistema usando il metodo di <b>sostituzione</b>
+        \[
+            \begin{cases}
+                \dfrac{2x -1}{3} - \dfrac{1 - y}{4} = \dfrac{9x + 4\left(2 - y\right)}{12}
+                \\\\
+                \left(-7x + 1\right)y - x\left(-5y - 4\right) = -2x \left(y + 1\right)
+            \end{cases}
+        \]
+    </p>
+
+    <br>
+        <button class="hint-button" onclick="showHint(1)">Soluzione</button>
+        <div class="hint">
+            <p class="gray">
+                <b>Soluzione:</b> 
+                \[
+                    \begin{cases}
+                        x = -\dfrac{15}{43}
+                        \\\\
+                        y = \dfrac{90}{43}
+                    \end{cases}
+                \]
+            </p>
+        </div>
+    <br>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
+        \[
+            \begin{cases}
+                5y - \dfrac{1}{2}\,\left(2x -1\right) = 2
+                \\\\
+                6y -\dfrac{1}{3}\,\left(2x - 1\right) = 4
+            \end{cases}
+        \]
+    </p>
+
+    <br>
+    <button class="hint-button" onclick="showHint(2)">Soluzione</button>
+    <div class="hint">
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \begin{cases}
+                    x = \dfrac{7}{2}
+                    \\\\
+                    y = 1
+                \end{cases}
+            \]
+        </p>
+    </div>    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 4</h3> 
+    <br>
+    <p>
+        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
+        \[
+            \begin{cases}
+                2\left(x -2y + z\right) = 5x + 1
+                \\\\
+                3x -4y = 1 -4z
+                \\\\
+                5 -3x +2y = 2\,\left(y + z\right) + 2
+            \end{cases}
+        \]
+    </p>
+
+    <br>
+    <button class="hint-button" onclick="showHint(3)">Soluzione</button>
+    <div class="hint"> 
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \begin{cases}
+                    x = -1
+                    \\\\
+                    y = 2
+                    \\\\
+                    z = 3
+                \end{cases}
+            \]
+        </p>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio 5</h3> 
+    <br>
+    <p>
+        Risolvere il seguente <b>sistema letterale</b>.
+        \[
+            \begin{cases}
+                x - y = 2 + k
+                \\\\
+                -x + ky = 1
+            \end{cases}
+        \]
+    </p>    
+    <p>
+        Per quali valori di \(k\) il sistema risulta
+    </p>
+    <br>
+    <ul>
+        <li>
+            impossibile    
+        </li>
+        <li>
+            indeterminato
+        </li>
+        <li>
+            determinato. In questo caso mostrare le soluzioni in funzione di \(k\).
+        </li>
+    </ul>
+
+    <br>
+    <br>
+
+    <br>
+        <button class="hint-button" onclick="showHint(4)">Soluzione</button>
+        <div class="hint">
+            <p class="gray">
+                <b>Soluzione:</b>
+            </p>
+            <br>
+            <ul class="gray">
+                <li>
+                    Se \(k = 1\) allora il sistema è <b>impossibile</b>.
+                </li>
+                <br>
+                <li>
+                    Se \(k \neq 1\)  allora il sistema ha soluzione 
+                    \[
+                        \begin{cases}
+                            x = \dfrac{\left(k + 1\right)^2}{k - 1}
+                            \\\\
+                            y = \dfrac{k +3}{k -1}
+                        \end{cases}
+                    \]
+                </li>
+                
+            </ul>
+        </div>
+    <br>
+    
+    <br>
+    <br>
+
+    <script>
+        for(let i = 0; i < document.getElementsByClassName("hint").length; i++) {
+
+        document.getElementsByClassName("hint")[i].style.display = "none";
+
+        }
+
+        function showHint(i) {
+        document.getElementsByClassName("hint-button")[i].style.display = "none";
+        document.getElementsByClassName("hint")[i].style.display = "block";
+        }  
+    </script>
+
+</body>
