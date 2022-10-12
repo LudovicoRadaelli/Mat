@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Seno, coseno, tangente: definizione geometrica</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]            
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Gradi v.s. Radianti </b>
+                <br>
+                <div class="gray">
+                    [Par. 2.1, pag. da 664 a 666]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Definizioni di grado e radiante
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.2) Un angolo di riferimento: l'angolo giro
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.3) Passare da gradi a radianti (e viceversa)
+                    </b>
+                </div>
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Visualizzazione delle funzioni trigonometriche </b>
+                <br>
+                <div class="gray">
+                    [Par. 12.2, pag. da 668 a 669]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        3.1) Visualizzazione del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.2) Visualizzazione del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.3) Visualizzazione del tangente
+                    </b>
+                </div>
+
+                <br>
+                
+                <div style="text-align: left;">
+                    <b>4) Archi associati</b>
+                </div>
+                <div class="gray">
+                    [Par. 12.6, 12.7, pag. da 680 a 683]            
+                </div>   
+            </div>   
+            <br>
+            <div>
+                dispense disponibili <a class="blue" href="../../../3/goniometria/index.html">QUI</a>
+            </div>
+            
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            Consideriamo la funzione
+            \[
+                f\left(x\right) = 2x + 1
+            \]
+
+            La funzione \(f\) associa ad ogni input \(x\) l'output \(2x + 1\).
+            <br>
+            <br>
+            Scriviamo nella seguente tabella alcuni input/output assunti dalla funzione e rappresentiamoli su un piano cartesiano
+        </p>
+
+        <br>
+
+        <div id="slide-container1" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem; ">
+
+            <div class="geogebra-container">
+                <div id="geogebra1"></div>
+            </div>
+            
+            <br>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{2}\color{black}{} + 1 = \color{red}{5}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{2}\color{black}{} + 1 = \color{red}{5}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{-1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\left(-1\right)}\color{black}{} + 1 = \color{red}{-1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{2}\color{black}{} + 1 = \color{red}{5}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{-1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\left(-1\right)}\color{black}{} + 1 = \color{red}{-1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{-2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\left(-2\right)}\color{black}{} + 1 = \color{red}{-3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <table>
+                    <tr>
+                        <th>
+                            input \(\color{blue}{x}\)
+                        </th>
+                        <th>
+                            output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                        </th>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{0}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{0}\color{black}{} + 1 = \color{red}{1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{2}\color{black}{} + 1 = \color{red}{5}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{-1}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\left(-1\right)}\color{black}{} + 1 = \color{red}{-1}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{-2}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\left(-2\right)}\color{black}{} + 1 = \color{red}{-3}\)
+                        </td>
+                    </tr>
+                    <tr style="font-size: 0.9rem;">
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(\color{blue}{\frac{1}{2}}\)
+                        </td>
+                        <td style="min-height: 1rem; height: 2rem;">
+                            \(2\cdot\color{blue}{\frac{1}{2}}\color{black}{} + 1 = \color{red}{2}\)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="slide1">
+                <p>
+                    A questo punto disegnamo il grafico completo della funzione
+                </p>
+            </div>
+
+            <div class="slide1">
+                <p>
+                    A questo punto disegnamo il grafico completo della funzione
+                </p>
+            </div>
+    
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)" disabled>Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            <b>Osservazione <u>fondamentale</u></b>
+            <br>
+            <br>
+            Per disegnare il <b>grafico</b> della funzione \(f\) abbiamo rappresentato sul piano cartesiano tutti i punti che
+        </p>
+        <br>
+        <ul>
+            <li>
+                come coordinata \(x\) hanno l' input dato alla funzione;
+            </li>
+            <br>
+            <li>
+                come coordinata \(y\) hanno il corrispondente l'output assunto dalla funzione.
+            </li>
+        </ul>
+        <br>
+        <p>
+            Di conseguenza il fatto che il grafico della funzione contiene il <span style="color: red;">punto</span> di coordinate \(\left(1\,;\,\,3\right)\)
+            significa che se alla funzione diamo input \(1\), il corrispondene output è \(3\). 
+            <br>
+            <span class="gray">(guardate il grafico di seguito)</span> 
+        </p>
+
+        <br>
+        <img src="img/9(1).png" style="width: 70%;">
+        <br>
+        Infatti abbiamo visto che 
+        <table>
+            <tr>
+                <th>
+                    input \(\color{blue}{x}\)
+                </th>
+                <th>
+                    output\(\,\,\,\) \(2\cdot\color{blue}{x}\color{black}{} + 1\)
+                </th>
+            </tr>
+            <tr style="font-size: 0.9rem;">
+                <td style="min-height: 1rem; height: 2rem;">
+                    \(\color{blue}{1}\)
+                </td>
+                <td style="min-height: 1rem; height: 2rem;">
+                    \(2\cdot\color{blue}{1}\color{black}{} + 1 = \color{red}{3}\)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Leggere e rileggere l'esempio precedente. Vi chiederò di rispiegarmelo in classe.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Rappresentare il grafico della funzione \(f\left(x\right) = -2x + 3\) sul piano cartesiano.
+    </p>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <p>
+        Consideratee il grafico della funzione \(f\) rappresentato nella seguente figura
+    </p>
+    <br>
+    <img src="img/9(2).png" alt="">
+    <br>
+    <ul>
+        <li>
+            Che output assume la funzione in corrispondenza dell' input \(x = 4\)?
+        </li>
+        <br>
+        <li>
+            Che output assume la funzione in corrispondenza dell' input \(x = -3\)?
+        </li>
+        <br>
+        <li>
+            Per quali valori della \(x\) la funzione assume <b>output</b> \(2\,\)?
+        </li>
+        <br>
+        <li>
+            Per quali valori della \(x\) la funzione assume <b>output</b> \(0\,\)?
+        </li>
+    </ul>
+
+    <br>
+    <br>
+
+    <script>
+        var ggbApp1 = new GGBApplet({
+        "appName": "classic", 
+        "id": "gg1",
+        "allowUpscale": true,
+        "showToolBar": false, 
+        "showAlgebraInput": false, 
+        "showMenuBar": false, 
+        "enableShiftDragZoom": false,
+        "scaleContainerClass":"geogebra-container",
+        "material_id":"zqzunwmx"}, 
+        true);   
+
+    window.addEventListener("load", function() { 
+        ggbApp1.inject('geogebra1');
+    });
+
+
+    slideIndex = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    //funzione per passare alla slide successiva
+    function nextSlide(n) {
+        
+        //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+        document.location.href=`#slide-container${n}`
+
+        //nascondo tutte le slide
+        let slide = document.getElementsByClassName(`slide${n}`)
+        for(let i = 0; i < slide.length; i++) {
+            slide[i].style.display = "none";
+        }
+
+        
+        for(let i = 1; i <= 8; i++) {
+            gg1.setVisible(`l${i}`, false)
+        }
+        gg1.setVisible(`f`, false)
+        
+
+        //aggiorno l'indice
+        slideIndex[n]++;
+
+        
+        if(slideIndex[n] === 7) {
+            gg1.setVisible(`l6`, true)
+        } else if(slideIndex[n] === 8) {
+            gg1.setVisible(`f`, true)
+            gg1.setVisible(`l6`, true)
+        } else {
+            gg1.setVisible(`l${slideIndex[n]}`, true)
+        }
+        
+
+        if(slideIndex[n] !== 0 ) {
+            //pulsante previous abiliatato
+            document.getElementById(`previousSlide-button${n}`).disabled = false;
+        }
+
+        //se ci sono ancora slide da mostrare passo alla successiva
+        if(slideIndex[n] < slide.length) {
+            slide[slideIndex[n]].style.display = "block";
+        }
+
+        //le slide da mostrare sono finite. rendo nuovamente visibile l'ultima slide (altimenti sparisce)
+        //e scrollo la vista al riquadro conclusiovo
+        if(slideIndex[n]  === slide.length -1) {
+            slide[slide.length-1].style.display = "block";
+            document.getElementById(`nextSlide-button${n}`).disabled = true;  
+        }
+
+    }
+
+    //funzione per passare alla slide successiva
+    function previousSlide(n) {
+
+        
+        //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+        document.location.href=`#slide-container${n}`
+
+        //nascondo tutte le slide
+        let slide = document.getElementsByClassName(`slide${n}`)
+        for(let i = 0; i < slide.length; i++) {
+            slide[i].style.display = "none";
+        }
+
+        for(let i = 1; i <= 8; i++) {
+            gg1.setVisible(`l${i}`, false)
+        }
+        gg1.setVisible(`f`, false)
+        
+
+        //aggiorno l'indice
+        slideIndex[n]--;
+
+        
+        if(slideIndex[n] === 7) {
+            gg1.setVisible(`l6`, true)
+        } else if(slideIndex[n] === 8) {
+            gg1.setVisible(`f`, true)
+            gg1.setVisible(`l6`, true)
+        } else {
+            gg1.setVisible(`l${slideIndex[n]}`, true)
+        }
+        
+
+
+        //passo alla precedente. se è la prima slide disattivo il tasto previous
+        slide[slideIndex[n]].style.display = "block";
+        slide[slideIndex[n]].style.fontSize = "1.1rem";
+        if(slideIndex[n] === 0) {
+            document.getElementById(`previousSlide-button${n}`).disabled = true;
+        } 
+
+        //nel caso in cui il pulsante next sia disabilitato lo riattivo
+        if(document.getElementById(`nextSlide-button${n}`).disabled === true) {
+            document.getElementById(`nextSlide-button${n}`).disabled = false;  
+        }
+    }
+
+    let currentIndex = 0
+
+
+    function inizialize(n) {
+
+        currentIndex = 0
+
+        let slide = document.getElementsByClassName(`slide${n}`)
+
+        //TODO questo è un tentativo (fallito miseramente) di rimediare al seguente problema :
+        //quando passo alla seconda slide (la 1-esima) il font-size delle formule matematiche cambia per ragioni misteriose
+        //Queste 3 linee di codice possono essere omesse, ogni slide ha come attributo style "none"
+        for(let i = 0; i < slide.length; i++) {
+            slide[i].style.fontSize = "100%";   
+            slide[i].style.display = "none"
+        }
+
+        //rendo visibile la prima slide
+        slide[0].style.display = "block"
+
+        //rendo visibile la prima slide
+        document.getElementsByClassName(`slide${n}`)[0].style.display = "block"
+
+        //pulsante previous disabled
+        document.getElementById(`previousSlide-button${n}`).disabled = true;
+
+    }
+
+    inizialize(1)
+    </script>    
+</body> 
