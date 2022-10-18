@@ -399,7 +399,7 @@
 
     <section>
         <div class="h2">
-            <span class="par">5</span>
+            <span class="par">4</span>
             <h2 id="archiAssociati">Archi associati</h2>
         </div>
     
@@ -414,6 +414,281 @@
         <br>
         <hr>
         <br>    
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">5</span>
+            <h2 id="graficoFunzioniTrigonometriche">Grafico delle funzioni trigonometriche</h2>
+        </div>
+    
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">5.1</span>
+            <h3>Grafico del seno</h3>
+        </div>
+        
+        <br>
+
+        <p>
+            Consideriamo la funzione 
+            \[
+                f\left(x\right) = sin\left(x\right)
+            \]
+            Per disegnare il suo grafico rappresentiamo sul piano cartesiano tutti i punti che
+        </p>
+        <br>
+        <ul>
+            <li>
+                Come coordinata \(x\) hanno un dato <span style="color: orange;">angolo</span> (input della funzione)
+            </li>
+            <br>
+            <li>
+                Come coordinata \(y\) hanno il <span style="color: red;">seno di quell'angolo</span> (output della funzione)
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            Serviamoci della circonferenza goniometrica per effettuare il grafico
+        </p>
+
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebra7"></div>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">5.2</span>
+            <h3>Grafico del coseno</h3>
+        </div>
+
+        <br>
+
+        <p>
+            Consideriamo la funzione 
+            \[
+                f\left(x\right) = cos\left(x\right)
+            \]
+            Per disegnare il suo grafico rappresentiamo sul piano cartesiano tutti i punti che
+        </p>
+        <br>
+        <ul>
+            <li>
+                Come coordinata \(x\) hanno un dato <span style="color: orange;">angolo</span> (input della funzione)
+            </li>
+            <br>
+            <li>
+                Come coordinata \(y\) hanno il <span style="color: blue;">coseno di quell'angolo</span> (output della funzione)
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            Serviamoci della circonferenza goniometrica per effettuare il grafico
+        </p>
+
+        <div class="geogebra-container">
+            <div id="geogebra8"></div>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">5.3</span>
+            <h3>Grafico della tangente</h3>
+        </div>
+
+        <br>
+
+        <p>
+            Consideriamo la funzione 
+            \[
+                f\left(x\right) = tan\left(x\right)
+            \]
+            Per disegnare il suo grafico rappresentiamo sul piano cartesiano tutti i punti che
+        </p>
+        <br>
+        <ul>
+            <li>
+                Come coordinata \(x\) hanno un dato <span style="color: orange;">angolo</span> (input della funzione)
+            </li>
+            <br>
+            <li>
+                Come coordinata \(y\) hanno la <span style="color: rgb(0, 175, 0);">tangente di quell'angolo</span> (output della funzione)
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            Serviamoci della circonferenza goniometrica per effettuare il grafico
+        </p>
+
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebra9"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">6</span>
+            <h2 id="graficoFunzioniTrigonometriche">Trasfromazioni del grafico delle funzioni trigonometriche</h2>
+        </div>
+    
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">6.1</span>
+            <h3>Traslazione verticale</h3>
+        </div>
+        <br>
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <p>
+                Consideriamo la funzione 
+                \[
+                    \color{blue}{}g\color{black}{}\left(x\right) = sin\left(x\right) + 3
+                \]
+                Siccome questa funzione è ottenuta variando leggermente la funzione
+                \[
+                    \color{red}{}f\color{black}{}\left(x\right) = sin\left(x\right)
+                \]
+                ci possiamo aspettare che il suo grafico si possa ricavare a partire da quello del seno.
+            </p>
+            <br>
+            <p>
+                Osserviamo che dato un qualsiasi input \(x\), l'output della funzione \(\color{blue}{}g\) si ottiene aggiungendo \(3\) all'output di \(\color{red}{f}\)
+                \[
+                    \color{blue}{}g\color{black}{}\left(x\right) = \color{red}{}f\color{black}{}\left(x\right) + 3
+                \]
+            </p>
+            <p>
+                Questo significa che per disegnare il grafico di \(\color{blue}{g}\) in corrispondenza di un input \(x\) dovrò vedere il valore assunto da \(\color{red}{f}\) ed alzarmi di \(3\) unità verso l'alto
+            </p>
+    
+            <br>
+            <div class="geogebra-container">
+                <div id="geogebra10"></div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="grayBackground">
+            <p>
+                Il grafico della funzione 
+            \[
+                \color{blue}{g}\color{black}{}\left(x\right) = sin\left(x\right) + \color{green}{a}
+            \]
+            si ottiene traslando <b>verticalmente</b> il grafico di 
+            \[
+                \color{red}{f}\color{black}{} \left(x\right) = sin\left(x\right)
+            \]
+            </p>
+            <br>
+            <ul>
+                <li>
+                    la traslazione è <b>verso l'alto</b> 
+                    <br>
+                    se \(\color{green}{a}\color{black}{} \gt 0\)
+                </li>
+                <br>
+                <li>
+                    la traslazione è <b>verso il basso</b> 
+                    <br>
+                    se \(\color{green}{a}\color{black}{} \lt 0\)
+                </li>
+            </ul>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">6.2</span>
+            <h3>Traslazione orizzontale</h3>
+        </div>
+        <br>
+        
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container" style="margin-bottom: 1rem;">
+            <p>
+                Consideriamo la funzione 
+                \[
+                    \color{blue}{}g\color{black}{}\left(x\right) = sin\left(x - \dfrac{\pi}{6}\right) 
+                \]
+                Siccome questa funzione è ottenuta variando leggermente la funzione
+                \[
+                    \color{red}{}f\color{black}{}\left(x\right) = sin\left(x\right)
+                \]
+                ci possiamo aspettare che il suo grafico si possa ricavare a partire da quello del seno.
+            </p>
+            <br>
+            
+            <div class="grayBorder">
+                <p>
+                    Consideriamo un input \(x\).
+                </p>
+                <br>
+                <p>
+                    L'output della funzione \(\color{blue}{}g\) in \(x\)
+                </p>
+                <br>
+                <p style="text-align: center;">
+                    <u>è uguale</u>
+                </p>
+                <br>
+                <p>
+                    all'output di \(\color{red}{f}\) in \(x -\dfrac{\pi}{6}\).
+                </p>
+                <br>
+                <p>
+                    In simboli:
+                    \[
+                        \color{blue}{}g\color{black}{}\left(x\right) = \color{red}{}f\color{black}{}\left(x - \dfrac{\pi}{6}\right)
+                    \]
+                </p>
+            </div>
+            <br>
+            
+            <br>
+            <p>
+                Sul grafico cartesiano l'input \(x - \dfrac{\pi}{6}\) lo vediamo spostandoci a sinistra di \(x\) di \(\dfrac{\pi}{6}\) unità
+            </p>
+            <br>
+            <img src="img/indietreggio.png" alt="">
+            
+            <br>
+        
+            <p>
+                Questo significa che per disegnare il grafico di \(\color{blue}{g}\) in corrispondenza di un input \(x\) dovrò vedere il valore assunto da \(\color{red}{f}\) in \(\dfrac{\pi}{6}\) unità a sinistra di \(x\)
+            </p>
+            <br>
+            
+            <div class="geogebra-container">
+                <div id="geogebra11"></div>
+            </div>
+        </div>
     </section>
 
     <section>
