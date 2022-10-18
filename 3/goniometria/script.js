@@ -75,6 +75,65 @@ var ggbApp6 = new GGBApplet({
     "material_id":"gxpyuqk3"}, 
     true); 
 
+var ggbApp7 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg7",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"kz4mjhax"}, 
+    true); 
+
+var ggbApp8 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg8",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"gaemptmx"}, 
+    true); 
+
+var ggbApp9 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg9",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"qg4edgqc"}, 
+    true); 
+
+var ggbApp10 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg10",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"h3qb2prb"}, 
+    true); 
+
+var ggbApp11 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg11",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"cpquezuw"}, 
+    true); 
 
 window.addEventListener("load", function() { 
     ggbApp1.inject('geogebra1');
@@ -83,6 +142,11 @@ window.addEventListener("load", function() {
     ggbApp4.inject('geogebra4');
     ggbApp5.inject('geogebra5');
     ggbApp6.inject('geogebra6');
+    ggbApp7.inject('geogebra7');
+    ggbApp8.inject('geogebra8');
+    ggbApp9.inject('geogebra9');
+    ggbApp10.inject('geogebra10');
+    ggbApp11.inject('geogebra11');
 });
     
 
