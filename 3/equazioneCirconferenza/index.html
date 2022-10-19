@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="../../js/monomialAndPolynomial.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Equazione della circonferenza</title>
+</head>
+<body>
+    
+    <section>
+        <div class="h2">
+            <span class="par">1</span>
+            <h2>Equazione della circonferenza</h2>
+        </div>
+    
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">1.1</span>
+            <h3>Definizione di circonferenza</h3>
+        </div>
+    
+        <p class="grayBackground">
+            La circonferenza è l'insieme di tutti i punti equidistanti da un punto \(\color{blue}{C}\).
+            <br>
+            Il punto \(\color{blue}{C}\) è detto <b>centro</b> della circonferenza.
+            <br>
+            La distanza di ciascun punto dal centro è detta <b>raggio</b> (\(\color{red}{r}\) nella figura)
+            <br>
+            <br>
+            <img src="img/definizioneCirconferenza.png" style="width: 50%;">
+        </p>
+    
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">1.2</span>
+            <h2>Derivazione dell'equazione della circonferenza</h2>
+        </div>
+        
+        <br>
+    
+        <p>
+            Cosa succede se considero una circonferenza nel piano cartesiano?
+            <br>
+            Come si traduce la proprietà che tutti i suoi punti possiedono (essere equidistanti dal centro) in termini 
+            delle coordinate?
+        </p>
+
+        <br>
+        <div>
+            <div style="position: sticky; top: 0; left: 0rem; width: 100%; padding: auto; margin: auto; z-index: 1">
+                <img src="img/derivazioneEquazione.png">
+            </div>
+            
+            <br>
+    
+            <p>
+                Consideriamo la circonferenza avente
+            </p>
+            <br>
+            <ul>
+                <li>
+                    centro \(\color{blue}{C}\) di coordinate \(\left(\color{blue}{x_{_{C}}}\color{black}{}\,;\,\,\color{blue}{}y_{_{C}}\color{black}{}\right)\).
+                </li>
+                <br>
+                <li>
+                    raggio \(\color{red}{r}\)
+                </li>
+            </ul>
+                <br>
+                Indichiamo con \(P\) un generico punto del piano di coordinate  \(\left(x\,;\,\,y\right)\)
+                <br>
+                <br>
+                Per definizione di circonferenza, l'affermazione
+            </p>
+            <br>
+            <p style="text-align: center;">
+                "il punto \(P\) appartiene alla circonferenza" 
+            </p>
+            <br>
+            <p style="text-align: center;"></p>equivale all'affermazione</p>
+            <br>
+            <p style="text-align: center;">
+                "la distanza di \(P\) dal centro \(\color{blue}{C}\) è uguale ad \(\color{red}{r}\)"
+            </p>
+            <br>
+            <p>
+                Ma... noi conosciamo la formula della distanza tra due punti!
+                <br>
+                Quindi possiamo tradurre l'ultima affermazione in linguaggio algebrico:
+                \[
+                    \underset{\color{gray}{}\text{la distanza di} \,\,\color{black}{P}\,\, \color{gray}{}\text{dal centro} \,\, \color{blue}{C}}{
+                        \color{gray}{}
+                        \underbrace{
+                            \color{black}{}
+                            \sqrt{
+                                \left(x - \color{blue}{x_{_C}}\right)\color{black}{}^2 
+                                +
+                                \left(y - \color{blue}{y_{_C}}\right)\color{black}{}^2
+                            }                        
+                        }                        
+                    }
+
+                    \underset{
+                        \color{gray}{}\text{è uguale ad}\,\, \color{red}{r}
+                    }{
+                        \color{gray}{}
+                        \underbrace{
+                            \color{black}{}
+                            \,\, = \,\, \color{transparent}{\sqrt{\color{red}{r}}}
+                        }
+                    }
+                \]
+                Svolgiamo un po' di calcoli.
+                <br>
+                Innanzitutto per eliminare la radice eleviamo entrambi i membri dell'equazione alla seconda:
+                \[
+                    \left[\sqrt{\left(x - \color{blue}{}x_{_{C}}\color{black}{}\right)^2 +  \left(y - \color{blue}{}y_{_{C}}\color{black}{}\right)^2}\right]^{2} = \color{red}{r}^{\color{black}{}2}
+                \]
+                \[
+                    \Downarrow
+                \]            
+            </p>
+            <p class="grayBorder">
+                \[
+                    \left(x - \color{blue}{}x_{_{C}}\color{black}{}\right)^2 +  \left(y - \color{blue}{}y_{_{C}}\color{black}{}\right)^2 = \color{red}{r}^{\color{black}{}2}
+                \]
+            </p>
+            <br>
+            <p>
+                Questa che abbiamo scritto è l'<b>equazione della circonferenza</b>
+            </p>
+        </div>
+
+        <br>
+
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <b>Scrivere l'equazione a partire da \(\color{blue}{C}\) ed \(\color{red}{r}\)</b>
+            <br>
+            <br>
+            <p>
+                Data la circonferenza di centro \(\color{blue}{C}\color{black}{}\,\left(\color{blue}{}2\color{black}{}\,;\,\,\color{blue}{}-3\color{black}{}\right)\)
+                e raggio \(\color{red}{r} \color{black}{\,=\,}\color{red}{5}\), l'equazione che descrive i suoi punti è
+                \[
+                    \left(x - \color{blue}{}2\color{black}{}\right)^2 
+                    +  
+                    \left(y - \color{blue}{}\left(-3\right)\color{black}{}\right)^2 = \color{red}{5}^{\color{black}{}2}
+                \]
+                che svolti i calcoli diventa
+                \[
+                    \left(x - 2\right)^2 + \left(y + 3 \right)^2 = 25
+                \]                
+            </p>
+
+            <br>
+            <hr>
+            <br>
+
+            <b>Trovare \(\color{blue}{C}\) ed \(\color{red}{r}\) a partire dall'equazione</b>
+            <br>
+            <br>
+            <p>
+                Consideriamo l'equazione della circonferenza
+                \[
+                    \left(x + 1\right)^2 + \left(y - 2\right)^2 = 9
+                \]
+                A partire da essa possiamo dedurre le coordinate del centro \(\color{blue}{C}\) ed il raggio \(\color{red}{r}\).
+                <br>
+                <br>
+                Infatti guardando l'equazione della circonferenza notiamo che 
+            </p>
+            <br>
+            <ul>
+                <li>
+                    il numero che leggiamo dopo la \(x\) è l'opposto della coordinata \(x_{_C}\) del centro.
+                </li>
+                <br>
+                <li>
+                    il numero che leggiamo dopo la \(y\) è l'opposto della coordinata \(y_{_C}\) del centro.
+                </li>
+                <br>
+                <li>
+                    a destra dell'uguale leggiamo il quadrato del raggio.
+                </li>
+            </ul>
+            <p>
+                \[
+                    \underset{
+                        \,\,\,\,\,\,\,\,\,\,\,\color{gray}{}\text{opposto}\,x_{_C} \quad\quad\quad  \color{gray}{}\text{opposto}\,y_{_C}\,\,\,\,\,\,\,\text{quadrato di r}
+                    }{
+                        \left(x \,\,\color{gray}{\underbrace{\color{black}{} -\,\, \color{blue}{}x_{_{C}}}}\color{black}{}\right)^2 +  
+                        \left(y \,\,\color{gray}{\underbrace{\color{black}{} -\,\, \color{blue}{}y_{_{C}}}}\color{black}{}\right)^2 = \color{gray}{}\underbrace{\color{red}{r}^{\color{black}{}2}}
+                    }
+                \]
+            </p>
+            <p>
+                Di conseguenza dall'equazione 
+                \[
+                    \underset{
+                        \,\,\,\,\,\,\,\,\,\,\,\color{gray}{}\text{opposto}\,x_{_C} \quad\quad\quad  \color{gray}{}\text{opposto}\,y_{_C}\,\,\,\,\,\,\,\text{quadrato di r}
+                    }{
+                        \left(x \,\,\color{gray}{\underbrace{\color{black}{} +\,\, 1}}\color{black}{}\right)^2 +  
+                        \left(y \,\,\color{gray}{\underbrace{\color{black}{} -\,\, 2}}\color{black}{}\right)^2 = \color{gray}{}\underbrace{\color{black}{9}}
+                    }
+                \]
+                leggiamo che 
+            </p>
+            <br>
+            <ul>
+                <li>
+                    \(x_{_C} = \boldsymbol{-}1\)
+                </li>
+                <br>
+                <li>
+                    \(y_{_C} = \boldsymbol{+}2\)
+                </li>
+                <br>
+                <li>
+                   \(r = 3\)
+                </li>
+            </ul>
+            <br>
+            <p>
+                Concludiamo che l'equazione descrive una circonferenza di centro \(C\,\left(-1\,;\,\,2\right)\) e raggio \(r = 3\)
+            </p>
+            
+        </div>
+        
+        
+        
+        
+
+    </section>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="script.js"></script>
+</body>
