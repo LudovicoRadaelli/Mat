@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
@@ -13,169 +14,2101 @@
 <body>
     <h1>Logaritmi</h1>
     
-    <div class="h2">
-        <span class="par">1</span>
-        <h2>Definizione</h2>
-    </div>
-    
-    <br>
+    <section>
 
-    <p class="grayBackground">
-        Si definisce <b>logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\)</b> quel numero da assegnare come esponente a \(b\) per ottenere \(a\).
-    </p>
-    
-    <br>
-
-    <p>
-        Per indicare il logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\) useremo il simbolo
-        \[
-            \log_{\color{blue}{b}}\left(\color{red}{a}\color{black}{}\right)
-        \]
-    </p>
-
-    <br>
-
-    <h3 class="yellow">Esempi</h3>
-    <div class="esempi-container">
-    
-        <p>
-            \[ 
-            \log_{\color{blue}{2}}\left(\color{red}{8}\color{black}{}\right) = 3 
-            \] 
-        </p>
-        <p>
-            infatti l'esponente da assegnare a \(\color{blue}{2}\) per ottenere \(\color{red}{8}\) è \(3\):
-            \[
-                \color{blue}{2}\color{black}{^{3} = } \color{red}{\,\,8}
-            \]
-        </p>
-        <hr>
-        <p>
-            \[ 
-            \log_{\color{blue}{3}}\left(\color{red}{81}\color{black}{}\right) = 4 
-            \] 
-        </p>
-        <p>
-            infatti l'esponente da assegnare a \(\color{blue}{3}\) per ottenere \(\color{red}{81}\) è \(4\):
-            \[
-                \color{blue}{3}\color{black}{^{4} = } \color{red}{\,\,81}
-            \]
-        </p>
-        <hr>
-        <p>
-            \[ 
-            \log_{\color{blue}{5}}\left(\color{red}{30}\color{black}{}\right) = 2,1133\dots
-            \] 
-        </p>
-        <p>
-            infatti l'esponente da assegnare a \(\color{blue}{5}\) per ottenere \(\color{red}{30}\) è \(2,1133\dots\).
-        </p>
-        <p class="gray">
-            In questo caso non l'abbiamo potuto calcolare a mente, ma abbiamo dovuto usare la calcolatrice. Però il risultato torna: se \(5^2 = 25\) per ottenere \(30\) dovrò incrementare un po' l'esponente
-        </p>
+        <div class="h2">
+            <span class="par">1</span>
+            <h2>Definizione</h2>
+        </div>
+        
         <br>
-        <hr>
-        <p>
-            \[ 
-                \log_{\color{blue}{2}}\left(\color{red}{-8}\color{black}{}\right) = \text{???}
-            \] 
+    
+        <p class="grayBackground">
+            Si definisce <b>logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\)</b> quel numero da assegnare come esponente a \(b\) per ottenere \(a\).
         </p>
+        
+        <br>
+    
         <p>
-            Ragioniamo: stiamo cercando un esponente che assegnato a \(\color{blue}{2}\) dia come risultato \(\color{red}{-8}\). Ovvero:
+            Per indicare il logaritmo in base \(\color{blue}{b}\) di \(\color{red}{a}\) useremo il simbolo
             \[
-                \color{blue}{2}\color{black}{^{\text{???}} = } \color{red}{\,\,-8}
+                \log_{\color{blue}{b}}\left(\color{red}{a}\color{black}{}\right)
             \]
-            Problema: qualsiasi esponente assegni a \(\color{blue}{2}\), il risultato della potenza è <b>sempre</b> positivo. Quindi il numero che sto cercando non esiste!
         </p>
-    </div>
-
-    <br>
-
-    <div class="grayBackground">
-        <div style="text-align: center;margin-bottom: 0.5rem;">⚠️⚠️⚠️⚠️</div>
-        <p>Il logaritmo è definito solo per valori positivi dell'argomento.</p>
-    </div>
-
-    <br>
-
-    <br>
-    <hr>
-    <br>
-    <br>
     
-
-    <div class="h2">
-        <span class="par">2</span>
-        <h2>Proprietà del logaritmo</h2>
-    </div>
+        <br>
     
-    <br>
-
-    <table style="margin: auto;">
-        <tr>
-            <td>
+        <h3 class="yellow">Esempi</h3>
+        <div class="esempi-container">
+        
+            <p>
+                \[ 
+                \log_{\color{blue}{2}}\left(\color{red}{8}\color{black}{}\right) = 3 
+                \] 
+            </p>
+            <p>
+                infatti l'esponente da assegnare a \(\color{blue}{2}\) per ottenere \(\color{red}{8}\) è \(3\):
                 \[
-                 \log_{b}{\left(a\right)} \color{red}{\,+\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(a \color{red}{\,\cdot\,}\color{black}{}c\right)
+                    \color{blue}{2}\color{black}{^{3} = } \color{red}{\,\,8}
                 \]
-            </td>
-        </tr>
-        <tr>
-            <td>
+            </p>
+            <hr>
+            <p>
+                \[ 
+                \log_{\color{blue}{3}}\left(\color{red}{81}\color{black}{}\right) = 4 
+                \] 
+            </p>
+            <p>
+                infatti l'esponente da assegnare a \(\color{blue}{3}\) per ottenere \(\color{red}{81}\) è \(4\):
                 \[
-                    \log_{b}{\left(a\right)} \color{red}{\,-\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(\color{red}{\dfrac{\color{black}{a}}{\color{black}{c}}}\color{black}{}\right)
+                    \color{blue}{3}\color{black}{^{4} = } \color{red}{\,\,81}
                 \]
-            </td>
-        </tr>
-        <tr>
-            <td>
+            </p>
+            <hr>
+            <p>
+                \[ 
+                \log_{\color{blue}{5}}\left(\color{red}{30}\color{black}{}\right) = 2,1133\dots
+                \] 
+            </p>
+            <p>
+                infatti l'esponente da assegnare a \(\color{blue}{5}\) per ottenere \(\color{red}{30}\) è \(2,1133\dots\).
+            </p>
+            <p class="gray">
+                In questo caso non l'abbiamo potuto calcolare a mente, ma abbiamo dovuto usare la calcolatrice. Però il risultato torna: se \(5^2 = 25\) per ottenere \(30\) dovrò incrementare un po' l'esponente
+            </p>
+            <br>
+            <hr>
+            <p>
+                \[ 
+                    \log_{\color{blue}{2}}\left(\color{red}{-8}\color{black}{}\right) = \text{???}
+                \] 
+            </p>
+            <p>
+                Ragioniamo: stiamo cercando un esponente che assegnato a \(\color{blue}{2}\) dia come risultato \(\color{red}{-8}\). Ovvero:
                 \[
-                    \log_{b}\left(a^{\color{red}{c}}\color{black}{}\right) = \color{red}{c} \color{black}{} \log_{b}\left(a\right)
+                    \color{blue}{2}\color{black}{^{\text{???}} = } \color{red}{\,\,-8}
                 \]
-            </td>
-        </tr>
-        <tr>
-            <td>
-                \[
-                    \log_{b}{\left(a\right)} = \dfrac{\log_{\color{red}{c}}{\left(a\right)}}{\log_{\color{red}{c}}{\left(a\right)}}
-                \]
-            </td>
-        </tr>
-    </table>      
+                Problema: qualsiasi esponente assegni a \(\color{blue}{2}\), il risultato della potenza è <b>sempre</b> positivo. Quindi il numero che sto cercando non esiste!
+            </p>
+        </div>
     
+        <br>
+    
+        <div class="grayBackground">
+            <div style="text-align: center;margin-bottom: 0.5rem;">⚠️⚠️⚠️⚠️</div>
+            <p>Il logaritmo è definito solo per valori positivi dell'argomento.</p>
+        </div>
+    
+        <br>
+    
+        <br>
+        <hr>
+        <br>
+        <br>
+    </section>
+    
+
+    <section>
+        <div class="h2">
+            <span class="par">2</span>
+            <h2>Proprietà del logaritmo</h2>
+        </div>
+        
+        <br>
+    
+        <table style="margin: auto;">
+            <tr>
+                <td>
+                    \[
+                     \log_{b}{\left(a\right)} \color{red}{\,+\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(a \color{red}{\,\cdot\,}\color{black}{}c\right)
+                    \]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[
+                        \log_{b}{\left(a\right)} \color{red}{\,-\,} \color{black}{} \log_{b}{\left(c\right)} = \log_{b}\left(\color{red}{\dfrac{\color{black}{a}}{\color{black}{c}}}\color{black}{}\right)
+                    \]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[
+                        \log_{b}\left(a^{\color{red}{c}}\color{black}{}\right) = \color{red}{c} \color{black}{} \log_{b}\left(a\right)
+                    \]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[
+                        \log_{b}{\left(a\right)} = \dfrac{\log_{\color{red}{c}}{\left(a\right)}}{\log_{\color{red}{c}}{\left(a\right)}}
+                    \]
+                </td>
+            </tr>
+        </table>      
+        
+        <br>
+    
+        <h3 class="yellow">Esempi</h3>
+        <div class="esempi-container">
+            <p class="formula">
+                \[
+                    \color{gray}{\underset{=\,\,2}{\underbrace{\color{black}{\log_{5}{\left(25\right)}}}}} + 
+                    \color{gray}{\underset{=\,\,3}{\underbrace{\color{black}{\log_{5}{\left(125\right)}}}}} = 
+                    \color{gray}{\underset{= \,\,\log_{5}{625} \,\,=\,\, 5}{\underbrace{\color{black}{\log_{5}{\left(25 \cdot 125\right)}}}}}
+                \]
+            </p>
+            <br>
+            <hr>
+            <br>
+            <p>
+                \(
+                        \log_{3}{\left(72\right)} - \log_{3}{\left(45\right)} = \log_{3}{\left(\dfrac{72}{45}\right)}  
+                \)
+            </p>
+            <br>
+            <hr>
+            <br>
+            <p>
+                \[
+                    \log_{5}{\left(3^4\right)} = 4 \log_{5}{\left(3\right)}
+                \]
+            </p>
+            <br>
+            <hr>
+            <br>
+            <p>
+                \[
+                    \log_{8}{\left(64\right)} = \dfrac{\log_{2}{\left(64\right)}}{\log_{2}{\left(8\right)}}
+                \]
+            </p>
+        </div>
+    
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">3</span>
+            <h2>Funzioni logaritmiche</h2>
+        </div>
+        
+        <p>
+            Finora abbiamo considerato il logarimo come <b>operazione</b>. I questo paragrafo lo considereremo dal punto di vista 
+            delle <b>funzioni</b>, con l'obiettivo di riuscire a tracciare il grafico di una funzione logaritmica.
+        </p>
+    
+        <br>
+    
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <p>
+                Consideriamo la funzione
+                \[
+                    f\left(x\right) = log_{_{2}}\left(x\right)
+                \]
+    
+                La funzione \(f\) associa ad ogni input \(x\) l'output \(log_{_{2}}\left(x\right)\).
+                <br>
+                <br>
+                Scriviamo nella seguente tabella alcuni input/output che assume, e rappresentiamoli su un piano cartesiano
+            </p>
+    
+            <br>
+    
+            <div id="slide-container1" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem; ">
+    
+                <div class="geogebra-container">
+                    <div id="geogebra1"></div>
+                </div>
+                
+                <br>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right)\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{8}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{8}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{16}\color{black}{}\right) = 4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{8}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{16}\color{black}{}\right) = 4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{8}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{16}\color{black}{}\right) = 4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{4}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{4}}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+    
+                        
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{2}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{4}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{8}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{16}\color{black}{}\right) = 4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{4}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{4}}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{8}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{2}}\left(\color{blue}{\dfrac{1}{8}}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide1">
+                    <p>
+                        A questo punto disegnamo il grafico completo della funzione
+                    </p>
+                </div>
+    
+                <div class="slide1">
+                    <p>
+                        A questo punto disegnamo il grafico completo della funzione
+                    </p>
+                </div>
+        
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                <button id="previousSlide-button1" onclick="previousSlide(1)" disabled>Indietro</button>
+                <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+            </div>
+    
+        </div>
+    
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <p>
+                Consideriamo la funzione
+                \[
+                    f\left(x\right) = log_{_{\frac{1}{2}}}\left(x\right)
+                \]
+    
+                La funzione \(f\) associa ad ogni input \(x\) l'output \(log_{_{\frac{1}{2}}}\left(x\right)\).
+                <br>
+                <br>
+                Scriviamo nella seguente tabella alcuni input/output che assume, e rappresentiamoli su un piano cartesiano
+            </p>
+    
+            <br>
+    
+            <div id="slide-container2" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem; ">
+    
+                <div class="geogebra-container">
+                    <div id="geogebra2"></div>
+                </div>
+                
+                <br>            
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{8}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{8}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{16}\color{black}{}\right) = -4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{8}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{16}\color{black}{}\right) = -4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{8}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{16}\color{black}{}\right) = -4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{4}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{4}}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <table>
+                        <tr>
+                            <th>
+                                input \(\color{blue}{x}\)
+                            </th>
+                            <th>
+                                output \(log_{_{\frac{1}{2}}}\left(\color{blue}{x}\color{black}{}\right)\)
+                            </th>
+                        </tr>
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{1}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{1}\color{black}{}\right) = 0\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{2}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{2}\color{black}{}\right) = -1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{4}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{4}\color{black}{}\right) = -2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{8}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{8}\color{black}{}\right) = -3\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{16}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{16}\color{black}{}\right) = -4\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{2}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = 1\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{4}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{4}}\color{black}{}\right) = 2\)
+                            </td>
+                        </tr>
+    
+                        <tr style="font-size: 0.9rem;">
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(\color{blue}{\dfrac{1}{8}}\)
+                            </td>
+                            <td style="min-height: 1rem; height: 2rem;">
+                                \(log_{_{\frac{1}{2}}}\left(\color{blue}{\dfrac{1}{8}}\color{black}{}\right) = 3\)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="slide2">
+                    <p>
+                        A questo punto disegnamo il grafico completo della funzione.
+                    </p>
+                </div>
+    
+                <div class="slide2">
+                    <p>
+                        A questo punto disegnamo il grafico completo della funzione.
+                    </p>
+                </div>
+        
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                <button id="previousSlide-button2" onclick="previousSlide(2)" disabled>Indietro</button>
+                <button id="nextSlide-button2" onclick="nextSlide(2)">Avanti</button>
+            </div>
+    
+        </div>
+    
+        <br>
+        <br>
+    
+        <p>
+            Come visto nei due esempi, il comportamento della funzione cambia drasticamente a seconda della base che consideriamo.
+        </p>
+        <br>
+        <ul>
+            <li>
+                nel caso in cui la base sia \(\color{red}{2}\), la funzione logaritmica \(f\left(x\right) = log_{_{\color{red}{2}}}\left(x\right)\) è <b>crescente</b>.
+            </li>
+            <br>
+            <li>
+                nel caso in cui la base sia \(\color{red}{\frac{1}{2}}\), la funzione logaritmica \(f\left(x\right) = log_{_{\color{red}{\frac{1}{2}}}}\left(x\right)\) è <b>decrescente</b>.
+            </li>
+        </ul>
+        <br>
+        <p>
+            In generale si ha che 
+        </p>
+        <br>
+        <div class="grayBackground">
+            <p>
+                La funzione logaritmica 
+                \[
+                    f\left(x\right) = log_{_{\color{red}{b}}}\left(x\right)
+                \]
+            </p>
+            <br>
+            <ul>
+                <li>
+                    è <b>crescente</b> se \(\boldsymbol{\color{red}{b}\color{black}{} \gt 1}\).
+                </li>
+                <br>
+                <li>
+                    è <b>decrescente</b> se \(\boldsymbol{0 \lt \color{red}{b}\color{black}{} \lt 1}\).
+                </li>
+            </ul>
+            <br>
+            <div class="geogebra-container">
+                <div id="geogebra3"></div>
+            </div>
+            <p class="gray" style="font-size: 0.9rem;">
+                Usate lo slider per modificare il valore la base \(b\) e vedere i grafico corrispondente
+            </p>
+            
+        </div>
+    
+        <br>
+        <p>
+            Osserviamo anche due proprietà condivise da tutte le funzioni logarimiche, a prescindere dalla loro base.
+        </p>
+        <br>
+    
+        <div class="grayBackground">
+            <p>
+                Il grafico di \(f\left(x\right) = log_{_{b}}\left(x\right)\)
+            </p>
+            <br>
+            <ul>
+                <li>
+                    Interseca l'asse delle \(x\) nel punto \(\left(1\,;\,\,0\right)\).
+                </li>
+                <br>
+                <li>
+                    Ha come asintoto l'asse delle \(y\).
+                    <br>
+                    Ciò significa che il grafico della funzione si "schiaccia" contro l'asse delle \(y\), senza toccarlo mai.
+                </li>
+            </ul>
+        </div>
+    
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <div class="h3">
+            <span class="sub-par">
+                3.1
+            </span>
+            <h3>Traslazione del grafico di \(\boldsymbol{f\left(x\right) = log_{_{b}}\left(x\right)}\)</h3>
+        </div>
+    
+        <br>
+        <br>
+    
+        <p>
+            <h4 class="blue">Traslazione verticale</h4>
+        </p>
+    
+        <br>
+    
+        <h3 class="yellow">Esempi</h3>
+        <div class="esempi-container">
+            <p>
+                Disegnamo il grafico di 
+                \[
+                    g\left(x\right) = log_{_{2}}\left(x\right) \color{red}{\,\,+\,\,3}
+                \]
+                Di seguito è riportata una tabella con qualche input/output
+            </p>
+            <br>
+            <table>
+                <tr>
+                    <th>
+                        input: \(\color{blue}{x}\)
+                    </th>
+                    <th>
+    
+                        output: \(\,\,log_{_{2}}\left(\color{blue}{x}\color{black}{}\right) \color{red}{\,\,+\,\,3}\)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        \(\color{blue}{1}\)
+                    </td>
+                    <td>
+                        \(\,\,\underset{0}{\color{gray}{\underbrace{\color{black}{log_{_{2}}\left(\color{blue}{1}\color{black}{}\right)}}}} \color{red}{\,\,+\,\,3} \color{black}{}= 3\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\color{blue}{2}\)
+                    </td>
+                    <td>
+                        \(\,\,\underset{1}{\color{gray}{\underbrace{\color{black}{log_{_{2}}\left(\color{blue}{2}\color{black}{}\right)}}}} \color{red}{\,\,+\,\,3} \color{black}{}= 4\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\color{blue}{4}\)
+                    </td>
+                    <td>
+                        \(\,\,\underset{2}{\color{gray}{\underbrace{\color{black}{log_{_{2}}\left(\color{blue}{4}\color{black}{}\right)}}}} \color{red}{\,\,+\,\,3} \color{black}{}= 5\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\color{blue}{8}\)
+                    </td>
+                    <td>
+                        \(\,\,\underset{3}{\color{gray}{\underbrace{\color{black}{log_{_{2}}\left(\color{blue}{8}\color{black}{}\right)}}}} \color{red}{\,\,+\,\,3} \color{black}{}= 6\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\color{blue}{\dfrac{1}{2}}\)
+                    </td>
+                    <td>
+                        \(\,\,\underset{-1}{\color{gray}{\underbrace{\color{black}{log_{_{2}}\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right)}}}} \color{red}{\,\,+\,\,3} \color{black}{}= 2\)
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p>
+                Per ogni valore di \(\color{blue}{x}\), la funzione assume il valore \(log_{_{2}}\left(\color{blue}{x}\color{black}{}\right)\) <span style="color: red">aumentato 
+                    di \(3\) unità</span>.
+                <br>
+                Questo significa che per disegnare il grafico di 
+                \[
+                    g\left(x\right) = log_{_{2}}\left(x\right) +3
+                \] 
+                basta disegnare quello di 
+                \[
+                    f\left(x\right) = log_{_{2}}\left(x\right)
+                \] 
+                ed <b>traslarlo verticalmente</b> verso l'alto di \(3\) unità
+            </p>
+    
+        </div>
+    
+    
+        <br>
+        <br>
+    
+        <p>
+            In generale possiamo affermare che 
+        </p>
+        
+        <br>
+    
+        <div class="grayBackground">
+            <p>
+                Il grafico di una funzione
+                \[
+                    g\left(x\right) = log_{_{b}}\left(x\right) \color{red}{}{\,\,+\,\,a} 
+                \] 
+                si ottiene <b>traslando verticalmente</b> il grafico di 
+                \[
+                    f\left(x\right) = log_{_{b}}\left(x\right)
+                \] 
+                di \(\color{a}{}\) unità.
+                <br>
+                <br>
+                La traslazione è 
+            </p>
+            <br>
+            <ul>
+                <li>
+                    verso l'<b>alto</b> se \(\color{red}{a}\color{black}{} \gt 0\)
+                </li>
+                <br>
+                <li>
+                    verso il <b>basso</b> se \(\color{red}{a}\color{black}{} \lt 0\)
+                </li>
+            </ul>
+    
+            <br>
+            <div class="geogebra-container">
+                <div id="geogebra4"></div>
+            </div>
+    
+        </div>    
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+    </section>
+
+    <section>
+        <div class="h2">
+            <span class="par">4</span>
+            <h2>Equazioni logaritmiche</h2>
+        </div>
+            
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">4.1</span>
+            <h2>Tipologia "passaggio agli argomenti"</h2>
+        </div>
+            
+        <br>
+
+        <p>
+            Prima di tutto impariamo a riconoscere equazioni logaritmiche di questa tipologia.
+            <br>
+            <br>
+            Esse presentano in entrambi i membri <b>somme e 
+            sottrazioni di logaritmi o di loro multipli</b>.
+            <br>
+            Di conseguenza per questa tipologia possiamo usare le proprietà dei logaritmi studiate nel paragrafo <b class="blue">2</b>.
+            <br>
+            <br>
+            Facciamo alcuni esempi:
+        </p>
+        <br>
+        <ul>
+            <li>
+                <p class="formula">
+                    \(
+                        log\left(x\right) - 3\,log\left(x\right) = log\left(x\right)
+                    \)
+                </p> 
+            </li>
+            <br>
+            <li>
+                <p class="formula">
+                    \(
+                        3\,log\left(x\right) + 5\,log\left(2x - 5\right) = log\left(x\right)
+                    \)
+                </p> 
+            </li>
+            <br>
+            <li>
+                <p class="formula">
+                    \(
+                        log\left(x\right) + 2\,log\left(x + 1\right) = log\left(x - 1\right) - log\left(2x\right) 
+                    \)
+                </p> 
+            </li>
+            <br>
+            <li>
+                <p class="formula">
+                    \(
+                        log_{_{3}}\left(x\right) + \color{red}{2}\color{black}{} = \color{blue}{0}
+                    \)
+                    <br>
+                    <br>
+                    perché possiamo trasformare l'equazione in 
+                    <br>
+                    <br>
+                    \(
+                        log_{_{3}}\left(x\right) + \color{red}{log_{_{3}}\left(9\right)}\color{black}{} = \color{blue}{log_{_{3}}\left(1\right)}
+                    \)
+                </p> 
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            Nel prossimo esempio vediamo la strategia da mettere in campo per risolvere un'equazione di questo tipo.
+        </p>
+
+        <br>
+
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <video src="img/passaggioAgliArgomenti.mp4" controls></video>
+        </div>
+
+        <br>
+
+        <p>
+            In generale possiamo dire che;
+        </p>
+
+        <div class="grayBackground">
+            <p>
+                Per risolvere un'equazione del tipo "passaggio agli argomenti":
+            </p>
+            <br>
+            <ul>
+                <li>
+                    si effettuano le <b>condizioni di esistenza</b>;
+                </li>
+                <br>
+                <li>
+                    si usano le proprietà dei logaritmi fino a riscrivere l'equazione nella forma
+                    \[
+                        log\left(\color{red}{}A\left(x\right)\color{black}{}\right) = log\left(\color{blue}{}B\left(x\right)\color{black}{}\right)
+                    \]
+                    Successivamente si deduce che 
+                    \[
+                        \color{red}{}A\left(x\right)\color{black}{} = \color{blue}{}B\left(x\right)
+                    \]
+                    (<b>passaggio agli argomenti</b> )
+                </li>
+                <br>
+                <li>
+                    Si risolve l'equazione
+                    \[
+                        A\left(x\right) = B\left(x\right)
+                    \]
+                    e si <b>controlla</b> se le soluzioni ottenute appartengono al campo di esisteza
+                </li>
+            </ul>
+
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="h3">
+            <span class="sub-par">4.2</span>
+            <h2>Tipologia "sostituzione"</h2>
+        </div>
+            
+        <br>
+
+        <p>
+            Prima di tutto impariamo a riconoscere equazioni logaritmiche di questa tipologia.
+            <br>
+            <br>
+            In esse i logaritmi che figurano hanno tutti <b>lo stesso argomento</b> e <b>sostituendo</b> ogni logaritmo con 
+            una lettera qualsiasi otteniamo una equazione che sappiamo risolvere.
+            <br>
+            <br>
+            Facciamo alcuni esempi:
+        </p>
+        <br>
+        <ul>
+            <li>
+                <p class="formula">
+                    \(
+                        log^2\left(x\right) + 3\,log\left(x\right) - 2 = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(x\right)
+                    \] 
+                    otteniamo un'equazione di secondo grado
+                    \[
+                        \begin{align*}  
+                            \color{red}{}log\color{black}{}^2\color{red}{}\left(x\right)\color{black}{} + 3\,&\color{red}{}log\left(x\right)\color{black}{} - 2 = 0    
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \color{red}{}A\color{black}{}^2 + &3\color{red}{}A\color{black}{} - 2 = 0    
+                        \end{align*}
+                    \]
+                </p> 
+            </li>
+            <br>
+            <li>
+                <p class="formula">
+                    \(
+                        \left(3\,log\left(x + 1\right) -1\right) \, \left(-2\,log\left(x + 1\right) +4\right) = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(x + 1\right)
+                    \] 
+                    otteniamo l'equazione
+                    \[
+                        \begin{align*}  
+                            \left(3\,\color{red}{}log\left(x + 1\right)\color{black}{} -1\right) \,& \left(-2\,\color{red}{}log\left(x + 1\right)\color{black}{} +4\right) = 0
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \left(3\color{red}{}A\color{black}{} -1\right) \,& \left(-2\color{red}{}A\color{black}{} +4\right) = 0
+                        \end{align*}
+                    \]
+                </p> 
+            </li>
+            <br>
+            <li>
+                <p class="formula">
+                    \(
+                        \dfrac{1}{log\left(3x^2 -2\right)} + 4\,log\left(3x^2 -2\right) = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(3x^2 - 2\right)
+                    \] 
+                    otteniamo un'equazione di secondo grado
+                    \[
+                        \begin{align*}  
+                            \dfrac{1}{\color{red}{}log\left(3x^2 -2\right)\color{black}{}} + 4\,&\color{red}{}log\left(3x^2 -2\right)\color{black}{} = 0
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \dfrac{1}{\color{red}{}A\color{black}{}} + 4&\color{red}{}A\color{black}{} = 0
+                        \end{align*}
+                    \]
+                </p> 
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            Nel prossimo esempio vediamo la strategia da mettere in campo per risolvere un'equazione di questo tipo.
+        </p>
+
+        <br>
+
+        <h3 class="yellow">Esempio</h3>
+        <div class="esempi-container">
+            <video src="img/sostituzione.mp4" controls></video>
+        </div>
+
+        <br>
+
+        <p>
+            In generale possiamo dire che;
+        </p>
+
+        <div class="grayBackground">
+            <p>
+                Per risolvere un'equazione del tipo "sostituzione":
+            </p>
+            <br>
+            <ul>
+                <li>
+                    si effettuano le <b>condizioni di esistenza</b>;
+                </li>
+                <br>
+                <li>
+                    si effettua una <b>sostituzione</b> 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(p(x)\right)
+                    \]
+                    <nobr>e si risolve l'equazione ottenuta nell'incognita \(\color{red}{A}\)</nobr>
+                </li>
+                <br>
+                <li>
+                    Per ogni soluzione 
+                    \[
+                        A = s
+                    \]
+                    risostituiamo \(\color{red}{A}\) con il \(\color{red}{}log\left(p(x)\right)\) e risolviamo l'equazione nell'incognita \(x\)
+                    \[
+                        \begin{align*}
+                            \color{red}{}A\color{black}{} &= s
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \color{red}{}log\left(p(x)\right)\color{black}{} &= s
+                        \end{align*}
+                    \]
+
+
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </section>    
+
+    <br>
     <br>
 
-    <h3 class="yellow">Esempi</h3>
-    <div class="esempi-container">
-        <p class="formula">
-            \[
-                \color{gray}{\underset{=\,\,2}{\underbrace{\color{black}{\log_{5}{\left(25\right)}}}}} + 
-                \color{gray}{\underset{=\,\,3}{\underbrace{\color{black}{\log_{5}{\left(125\right)}}}}} = 
-                \color{gray}{\underset{= \,\,\log_{5}{625} \,\,=\,\, 5}{\underbrace{\color{black}{\log_{5}{\left(25 \cdot 125\right)}}}}}
-            \]
-        </p>
-        <br>
-        <hr>
-        <br>
-        <p>
-            \(
-                    \log_{3}{\left(72\right)} - \log_{3}{\left(45\right)} = \log_{3}{\left(\dfrac{72}{45}\right)}  
-            \)
-        </p>
-        <br>
-        <hr>
-        <br>
-        <p>
-            \[
-                \log_{5}{\left(3^4\right)} = 4 \log_{5}{\left(3\right)}
-            \]
-        </p>
-        <br>
-        <hr>
-        <br>
-        <p>
-            \[
-                \log_{8}{\left(64\right)} = \dfrac{\log_{2}{\left(64\right)}}{\log_{2}{\left(8\right)}}
-            \]
-        </p>
-    </div>
+    <script src="script.js"></script>
 </body>
