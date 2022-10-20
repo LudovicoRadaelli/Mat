@@ -135,6 +135,18 @@ var ggbApp11 = new GGBApplet({
     "material_id":"cpquezuw"}, 
     true); 
 
+var ggbApp12 = new GGBApplet({
+    "appName": "classic", 
+    "id": "gg12",
+    "allowUpscale": true,
+    "showToolBar": false, 
+    "showAlgebraInput": false, 
+    "showMenuBar": false, 
+    "enableShiftDragZoom": false,
+    "scaleContainerClass":"geogebra-container",
+    "material_id":"thehbjjx"}, 
+    true); 
+
 window.addEventListener("load", function() { 
     ggbApp1.inject('geogebra1');
     ggbApp2.inject('geogebra2');
@@ -147,6 +159,7 @@ window.addEventListener("load", function() {
     ggbApp9.inject('geogebra9');
     ggbApp10.inject('geogebra10');
     ggbApp11.inject('geogebra11');
+    ggbApp12.inject('geogebra12');
 });
     
 
