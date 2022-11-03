@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #compitiSelector-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    select {
+        display: block;
+        padding: auto; 
+        margin-right: 1rem;
+    }
+
+    #ex-button {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+</style>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Seno, coseno, tangente: definizione geometrica</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]            
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Gradi v.s. Radianti </b>
+                <br>
+                <div class="gray">
+                    [Par. 2.1, pag. da 664 a 666]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Definizioni di grado e radiante
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.2) Un angolo di riferimento: l'angolo giro
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        2.3) Passare da gradi a radianti (e viceversa)
+                    </b>
+                </div>
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Visualizzazione delle funzioni trigonometriche </b>
+                <br>
+                <div class="gray">
+                    [Par. 12.2, pag. da 668 a 669]
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        3.1) Visualizzazione del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.2) Visualizzazione del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        3.3) Visualizzazione del tangente
+                    </b>
+                </div>
+            </div>
+
+            <br>
+            
+            <div style="text-align: left;">
+                <b>4) Archi associati</b>
+            </div>
+            <div class="gray">
+                [Par. 12.6, 12.7, pag. da 680 a 683]            
+            </div>   
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>5) Grafico delle funzioni trigonometriche</b>
+                <br>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        5.1) Grafico del seno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        5.2) Grafico del coseno
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        5.3) Grafico della tangente
+                    </b>
+                </div>
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>6) Trasfromazioni del grafico delle funzioni trigonometriche</b>
+                <br>
+                <br>    
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        6.1) Traslazione verticale
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        6.2) Traslazione orizzontale
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        6.3) Dilatazione e contrazione verticale
+                    </b>
+
+                    <br>
+                    <br>
+
+                    <b>
+                        6.4) Dilatazione e contrazione orizzontale
+                    </b>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+
+            <div>
+                dispense disponibili <a class="blue" href="../../../3/goniometria/index.html">QUI</a>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p>
+        Di seguito trovate tutti i compiti svolti fino a questo momento. Gli argomenti sono quelli illustrati sopra.s 
+        <br>
+        <br>
+        Provate a svolgere nuovamente esercizi che vi hanno dato filo da torcere confrontando le vostre soluzioni con gli appunti presi in classe. 
+        <br>
+        <br>
+        Gli esercizi della verifica ricalcheranno il lavoro svolto in classe ed a casa.
+    </p>
+
+    <br>
+
+
+    <div id="compitiSelector-container" class="grayBorder">
+    
+        <select id="ex">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <button id="ex-button" onclick="vai()">Apri compiti</button>
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+        let ex = document.getElementById("ex").options;
+        let i = document.getElementById("ex").selectedIndex;
+        console.log(`ex[i]: ${ex[i].index}`)
+        document.location.href=`https://ludovicoradaelli.github.io/Matematica/2022/quarta/esercizi4Ci/es${ex[i].index + 1}.html`;
+    }
+    </script>
+</body> 
