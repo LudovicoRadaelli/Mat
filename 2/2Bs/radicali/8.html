@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Radice di indice \(n\) di un numero</b>
+            </div>
+            <div class="gray">
+                [Par. 14.2, pag. da 738 a 743]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Condizioni d'esistenza di un radicale</b>
+            </div>
+            <div class="gray">
+                [Par. 14.2, pag. 743]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Proprietà invariantiva</b>
+            </div>
+            <div class="gray">
+                [Par. 14.2, pag. da 743 a 747]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Moltiplicazioni e divisioni tra radicali</b>
+            </div>
+            <div class="gray">
+                [Par. 15.1, pag. da 772 a 774]
+            </div>
+
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../../2/radicali/index.html">QUI</a>
+            </p>
+            
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+    
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere gli esercizi n° 32, 33, 34 a pag 789. 
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Determinare per quali valori di \(x\) la seguente frazione è <b>positiva</b>
+        \[
+            \dfrac{\left(2x -4\right) \left(3x + 18\right)}{5x- 6}
+        \]
+    </p>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio guidato</h3>
+    <br>
+    <p class="grayBorder">
+        Determinare per quali valori di \(x\) la seguente frazione è <b>positiva</b>
+        \[
+            \dfrac{\left(5x -10\right) \left(3x + 9\right)}{2x- 3}
+        \]
+    </p>
+    <br>
+
+
+    
+    <p>
+        <b>Svolgimento</b>  
+        <br>
+        Il segno della frazione 
+        \[
+            \dfrac{\color{red}{\left(5x -10\right)}\color{black}{\,\cdot\,} \color{blue}{\left(3x + 9\right)}}{\color{green}{2x- 3}}
+        \]
+        dipende dal segno dei singoli fattori che compongono numeratore e denominatore.
+        <br>
+        Studiamoli singolarmente:
+    </p>
+    <br>
+    <div class="grayBorder">
+        <p>
+            <b>\(\triangleright\,\,\,\)segno di \(\color{red}{\boldsymbol{5x -10}}\)</b>
+            <br>
+            <br>
+            Per quali valori \(\color{red}{5x -10}\) è positivo?
+            <br>
+            In linguaggio simbolico possiamo scrivere:
+            \[
+                \color{red}{5x -10} \color{black}{} \gt 0
+            \]
+            Risolviamola:
+            \[
+                \begin{align*}
+                    5x -10 &\gt 0
+                    \\\\
+                    5x &\gt 10
+                    \\\\
+                    x &\gt \dfrac{10}{5}
+                    \\\\
+                    x &\gt 2
+                \end{align*}
+            \]
+            Quindi 
+            \[
+                \color{red}{5x -10} \color{black}{} \quad\text{è positiva se} \quad x \gt 2
+            \]
+            Per tutti gli altri valori \(\color{red}{5x -10}\) assume segno negativo, eccetto in \(x = 2\) dove vale zero.
+            <br>
+            <br>
+            Scriviamolo in linguaggio grafico
+        </p>
+        <br>
+        <img src="img/8(1).png" alt="" style="border: 0;">
+    </div>
+    <br>
+    <div class="grayBorder">
+        <p>
+            <b>\(\triangleright\,\,\,\)segno \(\color{blue}{\boldsymbol{3x+9}}\)</b>
+            <br>
+            <br>
+            Per quali valori \(\color{blue}{3x+9}\) è positivo?
+            <br>
+            In linguaggio simbolico possiamo scrivere:
+            \[
+                \color{blue}{3x +9} \color{black}{} \gt 0
+            \]
+            Risolviamola:
+            \[
+                \begin{align*}
+                    3x + 9 &\gt 0
+                    \\\\
+                    3x &\gt -9
+                    \\\\
+                    x &\gt \dfrac{-9}{3}
+                    \\\\
+                    x &\gt -3
+                \end{align*}
+            \]
+            Quindi 
+            \[
+                \color{blue}{3x + 9} \color{black}{} \quad\text{è positiva se} \quad x \gt -3
+            \]
+            Per tutti gli altri valori \(\color{blue}{3x + 9}\) assume segno negativo, eccetto in \(x = -3\) dove vale zero.
+            <br>
+            <br>
+            Scriviamolo in linguaggio grafico nella seconda riga 
+    
+        </p>
+        <br>
+        <img src="img/8(2).png" alt="" style="border: 0;">
+    </div>
+    <br>
+    
+    <div class="grayBorder">
+        <p>
+            <b>\(\triangleright\,\,\,\)segno \(\color{green}{\boldsymbol{2x- 3}}\)</b>
+            <br>
+            <br>
+            Per quali valori \(\color{green}{2x- 3}\) è positivo?
+            <br>
+            In linguaggio simbolico possiamo scrivere:
+            \[
+                \color{green}{2x- 3} \color{black}{} \gt 0
+            \]
+            Risolviamola:
+            \[
+                \begin{align*}
+                    2x- 3 &\gt 0
+                    \\\\
+                    2x &\gt 3
+                    \\\\
+                    x &\gt \dfrac{3}{2}
+                \end{align*}
+            \]
+            Quindi 
+            \[
+                \color{green}{2x- 3} \color{black}{} \quad\text{è positiva se} \quad x \gt \dfrac{3}{2}
+            \]
+            Per tutti gli altri valori \(\color{green}{2x- 3}\) assume segno negativo, eccetto in \(x = \dfrac{3}{2}\) dove vale zero.
+            <br>
+            <br>
+            Scriviamolo in linguaggio grafico nella terza riga
+        </p>
+        <br>
+        <img src="img/8(3).png" alt="" style="border: 0;"s>
+    </div>
+    <br>
+
+    <br>
+    <br>
+
+    <p>
+        Utilizzando questo grafico dei segni  possiamo dedurre che segno della frazione 
+        \[
+            \dfrac{\color{red}{\left(5x -10\right)}\color{black}{\,\cdot\,} \color{blue}{\left(3x + 9\right)}}{\color{green}{2x- 3}}
+        \]
+        al variare della \(x\)
+    </p>
+    <br>
+    <img src="img/8(4).png" alt="" style="border: 0;">
+    <br>
+    <p>
+        Ora possiamo leggere la riposta alla domanda del testo a partire dal grafico:
+    </p>
+    <br>
+    <p class="grayBorder">
+        La frazione
+        \[
+            \dfrac{\left(5x -10\right) \left(3x + 9\right)}{2x- 3} \quad\text{è positiva}
+        \]
+        \[
+            \text{se}\,\,\,  -3 \lt x \lt \dfrac{3}{2} \,\,\,\,\text{oppure}\,\,\,\, x \gt 2
+        \]
+    </p>
+
+    <div class="grayBorder">
+        <p>
+            <b>Esplorazione interattiva</b>
+            <br>
+            Provate a modificare il valore della \(x\) attraverso lo slider ed osservate il segno assunto di conseguenza dalla frazione.
+        </p>
+    </div>
+
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <br>
+    <br>
+
+
+    
+</body>
+
