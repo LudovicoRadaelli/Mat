@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Definizione</b>
+            </div>
+            <div class="gray">
+                [Par. 9.1, pag. da 408 a 409]
+            </div>   
+            
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Proprietà del logaritmo</b>
+            </div>
+            <div class="gray">
+                [Par. 9.2, pag. da 409 a 412]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Funzione logaritmica</b>
+            </div>
+            <div class="gray">
+                [Par. 9.3, pag. 412]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Equazioni logaritmiche</b>
+            </div>
+            <div class="gray">
+                [Par. 9.4, pag. da 413 a 414]
+            </div>
+            <br>
+            <div style="width: 90%; margin-left: 10%">
+                <b>
+                    4.1) Tipologia "passaggio agli argomenti"
+                </b>
+
+                <br>
+                <br>
+
+                <b>
+                    4.2) Tipologia "sostituzione"
+                </b>            
+            </div>
+
+            <br>
+                
+            
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+            <br>
+            
+            <div>
+                Dispense aggiuntive disponibili <a href="../../logaritmi/index.html">QUI</a>
+            </div>
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <p>
+        Di seguito trovate tutti i compiti svolti fino a questo momento. Gli argomenti sono quelli illustrati sopra.
+        <br>
+        <br>
+        Svolgete nuovamente 
+    </p>        
+    <br>
+    <ul>
+        <li>
+            i problemi svolti in classe durante questa settimana di esercitazione
+        </li>
+        <br>
+        <li>
+            gli esercizi per casa che vi hanno dato filo da torcere confrontando le vostre soluzioni con gli appunti presi in classe. 
+        </li>    
+    </ul>
+    <br>
+    <p>
+        Gli esercizi della verifica ricalcheranno il lavoro svolto in classe ed a casa.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <p class="gray">
+        <b>Esercitazione mercoledì 09/11</b>
+    </p>
+    <img src="img/11(1).jpg" alt="">
+    <br>
+    <img src="img/11(2).jpg" alt="">
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p class="gray">
+        <b>Esercitazione mercoledì 10/11</b>
+    </p>
+    <img src="img/11(3).jpg" alt="">
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p class="gray">
+        <b>Vecchi compiti per casa</b>
+    </p>
+    <div id="compitiSelector-container" class="grayBorder">
+    
+        <select id="ex" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <br>
+
+        <button id="ex-button" onclick="vai()">Apri compiti</button>
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+        let ex = document.getElementById("ex").options;
+        let i = document.getElementById("ex").selectedIndex;
+        console.log(`ex[i]: ${ex[i].index}`)
+        document.location.href=`https://ludovicoradaelli.github.io/Matematica/2022/quarta/esercizi4Ci/es${ex[i].index + 1}.html`;
+    }
+    </script>
+
+</body>
