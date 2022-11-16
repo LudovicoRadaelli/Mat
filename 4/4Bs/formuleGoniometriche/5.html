@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                
+                <b>1) Addizione e sottrazione</b>
+                <br>
+                <div class="gray">
+                    [Par. 13.1, pag. da 787 a 791]            
+                </div> 
+                <br>
+                
+                <div style="width: 90%; margin-left: 10%">
+                    <b>1.1) Formule </b>
+                </div>
+                
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>1.2) Angolo aggiunto</b>
+                </div>
+
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>1.3) Angolo fra due rette</b>
+                </div>
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Duplicazione</b>
+                <br>
+                <div class="gray">
+                    [Par. 13.2, pag. da 791 a 793]            
+                </div> 
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Bisezione</b>
+                <br>
+                <div class="gray">
+                    [Par. 13.3, pag. da 793 a 795]            
+                </div> 
+            </div>
+        </div>
+
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Rette ed angoli</h3>
+    <div class="esempi-container">
+
+        <div class="grayBackground">
+            Data l'equazione della retta 
+            \[
+                y = mx + q
+            \]
+            il coefficiente angolare \(m\) è uguale alla tangente dell'angolo \(\alpha\) formato dalla retta e dall'asse \(x\).
+            <br>
+            In simboli
+            \[
+                m = tan\left(\alpha\right)
+            \]
+        </div>
+
+        <br>
+
+
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+        
+        <p class="gray" style="font-size: 0.9rem; text-align: center;">Usate lo slidere per variare l'angolo \(\alpha\)</p>
+
+        <br>
+        <input type="range" id="line" min="-20" max="20" step="0.1" style="display:block;  width: 70%; margin: auto" onmousemove="changeCirconference()" ontouchmove="changeLine()">
+        <br>
+        <div id="text">
+            \[
+                y = \underset{1}{\underbrace{tan\left(45°\right)x}}
+            \]
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Stabilire l'angolo che le rette rappresentate dalle seguenti equazioni formano con l'asse \(x\)
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(y = -1x -10\)
+        </li>
+        <br>
+        <li>
+            \(y = x +3\)
+        </li>
+        <br>
+        <li>
+            \(y = -\sqrt{3}x -4\)
+        </li>
+        <br>
+        <li>
+            \(y = -\dfrac{\sqrt{3}}{3}x -4\)
+        </li>
+        <br>
+        <li>
+            <p>
+                \(y = 7x -4\)
+            </p>
+            <br>        
+            <p class="gray">
+                <b>Suggerimento</b>
+                <br>
+                Per questo usate la calcolatrice. Su quelle scientifiche c'è un tasto apposito per calcolare l'arctan di un angolo.
+            </p>
+        </li>        
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Svolgere gli esercizi 
+    </p>
+    <br>
+    <ul>
+        <li>
+            n° 119, 120 a pag. 806
+        </li>
+        <br>
+        <li>
+            n° 209 pag. 810
+        </li>
+    </ul>
+    
+
+    <script>
+
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "material_id":"x7qadmd4"
+            }, 
+            true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+
+        let m = 1;
+        
+        function changeLine() {
+            let ggbM = document.getElementById("line").value;
+            if(m !== ggbM) {
+                m = document.getElementById("line").value;
+                gg1.setValue("m", m);
+            }
+
+            let text = gg1.getValueString("text7");
+            document.getElementById("text").innerHTML =  
+            `\\[
+                ${text}
+            \\]`
+            
+            MathJax.typesetClear([document.getElementById("text")]);
+            MathJax.typesetPromise([document.getElementById("text")]).then(() => {});
+        }
+
+        
+
+
+    </script>
+    <br>
+    <br>
+</body>
