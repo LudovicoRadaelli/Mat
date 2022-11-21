@@ -7,6 +7,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <link rel="stylesheet" href="../../../css/style.css">
     <title>Compiti per casa</title>
 </head>
@@ -26,56 +27,68 @@
         <div class="grayBorder">
 
             <div style="text-align: left;">
-                <b>1) Equazione in due incognite</b>
-            </div>
-            <div class="gray">
-                [Par. 13.1, pag. da 670 a 672]
-            </div>    
-
-            <br>
-
-            <div style="text-align: left;">
-                <b>2) Cosa è un sistema lineare?</b>
-            </div>
-            <div class="gray">
-                [Par. 13.1, pag. da 670 a 672]
-            </div>
-
-            <br>
-
-            <div style="text-align: left;">
-                <b>3) Metodo di sostituzione</b>
-            </div>
-            <div class="gray">
-                [Par. 13.2 pag. 672]
-            </div>
-
-            <br>
-
-            <div style="text-align: left;">
-                <b>3) Metodo di riduzione</b>
-            </div>
-            <div class="gray">
-                [Par. 13.5 pag. 676]
-            </div>
-
-            <br>
-
-            <div style="text-align: left;">
-                <b>4) Sistemi con più di due equazioni in più di due incognite: 
-                    <br> 
-                    metodo di eliminazione di Gauss</b>
-            </div>
-            <div class="gray">
-                [Par. 13.5 pag. 676]
+                <b>1) Equazione della circonferenza</b>
+                <br>
+                <div class="gray">
+                    [Par. 5.1, pag. da 244 a 247]
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.1) Definizione di circonferenza
+                    </b>
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.2) Equazione della circonferenza (prima forma)
+                    </b>
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.3) Equazione della circonferenza (seconda forma)
+                    </b>
+                </div>
             </div>
             
             <br>
+
+            <div style="text-align: left;">
+                <b>2) Rette e circonferenze</b>
+                <br>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Posizione di una retta rispetto a una circonferenza
+                    </b>
+                    <br>
+                    <div class="gray">
+                        [Par. 5.2, pag. da 259 a 260]
+                    </div>
+                </div>
+                
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.2) rette tangenti ad una circonferenza
+                    </b>
+                    <br>
+                    <div class="gray">
+                        [Par. 5.2, pag. da 260 a 262]
+                    </div>
+                </div>
+            </div>
+
+
+
             <br>
 
             <p>
-                le dispense sono disponibili <a class="gray" href="../../../2/sistemiLineari/index.html">QUI</a>
+                le dispense sono disponibili <a class="gray" href="../../equazioneCirconferenza/index.html">QUI</a>
             </p>
+            
             
 
             <!-- 
@@ -99,330 +112,1191 @@
 
     <br>
     <br>
+    <br>
     <hr>
+    <br>
     <br>
 
 
     <!-- ESERCIZI -->
 
-    <h3 class="green">Esercizio 1</h3>
+    <h3 class="green">Esercizio 1 (svolto) </h3>
+    <p class="gray" style="font-size: 0.9rem;">(Copiate sul quaderno lo svolgimento di quest'esercizio)</p>
+    <br>
     <p>
-        Di seguito sono riportate le due file del compito in classe.
+        Risolvere il seguente sistema di <b>tre equazioni</b> in <b>tre incognite</b>
+        \[
+            \begin{cases}
+                2\left(x -2y + z\right) = 5x + 1
+                \\\\
+                3x -4y = 1 -4z
+                \\\\
+                5 -3x +2y = 2\,\left(y + z\right) + 2
+            \end{cases}
+        \]
+    </p>
+    <br>
+    <div>
+        <b>Svolgimento</b>
         <br>
-        Provate a svolgere la fila opposta alla vostra.
-    </p>
+        <div id="slide-container1" style="min-height: 85vh; border: 0.01rem solid lightgray; padding: 1rem; ">
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        2\left(x -2y + z\right) = 5x + 1
+                        \\\\
+                        3x -4y = 1 -4z
+                        \\\\
+                        5 -3x +2y = 2\,\left(y + z\right) + 2
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Innanzitutto vogliamo scrivere il sistema in modo "<b>ordinato</b>": 
+                <br>
+                ogni equazione deve esser portata nella forma
+                \[
+                    \cdots x\,\,+\,\,\cdots y\,\,+\,\,\cdots z\,\, = \cdots 
+                \]
+                Svolgiamo le moltiplicazioni.
+            </div>
+            
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        2x -4y + 2z = 5x + 1
+                        \\\\
+                        3x -4y = 1 -4z
+                        \\\\
+                        5 -3x +2y = 2y + 2z + 2
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Portiamo tutti i termini incogniti a sinistra dell'uguale e tutti i termini noti a destra dell'uguale.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        2x -4y + 2z -5x= 1
+                        \\\\
+                        3x -4y +4z= 1 
+                        \\\\
+                         -3x +2y -2y -2z= + 2  -5
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Svolgiamo le somme tra monomi simili
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \,\,\,\,3x -4y +4z = 1 
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Ora che abbiamo ordinato il sistema passiamo ad <b>eliminare l'incognita \(\boldsymbol{x}\) dalla seconda 
+                e terza equazione</b>.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{blue}{-3x -4y + 2z = 1}
+                        \\\\
+                        \,\,\,\,\color{blue}{3x -4y +4z = 1 }
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Sommiamo membro a membro la prima e la seconda equazione e sostituiamo il loro 
+                risultato alla seconda equazione
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \,\,\,\,3x -4y +4z = 1
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Sommiamo membro a membro la prima e la seconda equazione e sostituiamo il loro 
+                risultato alla seconda equazione
+                <br>
+                <br>
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \begin{cases}
+                            \color{blue}{-3x -4y + 2z = 1}
+                            \\\\
+                            \,\,\,\,\color{blue}{3x -4y +4z = 1 }
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \qquad\,\,\,\color{transparent}{-8y +6z = 2}
+                \)
+
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \,\,\,\,3x -4y +4z = 1
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Sommiamo membro a membro la prima e la seconda equazione e sostituiamo il loro 
+                risultato alla seconda equazione
+                <br>
+                <br>
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \begin{cases}
+                            -3x -4y + 2z = 1
+                            \\\\
+                            \,\,\,\,3x -4y +4z = 1
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \qquad\,\,\,\color{blue}{-8y +6z = 2}
+                \)
+
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \qquad\, \color{blue}{-8y +6z = 2}
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)                    
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{blue}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, -8y +6z = 2
+                        \\\\
+                        \color{blue}{-3x \,\,\color{transparent}{0y}\,\, \color{blue}{} -2z= -3}
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Ora sottraiamo membro a membro la prima e la terza equazione e sostituiamo il 
+                risultato alla terza equazione
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \qquad\, -8y +6z = 2
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Ora sottraiamo membro a membro la prima e la terza equazione e sostituiamo il 
+                risultato alla terza equazione
+                <br>
+                <br>
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{gray}{-}
+                            \\
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            \color{blue}{-3x -4y + 2z = 1}
+                            \\\\
+                            \,\,\,\,\color{blue}{-3x \,\,\color{transparent}{0y}\,\, \color{blue}{} -2z= -3}
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \qquad\,\,\,\color{transparent}{}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \qquad\, -8y +6z = 2
+                        \\\\
+                        -3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Ora sottraiamo membro a membro la prima e la terza equazione e sostituiamo il 
+                risultato alla terza equazione
+                <br>
+                <br>
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{gray}{-}
+                            \\
+                        \end{cases}
+                    \)
+                    
+                    \(
+                        \begin{cases}
+                            -3x -4y + 2z = 1
+                            \\\\
+                            \,\,\,\,-3x \,\,\color{transparent}{0y}\,\, \color{black}{} -2z= -3
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \qquad\qquad\,\,\,\,\,\,\color{blue}{-4y + 4z = 4}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \qquad\, -8y +6z = 2
+                        \\\\
+                        \qquad\, \color{blue}{-4y + 4z = 4}
+                    \end{cases}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4y + 2z = 1
+                        \\\\
+                        \qquad\, -8y +6z = 2
+                        \\\\
+                        \qquad\, -4y + 4z = 4
+                    \end{cases}
+                \)
+                <br>
+                <br>
+                Mettiamo in pausa la prima equazione e concentriamoci sulla seconda e terza equazione. 
+                <br>
+                Queste contengono come incognite solo la \(y\) e la \(z\).
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{red}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)                    
+                <br>
+                <br>
+                Mettiamo in pausa la prima equazione e concentriamoci sulla seconda e terza equazione. 
+                <br>
+                Queste contengono come incognite solo la \(y\) e la \(z\).
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{red}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{gray}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \color{red}{}
+                        \begin{cases}
+                            -8y +6z = 2
+                            \\\\
+                            -4y + 4z = 4
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \qquad\,\,\,\color{transparent}{}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{gray}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            -8y +6z = 2
+                            \\\\
+                            -4y + 4z = 4
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \begin{align*}
+                        &\qquad\qquad\,\,\,\color{red}{\quad -2z = -6}
+                    \end{align*}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{gray}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            -8y +6z = 2
+                            \\\\
+                            -4y + 4z = 4
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                \(
+                    \begin{align*}
+                        &\qquad\qquad\,\,\,\quad -2z = -6
+                        \\\\
+                        &\qquad\qquad\,\,\,\quad z = \dfrac{-6}{-2}
+                        \\\\
+                        &\qquad\qquad\,\,\,\quad\color{red}{z = 3}
+                    \end{align*}
+                \)
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content; border-bottom: 0.01rem solid black; padding-bottom: 1rem;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            \color{red}{z = 3}
+                            \\\\
+                            -4y + 4z = 4
+                        \end{cases}
+                    \)
+                </div>
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            -4y + 4\cdot\color{red}{3} \color{black}{}= 4
+                        \end{cases}
+                    \)
+                </div>
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            -4y = 4 -12 
+                        \end{cases}
+                    \)
+                </div>
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            -4y = -8 
+                        \end{cases}
+                    \)
+                </div>
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        \color{gray}{-3x -4y + 2z = 1}
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4\color{blue}{y}\color{black}{} + 2\color{red}{z}\color{black}{} = 1
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            \color{red}{z = 3}
+                            \\\\
+                            \color{blue}{y = 2}
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -4\cdot\color{blue}{2}\color{black}{} + 2\cdot\color{red}{3}\color{black}{} = 1
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -8 + 6 = 1
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x -2 = 1
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x  = 1 + 2
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        -3x  = 3
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        x  = -1
+                        \\\\
+                        \qquad\, \color{black}{}
+                        \begin{cases}
+                        -8y +6z = 2
+                        \\\\
+                        -4y + 4z = 4
+                        \end{cases}
+                    \end{cases}
+                \)              
+
+                <br>
+                <br>
+
+                Risolviamo il sistema da loro formato. Usiamo il metodo di riduzione.
+
+                <br>
+                <br>
+
+                <div style="width: fit-content;">
+                    \(
+                        \color{white}{}
+                        \begin{cases}
+                            \color{transparent}{-x}
+                            \\\\
+                            \color{transparent}{-2}
+                        \end{cases}
+                    \)
+                    \(
+                        \begin{cases}
+                            z = 3
+                            \\\\
+                            y = 2
+                        \end{cases}
+                    \)
+                </div>
+                <br>
+                <br>
+                Sostituiamo i valori di \(y\) e \(z\) nella prima equazione, che avevamo messo in pausa.
+            </div>
+
+            <div class="slide1">
+                \(
+                    \begin{cases}
+                        x  = -1
+                        \\\\
+                        y = 2
+                        \\\\
+                        z = 3
+                    \end{cases}
+                \)              
+                <br>
+                <br>
+                Siamo così arrivati alla soluzione del sistema.
+            </div>
+            
+
+
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)" disabled>Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>
+    </div>
 
     <br>
     <br>
     <hr>
     <br>
     <br>
+
 
     <h3 class="green">Esercizio 2</h3>
-    <p>
-        Calcolare la \(\sqrt{10}\) fino alla terza cifra decimale <b>senza usare la calcolatrice</b>
-    </p>
-
     <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h2 class="red">FILA A</h2>
-    <br>
-    
-    <h3 class="green">Esercizio 1</h3>
-    <br>
-    <p>
-        Svolgere il seguente sistema usando un metodo <b>a scelta</b>
-        \[
-            \begin{cases}
-                \left(3 - 2y\right)^2 - 4y\left(y - 1\right) + 5x = 1 - x
-                \\\\
-                -2\left(1 + x\right) - 3\left(2x + 2y\right) = 2
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> \(\left(-\dfrac{4}{5}\,; \dfrac{2}{5}\right)\)
-    </p>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 2</h3>
-    <br>
-    <p>
-        Svolgere il seguente sistema usando il metodo di <b>sostituzione</b>
-        \[
-            \begin{cases}
-                \dfrac{2x -1}{5} - \dfrac{y + 1}{2} = \dfrac{x - y}{2} -\dfrac{x +3}{10}
-                \\\\
-                \dfrac{1}{2} \,\left(x +1\right) - 3y = 2
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> impossibile
-    </p>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 3</h3>
-    <br>
-    <p>
-        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
-        \[
-            \begin{cases}
-                \dfrac{1}{3}\left(x - \dfrac{y +1}{2}\right) - \dfrac{1}{2}\left(\dfrac{x +1}{3} - y\right) = -\dfrac{5}{4}
-                \\\\
-                \dfrac{1}{2}\left[x - 2\left(\dfrac{y -2}{3} + 1\right)\right] = 2x - \dfrac{1}{12}
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> \(\left(\dfrac{1}{2}\,; -3\right)\)
-    </p>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 4</h3> 
-    <br>
-    <p>
-        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
-        \[
-            \begin{cases}
-                2x + y -z = 6    
-                \\\\
-                x + y + z = 1
-                \\\\
-                x -y +2z = -5
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> \(\left(1\,; \,\,2\,; \,\,-2\right)\)
-    </p>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 5</h3> 
-    <br>
-    <p>
-        Risolvere il seguente <b>sistema letterale</b>.
-        \[
-            \begin{cases}
-                6x + ky = -1 + k
-                \\\\
-                5x -2ky = 4
-            \end{cases}
-        \]
-    </p>    
-    <p>
-        Stabilire per quali valori di \(k\) il sistema risulta
-    </p>
     <ul>
         <li>
-            impossibile    
+            Disegnate <b>un</b> punto \(A\) sul piano cartesiano. Quante circonferenze passanti per \(A\) esistono?
         </li>
+        <br>
         <li>
-            indeterminato
+            Disegnate <b>due</b> punti \(A\) e \(B\) sul piano cartesiano. Quante circonferenze esistono che passino per \(A\) e \(B\)?
         </li>
+        <br>
         <li>
-            determinato. In questo caso mostrare le soluzioni in funzione di \(k\).
+            Disegnate <b>tre</b> punti \(A\), \(B\) e \(C\) sul piano cartesiano. Quante circonferenze esistono che passino per \(A\), \(B\) e \(C\)?
+        </li>
+        <br>
+        <li>
+            Disegnate <b>quattro</b> punti \(A\), \(B\), \(C\) e \(D\) sul piano cartesiano. Quante circonferenze esistono che passino per \(A\), \(B\), \(C\) e \(D\)?
         </li>
     </ul>
 
     <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> 
-        <br>
-        <br>
-        se \(k \neq 0\) allora \(\left(\dfrac{2k +2}{17}\,; \dfrac{5k -29}{17k}\right)\)
-        <br>
-        <br>
-        se \(k = 0\) allora l'equazione è impossibile
-    </p>
-    
-    <br>
     <br>
     <hr>
     <br>
     <br>
 
-    <h2 class="red">FILA B</h2>
-<br>
-
-    <h3 class="green">Esercizio 1</h3>
-    <p>
-        Svolgere il seguente sistema usando un metodo <b>a scelta</b>
-        \[
-            \begin{cases}
-                \left(2x + 1\right)^2 -5\left(1 -y\right) = 4x^2 -y
-                \\\\
-                5x + \left(2x + 1\right)\left(y - 2\right) = 2xy + 1
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione</b> \(\left(7\,; -4\right)\)
-    </p>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-
-    <h3 class="green">Esercizio 2</h3>
-    <p>
-        Svolgere il seguente sistema usando il metodo di <b>sostituzione</b>
-        \[
-            \begin{cases}
-                \dfrac{3x + 1}{2} - \dfrac{2y -1}{3} = \dfrac{2}{3} \left(2x -y\right) + \dfrac{2 + x}{6}
-                \\\\
-                \dfrac{x}{3} - \dfrac{y}{2} = 1
-            \end{cases}
-        \]
-    </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> impossibile
-    </p>
-
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
 
     <h3 class="green">Esercizio 3</h3>
+    <br>
     <p>
-        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
-        \[
-            \begin{cases}
-                \dfrac{1}{3} \left(\dfrac{x-2}{4} - \dfrac{y + 1}{2}\right) = -\left(\dfrac{3x -2}{3} - \dfrac{y -3}{2}\right) + 3
-                \\\\
-                \dfrac{4x - \left(2y - x\right)}{2} = \dfrac{1 - y}{10} - \left(\dfrac{1}{5}x -\dfrac{23}{4}\right)
-            \end{cases}
-        \]
+        Svolgere l'esercizio n° 218 a pa. 291.
     </p>
-
-    <br>
-
-    <p class="gray">
-        <b>Soluzione: </b> \(\left(2\,; -\dfrac{1}{2}\right)\)
-    </p>
+        
+    </ul>
 
     <br>
     <br>
-    <hr>
-    <br>
-    <br>
+
+    <script>
+        for(let i = 0; i < document.getElementsByClassName("hint").length; i++) {
+
+        document.getElementsByClassName("hint")[i].style.display = "none";
+
+        }
+
+        function showHint(i) {
+        document.getElementsByClassName("hint-button")[i].style.display = "none";
+        document.getElementsByClassName("hint")[i].style.display = "block";
+        }  
+
+        slideIndex = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        
+        //funzione per passare alla slide successiva
+        function nextSlide(n) {
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]++;
+
+            if(slideIndex[n] !== 0 ) {
+                //pulsante previous abiliatato
+                document.getElementById(`previousSlide-button${n}`).disabled = false;
+            }
+
+            //se ci sono ancora slide da mostrare passo alla successiva
+            if(slideIndex[n] < slide.length) {
+                slide[slideIndex[n]].style.display = "block";
+            }
+
+            //le slide da mostrare sono finite. rendo nuovamente visibile l'ultima slide (altimenti sparisce)
+            //e scrollo la vista al riquadro conclusiovo
+            if(slideIndex[n]  === slide.length -1) {
+                slide[slide.length-1].style.display = "block";
+                document.getElementById(`nextSlide-button${n}`).disabled = true;  
+            }
+
+        }
+
+        //funzione per passare alla slide successiva
+        function previousSlide(n) {
+
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]--;
+
+            //passo alla precedente. se è la prima slide disattivo il tasto previous
+            slide[slideIndex[n]].style.display = "block";
+            slide[slideIndex[n]].style.fontSize = "1.1rem";
+            if(slideIndex[n] === 0) {
+                document.getElementById(`previousSlide-button${n}`).disabled = true;
+            } 
+
+            //nel caso in cui il pulsante next sia disabilitato lo riattivo
+            if(document.getElementById(`nextSlide-button${n}`).disabled === true) {
+                document.getElementById(`nextSlide-button${n}`).disabled = false;  
+            }
+        }
+
+        let currentIndex = 0
 
 
-    <h3 class="green">Esercizio 4</h3> 
-    <p>
-        Svolgere il seguente sistema usando il metodo di <b>riduzione</b>
-        \[
-            \begin{cases}
-                2x + y + z = 1
-                \\\\
-                4x -y +z = -5
-                \\\\
-                -x +y +2z = 5
-            \end{cases}
-        \]
-    </p>
+        function inizialize(n) {
 
-    <br>
+            currentIndex = 0
 
-    <p  class="gray">
-        <b>Soluzione: </b> \(\left(-1\,; \,\,2\,; \,\,1\right)\)
-    </p>
+            let slide = document.getElementsByClassName(`slide${n}`)
 
+            //TODO questo è un tentativo (fallito miseramente) di rimediare al seguente problema :
+            //quando passo alla seconda slide (la 1-esima) il font-size delle formule matematiche cambia per ragioni misteriose
+            //Queste 3 linee di codice possono essere omesse, ogni slide ha come attributo style "none"
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.fontSize = "100%";   
+                slide[i].style.display = "none"
+            }
 
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
+            //rendo visibile la prima slide
+            slide[0].style.display = "block"
 
-    <h3 class="green">Esercizio 5</h3> 
-    <p>
-        Risolvere il seguente <b>sistema letterale</b>.
-        \[
-            \begin{cases}
-                kx + 4y = 1 - k
-                \\\\
-                5kx + 2y = 1
-            \end{cases}
-        \]
-    </p>    
-    <p>
-        Stabilire per quali valori di \(k\) il sistema risulta
-    </p>
-    <ul>
-        <li>
-            impossibile    
-        </li>
-        <li>
-            indeterminato
-        </li>
-        <li>
-            determinato. In questo caso mostrare le soluzioni in funzione di \(k\).
-        </li>
-    </ul><br>
+            //rendo visibile la prima slide
+            document.getElementsByClassName(`slide${n}`)[0].style.display = "block"
 
-    <br>
+            //pulsante previous disabled
+            document.getElementById(`previousSlide-button${n}`).disabled = true;
 
-    <p class="gray">
-        <b>Soluzione: </b> 
-        <br>
-        <br>
-        se \(k \neq 0\) allora \(\left(\dfrac{k +1}{9k}\,; \dfrac{4 -5k}{18}\right)\)
-        <br>
-        <br>
-        se \(k = 0\) allora l'equazione è impossibile
-    </p>
+        }
+
+        inizialize(1)
+
+    </script>
+
     
-    <br>
-    <br>
-
 </body>
