@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Equazioni esponenziali</title>
+</head>
+<body>
+    <h1>Esponenziali</h1>
+    
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Propietà potenze</h2>
+    </div>
+    <p>
+        Negli esercizi che impareremo a risolvere, spesso sarà utile sfruttare alcune proprietà dell potenze che vi ricordo qui di seguito.
+        <span style="color: gray">(Premendo il pulsante potete generare nuovi esempi.)</span>
+    </p>
+    <br>
+
+    <b>Potenze negative</b>
+    <div class="grayBorder">
+        <h3 class="yellow">Esempi</h3>
+        <div class="esempi-container">
+            <p id="esempio1">
+                \[
+                    \left( \frac{\color{#0F9D58}{2}}{\color{blue}{3}} \right)^{\color{red}{\boldsymbol{-}}\color{black}{5}} = \frac{\color{blue}{3}}{\color{#0F9D58}{2}}^{5}
+                \]
+            </p>
+            <br>
+            <button class="generaEsempio" id="generaEsempio1" onclick="generaEsempio(1)">Genera un altro esempio</button>
+        </div>
+
+        <br>
+
+        <p>
+            Il meno dell'esponente agisce "ribaltando" numeratore e denominatore della frazione.
+        </p>
+        
+    </div>
+
+    <br>
+    <br>
+
+
+    <b>Radici e potenze frazionarie</b>
+    <div class="grayBorder">
+        <h3 class="yellow">Esempi</h3>
+        <div class="esempi-container">
+            <p id="esempio2">
+                \[
+                    \sqrt[\color{blue}{2}]{3^{\color{red}{5}}} = 3^{\frac{\color{red}{5}}{\color{blue}{2}}}  
+                \]
+            </p>
+            <br>
+            <button class="generaEsempio" id="generaEsempio2" onclick="generaEsempio(2)">Genera un altro esempio</button>
+        </div>
+        <br>
+        <p>
+            Possiamo riscrivere la radice di un numero come potenza frazionaria di quello stesso numero. 
+            <br>
+            L'<span style="color: blue">indice</span> di radice diventa il <span style="color: blue">denominatore</span> dell'esponente. L'<span style="color: red">esponente</span> de numero sotto radice diventa il <span style="color: red">numeratore</span> dell'esponente frazionario.
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <b>Proprietà potenze</b>
+    <div class="grayBorder">
+        <p>Se avete bisogno di una rinfrescata sulle proprietà basilari delle potenze, potete trovarle <a href="https://ludovicoradaelli.github.io/Mat/1/proprietaPotenze/index.html">QUI</a></p>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+    <div class="h2">
+        <div class="par">2</div>
+        <h2>Equazioni esponenziali - <i>"passaggio agli esponenti"</i></h2>
+    </div>
+    
+    <br>
+
+    <p>
+        Pensate: se vi dico che \(2^{A}\) è uguale a \(2^{B}\), che cosa sapete dirmi sugli esponenti \(A\) e \(B\)?
+    </p>
+    
+    <br>
+    <button id="mostraRisposta" class="generaEsempio" onclick="mostraRisposta()">Mostra risposta</button>
+    <p id="risposta" style="text-align: center;">
+        \(A\) deve essere esattamente uguale a \(B\).
+    </p>
+    <br>
+    
+    <p>
+        Sfruttiamo questo semplice ragionamento per risolvere questa equazione:
+        \[
+            2^x \cdot 4 = 8 \cdot \sqrt{2}
+        \]
+    </p>
+    <video src="img/eq1.mp4" controls></video>
+    <br>
+    <p>Vediamo un esercizio della stessa tipologia, ma di difficoltà più elevata.</p>
+    <br>
+    <video src="img/eq2.mp4" controls></video>
+
+    <br>
+    <br>
+
+    <!-- <h2>Equazioni esponenziali - <i>"incognita ausiliaria"</i></h2>
+    <p>
+        Prendete questa equazione piccola piccola:
+        \[ 
+            8 \color{red}{+} \color{black}{ 2^{x+1} = 2^{2x}}
+        \]
+        Tentati di risolverla come prima? Sta volta ci dice male! Vi ho evidenziato quel \(\color{red}{+}\), perché a causa sua 
+        non possiamo trasformare \(8 + 2^{x+1}\) in \(2^{qualcosa}\): le proprietà delle potenze vagono solo se le potenze sono <u>moltiplicate</u> tra di loro.
+    </p>
+    <p>Vediamo quale strategia possiamo seguire questa volta</p>
+    <br>
+    <video src="img/eq3.mp4" controls></video>
+    <br>
+    <p>Risolviamo l'equazione che avevamo lasciato in sospeso</p>
+    <br>
+    <video src="img/eq4.mp4" controls></video>
+    
+    
+    <div id="gimmiSpace"></div> -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- https://ludovicoradaelli.github.io/Matematica/2022/ -->
