@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Equazione della circonferenza</b>
+                <br>
+                <div class="gray">
+                    [Par. 5.1, pag. da 244 a 247]
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.1) Definizione di circonferenza
+                    </b>
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.2) Equazione della circonferenza (prima forma)
+                    </b>
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.3) Equazione della circonferenza (seconda forma)
+                    </b>
+                </div>
+            </div>
+            
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Rette e circonferenze</b>
+                <br>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.1) Posizione di una retta rispetto a una circonferenza
+                    </b>
+                    <br>
+                    <div class="gray">
+                        [Par. 5.2, pag. da 259 a 260]
+                    </div>
+                </div>
+                
+                <br>
+
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        2.2) rette tangenti ad una circonferenza
+                    </b>
+                    <br>
+                    <div class="gray">
+                        [Par. 5.2, pag. da 260 a 262]
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../equazioneCirconferenza/index.html">QUI</a>
+            </p>
+            
+            
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio 1</h3>
+    <p>
+        Svolgere gli esercizi n° 140 a pag. 282.
+        <br>
+        Se  avete difficoltà cliccate il pulsante per visualizzare i suggerimenti.
+    </p>
+    <br>
+    <button class="hint-button" onclick="showHint(0)">Suggerimento</button>
+    <div class="hint"> 
+        <p class="gray">
+            <b>Suggerimento</b> 
+            <br>
+            Risolvendo il sistema 
+            \[
+                \begin{cases}
+                    x^2 + y^2 -x +y -2 = 0
+                    \\\\
+                    y = -2x + k 
+                \end{cases}
+            \]
+            otteniamo i due punti di intersezione tra retta e circonferenza (che esistono se \(\Delta \gt 0\)).
+            <br>
+            <br>
+            Dopo aver trovato questi due punti (che dipenderanno da \(k\)), imponiamo che la loro <b>distanza</b> sia uguale a \(\sqrt{5}\). 
+        </p>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 2</h3>
+    <p>
+        Svolgere gli esercizi n° 235 a pag. 292.
+    </p>
+
+
+
+
+    <br>
+    <br>
+
+    <script>
+        for(let i = 0; i < document.getElementsByClassName("hint").length; i++) {
+
+        document.getElementsByClassName("hint")[i].style.display = "none";
+
+        }
+
+        function showHint(i) {
+        document.getElementsByClassName("hint-button")[i].style.display = "none";
+        document.getElementsByClassName("hint")[i].style.display = "block";
+        }  
+    </script>
+</body>
