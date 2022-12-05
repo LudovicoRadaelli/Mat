@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Equazione in due incognite</b>
+            </div>
+            <div class="gray">
+                [Par. 13.1, pag. da 670 a 672]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Cosa è un sistema lineare?</b>
+            </div>
+            <div class="gray">
+                [Par. 13.1, pag. da 670 a 672]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Metodo di sostituzione</b>
+            </div>
+            <div class="gray">
+                [Par. 13.2 pag. 672]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Metodo di riduzione</b>
+            </div>
+            <div class="gray">
+                [Par. 13.5 pag. 676]
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Sistemi con più di due equazioni in più di due incognite: 
+                    <br> 
+                    metodo di eliminazione di Gauss</b>
+            </div>
+            <div class="gray">
+                [Par. 13.5 pag. 676]
+            </div>
+            
+            <br>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../../2/sistemiLineari/index.html">QUI</a>
+            </p>
+            
+
+            <!-- 
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+             -->
+
+
+            
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Ripasso</h3>
+    <div id="compitiSelector-container" class="grayBorder">
+
+        <p class="gray">
+            Di seguito potete consultare gli esercizi che abbiamo svolto in passato.
+            <br>
+            Provate a risvolgere quelli che vi hanno dato più filo da torcere, consultando gli appunti delle correzioni svolte in classe.
+
+        </p>
+        
+        <br>
+        
+    
+        <select id="ex" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <br>
+
+        <button id="ex-button" onclick="vai()">Apri compiti</button>
+        
+
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+            let ex = document.getElementById("ex").options;
+            let i = document.getElementById("ex").selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            window.open(`https://ludovicoradaelli.github.io/Mat/2/2Bs/radici/${ex[i].index + 1}.html`, `_blank`);
+        }
+    </script>
+</body>
