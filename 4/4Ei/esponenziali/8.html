@@ -171,6 +171,52 @@
 
     <br>
     <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Ripasso</h3>
+    <div id="compitiSelector-container" class="grayBorder">
+
+        <p class="gray">
+            Di seguito potete consultare gli esercizi che abbiamo svolto in passato.
+            <br>
+            Provate a risvolgere quelli che vi hanno dato più filo da torcere, consultando gli appunti delle correzioni svolte in classe.
+
+        </p>
+        
+        <br>
+        
+
+        <select id="ex" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+
+        <br>
+
+        <button id="ex-button" onclick="vai()">Apri compiti</button>
+        
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+            let ex = document.getElementById("ex").options;
+            let i = document.getElementById("ex").selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            window.open(`https://ludovicoradaelli.github.io/Mat/4/4Ei/esponenziali/${ex[i].index + 1}.html`, `_blank`);
+        }
+    </script>
     
 
 </body>
