@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon/ohOhOh.ico" />
+    <title>Oh oh oh!</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    <h1>Compiti per le vacanze</h1>  
+    
+    <br>  
+
+    <h3 class="blue">Istruzioni per l'uso</h3>
+    <br>
+    <p>
+        Di seguito trovate un piccolo percorso per ripassare/recuperare gli argomenti svolti fino ad ora.
+        <br>
+        <br>
+        Gli esercizi consigliati <b class="red">non sono obbligatori</b> da svolgere, sono un'indicazione su dove trovare ulteriori 
+        materiale per allenarsi. Fatene quanti reputate opportuno se lo reputate opportuno. 
+        <br>
+        Gli unici esercizi che vi chiedo di fare per non arrugginirvi sono i \(7\) esercizi principali.        
+        
+        <br>
+        <br>
+        <b class="yellow">⚠️Attenzione⚠️</b> 
+        <br>
+        Gli esercizi accompagnati dal simbolo 🚧 sono quelli per cui ancora non è disponibile la video soluzione. 
+        Pian piano registrerò i video e li caricherò, aggiornate di tanto in tanto la pagina.
+
+        <br>
+        <br>
+        
+        Passate delle buone vacanze!
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Teoria</h3>
+    <br>
+    <ul>
+        <li>
+            <b>Funzioni goniometriche</b>: capitolo \(12\) del vostro libro di testo e dispense disponibili <a class="gray" href="../../../3/goniometria/index.html">QUI</a>.
+        </li>
+        <br>
+        <li>
+            <b>Formule goniometriche</b>: capitolo \(13\) del vostro libro di testo.
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- Angoli multipli di angoli notevoli -->
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p class="gray">
+        Attraverso questo esercizio potete allenarvi ad individuare il seno, coseno e tangente degli angoli multipli di \(\dfrac{\pi}{6}\), \(\dfrac{\pi}{4}\), \(\dfrac{\pi}{3}\) e \(\dfrac{\pi}{2}\).        
+    </p>
+
+    <br>
+    
+    <div class="grayBorder">
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+    
+        <p id="domanda" style="min-height: 10vh;"></p>  
+        
+        <br>
+    
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <button id="generaDomanda" onclick="generaDomanda()">Nuova domanda!</button>
+            <button id="rispostaCorretta" onclick="controllaSoluzione()" disabled>Controlla soluzione</button>
+        </div>
+    </div>
+
+    <script src="../../../3/goniometria/quizAngoliMultipili.js"></script>
+
+    
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Esercizi simili:</b> n° 458, 459, 460, 463, 467 pag. 753.
+    </p>
+    <br>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- archi associati -->
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Usare gli <b>archi associati</b> per sviluppare la seguente espressione
+        \[
+            \dfrac{sin\left(\pi - \alpha\right) - cos\left(\pi + \alpha\right) \cdot tan\left(-\alpha\right)}{sin\left(\dfrac{\pi}{2} + \alpha\right) - cos\left(\dfrac{3}{2}\pi + \alpha\right)}
+        \]
+    </p>
+    <br>
+
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Esercizi simili:</b> n° 398, 399, 400, 402, 406, 407, 414 pag. 750.
+    </p>
+    <br>
+
+    <!-- Tool angoli multipli -->
+    <div class="grayBorder">
+        <h3 class="yellow">Tool per angoli multipli</h3>
+
+        <br>
+
+        <p class="gray">
+            Trascinando il punto nero sulla circonfereza potete visualizzare seno, coseno e tangente dell'angolo che vi interessa e confrontarli con seno, coseno e tangente dell'angolo di cui è multiplo.
+            <br>
+            Potete usare questo strumento per risolvere gli esercizi precendenti.
+        </p>
+
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebra2"></div>
+        </div>
+        <br>
+        <div class="input-container" style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; font-size: 0.9rem;">
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" checked = "checked" onclick="cambiaGriglia(30)"> <span> Multipli di \(\dfrac{\pi}{6}\)</span>
+            </div>
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" onclick="cambiaGriglia(45)"> <span> Multipli di \(\dfrac{\pi}{4}\)</span>
+            </div>
+            <div class="input">
+                <input type="radio" class="input" name ="griglia" onclick="cambiaGriglia(60)"> <span> Multipli di \(\dfrac{\pi}{3}\)</span>    
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../3/goniometria/toolAngoliMultipli.js"></script>
+
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- Formule addizione -->
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        <p>
+            Semplificare le seguenti espressioni usando le <b>formule di addizione e sottrazione</b>.
+        </p>
+        <br>
+        <ul>
+            <li>
+                \(
+                    sin\left(\dfrac{3}{4}\pi + x\right) - cos\left(x + \dfrac{7}{6}\pi\right)
+                \)
+            </li>
+            <br>
+            <li>
+                \(tan\left(x + \dfrac{5}{4}\pi\right) - \tan\left(x - \dfrac{\pi}{4}\right)\)
+            </li>
+        </ul>
+        
+    </div>
+
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Esercizi simili:</b> n° 12, 13, 18, 20, 24 pag. 800.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- formule di duplicazione -->
+    <h3 class="green">Esercizio 4</h3>
+    <br>
+    <p>
+        Semplificare le seguenti espressioni usando le <b>formule di duplicazione</b>.
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(
+                tan\left(x\right) \cdot sin\left(2x\right) - cos\left(2x\right)
+            \)
+        </li>
+        <br>
+        <li style="font-size: 0.9rem;">
+            \(
+                sin\left(2x\right) \cdot cotan\left(x\right) + tan\left(2x\right) \dfrac{cos^2\left(x\right) - sin^2\left(x\right)}{cos^2\left(x\right)}
+            \)
+        </li>
+    </ul>
+        
+    
+
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <br>
+    <br>
+
+    
+    <p>
+        <b>Esercizi simili:</b> n° 115, 116, 117, 118, 120, 127  pag. 806.
+    </p>
+    
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- formule di bisezione -->
+    <h3 class="green">Esercizio 5</h3>
+    <br>
+    <p>
+        Semplificare le seguenti espressioni usando le <b>formule di bisezione</b>.
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(
+                sin^2\left(\dfrac{x}{2}\right) - 2\,cos^2\left(\dfrac{x}{2}\right)
+            \)
+        </li>
+        <br>
+        <li>
+            \(
+                tan^2\left(\dfrac{x}{2}\right) \cdot sin\left(x\right)
+            \)
+        </li>
+    </ul>
+    
+
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <p>
+        <b>Esercizi simili:</b> n° 203, 204, 205, 206, 209, 214 pag. 811.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- formule parametriche -->
+    <h3 class="green">Esercizio 6</h3>
+    <br>
+    <p>
+        Semplificare la seguenti espressione usando le <b>formule parametriche</b>.
+        \[
+            \sqrt{3}\,sin\left(x\right) + cos\left\(x\right)
+        \]
+    </p>
+    
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <p>
+        <b>Esercizi simili:</b> n°  pag. .
+    </p>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <!-- equazioni goniometriche elementari -->
+    <h3 class="green">Esercizio 7</h3>
+    <br>
+    <p>
+        Risolvere le seguenti equazioni goniometriche
+    </p>
+    <br>
+    <ul>
+        <li>
+            \(
+                sin\left(3x + \dfrac{3}{4}\pi\right) = sin\left(x + \dfrac{\pi}{6}\right)
+            \)
+        </li>
+        <br>
+        <li>
+            \(
+                tan\left(4x + \dfrac{7}{6}\pi\right) = tan\left(x + \pi\right)
+            \)
+        </li>
+    </ul>
+    
+    <br>
+    🚧
+    <br>
+    <video src="" controls></video>
+    <br>
+
+    <p>
+        <b>Esercizi simili:</b> n° 118, 131, 132, 133, 150, 151 pag. 859.
+    </p>
+
+    
+    <br>
+    <br>
+
+    
+</body>
