@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Studio del segno di una funzione</title>
+</head>
+<body>
+    <h1>Studio del segno di una funzione</h1>
+    
+    <br>
+
+    <div class="h2">
+        <span class="par">1</span>
+        <h2>Funzioni prodotto e funzioni fratte</h2>
+        <!-- <h2>\(f\left(x\right)=\frac{N\left(x\right)}{D\left(x\right)}\) e \(f\left(x\right)=A\left(x\right)\cdot B\left(x\right)\)</h2> -->
+    </div>
+
+    <br>
+    <p>
+        Una <b>funzione prodotto</b> è definita dal prodotto di una o più funzioni.
+        <br>
+        Ricordate che gli elementi moltiplicati tra loro vengono chiamati <b>fattori</b>.
+    </p>
+    
+    <br>
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <p>
+            Esempi di funzioni prodotto sono i seguenti:
+            \[
+                \begin{align*}
+                    &f\left(x\right) = \underset{\color{gray}{}\text{1° fattore}}{\color{gray}{\underbrace{\color{black}{\left(5x +1\right)}}}} 
+                    \,\,\color{red}{\cdot }\color{black}{}\,\,
+                    \underset{\color{gray}{}\text{2° fattore}}{\color{gray}{\underbrace{\color{black}{\left(-4x^2 +1\right)}}}}
+                    \\\\
+                    &f\left(x\right) = \underset{\color{gray}{}\text{1° fattore}}{\color{gray}{\underbrace{\color{black}{\dfrac{2 -3x}{7x +1}}}}} 
+                    \,\,\color{red}{\cdot }\color{black}{}\,\,
+                    \underset{\color{gray}{}\text{2° fattore}}{\color{gray}{\underbrace{\color{black}{\left(7x - 3\right)}}}}
+                    \\\\
+                    &f\left(x\right) = \underset{\color{gray}{}\text{1° fattore}}{\color{gray}{\underbrace{\color{black}{x^5}}}} 
+                    \,\color{red}{\cdot }\color{black}{}\,
+                    \underset{\color{gray}{}\text{2° fattore}}{\color{gray}{\underbrace{\color{black}{\left(2 + x\right)}}}}
+                    \,\,\color{red}{\cdot }\color{black}{}\,\,
+                    \underset{\color{gray}{}\text{3° fattore}}{\color{gray}{\underbrace{\color{black}{\sqrt{1 -x}}}}}
+                    \\\\
+                \end{align*}
+            \]
+        </p>
+    </div>
+    <br>
+    <video src="img/disequazioniFratte.mp4" controls></video>
+
+    <br>
+
+    <div class="grayBackground">
+        
+        <nobr><b>Funzione prodotto: \( \boldsymbol{f\left(x\right) = f_{1}\left(x\right) \cdot f_{2}\left(x\right)} \)</b></nobr>
+        <br>
+        <br>
+        <ul>
+            <li>
+                Studiamo come cambia il segno dei fattori \(\boldsymbol{f_{1}\left(x\right)}\) ed \(\boldsymbol{f_{2}\left(x\right)}\) al variare del valore della \(x\).
+            </li>
+            <br>
+            <li>
+                Ricaviamo il segno di \(\boldsymbol{f\left(x\right)}\) a partire da quello di \(\boldsymbol{f_{1}\left(x\right)}\)
+                 ed \(\boldsymbol{f_{2}\left(x\right)}\) attraverso la regola dei segni .
+
+                 <br>
+                 <br>
+                 <table style="width:fit-content; max-width: 400px; border: 0; margin: auto; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; ">
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="max-width: 25%; border: 0;"></td>
+                        <td style="max-width: 25%; background-color: gray;">\(\boldsymbol{-}\)</td>
+                        <td style="max-width: 25%; background-color: gray;">\(0\)</td>
+                        <td style="max-width: 25%; background-color: gray;">\(\boldsymbol{+}\)</td>                
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(\boldsymbol{-}\)</td>
+                        <td style="min-width: 25%;">\(+\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(-\)</td>
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(0\)</td>                
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(\boldsymbol{+}\)</td> 
+                        <td style="min-width: 25%;">\(-\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(+\)</td> 
+                    </tr>
+                </table>
+            </li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+
+        <nobr><b>Funzione fratta: \( \boldsymbol{f\left(x\right) = \dfrac{n\left(x\right)}{d\left(x\right)}} \)</b></nobr>
+        <br>
+        <br>
+        <ul>
+            <li>
+                Studiamo come cambia il segno del numeratore \(\boldsymbol{n\left(x\right)}\) e del denominatore \(\boldsymbol{d\left(x\right)}\) al variare del valore della \(x\).
+            </li>
+            <br>
+            <li>
+                Ricaviamo il segno di \(\boldsymbol{f\left(x\right)}\) a partire da quello del numeratore \(\boldsymbol{n\left(x\right)}\)
+                 e del denominatore \(\boldsymbol{d\left(x\right)}\) attraverso la regola dei segni.
+                 <br>
+                 <br>
+                 <p style="width: 100%; text-align:center;">
+                    ⚠️⚠️
+                 </p>
+                 Ricordiamo che non è possibile dividere per \(0\), quindi i casi
+                 \[
+                    \begin{align*}
+                        &\dfrac{+}{0}  \,\,\,\,\text{non esiste, (in simboli} \,\,\,\nexists)
+                        \\\\
+                        &\dfrac{+}{0}  \,\,\,\,\text{non esiste, (in simboli} \,\,\,\nexists)
+                    \end{align*}
+                 \]
+                 <!-- <br>
+                 <br>
+
+                 <table style="width:fit-content; max-width: 400px; border: 0; margin: auto; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; ">
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="max-width: 25%; border: 0;">\(\color{red}{:}\)</td>
+                        <td style="max-width: 25%; background-color: gray;">\(\boldsymbol{-}\)</td>
+                        <td style="max-width: 25%; background-color: gray;">\(0\)</td>
+                        <td style="max-width: 25%; background-color: gray;">\(\boldsymbol{+}\)</td>                
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(\boldsymbol{-}\)</td>
+                        <td style="min-width: 25%;">\(+\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(-\)</td>
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(0\)</td>                
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                    </tr>
+                    <tr style="min-height: 25%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+                        <td style="min-width: 25%; background-color: gray;">\(\boldsymbol{+}\)</td> 
+                        <td style="min-width: 25%;">\(-\)</td>
+                        <td style="min-width: 25%;">\(0\)</td>
+                        <td style="min-width: 25%;">\(+\)</td> 
+                    </tr>
+                </table> -->
+            </li>
+        </ul>
+        
+        
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">2</span>
+        <h2>Polinomi di grado maggiore di \(2\)</h2>
+    </div>
+    <br>
+    
+    <h3 class="yellow">Esempio</h3>
+    <div class="esempi-container">
+        <p>
+            Studiamo il segno del polinomio 
+            \[
+                3x^3 +2x^2 -12x -8
+            \]
+            al variare del valore della \(x\).
+        </p>
+        <br>
+        <p>
+            Per ora abbiamo tecniche per studiare il segno di polinomi di <b>primo</b> grado e <b>secondo</b> grado.
+        </p>
+        <p>
+            Come possiamo studiare il segno di un polinomio di <b>terzo</b> grado, come quello assegnato dal testo?
+        </p>
+        <br>
+        <p>
+            Proviamo a scomporre il polinomio. 
+            <br>
+            Sappiamo che scomporre un polinomio significa scriverlo come prodotto di polinomio di grado minore.
+            <br>
+            In particolare, possiamo scomporre 
+            \[
+                3x^3 +2x^2 -12x -8
+            \] 
+            attraverso il raccoglimento a fattor parziale:
+            \[
+                \begin{align*}
+                    & 3x^3 +2x^2 -12x -8 = 
+                    \\\\
+                    \,& x^2 \cdot \left(3x +2\right) - 4 \cdot \left(3x +2\right) =
+                    \\\\
+                    = \,& \left(x^2 -4\right)\cdot \left(3x +2\right)
+                \end{align*}
+            \]
+            Di conseguenza il segno del polinomio 
+            \[
+                3x^3 +2x^2 -12x -8
+            \]
+             è uguale al segno del prodotto  
+             \[
+                \left(x^2 -4\right)\cdot \left(3x +2\right)    
+             \]
+             da qui iniziamo lo studio dei singoli fattori, come visto nel paragrafo precedente.
+        </p>
+    
+        <br>
+    
+    
+        <p>
+            <b>Segno di \(\boldsymbol{\left(x^2 -4\right)}\)</b>
+            <br>
+            risolviamo l'equazione associata a  \(x^2 -4\)
+            \[
+                \begin{align*}
+                    & x^2 -4 = 0
+                    \\\\
+                    & x^2 = 4
+                    \\\\
+                    & x = \pm \sqrt{4} = \pm 2
+    
+                \end{align*}
+            \]
+            Disegnamo la parabola associata al polinomio \(x^2 -4\) e da essa deduciamo il suo segno
+            <br>
+            <img src="img/segno(1).png" alt="" style="max-width:300px; width: 50%; margin: auto;">
+        </p>
+    
+        <br>
+        <br>
+    
+        <p>
+            <b>Segno di \(\boldsymbol{\left(3x +2\right)}\)</b>
+            <br>
+            \[
+                \begin{align*}
+                    & 3x +2 \gt 0
+                    \\\\
+                    & 3x \gt -2
+                    \\\\
+                    & x \gt -\dfrac{2}{3}
+                \end{align*}
+            \]
+            ovvero il polinomio ha segno \(+\) se il valore di \(x\) è maggiore di \(-\dfrac{2}{3}\).
+        </p>
+    
+        <br>
+        <br>
+    
+        <p>
+            <b>Grafico dei segni</b>
+            <br>
+            Inseriamo le informazioni ottenute finora in un grafico dei segni. Nel grafico adottiamo la convenzione \(f\left(x\right) := 3x^3 +2x^2 -12x -8\)
+            <br>
+            <br>
+            <img src="img/segno(2).png" alt="" style="width: 100%; max-width: 500px; margin: auto;">
+            <br>
+            In conclusione
+            <br>
+            <br>
+            <ul>
+                <li>
+                    \(f\left(x\right) \gt 0 \quad\) se 
+                    \[\quad -2 \lt x \lt -\dfrac{2}{3} \quad \text{oppure} \quad x \gt 2\]
+                </li>
+                <br>
+                <li>
+                    <div style="overflow-x: auto;">
+                        \(f\left(x\right) = 0 \quad\) se 
+                        \[x = -2 \quad\text{oppure}\quad x = -\dfrac{2}{3} \quad\text{oppure}\quad x \gt 2\]    
+                    </div>
+                    
+                </li>
+                <br>
+                <li>
+                    \(f\left(x\right) \lt 0 \quad\) se 
+                    \[x \lt -2  \quad \text{oppure} \quad -\dfrac{2}{3} \lt x \lt 2\]
+                </li>
+            </ul>
+        </p>
+    </div>
+
+    <br>
+    
+
+    <p>
+        In generale:
+    </p>
+
+    
+    
+    <div class="grayBackground">
+        Dato un polinomio \(P\left(x\right)\) di grado \(n \geq 3\), per studiarne il segno possiamo 
+        <br>
+        <br>
+        <ul>
+            <li>
+                scomporlo nel prodotto di polinomi di grado \(1\) e \(2\)
+            </li>
+            <br>
+            <li>
+                studiare il segno dei singoli fattori
+            </li>
+            <br>
+            <li>
+                effettuare il grafico dei segni
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="h2">
+        <span class="par">3</span>
+        <h2>Funzioni del tipo \(f\left(x\right)=A\left(x\right)^n\) nei casi \(n\) pari ed \(n\) dispari</h2>
+    </div>
+    
+    <br>
+
+    <video src="img/segnoA^n.mp4" controls></video>
+    <br>
+
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Studiamo il segno di \(A\left(x\right)\)
+            </li> 
+            <br>
+            <li>
+                <p>
+                    Ricaviamo il segno di \(A\left(x\right)^n\) a partire da quello di \(A\left(x\right)\) usando le seguenti tabelle:
+                    <br>
+                    <br>
+                    se <b>\(\boldsymbol{n}\) è pari</b>
+                </p>
+            
+                <table style="width: 95%; max-width: 400px; margin: auto;">
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                    </tr>
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)^n}\)
+                        </td>
+                        <td>\(+\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                        </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <p>
+                    se <b>\(\boldsymbol{n}\) è dispari</b>
+                </p>
+                <table style="width: 95%; max-width: 400px; margin: auto;">
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                    </tr>
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)^n}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                        </tr>
+                </table>
+            </li>           
+        </ul>
+        
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <span class="par">4</span>
+        <h2>Funzioni del tipo \(f\left(x\right)=\sqrt[n]{A\left(x\right)}\) nei casi \(n\) pari ed \(n\) dispari</h2>
+    </div>
+    
+    <br>
+    <b>Se \(n\) è pari</b>
+    <video src="img/segnoSqrtPari.mp4" controls></video>
+    <br>
+
+    <br>
+    <b>Se \(n\) è dispari</b>
+    <video src="img/segnoSqrtDispari.mp4"></video>
+
+    <br>
+
+    <div class="grayBackground">
+        <ul>
+            <li>
+                Studiamo il segno dell'argomento della radice, \(A\left(x\right)\)
+            </li> 
+            <br>
+            <li>
+                <p>
+                    Ricaviamo il segno di \(\sqrt[n]{A\left(x\right)}\) a partire da quello di \(A\left(x\right)\) usando le seguenti tabelle:
+                    <br>
+                    <br>
+                    se <b>\(\boldsymbol{n}\) è pari</b>
+                </p>
+            
+                <table style="width: 95%; max-width: 400px; margin: auto;">
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                    </tr>
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{\sqrt[n]{A\left(x\right)}}\)
+                        </td>
+                        <td>\(\nexists\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                        </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <p>
+                    se <b>\(\boldsymbol{n}\) è dispari</b>
+                </p>
+                <table style="width: 95%; max-width: 400px; margin: auto;">
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{A\left(x\right)}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                    </tr>
+                    <tr>
+                        <td>
+                            segno di \(\boldsymbol{\sqrt[n]{A\left(x\right)}}\)
+                        </td>
+                        <td>\(-\)</td>
+                        <td>0</td>
+                        <td>\(+\)</td>                
+                        </tr>
+                </table>
+            </li>           
+        </ul>
+        
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+    <script src="script.js"></script>
+</body>
