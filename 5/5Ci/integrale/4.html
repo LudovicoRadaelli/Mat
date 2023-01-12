@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <!-- <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Coefficiente angolare</b>
+            </div>
+
+            <br> 
+
+            <br>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../derivata/index.html">QUI</a>
+            </p>
+    
+        </div>
+       
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br> -->
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Regole di integrazione</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                \[
+                    \int x^{\alpha} \,\,dx = \dfrac{x^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{x} \,\, dx = ln\left(x\right) + c \quad \text{con} \quad x \gt 0
+                \]
+            </li>
+            <br>            
+            <li>
+                \[
+                    \int e^{x} \,\, dx = e^{x} + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int sin(x) \,\, dx = -cos(x) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int cos(x) \,\, dx = sin(x) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{cos^2(x)} \,\, dx = tan(x) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{sin^2(x)} \,\, dx = -cotan(x) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{\sqrt{1 -x^2}} \,\, dx = arcsin(x) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{1 + x^2} \,\, dx = 
+                \]
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 0</h3>
+    <br>
+    <p>
+        Leggere lo svolgimento dei seguenti integrali
+    </p>
+    <br>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%; overflow-y: scroll;">
+        <img src="../../integrale/img/integraliNotevoli(1)(1).png" alt="" style="display: block; width: auto;">
+        <br>
+        <img src="../../integrale/img/integraliNotevoli(1)(2).png" alt="" style="display: block; width: auto;">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere i seguenti integrali
+    </p>    
+    <br>
+    <ul>
+        <li>
+            \[
+                \int\left(9 sin(x) - \dfrac{1}{2}cos(x) + 3x^5\right) dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                -9\,cos(x) - \dfrac{1}{2}sin(x) + \dfrac{x^6}{2} + c
+            \]
+        </p>
+        <br>
+        <li>
+            \[
+                \int \dfrac{-2x^2 + x^3 -7x^4 }{x^3} \,\, dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                -\dfrac{7}{2}x^2 + x - 2\,ln(x)
+            \]
+        </p>
+        <br>
+        <li>
+            \[
+                \int\left(\sqrt[3]{x} - 2\sqrt[5]{x^3} + \dfrac{3}{x^4}\right) dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{3}{4}\,\sqrt[3]{x^4} - \dfrac{5}{4}\,\sqrt[5]{x^8} - \dfrac{1}{x^3}
+            \]
+        </p>        
+        <!-- <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                
+            \]
+        </p>
+        <li>
+            \[
+                \int\left(5x^2 + x + 9\right)\sqrt{\dfrac{5x^3}{3} + x^2 + 9x}\,\,\, dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{2}{3}\,\left(\dfrac{5x^3}{3} + x^2 + 9x\right)^{\frac{3}{2}} = \dfrac{2}{3} \sqrt{\left(\dfrac{5x^3}{3} + x^2 + 9x\right)^2}
+            \]
+        </p> -->
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio di ripasso</h3>
+    <p style="font-size: 0.9;">(Solo per chi deve recuperare)</p>
+    <br>
+    <ul>
+        <li>
+            Studiare la funzione 
+            \[
+                f(x) = \dfrac{3x + 6}{-2x + 2}
+            \]
+        </li>
+        <br>
+        <li>
+            Studiare la funzione 
+            \[
+                f(x) = \dfrac{-2x + 4}{3x + 3}
+            \]
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+</body>
