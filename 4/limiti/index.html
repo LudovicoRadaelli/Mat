@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>I limiti</title>
+</head>
+<body>
+    <h1>I limiti</h1>
+
+    <br>
+    <p>
+        Prendete una funzione qualsiasi \(f\) ed un input \(c\) appartenente al suo dominio. La domanda sulla quale vogliamo ragiornare è
+    </p>
+    <p style="width: 80%; margin: auto;">
+        <i>
+            che output ottengo prendendo un input <b>vicinissimo</b> al valore \(c\)?
+        </i>
+    </p>
+
+    <br>
+    <div class="h2">
+        <div class="par">1</div>
+        <h2>Stima del limite a partire dalla tabella</h2>
+    </div>
+
+    <br>
+
+    <p>
+        <b>Limite definito</b>
+    </p>
+    
+    <video src="img/limiteDefinitoTabella.mp4" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Limite infinito</b>
+    </p>
+    <video src="img/limiteInfinitoTabella.mp4" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Limite non esistente</b>
+    </p>
+    <video src="img/limiteNonDefinitoTabella.mp4" controls></video>
+    <br>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <div class="par">2</div>
+        <h2>Stima del limite a partire dal grafico</h2>
+    </div>
+
+    <br>
+    
+    <p>
+        <b>Limite definito</b>
+    </p>
+    
+    <video src="img/limiteDefinitoGrafico.mp4" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Limite infinito</b>
+    </p>
+    <video src="img/limiteInfinitoGrafico.mp4" controls></video>
+    <br>
+
+    <br>
+    <p>
+        <b>Limite non esistente</b>
+    </p>
+    <video src="img/limiteNonDefinitoGrafico.mp4" controls></video>
+    <br>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <div class="h2">
+        <div class="par">3</div>
+        <h2>Calcolo dei limiti tramite sostituzione</h2>
+    </div>
+
+    <br>
+    
+    <p>
+        Se il risultato della sostituzione è <b>definito</b>
+    </p>
+    
+    <video src="img/limiteSostituzioneDefinito.mp4" controls></video>
+    <br>
+
+    <br>
+    <p>
+        Se il risultato della sostituzione è <b>\(\boldsymbol{\dfrac{L}{0}}\)</b>
+    </p>
+    <video src="img/limiteSostituzione1fratto0(1).mp4" controls></video>
+    <br>
+    <video src="img/limiteSostituzione1fratto0(2).mp4" controls></video>
+    <br>
+    <br>
+    <p id="0su0">
+        Se il risultato della sostituzione è <b>\(\boldsymbol{\dfrac{0}{0}}\)</b>
+    </p>
+    <br>
+    <b>Tramite scomposizione</b>
+    <video src="img/limite0su0scomposizione.mp4" controls></video>
+    <br>
+
+    <b>Tramite razionalizzazione</b>
+    <video src="img/limite0su0razionalizzazione.mp4" controls></video>
+    <br>
+    <br>
+
+    <p>
+        Di seguito uno <b>schema riassuntivo</b> di come calcolare il limite di una funzione.
+    </p>
+    <br>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; overflow-x: scroll; width: 100%;">
+        <img src="img/schemaLimiti.png" style="display: block; width: 100vw">
+    </div>
+    <p class="gray">
+        Per visualizzare lo schema completo scorrete a destra.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <div class="par">4</div>
+        <h2>Teorema dei carabinieri</h2>
+    </div>
+
+    <br>
+    
+    <div class="esempi-container" style="color: #F4B400;">
+        LAVORI IN CORSO
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <div class="h2">
+        <div class="par">5</div>
+        <h2 id="definizioneFunzioneContinua">Definizione di continuità in un punto \(c\)</h2>
+    </div>
+
+    <br>
+    
+    <video src="img/definizioneFunzioneContinua.mp4" controls></video>
+
+    <br>
+
+    <p>
+        Sia \(f\) una funzione definita nell'intervallo \(\left(a\,;\,b\right)\) e sia \(c\) un valore contenuto in \(\left(a\,;\,b\right)\) 
+    </p>
+
+    <br>
+
+    <p class="grayBackground">
+        \[
+            f\,\,\, \text{è continua in}\,\, c
+        \]
+        \[
+            \Updownarrow
+        \]
+        \[
+            \underset{x \longrightarrow c}{lim}\,\,f\left(x\right) = f\left(x\right)
+        \]
+    </p>
+
+    <br>
+
+    <p>
+        Possiamo interpretare questa proprietà come segue:
+    </p>
+    <br>
+    <p style="width: 90%; margin: auto;">
+        \[
+            \color{red}{\underset{x \longrightarrow c}{lim}\,\,f\left(x\right)}
+            \,\,
+            \color{darkgreen}{\boldsymbol{=}} 
+            \,\,
+            \color{blue}{f\left(x\right)}
+        \]
+        <span style="color: red;">
+            il valore a cui la funzione si approssima per input sempre più vicini all'input
+        </span>
+        <br>
+        <span style="color: darkgreen;">
+            è uguale
+        </span>  
+        <br>
+        <span style="color: blue;">al valore che la funzione assume esattamente in \(\boldsymbol{c}\)</span>
+         
+        
+    </p>
+    <br>
+    <p>
+        In parole semplici (e un po' semplificatorie): 
+        <br>
+        il comportamento della funzione <i>vicino</i> all'input \(\boldsymbol{c}\) è uguale al comportamento della funzione <i>esattamente</i> in \(\boldsymbol{c}\)
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <div class="par">6</div>
+        <h2 id="classificazioneDiscontinuita">Classificazione delle discontinuità</h2>
+    </div>
+
+    <br>
+    
+    <br>
+    <video src="img/classificazioneDiscontinuita.mp4" controls></video>
+    <br>
+
+    <p>
+        Consideriamo una funzione \(f\) definita sull'intervallo \(\left(a\,;\,B\right)\) e sia \(c \in \left(a\,;\,B\right)\).
+    </p>
+    <p>
+        La funzione \(f\) presenta una discontinuità in \(x = c\,\) se l'uguaglianza 
+        \[
+            \underset{x \longrightarrow c}{lim}\,\,f\left(x\right) = f(c)
+        \]
+        è <b>falsa</b>. Cosa può renderla tale?
+    </p>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <div class="h3">
+        <div class="sub-par">6.1</div>
+        <h3 class="blue">Discontinuità di I specie (di salto)</h3>
+    </div>
+
+    
+
+    <p class="grayBackground">
+        Una funzione presenta una <b>discontinua di I specie</b> se entrambi i due limiti \(x \rightarrow c\) da destra e da sinistra esistono finiti,
+        ma non sono uguali.
+    </p>
+    
+    <br>
+    <img src="img/primaSpecie.png">
+    <br>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h3">
+        <div class="sub-par">6.2</div>
+        <h3 class="blue">Discontinuità di II specie specie</h3>
+    </div>
+    <p class="grayBackground">
+        Una funzione presenta una <b>discontinua di II specie</b> se almeno uno dei due limiti per \(x \rightarrow c\) da destra o da sinistra,
+        o non esiste o non è finito.
+    </p>
+    <br>
+    <img src="img/secondaSpecie.png">
+    <br>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h3">
+        <div class="sub-par">6.3</div>
+        <h3 class="blue">Discontinuità di III specie specie (eliminabile)</h3>
+    </div>
+    <p class="grayBackground">
+        Una funzione presenta una <b>discontinua di III specie</b> se il limite per \(x \rightarrow c\) esiste finito, ma è diverso da \(f(c)\).
+    </p>
+    <br>
+    <img src="img/terzaSpecie.png">
+    <br>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p>
+        Di seguito uno schema pratico da usare per controllare se una funzione è discontinua ed in caso positivo classificare il tipo di discontinuità.
+    </p>
+    <br>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; overflow-x: scroll; width: 100%;">
+        <img src="img/schemaDiscontinuita.png" style="display: block; width: auto; margin:auto;">
+    </div>
+    <p class="gray">
+        Per visualizzare lo schema completo scorrete a destra.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="h2">
+        <div class="par">7</div>
+        <h2 id="teoremiFunzioniContinue">Teoremi sulle funzioni continue</h2>
+    </div>
+
+    <br>
+    
+    <p>
+        Iniziamo con qualche definizione:
+    </p>
+    
+    <br>
+
+    <b>Funzione continua</b>
+    <p class="grayBackground">
+        Consideriamo una funzione \(f\) definita su un dominio \(D\).
+        <br>
+        La funzione \(f\) si dice  <b>continua su </b>\(\boldsymbol{D}\) se è continua in ogni punto di \(D\).
+    </p>
+
+    <br>
+    <br>
+
+    <b>Massimo assoluto</b>
+    <p class="grayBackground">
+        Consideriamo una funzione \(f\) definita su un dominio \(D\).
+        <br>
+        Si dice che la funzione ammette un <b>massimo assoluto</b> se esiste un output della funzione più grande di tutti gli altri output assunti sul dominio \(D\).
+        In simboli:
+        \[ \exists x_{M} \in D \quad\text{tale che }\,\,\, f\left(x_{M}\right) \geq f\left(x\right)\,\,\, \forall x \in D\] 
+        Il punto \(x_{M}\) viene detto <b>punto di massimo assoluto</b>.
+    </p>
+
+    <br>
+    <br>
+
+    <b>Minimo assoluto</b>
+    <p class="grayBackground">
+        Consideriamo una funzione \(f\) definita su un dominio \(D\).
+        <br>
+        Si dice che la funzione ammette un <b>minimo assoluto</b> se esiste un output della funzione più piccolo di tutti gli altri output assunti sul dominio \(D\).
+        In simboli:
+        <span style="overflow-x: scroll;">
+            \[ \exists x_{m} \in D \quad\text{tale che }\,\,\,f\left(x_{m}\right) \leq f\left(x\right)\,\,\, \forall x \in D\] 
+        </span>
+        Il punto \(x_{m}\) viene detto <b>punto di minimo assoluto</b>.
+    </p>
+
+    <br>
+    <br>
+
+    <h3 class="yellow">Esempi</h3>
+    <div class="esempi-container">
+        <b>Esempio 1</b>
+        <br>
+        <br>
+        <p>
+            La funzione \(f\left(x\right) = sin\left(x\right)\) ha 
+        </p>
+        <br>
+        <ul>
+            <li>
+                <p>
+                    massimo assoluto \(1\) assunto nei punti \(x = \dfrac{\pi}{2} + 2k\pi\), con \(k \in \mathbb{Z}\)
+                </p>
+                <br>
+                <div style="overflow-x: scroll;">
+                    <img src="img/esempioMassimiAssoluti.png" alt="" style="width: 200%;">
+                </div>
+                <p class="gray">Scorrete per vedere tutta la figura</p>
+            </li>
+            <br>
+            <li>
+                <p>
+                    minimo assoluto \(-1\) assunto nei punti \(x = \dfrac{\pi}{2} + 2k\pi\), con \(k \in \mathbb{Z}\)
+                </p>
+                <br>
+                <div style="overflow-x: scroll;">
+                    <img src="img/esempioMinimiAssoluti.png" alt="" style="width: 200%;">
+                </div>
+                <p class="gray">Scorrete per vedere tutta la figura</p>
+            
+            </li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+
+        <b>Esempio 2</b>
+        <br>
+        <br>
+
+        <p>
+            La funzione \(f\left(x\right) = ln\left(x\right)\) 
+        </p>
+        <br>
+        <ul>
+            <li>
+                <b>non ammette</b> minimo assoluto;
+            </li>
+            <br>
+            <li>
+                <b>non ammette</b> massimo assoluto.
+            </li>
+        </ul>
+        <br>
+
+        <p>
+            Infatti sappiamo che quando la \(x\) si avvicina a \(0\) da destra la funzione assume output sempre più bassi. Di conseguenza la funzione non assume un output più piccolo rispetto a tutti gli altri.
+        </p>
+        <p>
+            Lo stesso identico discorso vale per \(x\) che assume valori sempre più grande.
+        </p>
+        <br>
+        <div style="overflow-x: scroll;">
+            <img src="img/esempioIllimitata.png" alt="" style="width: 200%;">
+        </div>
+        <p class="gray">Scorrete per vedere tutta la figura</p>
+
+    </div>  
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+    <p>
+        Come abbiamo visto dagli esempi non tutte le funzioni ammettono massimo o minimo assoluti.
+    </p>
+    <p>
+        Ci sono delle proprietà della funzione che ci assicurano che abbia massimi e minimi assoluti?
+    </p>
+
+    <br>
+
+    <div class="grayBackground">
+        <p>
+            <b>Teorema di Weierstrass</b>
+            <br>
+            <br>
+            Se \(f\) è una funzione 
+        </p>
+        <br>
+        <ol>
+            <li>
+                definita su un intervallo chiuso e limitato \(D\)
+            </li>
+            <br>
+            <li>
+                continua su \(D\)
+            </li>
+        </ol>
+        <br>
+        <p>
+            allora ammette massimo assoluto e minimo assoluto in \(D\).
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <p>
+        Provare per credere: provate a disegnare una funzione continua che sia definita sull'intervallo rosso, che è chiuso e limitato.
+    </p>
+    
+    <br>
+    <br>
+
+    <img src="img/sketch.png" alt="" onmousedown="goToLink()">
+    <p class="gray">
+        Cliccate l'immagine
+    </p>
+
+
+    <br>
+    <br>
+
+    <script src="script.js"></script>
+</body>

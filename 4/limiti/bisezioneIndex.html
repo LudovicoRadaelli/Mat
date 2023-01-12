@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Metodo di bisezione App</title>
+</head>
+<body>
+    <div id="geogebra1" class="geogebra-container"></div>
+    <br>
+    <div>
+
+        <p style="text-align: center;">
+            \(f\left(x\right) = \) <input type="text" id="function" value="x^2 -10"> <button style="display: inline-block;" onclick="definisciFunzione()">Vai</button>
+        </p>
+        
+        <br>
+
+        <p>
+            Inserire gli estremi dell'intervallo all'interno del quale si vuole trovare la soluzione:
+        </p>
+        
+        <br>
+
+        <p style="text-align: center;">
+            ( <input type="text" id="a" value="-10" style="width: 3rem; text-align: center;"> ;  <input type="text" id="b" value="10" style="width: 3rem; text-align: center;"> ) \(\qquad\)<button style="display: inline-block;" onclick="definisciIntervallo()">Vai</button>
+        </p>
+        
+        <br>
+
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+            <div id="verificaIntervallo-container" style="width: 50%;">
+                <p id="verificaIntervallo-text">
+                    Verifica se all'interno dell'intervallo esiste una soluzione:
+                </p>
+                <button id="verificaIntervallo-button" onclick="verificaEsistenzaSoluzione()">Vai</button>
+            </div>  
+            <div id="miglioraIntervallo-container" style="display: none; width: 50%;">
+                <p>
+                    Rendi l'intervallo più accurato:
+                </p>
+                <button id="miglioraIntervallo-button" onclick="miglioraIntervallo()">Vai</button>
+            </div>
+            <div id="intervalloSoluzione-container" style="display: none; width: 50%;">   
+                <p>L'intevallo in cui si trova la soluzione è</p>
+                <p id="intervalloSoluzione">
+                    \[
+                        \left(\right)
+                    \]
+                </p>
+            </div>
+        </div>  
+        
+    </div>
+
+    <button style="position: fixed; right: 0; bottom: 0;" onclick="speedUp()">Speed up</button>
+    <script src="bisezione.js"></script>
+</body>
