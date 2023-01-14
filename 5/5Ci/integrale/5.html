@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Integrale indefinito</b>
+            </div>
+            <div class="gray">
+                [Par. 24.1, pag. da 1256 a 1258]            
+            </div>
+
+            <br> 
+
+            <div style="text-align: left;">
+                <b>1) Integrali indefiniti immediati</b>
+            </div>
+            <div class="gray">
+                [Par. 24.2, pag. da 1259 a 1262]            
+            </div>
+
+            <br> 
+
+            <br>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../derivata/index.html">QUI</a>
+            </p>
+    
+        </div>
+       
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Regole di integrazione (generalizzate)</h3>
+    <div class="esempi-container">  
+        <ul>
+            <li>
+                \[
+                    \int f(x)^{\alpha} f'(x) \,\,dx = \dfrac{f(x)^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{f'(x)}{f(x)} \,\, dx = ln\left(|f(x)|\right) + c
+                \]
+            </li>
+            <br>            
+            <li>
+                \[
+                    \int e^{f(x)}f'(x) \,\, dx = e^{f(x)} + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int sin(f(x))f'(x) \,\, dx = -cos(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int cos(f(x))f'(x) \,\, dx = sin(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{cos^2(f(x))}f'(x) \,\, dx = tan(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{1}{sin^2(f(x))}f'(x) \,\, dx = -cotan(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{f'(x)}{\sqrt{1 -f(x)^2}} \,\, dx = arcsin(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{f'(x)}{1 + f(x)^2} \,\, dx = arctan(f(x)) 
+                \]
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere i seguenti integrali
+    </p>    
+    <br>
+    <ul>
+        <li>
+            \[
+                \int \left(4x^3 -6x\right)\left(x^4 -3x^2 +1\right)^3\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{\left(x^4 -3x^2 +1\right)^4}{4} + c
+            \]
+        </p>
+
+        <br>
+        <video src="../../integrale/img/integraliConPrimitivaComposta(1).mp4" controls></video>
+        <br>
+
+        <br>
+        <li>
+            \[
+                \int \dfrac{16x +1}{8x^2 +x -1}\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                ln \left|8x^2 +x -1\right| + c
+            \]
+        </p>
+
+        <br>
+        <video src="../../integrale/img/integraliConPrimitivaComposta(2).mp4" controls></video>
+        <br>
+
+        <br>
+        <li>
+            \[
+                \int -sin\left(x\right)e^{cos\left(x\right)} \,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                e^{cos\left(x\right)} + c
+            \]
+        </p>
+
+        <br>
+        <video src="../../integrale/img/integraliConPrimitivaComposta(3).mp4" controls></video>
+        <br>
+
+        <br>
+        <li>
+            \[
+                \int \left(2x\,sin\left(x^2\right) - \dfrac{cos\left(ln\left(x\right)\right)}{x}\right) \,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                -cos\left(x^2\right) - sin\left(ln\left(x\right)\right) + c
+            \]
+        </p>
+
+        <br>
+        <video src="../../integrale/img/integraliConPrimitivaComposta(4).mp4" controls></video>
+        <br>
+
+        <br>
+        <li>
+            \[
+                \int x\,\left(3x^2 + 2\right)^2 \,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{\left(3x^2 + 2\right)^3}{18} + c
+            \]
+        </p>
+
+        <br>
+        <video src="../../integrale/img/integraliConPrimitivaComposta(5).mp4" controls></video>
+        <br>
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio di ripasso</h3>
+    <p style="font-size: 0.9;">(Solo per chi deve recuperare)</p>
+    <br>
+    <p>
+        Studiare la funzione 
+        \[
+            f(x) = \dfrac{ln\left(x\right)}{x}
+        \]
+    </p>
+    
+    <br>
+    <br>
+</body>
