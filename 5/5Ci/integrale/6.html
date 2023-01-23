@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Integrale indefinito</b>
+            </div>
+            <div class="gray">
+                [Par. 24.1, pag. da 1256 a 1258]            
+            </div>
+
+            <br> 
+
+            <div style="text-align: left;">
+                <b>1) Integrali indefiniti immediati</b>
+            </div>
+            <div class="gray">
+                [Par. 24.2, pag. da 1259 a 1262]            
+            </div>
+
+            <br> 
+
+            <br>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../derivata/index.html">QUI</a>
+            </p>
+    
+        </div>
+       
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; overflow-y: scroll; min-height: 70vh; max-height: 70vh; width: 100%;">
+        <div style="width: 100%;">
+            <h3 class="yellow">Regole di integrazione</h3>
+            <br>
+            <div>
+                <ul>
+                    <li>
+                        \[
+                            \int x^{\alpha} \,\,dx = \dfrac{x^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{x} \,\, dx = ln\left(x\right) + c \quad \text{con} \quad x \gt 0
+                        \]
+                    </li>
+                    <br>            
+                    <li>
+                        \[
+                            \int e^{x} \,\, dx = e^{x} + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int sin(x) \,\, dx = -cos(x) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int cos(x) \,\, dx = sin(x) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{cos^2(x)} \,\, dx = tan(x) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{sin^2(x)} \,\, dx = -cotan(x) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{\sqrt{1 -x^2}} \,\, dx = arcsin(x) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{1 + x^2} \,\, dx = arctan(x) + c
+                        \]
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div  style="width: 100%">
+            <h3 class="yellow">Regole di integrazione (generalizzate)</h3>
+            <div>  
+                <ul>
+                    <li>
+                        \[
+                            \int f(x)^{\alpha} f'(x) \,\,dx = \dfrac{f(x)^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{f'(x)}{f(x)} \,\, dx = ln\left(|f(x)|\right) + c
+                        \]
+                    </li>
+                    <br>            
+                    <li>
+                        \[
+                            \int e^{f(x)}f'(x) \,\, dx = e^{f(x)} + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int sin(f(x))f'(x) \,\, dx = -cos(f(x)) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int cos(f(x))f'(x) \,\, dx = sin(f(x)) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{cos^2(f(x))}f'(x) \,\, dx = tan(f(x)) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{1}{sin^2(f(x))}f'(x) \,\, dx = -cotan(f(x)) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{f'(x)}{\sqrt{1 -f(x)^2}} \,\, dx = arcsin(f(x)) + c
+                        \]
+                    </li>
+                    <br>
+                    <li>
+                        \[
+                            \int \dfrac{f'(x)}{1 + f(x)^2} \,\, dx = arctan(f(x)) 
+                        \]
+                    </li>
+                </ul>
+            </div>         
+        </div>
+              
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere i seguenti integrali
+    </p>    
+    <br>
+    <ul>
+        <li>
+            \[
+                \int \left(3x^5 - \dfrac{5}{x^6} + 5\,\sqrt[5]{x^3}\right)\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{x^6}{2} + \dfrac{1}{x^5} + \dfrac{25}{8} \sqrt[5]{x^8} + c
+            \]
+        </p>
+
+        <br>
+        
+        <li>
+            \[
+                \int \left(5\,sin(x) - 6\,cos(x) - \dfrac{\sqrt{5}}{2}\,e^x\right)\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                -5\,cos(x) -6\,sin(x) - \dfrac{\sqrt{5}}{2} + c
+            \]
+        </p>
+
+        <br>
+        
+        <li>
+            \[
+                \int \dfrac{3x -5x^2 + \sqrt[5]{x^{11}}}{x^2}\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                3\,ln(x) -5x + \dfrac{5}{6}\,\sqrt[5]{x^6} + c
+            \]
+        </p>
+
+        <br>
+        
+        <li>
+            \[
+                \int \left(\dfrac{7}{1 + x^2} - \dfrac{3}{2\sqrt{1 - x^2}}\right)\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                7\,arctan(x) -\dfrac{3}{2}\,arcsin(x) + c
+            \]
+        </p>
+
+
+        <br>
+        
+        <li>
+            \[
+                \int \left[\left(2x + 1\right)\,\left(x^2 + x\right) + x\right]\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{x^4}{2} + x^3 + x + c
+            \]
+        </p>        
+
+        <br>
+        
+        <li>
+            \[
+                \int \dfrac{2\,cos(x)}{1 + cos^2(x)} + \dfrac{sin(x)}{cos(x)} \,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                arctan(cos(x)) - ln\left|cos(x)\right| + c
+            \]
+        </p>     
+        
+        <br>
+        
+        <li>
+            \[
+                \int \left(4x^3 -3\,cos(x)\right)\left(-3\,sin(x) + x^4\right)^4\,\,dx
+            \]
+        </li>
+        <br>
+        <p class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{\left(-3\,sin(x) + x^4\right)^5}{5} + c
+            \]
+        </p>     
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Ripasso</h3>
+    <div id="compitiSelector-container" class="grayBorder">
+    
+        <p class="gray">
+            Di seguito potete consultare gli esercizi che abbiamo svolto in passato.
+            <br>
+            Provate a risvolgere quelli che vi hanno dato più filo da torcere, consultando gli appunti delle correzioni svolte in classe.
+    
+        </p>
+        
+        <br>
+        
+    
+        <select id="ex" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    
+        <br>
+    
+        <button id="ex-button" onclick="vai()">Apri compiti</button>
+        
+    
+    </div>
+    
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+            let ex = document.getElementById("ex").options;
+            let i = document.getElementById("ex").selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            window.open(`https://ludovicoradaelli.github.io/Mat/5/5Ci/integrale/${ex[i].index + 1}.html`, `_blank`);
+        }
+    </script>
+</body>
