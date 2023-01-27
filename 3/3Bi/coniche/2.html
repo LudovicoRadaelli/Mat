@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>    
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <!-- <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Equazione della circonferenza</b>
+                <br>
+                <div class="gray">
+                    [Par. 5.1, pag. da 244 a 247]
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.1) Definizione di circonferenza
+                    </b>
+                </div>
+                <br>
+                <div style="width: 90%; margin-left: 10%">
+                    <b>
+                        1.2) Derivazione dell'equazione della circonferenza
+                    </b>
+                </div>
+            </div>
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../equazioneCirconferenza/index.html">QUI</a>
+            </p>
+            
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+        </div>
+
+    </section> 
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+-->
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio 0</h3>
+    <br>
+    <p>
+        Nella seguente file interattivo è possibile inserire i valori di \(\color{red}{a}\), \(\color{blue}{b}\), 
+        \(\color{rgb(0, 180, 0)}{c}\) e \(\color{rgb(255, 0, 255)}{d}\)
+        ed osservare la figura che si ottiene disegnado tutti i punti che soddisfano la proprietà
+        \[
+            \left(\dfrac{x}{\color{red}{a}\color{black}{}}\right)^2 + \left(\dfrac{y}{\color{blue}{b}\color{black}{}}\right)^2 = 1
+        \]
+    </p>
+    
+    <br>
+    
+    <div class="geogebra-container">
+        <div id="geogebra1"></div>
+    </div>
+    
+    <br>
+    
+    <p>
+
+        In classe abbiamo visto che modificando il valore del coefficiente \(\color{red}{a}\) si ottiene una 
+        <b>dilatazione orizzontale</b> della figura.
+        <br>
+        <br>
+        La modifica del coefficiente \(\color{blue}{b}\) porta ad una <b>dilatazione verticale</b> della figura.
+        <br>
+        <br>
+        Modificando i termini \(\color{#00ff00}{c}\) e \(\color{#ff00ff}{d}\) otteniamo invece la <b>traslazione</b> 
+        <span style="color: #00ff00">orizzontale</span> e <span style="color: #ff00ff">verticale</span> dell'ellisse.
+
+    </p>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Stabilite quali sono le equazioni che hanno i seguenti grafici.
+    </p>
+    <br>
+    <ul>
+        <li>
+            <b>a)</b>
+            <br>
+            <br>
+            <img src="img/2(1).png" style="display: block; width: 100%;">
+        </li>
+        <br>
+        <li>
+            <b>b)</b>
+            <br>
+            <br>
+            <img src="img/2(2).png" style="display: block; width: 100%;">
+        </li>
+    </ul>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <p>
+        Disegnare la figura geometrica che si ottiene disegnando tutti i punti che soddisfano la seguente proprietà
+        \[
+            \dfrac{(x + 3)^2}{5} + \dfrac{(y - 4)^2}{2} = 1
+        \]
+    </p>
+    <br>
+    <br>
+
+    <script>
+
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "material_id":"t2yuwzuq"
+                /* "filename":"myFile.ggb" */
+            }, 
+            true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+
+
+        
+    </script>
+    
+</body>
