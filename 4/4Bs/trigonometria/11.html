@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                
+                <b>1) Risoluzione di triangoli rettangoli</b>
+                <br>
+                <div class="gray">
+                    [Par. 15.1, pag. da 915 a 919]            
+                </div> 
+
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Area di un triangolo in funzione di due lati e dell'angolo tra essi compreso</b>
+                <br>
+                <div class="gray">
+                    [Par. 15.2, pag. 919]            
+                </div> 
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Teorema dei seni</b>
+                <br>
+                <div class="gray">
+                    [Par. 15.3, pag. da 921 a 922]            
+                </div> 
+            </div>
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Teorema del coseno</b>
+                <br>
+                <div class="gray">
+                    [Par. 15.3, pag. da 923 a 927]            
+                </div> 
+            </div>
+        </div>
+
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Svolgere l'esercizio n° 42 a pag. 974.
+    </p>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Ripasso</h3>
+
+    <br>
+
+    <div id="compitiSelector-container" class="grayBorder">
+
+        <p class="gray">
+            Di seguito potete consultare gli esercizi che abbiamo svolto in passato.
+            <br>
+            <br>
+            Come già detto in classe, uno degli esercizi del compito sarà tratto da quelli assegnati per casa.
+            <br>
+            <br>
+            Iniziate fin da ora a ripassarli, dando priorità a quelli che vi hanno messo più in difficoltà.
+            <br>
+            <br>
+            Vi consiglio di <b>non imparare i singoli passaggi a memoria</b>, ma di enucleare quale sia la strategia risolutiva dell'esercizio e provare a svolgerlo nuovamente da soli (a partire dal disegno della figura).
+
+
+        </p>
+        
+        <br>
+        
+
+        <select id="ex" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+
+    <br>
+
+    <button id="ex-button" onclick="vai()">Apri compiti</button>
+    
+
+</div>
+
+
+    <br>
+    <br>
+
+    <script>
+        function vai() {
+            let ex = document.getElementById("ex").options;
+            let i = document.getElementById("ex").selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            window.open(`https://ludovicoradaelli.github.io/Mat/4/4Bs/trigonometria/${ex[i].index + 1}.html`, `_blank`);
+        }
+    </script>
+
+</body>
+</html>
