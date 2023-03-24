@@ -72,6 +72,18 @@
 
 
     <!-- ESERCIZI -->
+    <h3 class="green">Schema verifica continuità</h3>
+    <br>
+    <div style=" overflow: auto; width: 100%; max-height: 90vh;">
+        <img src="../../limiti/img/schemaDiscontinuitaVersione2.png" style="display: block; min-width: 175%;">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
     <h3 class="green">Esercizio guida 1</h3>
     <br>
     <video src="../../limiti/img/verificaContinuitaFunzione(1).mp4" controls></video>    
@@ -105,6 +117,77 @@
     <hr>
     <br>
     <br>
+
+    <h3 class="green">Esercizio guida 4</h3>
+    <br>
+    <p>Sia data la funzione definita a tratti:</p>
+	<blockquote>
+		$$
+		f(x) = 
+		\begin{cases}
+		x^2-4, & \text{se } x \lt -1 \\\\   
+		\dfrac{1}{x+1}, & \text{se } x \geq -1
+		\end{cases}
+		$$
+	</blockquote>
+	<p>Stabilire se la funzione è continua nel punto \(x = -1\).</p>
+	<br>
+    <br>
+    <b>Svolgimento</b>
+    <br>
+    <br>    
+    Dobbiamo verificare se è verificata l'uguaglianza
+    
+    \[
+        \lim_{x \to -1} f(x) = f(-1)
+    \]
+    <ol>
+		<li>Calcoliamo il limite per \(x\) che tende a \(-1\) da sinistra:</li>
+		<blockquote>
+			$$
+			\lim_{x \to (-1)^{-}} f(x) = \lim_{x \to (-1)^{-}} (x^2-4) = (3^2-4) = 3
+			$$
+		</blockquote>
+		<li>Calcoliamo il limite per \(x\) che tende a \(-1\) da destra:</li>
+		<blockquote>
+			$$
+			\lim_{x \to (-1)^{+}} f(x) = \lim_{x \to (-1)^{+}} \frac{1}{x+1} = \frac{1}{(-1)^{+} + 1} = \frac{1}{0^{+}} = +\infty
+			$$
+		</blockquote>
+
+		<blockquote>
+			Si ha che \(\underset{x \to -1}{\lim} f(x)\) non è definito, perché 
+            \[
+                \lim_{x \to (-1)^{-}} f(x) \neq \lim_{x \to (-1)^{+}} f(x) 
+            \] 
+            quindi l'uguaglianza
+            \[
+                \lim_{x \to -1} f(x) = f(-1)
+            \]
+            non può essere soddisfatta, perché il suo membro sinisto non è definito.
+            <br>
+            Concludiamo che funzione non è continua in \(x = -1\).
+		</blockquote>
+	</ol>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio guida 5</h3>
+    <br>
+    <video src="../../limiti/img/funzioneContinuaParametro(2)(1).mp4" controls></video>
+    <br>
+    <video src="../../limiti/img/funzioneContinuaParametro(2)(2).mp4" controls></video>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
 
     <h3 class="green">Esercizio 1</h3>
     <br>
