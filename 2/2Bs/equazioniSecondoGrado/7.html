@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">
+
+            <div style="text-align: left;">
+                <b>1) Formula risolutiva</b>
+            </div>
+            <div class="gray">
+                [Par. 17.1, 17.2, pag. da 908 a 911]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Scomposizione di un polinomio di 2° grado attraverso le sue radici</b>
+            </div>
+            <div class="gray">
+                [Par. 17.6 pag. da 919 a 920]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>3) Disequazioni di 2° grado tramite metodo della parabola</b>
+            </div>
+            <div class="gray">
+                [Par. 20.3 pag. da 1090 a 1091]
+            </div>    
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>4) Disequazioni fratte</b>
+            </div>
+            <div class="gray">
+                [Par. 20.5  pag. 1093]
+            </div>    
+
+            <br>
+
+            <p>
+                le dispense sono disponibili <a class="gray" href="../../../2/equazioniSecondoGrado/index.html">QUI</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- ESERCIZI -->
+
+    <h3 class="green">Esercizio guida</h3>
+    <br>
+    <p>
+        Consideriamo la seguente equazione di secondo grado contenente il parametro \(\color{blue}{k}\):
+        \[
+            5x^2 +2\color{blue}{}k \color{black}{} \,x + 1 = 0
+        \]
+        Le situazioni che possiamo ottenere al variare del valore di \(\color{blue}{}k\) come sappiamo sono tre:
+        l'equazione potrebbe avere <b>zero soluzioni</b>, <b>una soluzione</b> o <b>due soluzioni</b>.
+        <br>
+        <br>
+        <div class="grayBorder">
+            Il nostro obiettivo è capire per quale valore di \(\color{blue}{}k\) si verifica ciascuno dei casi, e quali 
+            siano le eventuali soluzioni <b>in funzione di \(\boldsymbol{\color{blue}{}k}\)</b>.
+        </div>
+        <br>
+        <br>
+        Applichiamo la formula risolutiva:
+        \[
+            \begin{align*}
+                x 
+                & = \dfrac{-2\,\color{blue}{k}\color{black}{} \pm \sqrt{\left(2\,\color{blue}{k}\color{black}{}\right)^2 -4\cdot 5 \cdot 1}}{2 \cdot 5} 
+                \\\\
+                & = \dfrac{-2\,\color{blue}{k}\color{black}{} \pm \sqrt{4\color{blue}{k}\color{black}{}^2  -20}}{10} 
+            \end{align*}
+        \]
+        Arrivati a questo punto potremmo dire <i>"Finito! Ecco le soluzioni rispetto a \(\color{blue}{k}\)"</i>.
+        <br>
+        Il problema è che per alcuni valori di \(\color{blue}{k}\) le soluzioni non hanno senso perché l'argomento della radice potrebbe essere negativo 
+        (provate a scegliere \(\color{blue}{k} \color{black}{} = 0\)).
+        <br>    
+        <br>
+        <b>Studio del segno del \(\boldsymbol{\Delta}\)</b>
+        <br>
+        Poniamo quindi attenzione al \(\Delta\) dell'equazione, che è 
+        \[
+            4\color{blue}{k}\color{black}{}^2  -20
+        \]
+        Dal segno che esso assume, dipende il numero di soluzioni dell'equazione.
+        <br>
+        <br>
+        Disegnamo la parabola associata al polinomio \(4\color{blue}{k}\color{black}{}^2  -20\) in modo da poterne visualizzare il segno al variare di \(\color{blue}{k}\).
+        <br>
+        Prima di tutto risolviamo l'equazione associata:
+        \[
+            \begin{align*}    
+                4\color{blue}{k}\color{black}{}^2  -20 = 0
+                \\\\
+                4\color{blue}{k}\color{black}{}^2 = 20
+                \\\\
+                \color{blue}{k}\color{black}{}^2 = \dfrac{\overset{5}{\cancel{20}}}{\underset{1}{\cancel{4}}}
+                \\\\
+                \color{blue}{k}\color{black}{} = \pm \sqrt{5}
+            \end{align*}    
+
+        \]
+        Il coefficiente della \(\color{blue}{k}\color{black}{}^2\) è positivo, la parabola ha concavità rivolta verso 
+        l'alto ("sorride"). Inoltre, interseca l'asse delle \(x\) in \(x = \pm\sqrt{5}\).
+    </p>
+    <br>
+    <img src="../../equazioniSecondoGrado/img/parametriche(1).png" alt="">
+    <br>
+    <p>
+        Di conseguenza 
+    </p>
+    <br>
+    <ul>
+        <li>
+            se \(-\sqrt{5} \lt \color{blue}{k}\color{black}{} \lt \sqrt{5}\) 
+            <br>
+            allora l'equazione <b>non ha soluzioni</b>
+        </li>
+        <br>
+        <li>
+            se \(\color{blue}{k}\color{black}{} \lt -\sqrt{5}\) oppure \(\color{blue}{k}\color{black}{} \lt -\sqrt{5}\) 
+            <br>
+            allora l'equazione ha <b> due soluzioni</b>, che sono quelle trovate sopra
+            \[
+                x = \dfrac{-2\,\color{blue}{k}\color{black}{} \pm \sqrt{4\color{blue}{k}\color{black}{}^2  -20}}{10} 
+            \]
+        </li>
+        <br>
+        <li>
+            se \(\color{blue}{k}\color{black}{} = \pm \sqrt{5}\)
+            <br>
+            allora l'equazione ha <b>una soluzione</b>. La possiamo ottenere sostituendo a \(\color{blue}{k}\) i valori \(\pm\sqrt{5}\).
+            <br>
+            \[
+                \begin{align*}    
+                    x 
+                    & = \dfrac{-2\,\color{blue}{(\pm\sqrt{5})}\color{black}{} \pm \sqrt{4\color{blue}{(\pm\sqrt{5})}\color{black}{}^2  -20}}{10} =
+                    \\\\
+                    & = \dfrac{\mp 2\,\sqrt{5} \pm \sqrt{4\cdot5 -20}}{10} =
+                    \\\\
+                    & = \dfrac{\mp 2\,\sqrt{5}}{10} = 
+                    \\\\
+                    & = \dfrac{\mp\sqrt{5}}{5} = 
+                \end{align*}    
+            \]
+        </li>
+    </ul>
+
+
+    
+    
+
+    <br>
+    <br>
+
+
+
+    
+</body>
