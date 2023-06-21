@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Materiale di recupero</title>
+</head>
+<body>
+    <h1 class="red">Materiale per il recupero</h1>
+    <br>
+    <p class="gray">
+        Di seguito potete consultare gli esercizi assegnati per casa lungo il corso dell'anno.
+        <br>
+        Scorrendoli trovate i riferimenti al libro di testo, le dispense e le video-lezioni, inerenti sia la teoria che gli esercizi. 
+        <br>
+        Qualsiasi dubbio abbiate sugli esercizi, sono disponibile su Teams.
+
+    </p>
+    
+    <br>
+    <h2 class="blue">1) Dominio e segno di una funzione</h2>
+    <div id="compitiSelector-container" class="grayBorder">
+        <span class="gray">
+            Di seguito trovate materiale di ripasso risalente all'anno scorso:
+        </span>
+        <br>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+            <a href="https://ludovicoradaelli.github.io/Matematica/2022/terza/esercizi3Ei/archivio/2DominioSegnoParitaFunzioni/es8.html" target="_blank">Link 1</a>
+            <a href="https://ludovicoradaelli.github.io/Matematica/2022/terza/esercizi3Ei/archivio/2DominioSegnoParitaFunzioni/es9.html" target="_blank">Link 2</a>
+            <a href="https://ludovicoradaelli.github.io/Matematica/2022/terza/esercizi3Ei/archivio/2DominioSegnoParitaFunzioni/es10.html" target="_blank">Link 3</a>
+        </div>
+
+            
+        <br>
+
+        <span class="gray">
+            Dei seguenti esercizi svolgete solamente la parte relativa al dominio e segno (quindi non è richiesto calcolare il limite).
+        </span>
+        <select id="exlimiti" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    
+        <br>
+    
+        <button id="ex-button" onclick="vai(`limiti`)">Apri compiti</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <h2 class="blue">2) Derivata di una funzione</h2>
+    <div id="compitiSelector-container" class="grayBorder">
+        <select id="exderivata" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    
+        <br>
+    
+        <button id="ex-button" onclick="vai(`derivata`)">Apri compiti</button>    
+    </div>
+
+    <br>
+    <br>
+    
+    <script>
+        function vai(argomento) {
+            let ex = document.getElementById(`ex${argomento}`).options;
+            let i = document.getElementById(`ex${argomento}`).selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            if(argomento === `limiti`) {
+                window.open(`https://ludovicoradaelli.github.io/Mat/4/4Ei/${argomento}/${ex[i].index + 1 + 4}.html`, `_blank`);
+            } else {
+                window.open(`https://ludovicoradaelli.github.io/Mat/4/4Ei/${argomento}/${ex[i].index + 1}.html`, `_blank`);
+            }
+        }
+    </script>
+</body>
+</html>
