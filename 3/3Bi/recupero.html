@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Materiale di recupero</title>
+</head>
+<body>
+    <h1 class="red">Materiale per il recupero</h1>
+    <br>
+    <p class="gray">
+        Di seguito potete consultare gli esercizi assegnati per casa lungo il corso dell'anno.
+        <br>
+        Scorrendoli trovate i riferimenti al libro di testo, le dispense e le video-lezioni, inerenti sia la teoria che gli esercizi. 
+        <br>
+        Per consultare gli esercizi assegnati sul libro (e non disponibili online) potete guardare i compiti per casa dal 15 febbraio in poi.
+        <br>
+        Qualsiasi dubbio abbiate sugli esercizi, sono disponibile su Teams.
+
+    </p>
+    
+    <br>
+    <h2 class="blue">Goniometria e formule goniometriche</h2>
+    <div id="compitiSelector-container" class="grayBorder">
+        <select id="exgoniometria" style="display: block; width:fit-content; margin:auto">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+    
+        <br>
+    
+        <button id="ex-button" onclick="vai(`goniometria`)">Apri compiti</button>
+
+        
+        
+    
+    </div>
+
+    <script>
+        function vai(argomento) {
+            let ex = document.getElementById(`ex${argomento}`).options;
+            let i = document.getElementById(`ex${argomento}`).selectedIndex;
+            console.log(`ex[i]: ${ex[i].index}`)
+            window.open(`https://ludovicoradaelli.github.io/Mat/3/3Bi/${argomento}/${ex[i].index + 1}.html`, `_blank`);
+        }
+    </script>
+</body>
+</html>
